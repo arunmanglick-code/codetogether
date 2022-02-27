@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentElement>
+  <Database>
+    <SPName>Syntaxes</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\General\\Syntax.sql</Path>
+    <Description>
+      CASE STATMENT  :
+      IF STATMENT :
+      WHILE STATMENT :
+      RAISERROR STATMENT
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Create Table</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\General\\CreateTable.sql</Path>
+    <Description>
+        Create Table  : 
+        Add Foreign Key Constraint
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Alter Table</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\General\\AlterTable.sql</Path>
+    <Description>
+      Alter Column  :
+      Rename Column :
+      Add Column 
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Insert Table</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\General\\InsertTable.sql</Path>
+    <Description>
+      Insert Script      
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Create Procedure</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\General\\CreateProcedure1.sql</Path>
+    <Description>
+      Create Procedure
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Create Procedure</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\Vocada\\AddCriticalRule.sql</Path>
+    <Description>
+      Multiple Row Insertion - Using of XML DataType
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Complex Search Procedure</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\Vocada\\ComplexLabSearch.sql</Path>
+    <Description>
+      ComplexLabSearch
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Get Recent Messages</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\Vocada\\GetRecentMessages.sql</Path>
+    <Description>
+      GetRecentMessages
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Get Subscriber Messages</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\Vocada\\GetMessagesForSubscriber.sql</Path>
+    <Description>
+      GetMessagesForSubscriber
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Get User Facilities</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\Vocada\\GetUserFacilities.sql</Path>
+    <Description>
+      Computed Columns :
+      Computed Where Condition :
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Save AgentDevice Information</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\Vocada\\SaveAgentDeviceInformation.sql</Path>
+    <Description>
+      Lot of Programming
+    </Description>
+  </Database>
+   <Database>
+    <SPName>NC:GetRecentMessagesForSubscriber</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\Vocada\\GetRecentMessagesForSubscriber.sql</Path>
+    <Description>
+      Use of Temporary Table
+    </Description>
+  </Database>
+  <Database>
+    <SPName>NC:Compliance Report</SPName>
+    <Path>SQL Server Cafe\\SP Snippets\\Vocada\\Compliance Report.sql</Path>
+    <Description>
+      Compliance Report
+    </Description>
+  </Database>
+</DocumentElement>

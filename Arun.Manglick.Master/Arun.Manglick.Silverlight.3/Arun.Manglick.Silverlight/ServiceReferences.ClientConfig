@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <bindings>
+      <customBinding>
+        <binding name="CustomBinding_IProductSvc">
+          <binaryMessageEncoding />
+          <httpTransport />
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:1554/Host/Product.svc" binding="customBinding"
+          bindingConfiguration="CustomBinding_IProductSvc" contract="IProductSvc"
+          name="CustomBinding_IProductSvc" />
+    </client>
+  </system.serviceModel>
+</configuration>

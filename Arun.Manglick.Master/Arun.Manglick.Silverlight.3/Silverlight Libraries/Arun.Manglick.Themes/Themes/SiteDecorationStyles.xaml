@@ -1,0 +1,559 @@
+﻿<ResourceDictionary xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns="http://schemas.microsoft.com/client/2007"
+                    xmlns:uxcontrols="clr-namespace:CTLS.Shared.UX.Controls;assembly=CTLS.Shared.UX.Controls"
+                    xmlns:tk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    <!-- 
+        Following styles are applied around Border of individual regions.
+        HeaderContainer:    Applied on Border around site header, NOT including top-nav-bar
+        LeftNavContainer:   Applied on Border around left-nav-area
+        TopNavContainer:    Applied on Border around top-nav-bar
+        WorkAreaContainer:  Applied on Border around work-area page-frame.
+    
+    -->
+    <sys:String x:Key="FontFamily">Trebuchet MS,Verdana, Sans-Serif</sys:String>
+    <Style x:Key="HeaderContainer"
+           TargetType="Border">
+        <!-- No decorations applied as of now -->
+        <Setter Property="Width" Value="1003"/>
+    </Style>
+    <Style x:Key="LeftNavContainer"
+           TargetType="Border">
+        <!-- The ugly god-only-knows-shade-of-kaki gradient of Left Nave area -->
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Offset="0"
+                                  Color="#eeefe1" />
+                    <GradientStop Offset="0.75"
+                                  Color="#eeefe1" />
+                    <GradientStop Offset="1"
+                                  Color="#e4e4da" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Width"
+                Value="190"></Setter>
+    </Style>
+    <Style x:Key="TopNavContainer"
+           TargetType="Border">
+        <!-- TopNavBackground is same as end-color of LNB gradient -->
+        <Setter Property="Background"
+                Value="#e4e4da" />
+    </Style>
+    <Style x:Key="WorkAreaContainer"
+           TargetType="Border">
+        <!-- Defined by a heavier shade of kakhi -->
+        <Setter Property="BorderBrush"
+                Value="#cacab6" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <!--Border is not displayed in OP-->
+        <Setter Property="Width"
+                Value="775" />
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+        <Setter Property="Margin"
+                Value="15,0,0,0" />
+    </Style>
+    <Style x:Key="CPWorkAreaContainer"
+           TargetType="Border">
+        <!-- Defined by a heavier shade of kakhi -->
+        <Setter Property="BorderBrush"
+                Value="#cacab6" />
+        <Setter Property="BorderThickness"
+                Value="0" />        
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+        <Setter Property="Padding"
+                Value="10" />
+        <Setter Property="Width" Value="1003"/>
+        <Setter Property="HorizontalAlignment" Value="Center" />        
+    </Style>
+    <Style x:Key="FooterContainer"
+           TargetType="Border">
+        <!-- No decorations applied as of now -->
+        <Setter Property="Width" Value="1003"/>
+    </Style>
+    <!-- Gray Grid -->
+    <Style x:Key="SectionTitleContentStyle"
+           TargetType="Grid">
+        <Setter Property="VerticalAlignment"
+                Value="Top"></Setter>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"></Setter>
+        <Setter Property="Background"
+                Value="#eef0e6"></Setter>
+    </Style>
+    <Style x:Key="SectionTitleLiteContentStyle"
+           TargetType="Grid"
+           BasedOn="{StaticResource SectionTitleContentStyle}">
+        <Setter Property="Background"
+                Value="#f8f8f8"></Setter>
+    </Style>
+    <!--Seperator Style-->
+    <Style x:Key="HorizontalSeperator"
+           TargetType="Border">
+        <Setter Property="BorderThickness"
+                Value="0,0,0,1"></Setter>
+        <Setter Property="BorderBrush"
+                Value="#AEAEAB"></Setter>
+        <Setter Property="HorizontalAlignment"
+                Value="Center"></Setter>
+    </Style>
+    <Style x:Key="VerticalSeperator"
+           TargetType="Border">
+        <Setter Property="BorderThickness"
+                Value="1,0,0,0"></Setter>
+        <Setter Property="BorderBrush"
+                Value="#AEAEAB"></Setter>
+        <Setter Property="VerticalAlignment"
+                Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment"
+                Value="Center"></Setter>
+    </Style>
+    
+    <!-- CP Toggle Button Style  -->
+    
+    <Style x:Key="ToggleButtonStyle1"
+           TargetType="ToggleButton">
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Padding"
+                Value="5,0,0,0" />
+        <Setter Property="Margin"
+                Value="1,0,0,0" />
+        <Setter Property="Height"
+                Value="19" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Left" />
+        <Setter Property="Width"
+                Value="160" />
+        <Setter Property="Cursor"
+                Value="Hand"></Setter>
+        <Setter Property="FontFamily"
+                Value="Trebuchet MS,Verdana"></Setter>
+        <Setter Property="FontWeight"
+                Value="Bold"></Setter>
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0">
+                    <GradientStop Color="#FFA3AEB9"
+                                  Offset="0" />
+                    <GradientStop Color="#FF8399A9"
+                                  Offset="0.375" />
+                    <GradientStop Color="#FF718597"
+                                  Offset="0.375" />
+                    <GradientStop Color="#FF617584"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient"
+                                                                      Storyboard.TargetProperty="(Rectangle.Fill).(SolidColorBrush.Color)">
+                                            <SplineColorKeyFrame KeyTime="0"
+                                                                 Value="#3179A5" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient"
+                                                                      Storyboard.TargetProperty="(Rectangle.Fill).(SolidColorBrush.Color)">
+                                            <SplineColorKeyFrame KeyTime="0"
+                                                                 Value="#3179A5" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value=".55" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Poly"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient1"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Poly"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient1"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="FocusVisualElement"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid Margin="1"
+                              Background="{TemplateBinding Background}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle x:Name="BackgroundGradient"
+                                       Grid.Column="0">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="#428EBD"></SolidColorBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle x:Name="BackgroundGradient1"
+                                       Opacity="0"
+                                       Grid.Column="0">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="#3179A5"></SolidColorBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <StackPanel Grid.Column="1"
+                                        Background="#4A9ED6">
+                                <Polygon x:Name="Poly"
+                                         Stroke="#3179A5"
+                                         Fill="#3179A5">
+                                    <Polygon.Points>
+                                        <Point X="0"
+                                               Y="0" />
+                                        <Point X="8"
+                                               Y="8" />
+                                        <Point X="0"
+                                               Y="16" />
+                                    </Polygon.Points>
+                                </Polygon>
+                            </StackPanel>
+                        </Grid>
+                        <ContentPresenter x:Name="contentPresenter"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}" />
+                        <Rectangle x:Name="DisabledVisualElement"
+                                   Fill="#FFFFFFFF"
+                                   RadiusX="0"
+                                   RadiusY="0"
+                                   IsHitTestVisible="false"
+                                   Opacity="0" />
+                        <Rectangle x:Name="FocusVisualElement"
+                                   Stroke="#FF6DBDD1"
+                                   StrokeThickness="0"
+                                   RadiusX="0"
+                                   RadiusY="0"
+                                   Margin="0"
+                                   IsHitTestVisible="false"
+                                   Opacity="0" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>    
+           
+    
+    <Style x:Key="uxcontrolsGridView"
+           TargetType="uxcontrols:GridView">
+        <Setter Property="CanUserReorderColumns"
+                Value="True" />
+        <Setter Property="CanUserResizeColumns"
+                Value="True" />
+        <Setter Property="CanUserSortColumns"
+                Value="True" />
+        <Setter Property="Margin"
+                Value="1,1.2,0,2" />
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="HorizontalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="AutoGenerateColumns"
+                Value="False" />
+    </Style>
+    
+    <!-- Newly added Yellow Button style : by Surendra 11/08/10 -->
+    <Style x:Key="YellowButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#FF1F3B53"/>
+        <Setter Property="Foreground" Value="#FF000000"/>
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="#FF617584" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Height="auto" VerticalAlignment="Top" HorizontalAlignment="Left" Width="auto">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="BackgroundAnimation"/>
+                                        <DoubleAnimation Duration="0" To="0.55" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="Background" />
+                                        <DoubleAnimation Duration="0" To="0.519" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="Background" />
+                                        <DoubleAnimation Duration="0" To="0.229" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="Background" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="BackgroundAnimation"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" To=".55" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DisabledVisualElement"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualElement"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="Background" CornerRadius="10" BorderThickness="1" Padding="0">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFE0C589" Offset="0.498"/>
+                                    <GradientStop Color="#FFC99B44" Offset="0.532"/>
+                                    <GradientStop Color="#FFC0890E" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFF1D98D" Offset="0.442"/>
+                                    <GradientStop Color="#FFF9E87F" Offset="1"/>
+                                    <GradientStop Color="#FFE5B31F" Offset="0.476"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Grid Margin="1">
+                                <Border x:Name="BackgroundAnimation" CornerRadius="8" BorderThickness="1" Height="18" Padding="18,0">
+                                    <Border.BorderBrush>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFFCF8EC" Offset="0"/>
+                                            <GradientStop Color="#FFF9E87F" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.BorderBrush>
+                                </Border>
+                                <Rectangle x:Name="BackgroundGradient"/>
+                            </Grid>
+                        </Border>
+                        <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="18,3"/>
+                        <Rectangle x:Name="DisabledVisualElement" Fill="#FFFFFFFF" IsHitTestVisible="false" Opacity="0" RadiusY="3" RadiusX="3"/>
+                        <Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" Margin="1" Opacity="0" RadiusY="2" RadiusX="2" StrokeThickness="1"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    
+    <Style x:Key="PageHeaderText"
+           TargetType="TextBlock">
+        <Setter Property="Foreground"
+                Value="Black"></Setter>
+        <Setter Property="FontFamily" Value="Arial"></Setter>
+        <Setter Property="FontSize"
+                Value="18"></Setter>
+        <Setter Property="Margin"
+                Value="0,0,0,0" />
+    </Style>
+
+    <Style x:Key="RoundedPanelTextHeader"
+           TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment"
+                Value="Left"></Setter>
+        <Setter Property="Margin"
+                Value="15,3,0,3" />
+        <Setter Property="TextWrapping"
+                Value="Wrap">            
+        </Setter>
+        <Setter Property="Foreground"
+                Value="#FF636469" />
+        <Setter Property="FontFamily"
+                Value="Arial" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+
+    </Style>
+
+
+    <LinearGradientBrush x:Key="RoundedPanelHeaderBorderbg" EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FFFFFDFE"
+                      Offset="0" />
+        <GradientStop Color="#FFE8E6E7"
+                      Offset="0.879" />
+        <GradientStop Color="#FFD4740D"
+                      Offset="0.879" />
+    </LinearGradientBrush>
+
+    <Style x:Key="RoundedPanelHeaderBorder"
+           TargetType="Border">
+        <Setter Property="BorderBrush"
+                Value="#FFC3C3C3" />
+        <Setter Property="BorderThickness"
+                Value="1,1,1,0.5" />
+        <Setter Property="Height"
+                Value="23" />
+        <Setter Property="Margin"
+                Value="0,0,-1,0" />
+        <Setter Property="VerticalAlignment"
+                Value="Top" />
+        <Setter Property="CornerRadius"
+                Value="10,10,0,0" />
+        <Setter Property="Background" Value="{StaticResource RoundedPanelHeaderBorderbg}" />       
+    </Style>
+
+    <Style x:Key="RoundedPanelContentBorder"
+           TargetType="Border">
+        <Setter Property="BorderBrush"
+                Value="#FFC3C3C3" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Margin"
+                Value="0,0,-1,0" />
+    </Style>
+
+    <Style x:Key="RoundedPanel"
+           TargetType="Border">
+        <Setter Property="Margin"
+                Value="0,0,0,10"></Setter>
+    </Style>
+
+
+    <Style x:Key="liststyle"
+           TargetType="ListBox">
+        <Setter Property="Margin"
+                Value="10,0,0,0" />
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+        <Setter Property="BorderThickness"
+                Value="0" />      
+    </Style>
+
+
+    <Style TargetType="ListBoxItem">
+        <Setter Property="Padding"
+                Value="1" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Left" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Top" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="TabNavigation"
+                Value="Local" />
+            </Style>
+
+    <Style x:Key="refreshlink"
+           TargetType="HyperlinkButton">
+        <Setter Property="Foreground"
+                Value="Green" />
+        <Setter Property="FontSize"
+                Value="10" />
+        <Setter Property="Margin"
+                Value="0,3,10,0" />
+    </Style>
+    <Style x:Key="listdot"
+           TargetType="TextBlock">
+        <Setter Property="Padding"
+                Value="0" />
+        <Setter Property="VerticalAlignment"
+                Value="Top" />
+        <Setter Property="Margin"
+                Value="0,0,10,0" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="LineHeight"
+                Value="12" />        
+    </Style>
+    <Style x:Key="ErrorStyle" TargetType="TextBlock">
+        <Setter Property="Foreground"
+                Value="Red"></Setter>
+        <Setter Property="FontSize"
+                Value="11" />
+    </Style>
+    <Style x:Key="ReportHeaderText" TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="15">            
+        </Setter>
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="Margin"
+                Value="0,0,0,10" />
+    </Style>
+</ResourceDictionary>

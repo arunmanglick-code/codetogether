@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script src="../JQuery/jquery-1.3.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var spacer = null;
+        var curObj = null;
+
+        function openIt(obj) {
+            //debugger;
+            if (spacer) {
+                return;
+            }
+            spacer = document.createElement("span");
+            spacer.style.width = obj.offsetWidth;
+            spacer.style.height = obj.offsetHeight;
+            spacer.style.display = "none";
+            //obj.parentNode.insertBefore(spacer, obj);
+            $(obj).prepend(spacer);
+
+            obj.style.left = getAbsPos(obj, "Left");
+            obj.style.top = getAbsPos(obj, "Top");
+            obj.style.position = "absolute";
+            obj.style.width = 600; //obj.scrollWidth; //600;
+            obj.focus();
+            spacer.style.display = "inline";
+            curObj = obj;
+            
+            //alert(obj.scrollWidth);
+       }
+
+        function closeIt() {
+            if (spacer) {
+                spacer.parentNode.removeChild(spacer);
+                spacer = null;
+            }
+            if (curObj) {
+                curObj.style.width = "100px";
+                curObj.style.position = "static";                
+            }
+        }
+
+        function getAbsPos(o, p) { var i = 0; while (o != null) { i += o["offset" + p]; o = o.offsetParent; } return i; }
+
+        function ClickIt() {
+
+            openIt(document.getElementById('MyDrop'));
+        }
+    </script>
+
+</head>
+<body>
+    <div id="parentEmployees">
+        Parent Employee
+        <div id="george">
+            George Doe: Human resources department
+        </div>
+        <div id="bill">
+            Bill Doe: Human resources department
+        </div>
+    </div>
+    <br />
+    <br />
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <select id="MyDrop" style="width: 100px" onmouseenter="openIt(this)" onchange="closeIt()" onblur="closeIt()" >
+                        <option title="World">please select</option>
+                        <option title="Hello">My problem is that the column is not wide enough to display the contents in
+                            the drop-down list.</option>
+                        <option></option>
+                        Something else
+                    </select>
+                </td>
+                <td>
+                    <select id="Select1" style="width: 100px">
+                        <option>Do not select</option>
+                        <option>My problem is that the column is not wide enough to display the contents in
+                            the drop-down list.</option>
+                        <option></option>
+                        Something else
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="Select2" style="width: 100px" onmouseenter="openIt(this)" onchange="closeIt()" onblur="closeIt()" >
+                        <option>please select</option>
+                        <option>My problem is that the column is not wide enough to display the contents in
+                            the drop-down list.</option>
+                        <option></option>
+                        Something else
+                    </select>
+                </td>
+                <td>
+                    <select id="Select3" style="width: 100px">
+                        <option>Do not select</option>
+                        <option>My problem is that the column is not wide enough to display the contents in
+                            the drop-down list.</option>
+                        <option></option>
+                        Something else
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="Select4" style="width: 100px" >
+                        <option title="World">please select</option>
+                        <option title="World">My problem is that the column is not wide enough to display the contents in
+                            the drop-down list.</option>
+                        <option></option>
+                        Something else
+                    </select>
+                </td>
+                <td>
+                    <select id="Select5" style="width: 100px">
+                        <option>Do not select</option>
+                        <option>My problem is that the column is not wide enough to display the contents in
+                            the drop-down list.</option>
+                        <option></option>
+                        Something else
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <br />
+    <a href="#" onclick="ClickIt();">Click</a>
+</body>
+
+<script type="text/javascript">
+
+    var newemployee = document.createElement("div");
+    newemployee.setAttribute("id", "kevin");
+    newemployee.setAttribute("style", "color:Red");
+    newemployee.setAttribute("innerText", "New DIV added dynamically");
+
+    var georgeemployee = document.getElementById("george");
+    var billemployee = document.getElementById("bill");
+    var employees = document.getElementById("parentEmployees");
+
+    //employees.insertBefore(newemployee, billemployee); // This will insert between 'george' and 'bill'
+    //employees.parentNode.insertBefore(newemployee, employees); // // This will insert before 'parentEmployees'
+    //georgeemployee.parentNode.insertBefore(newemployee, georgeemployee); // This will insert before 'george'
+    //billemployee.parentNode.insertBefore(newemployee, billemployee); // // This will insert between 'george' and 'bill'
+
+    //$('#parentEmployees').after(newemployee); // This will insert after 'parentEmployees'
+    //$('#parentEmployees').append(newemployee); // This will insert after 'parentEmployees'
+
+    $('#parentEmployees').before(newemployee); // This will insert before 'parentEmployees'
+    //$('#parentEmployees').prepend(newemployee); // This will insert before 'parentEmployees'
+    
+
+</script>
+
+</html>

@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="Arun.Manglick.WebApp.EventHandler1"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="800" Height="800">
+    <StackPanel x:Name="LayoutRoot" Background="Aqua">
+        <Canvas x:Name="Canvas1" Background="DarkKhaki" Width="500" Height="200" MouseLeftButtonDown="Canvas1_MouseLeftButtonDown">
+            <TextBlock Canvas.Left="225" Canvas.Top="100" Text="My Canvas"></TextBlock>
+        </Canvas>
+    </StackPanel>
+</UserControl>

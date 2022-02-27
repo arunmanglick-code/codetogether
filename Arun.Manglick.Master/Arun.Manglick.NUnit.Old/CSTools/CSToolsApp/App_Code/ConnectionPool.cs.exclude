@@ -1,0 +1,34 @@
+using System;
+using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace Vocada.Veriphy
+{
+	public class ConnectionPool
+	{
+		/**
+		 * For now, do not use a pool, re-write later to do so.
+		 * Clients must close the connection when they are through.
+		 */
+		public static SqlConnection getOpenConnection()
+		{
+			SqlConnection cnx = new SqlConnection();
+			cnx.ConnectionString = getConnectionString();
+			cnx.Open();
+			return cnx;
+		}	
+
+		public static String getConnectionString()
+		{
+			string datasource = ConfigurationSettings.AppSettings[ "datasource" ];
+			string database =   ConfigurationSettings.AppSettings[ "database" ];
+			string username =   ConfigurationSettings.AppSettings[ "username" ];
+			string password =   ConfigurationSettings.AppSettings[ "password" ];
+			return "data source=" + datasource + ";initial catalog=" + database + ";user id=" + username + ";password=" + password + ";persist security info=True;packet size=4096";
+		}
+	}
+
+}
+

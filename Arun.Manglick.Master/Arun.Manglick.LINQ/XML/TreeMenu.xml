@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MDEMenu Text="Root">
+  <Level1 Text="LINQ Part 1" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Simple Query" Secure="false" Flag="~/Simple/Part1.aspx"></Level2>
+  </Level1>
+  <Level1 Text="LINQ DataSource Control" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Simple Use" Secure="false" Flag="~/LINQDataSource/Part1.aspx"></Level2>
+    <Level2 Text="Custom LINQ Expression" Secure="false" Flag="~/LINQDataSource/CustomLinqExpression.aspx"></Level2>
+    <Level2 Text="Selecting Event - Custom LINQ Expression" Secure="false" Flag="~/LINQDataSource/CustomLinqExpressionSelectingEvent.aspx"></Level2>
+  </Level1>
+  <Level1 Text="LINQ To XML" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Read XML File" Secure="false" Flag="~/LINQtoXML/ReadXMLFile.aspx"></Level2>
+  </Level1>
+  <Level1 Text="LINQ To Objects" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Non Deferred Operators" Secure="false" Flag="~/LINQ2Objects/Deferred Operators/Part1.aspx"></Level2>
+  </Level1>
+</MDEMenu>
+

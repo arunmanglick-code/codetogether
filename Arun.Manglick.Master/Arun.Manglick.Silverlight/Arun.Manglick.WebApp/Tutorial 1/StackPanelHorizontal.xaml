@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Arun.Manglick.WebApp.Tutorial_1.StackPanelHorizontal"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="800" Height="300">
+    <StackPanel Background="Beige" Orientation="Horizontal"  >
+        <TextBlock Text="Your name?" VerticalAlignment="Center" Margin="10,2,0,1"/>
+        <TextBox Width="150" Height="30" VerticalAlignment="Center" Margin="10,2,0,1"/>
+        <Button Content="Submit this information"  VerticalAlignment="Center" Margin="10,2,0,1" Height="30" Width="150" />
+        <CheckBox Content="With Zing!" VerticalAlignment="Center" Margin="10,2,0,1" />
+    </StackPanel>
+</UserControl>

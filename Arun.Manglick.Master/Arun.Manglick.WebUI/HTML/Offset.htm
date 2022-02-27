@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>New Document </title>
+    <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+
+    <script type="text/javascript"> 
+<!--
+
+        function info() {
+            str = "<ul>"
+
+            if (document.body.clientWidth) {
+                str += "<li>document.body.clientWidth = " + document.body.clientWidth
+                str += "<li>document.body.clientHeight = " + document.body.clientHeight
+                str += "<br /><br />"
+            }
+            if (document.body.offsetWidth) {
+                str += "<li>document.body.offsetWidth = " + document.body.offsetWidth
+                str += "<li><b>document.body.offsetHeight = " + document.body.offsetHeight + "</b>"
+                str += "<br /><br />"
+            }
+            if (window.innerWidth) {
+                str += "<li>Window.innerWidth = " + window.innerWidth
+                str += "<li>Window.innerHeight = " + window.innerHeight
+                str += "<br /><br />"
+            }
+            if (window.outerWidth) {
+                str += "<li>Window.outerWidth = " + window.outerWidth
+                str += "<li>Window.outerHeight = " + window.outerHeight
+                str += "<br /><br />"
+            }
+            if (document.getElementsByTagName) {
+                str += "<li>document.getElementsByTagName('body')[0].offsetWidth = " + document.getElementsByTagName('body')[0].offsetWidth
+                str += "<li>document.getElementsByTagName('body')[0].offsetHeight = " + document.getElementsByTagName('body')[0].offsetHeight
+                str += "<br /><br />"
+            }
+            if (document.documentElement) {
+                str += "<li>document.documentElement.offsetWidth = " + document.documentElement.offsetWidth
+                str += "<li>document.documentElement.offsetHeight = " + document.documentElement.offsetHeight
+                str += "<br /><br />"
+            }
+
+            if (document.getElementsByTagName) {
+                str += "<li>document.getElementById('display2').offsetWidth = " + document.getElementById('display2').offsetWidth
+                str += "<li><b>document.getElementById('display2').offsetHeight = " + document.getElementById('display2').offsetHeight + "</b>"
+                str += "<br /><br />"
+            }
+            if (document.getElementsByTagName) {
+                str += "<li>document.getElementById('display3').offsetWidth = " + document.getElementById('display3').offsetWidth
+                str += "<li><b>document.getElementById('display3').offsetHeight = " + document.getElementById('display3').offsetHeight + "</b>"
+                str += "<br /><br />"
+            }
+
+            document.getElementById("Span1").innerHTML = str
+            document.getElementById("Span2").innerHTML = str
+        }
+        setTimeout("info()", 200)
+
+
+
+                
+//--> 
+    </script>
+
+</head>
+<body>
+    The following examples and may vary depending on which browser you are using to
+    view this page.<br />
+    <table border="1" style="height: 650px;" width="80%">
+        <tr valign="top">
+            <td id="display2" style="height: 33%;" width="50%">
+                <div id="Div1" style="height: 100%; overflow: auto;">
+                    <span id="Span1"></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="display3" style="height: 33%;" width="50%">
+                <div id="Div2" style="height: 100%; overflow: auto;">
+                    <span id="Span2"></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+<script type="text/javascript">
+    
+</script>
+
+</html>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MDEMenu Text="Root">
+  <Level1 Text="Code Snippets" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Grid View" Secure="false" Flag="~/Code Snippets/GridViewSnippets.aspx"></Level2>
+    <Level2 Text="Other" Secure="false" Flag="~/Code Snippets/OtherSnippets.aspx"></Level2>
+  </Level1>
+  <Level1 Text="C# Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Shallow vs Deep Copy" Secure="false" Flag="~/CSharp Cafe/ShallowVsDeepCopy.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Dynamic Loading Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Simple Controls" Secure="false" Flag="~/Dynamic Loading Cafe/SimpleControls.aspx"></Level2>
+    <Level2 Text="GridView Control" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="GridView Columns" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="User Control" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Data Access Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Grid View" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="Misc" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Various Features" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/VariousFeatures.aspx"></Level4>
+        <Level4 Text="ToolTip" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/ToolTip.aspx"></Level4>
+        <Level4 Text="Client Side" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/ClientSideFeatures.aspx"></Level4>
+        <Level4 Text="Client Side Row" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/ClientSideRowFeatures.aspx"></Level4>
+        <Level4 Text="Hierarchichal Reports" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/HierarchichalGrids.aspx"></Level4>
+        <Level4 Text="Row Multi 'Selection n Movement'" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/GridRowMultiSelectionAndMovement.aspx"></Level4>
+        <Level4 Text="Generic Audit Trail" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/GenericAuditTrail.aspx"></Level4>
+        <Level4 Text="GridView at ClientSide" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/ClientSideAndGridView.aspx"></Level4>
+        <Level4 Text="Scrolling Header" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/ScrollingHeaderGrid.aspx"></Level4>
+        <Level4 Text="Non-Scrolling Header" Secure="false" Flag="~/Data Access Cafe/Grid View/Misc/NonScrollingHeaderGrid.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Paging" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Paging Style 1" Secure="false" Flag="~/Data Access Cafe/Grid View/Paging/PagingStyle_1.aspx"></Level4>
+        <Level4 Text="Paging Style 2" Secure="false" Flag="~/Data Access Cafe/Grid View/Paging/PagingStyle_2.aspx"></Level4>
+        <Level4 Text="Paging Style 3" Secure="false" Flag="~/Data Access Cafe/Grid View/Paging/PagingStyle_3.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Sorting" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Sorting 1" Secure="false" Flag="~/Data Access Cafe/Grid View/Sorting/Sorting1.aspx"></Level4>
+        <Level4 Text="Sorting using IComparer" Secure="false" Flag="~/Data Access Cafe/Grid View/Sorting/SortingUsingIComparable.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Export GridView" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Export GridView 1" Secure="false" Flag="~/Data Access Cafe/Grid View/Export Feature/ExportGridView1.aspx"></Level4>
+        <Level4 Text="Export GridView 2" Secure="false" Flag="~/Data Access Cafe/Grid View/Export Feature/ExportGridView2.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Master Detail" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Master Detail 1" Secure="false" Flag="~/Data Access Cafe/Master Detail/MasterDetail_488.aspx"></Level4>
+        <Level4 Text="Master Detail 2" Secure="false" Flag="~/Data Access Cafe/Master Detail/MasterDetailHyperlink_532.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Dynamic Columns Addition" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Bound Columns" Secure="false" Flag="~/Data Access Cafe/Grid View/Dynamic Column Addition/BoundColumns.aspx"></Level4>
+        <Level4 Text="Static - Bound N Template Columns" Secure="false" Flag="~/Data Access Cafe/Grid View/Dynamic Column Addition/StaticBoundNTemplateColumns.aspx"></Level4>
+        <Level4 Text="Static - Binding Bound N Template Columns" Secure="false" Flag="~/Data Access Cafe/Grid View/Dynamic Column Addition/StaticBindingBoundNTemplateColumns.aspx"></Level4>
+        <Level4 Text="Dynamic - Bound N Template Columns" Secure="false" Flag="~/Data Access Cafe/Grid View/Dynamic Column Addition/DynamicBoundNTemplateColumns.aspx"></Level4>
+        <Level4 Text="Audit - Dynamic - Bound N Template Columns" Secure="false" Flag="~/Data Access Cafe/Grid View/Dynamic Column Addition/DynamicBoundNTemplateColumnsAndAuditing.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Edit Update Delete Page Sort Select" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Using Template Field" Secure="false" Flag="~/Data Access Cafe/Grid View/EditUpdateDeletePageSortSelect/UsingTemplateField.aspx"></Level4>
+        <Level4 Text="Using Button Field" Secure="false" Flag="~/Data Access Cafe/Grid View/EditUpdateDeletePageSortSelect/UsingButtonField.aspx"></Level4>
+        <Level4 Text="Using Command Field" Secure="false" Flag="~/Data Access Cafe/Grid View/EditUpdateDeletePageSortSelect/UsingCommandField.aspx"></Level4>
+        <Level4 Text="Using Hyperlink Field" Secure="false" Flag="~/Data Access Cafe/Grid View/EditUpdateDeletePageSortSelect/UsingHyperlinkField.aspx"></Level4>
+        <Level4 Text="Using Checkbox Field" Secure="false" Flag="~/Data Access Cafe/Grid View/EditUpdateDeletePageSortSelect/UsingCheckBoxField.aspx"></Level4>
+      </Level3>
+      
+    </Level2>    
+    <Level2 Text="Details View" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Form View" Secure="false" Flag="~/Home.aspx"></Level2>    
+  </Level1>
+  <Level1 Text="DataSource Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="SqlDataSource" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="ObjectDataSource" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="Sorting using IComparer" Secure="false" Flag="~/DataSource Cafe/ObjectDataSource/Sorting.aspx"></Level3>
+    </Level2>
+    <Level2 Text="XMLDataSource" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Navigation Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Tree View" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Menu View" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Sitemap Control" Secure="false" Flag="~/Home.aspx"></Level2>    
+  </Level1>
+  <Level1 Text="Validation Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Validation Controls" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Custom Validator 1" Secure="false" Flag="~/Validation Cafe/CustomValidation1.aspx"></Level2>
+    <Level2 Text="Custom Validator 2" Secure="false" Flag="~/Validation Cafe/CustomValidation2.aspx"></Level2>
+    <Level2 Text="Custom Validator Dates" Secure="false" Flag="~/Validation Cafe/CustomValidationDate.aspx"></Level2>
+    <Level2 Text="Regular Expression" Secure="false" Flag="~/Validation Cafe/RegEx.aspx"></Level2>
+    
+  </Level1>
+  <Level1 Text="Encryption Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="DES Encryption" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="3DES Encryption" Secure="false" Flag="~/Encryption Cafe/3DES.aspx"></Level2>
+    <Level2 Text="DSA Encryption" Secure="false" Flag="~/Encryption Cafe/DSA.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Security Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Login Controls" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="MemberShip" Secure="false" Flag="~/Home.aspx"></Level2>    
+  </Level1>
+  <Level1 Text="Exception Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Page Level" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Application Level" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Complete Flow" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Internationalization Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Page Level" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Thread Level" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="ReadWrite Resources" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Reflection Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Object to DataTable" Secure="false" Flag="~/Reflection/ObjectToDataTable.aspx"></Level2>
+    <Level2 Text="AuditPage using Reflection" Secure="false" Flag="~/Reflection/AuditPage_Reflection.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Custom Collection Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="ICollection" Secure="false" Flag="~/Custom Collection/ICollection/ICollection.aspx"></Level2>
+    <Level2 Text="CollectionBase" Secure="false" Flag="~/Custom Collection/CollectionBase/CollectionBase.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Maintain State Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Session" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Profile/Personalization" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Caching Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Page Output Cache" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Partial Page Cache" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="SQL Dependency Cache" Secure="false" Flag="~/Caching Cafe/SQLCacheDependency/SQLCacheDependency.aspx"></Level2>
+    <Level2 Text="SQL Dependency Cache Notification" Secure="false" Flag="~/Caching Cafe/SQLCacheDependency/SQLCacheDependencyNotification.aspx"></Level2>
+  </Level1>
+  <Level1 Text="HTTP Runtime Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="HTTP Handlers" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="Text to Image Generator" Secure="false" Flag="~/HTTP Runtime Cafe/HTTP Handlers/Pages/TextToImageHandler.aspx"></Level3>
+      <Level3 Text="DB Image Handler" Secure="false" Flag="~/HTTP Runtime Cafe/HTTP Handlers/Pages/DBImageHTTPHandler.aspx"></Level3>
+    </Level2>
+    <Level2 Text="HTTP Modules" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Configuration Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Config Runtime Manipulation" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Config Encryption" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="XML n XSLT Cafe" Secure="false" Flag="">
+    <Level2 Text="XML Cafe" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="Different XML Fies" Secure="false" Flag="~/Home.aspx"></Level3>
+    </Level2>
+    <Level2 Text="XSLT Cafe" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="XML to HTML" Secure="false" Flag="~/Home.aspx"></Level3>
+    </Level2>
+  </Level1>
+ <Level1 Text="XSD Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Typed Dataset" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Un-Typed Dataset" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Threading Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Parameterized Threading" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Logger - Multiple Threading" Secure="false" Flag="~/Home.aspx"></Level2>    
+  </Level1>
+  <Level1 Text="Serialization Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="XML Serialization" Secure="false" Flag="~/Serialization Cafe/XmlSerialization.aspx"></Level2>
+    <Level2 Text="Binary Serialization" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Streams Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Stream Reader-Writer" Secure="false" Flag="~/Streams Cafe/StreamsReaderWriter.aspx"></Level2>
+    <Level2 Text="Code Snippet" Secure="false" Flag="~/Streams Cafe/CodeSnippet.aspx"></Level2>
+  </Level1>
+  <Level1 Text="User Controls" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Information Control" Secure="false" Flag="~/UserControls Cafe/Information.aspx"></Level2>
+    <Level2 Text="InformationSearch Control" Secure="false" Flag="~/UserControls Cafe/InformationSearch.aspx"></Level2>
+    <Level2 Text="Validators in InformationSearch Control" Secure="false" Flag="~/UserControls Cafe/InformationSearchValidations.aspx"></Level2>
+    <Level2 Text="AJAX in InformationSearch Control" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Dynamically loading InformationSearch Control" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Myths n Proof Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="String Conatenation" Secure="false" Flag="~/MythSnProof/StringConatenation.aspx" />
+    <Level2 Text="ViewState - Visibility" Secure="false" Flag="~/MythSnProof/ViewStateOnVisibility.aspx" />
+    <Level2 Text="ViewState - Disability" Secure="false" Flag="~/MythSnProof/ViewStateOnDisability.aspx" />
+    <Level2 Text="ViewState - Changeability" Secure="false" Flag="~/MythSnProof/ViewStateOnChangeability.aspx" />
+    <Level2 Text="JSState - Visibility" Secure="false" Flag="~/MythSnProof/JSStateOnVisibility.aspx" />
+    <Level2 Text="JSState - Disability" Secure="false" Flag="~/MythSnProof/JSStateOnDisability.aspx" />
+    <Level2 Text="JSState - Changeability" Secure="false" Flag="~/MythSnProof/JSStateOnChangeability.aspx" />    
+  </Level1>
+  <Level1 Text="Myths n Proof Cafe AJAXified" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="String Conatenation" Secure="false" Flag="~/MythSnProof AJAXified/StringConatenation.aspx" />
+    <Level2 Text="ViewState - Visibility" Secure="false" Flag="~/MythSnProof AJAXified/ViewStateOnVisibility.aspx" />
+    <Level2 Text="ViewState - Disability" Secure="false" Flag="~/MythSnProof AJAXified/ViewStateOnDisability.aspx" />
+    <Level2 Text="ViewState - Changeability" Secure="false" Flag="~/MythSnProof AJAXified/ViewStateOnChangeability.aspx" />
+    <Level2 Text="JSState - Visibility" Secure="false" Flag="~/MythSnProof AJAXified/JSStateOnVisibility.aspx" />
+    <Level2 Text="JSState - Disability" Secure="false" Flag="~/MythSnProof AJAXified/JSStateOnDisability.aspx" />
+    <Level2 Text="JSState - Changeability" Secure="false" Flag="~/MythSnProof AJAXified/JSStateOnChangeability.aspx" />
+  </Level1>
+  <Level1 Text="Code Profiling" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Simple Code Profiling" Secure="false" Flag="~/Profile Code/ProfileCode.aspx" />
+  </Level1>
+  <Level1 Text="ATLAS Cafe" Secure="false" Flag="">
+    <Level2 Text="ScriptManager" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="ScriptManager APIs" Secure="false" Flag="~/Home.aspx"></Level3>
+    </Level2>
+    <Level2 Text="UpdatePanel" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="UpdatePanel Introduction" Secure="false" Flag="~/Home.aspx"></Level3>
+      <Level3 Text="Controlling UpdatePanel" Secure="false" Flag="~/Home.aspx"></Level3>
+      <Level3 Text="Cancelling-Controlling Asynchronous Postback" Secure="false" Flag="~/Home.aspx"></Level3>
+      <Level3 Text="UpdatePanel With Master Pages" Secure="false" Flag="~/Home.aspx"></Level3>
+      <Level3 Text="UpdatePanel With User Control" Secure="false" Flag="~/Home.aspx"></Level3>
+    </Level2>
+    <Level2 Text="UpdateProgress" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="UpdateProgress Introduction" Secure="false" Flag="~/Home.aspx"></Level3>
+      <Level3 Text="Cancelling-Controlling Asynchronous Postback" Secure="false" Flag="~/Home.aspx"></Level3>
+    </Level2>
+  </Level1>
+  <Level1 Text="HTML Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="RnD" Secure="false" Flag="~/HTML/RnD.htm" />
+    <Level2 Text="Div Resize" Secure="false" Flag="~/HTML/DivResize.htm" />
+    <Level2 Text="Div Disable" Secure="false" Flag="~/HTML/DisableDIV.htm" />
+    <Level2 Text="Offset" Secure="false" Flag="~/HTML/Offset.htm" />
+    <Level2 Text="zIndex" Secure="false" Flag="~/HTML/ZIndex.htm" />
+    <Level2 Text="Centered Window" Secure="false" Flag="~/HTML/OpenCenteredWindow.htm" />
+    <Level2 Text="FullSize New Window" Secure="false" Flag="~/HTML/FullSizeNewWindow.htm" />
+    <Level2 Text="DOM" Secure="false" Flag="~/HTML/DOM.htm" />
+    <Level2 Text="DropDownExpand" Secure="false" Flag="~/HTML/DropDownExpand.htm" />
+    <Level2 Text="SizeWidth With EventObject" Secure="false" Flag="~/HTML/SizeWidth_EventObject.htm" />
+    
+  </Level1>
+  <Level1 Text="Misc Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="TextArea 15 Characters" Secure="false" Flag="~/Misc Cafe/TextArea75Characters.aspx" />
+    <Level2 Text="DropDown N Postback" Secure="false" Flag="~/Misc Cafe/DropDownNPostBack.aspx" />
+    <Level2 Text="Which Control Made PostBack" Secure="false" Flag="~/Misc Cafe/WhichControlMadePostBack.aspx" />
+    <Level2 Text="DoPostBack" Secure="false" Flag="~/Misc Cafe/DoPostBack.aspx" />
+    <Level2 Text="DefaultButton n DefaultFocus" Secure="false" Flag="~/Misc Cafe/DefaultButtonnDefaultFocus.aspx" />
+  </Level1>
+  <Level1 Text="Trial Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Trial Page" Secure="false" Flag="~/Trail Cafe/Trail.aspx" />
+    <Level2 Text="Trial Page 2" Secure="false" Flag="~/Trail Cafe/Trial2.aspx" />
+    <Level2 Text="Trial Page 3" Secure="false" Flag="~/Trail Cafe/Trial3.aspx" />
+    <Level2 Text="Trial Page 4" Secure="false" Flag="~/Trail Cafe/Trail4.aspx" />
+    <Level2 Text="Trial Page 5" Secure="false" Flag="~/Trail Cafe/StipulationSearchPage.aspx" />
+    <Level2 Text="Timer" Secure="false" Flag="~/Trail Cafe/Timer.aspx" />
+    <Level2 Text="Show Corner Popup" Secure="false" Flag="~/Trail Cafe/ShowCornerPopup.aspx" />
+    <Level2 Text="Memory Leak" Secure="false" Flag="~/Trail Cafe/MemoryLeak.aspx" />
+    <Level2 Text="June Trial" Secure="false" Flag="~/Trail Cafe/June.aspx" />
+  </Level1>
+  <Level1 Text="JS Scripts Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="ClientSide Calendar" Secure="false" Flag="~/JavaScript Cafe/JSCafe.aspx" />
+    <Level2 Text="Save Loose Changes 1" Secure="false" Flag="~/JavaScript Cafe/SaveLooseChangesAfterDropDownChangePostback.aspx" />
+    <Level2 Text="Save Loose Changes 2" Secure="false" Flag="~/JavaScript Cafe/SaveLooseChangesAfterSimplePostback.aspx" />
+    <Level2 Text="Save Loose Changes 3" Secure="false" Flag="~/JavaScript Cafe/SaveLooseChangesAfterCrossPostbackToChildPage.aspx" />
+    <Level2 Text="Browser Dependency" Secure="false" Flag="~/JavaScript Cafe/BrowserDependent.aspx" />
+    <Level2 Text="Key Identification" Secure="false" Flag="~/JavaScript Cafe/KeyIdentification.aspx" />
+    <Level2 Text="Prevent Key" Secure="false" Flag="~/JavaScript Cafe/PreventKeys.aspx" />
+    <Level2 Text="Key Identification Table" Secure="false" Flag="~/JavaScript Cafe/KeyIdentificationTable.aspx" />
+    <Level2 Text="OverRiding in JS" Secure="false" Flag="~/JavaScript Cafe/Overriding.aspx" />
+    <Level2 Text="Calling ServerSide Button Event Handler from JS" Secure="false" Flag="~/JavaScript Cafe/ButtonClickFromJS.aspx" />
+  </Level1>
+  <Level1 Text="Web Services Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Math Service" Secure="false" Flag="~/WebServices Cafe/MathClient.aspx" />
+    <Level2 Text="Retrun Types" Secure="false" Flag="~/WebServices Cafe/Part1.aspx" />
+    <Level2 Text="Overloading" Secure="false" Flag="~/Home.aspx" />
+    <Level2 Text="Asynchronous Call" Secure="false" Flag="~/Home.aspx" />
+  </Level1>
+  <Level1 Text="SQL Scripts Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Stored Procedure" Secure="false" Flag="~/SQL Server Cafe/SP Snippets.aspx" />
+    <Level2 Text="Stored Procedure Grid" Secure="false" Flag="~/SQL Server Cafe/SP Snippets GridView.aspx" />
+  </Level1>
+  <Level1 Text="UML Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Class Diagrams" Secure="false" Flag="~/UML Cafe/Class Diagrams/ClassDigarams.aspx" />
+    <Level2 Text="UseCase Diagrams" Secure="false" Flag="~/UML Cafe/UseCase Diagrams/UseCaseDigarams.aspx" />
+    <Level2 Text="Sequence Diagrams" Secure="false" Flag="~/UML Cafe/Sequence Diagrams/SequenceDigarams.aspx" />
+    <Level2 Text="Activity Diagrams" Secure="false" Flag="~/Home.aspx" />
+  </Level1>
+</MDEMenu>
+

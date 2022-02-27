@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.Views.Templates_And_CustomControls.CustomControls.ListMoverControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:local="clr-namespace:Arun.Manglick.CustomControls;assembly=Arun.Manglick.CustomControls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot">
+        <StackPanel>
+            <local:ListMover x:Name="lstMover"
+                             Margin="0,100,0,5"
+                             Height="220"
+                             Width="500"                             
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Top"
+                             DisplayMemberPath="ProductName"
+                             Loaded="lstMover_Loaded"
+                             ButtonColumnWidth="50"></local:ListMover>
+        </StackPanel>
+    </Grid>
+</UserControl>

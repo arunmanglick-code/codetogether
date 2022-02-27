@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://www.thatindigogirl.com/samples/2006/06" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://www.thatindigogirl.com/samples/2006/06" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.thatindigogirl.com/samples/2006/06/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/HelloIndigoMC?xsd=xsd2" namespace="http://www.thatindigogirl.com/samples/2006/06" />
+      <xsd:import schemaLocation="http://localhost:8000/HelloIndigoMC?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/HelloIndigoMC?xsd=xsd1" namespace="http://schemas.thatindigogirl.com/samples/2006/06" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveGigRequest">
+    <wsdl:part name="Item" element="tns:Item" />
+  </wsdl:message>
+  <wsdl:message name="SaveGigResponse" />
+  <wsdl:message name="GetGigRequest" />
+  <wsdl:message name="GetGigRequest_Headers">
+    <wsdl:part name="LicenseKey" element="tns:LicenseKey" />
+  </wsdl:message>
+  <wsdl:message name="GetGigResponse">
+    <wsdl:part name="Item" element="tns:Item" />
+  </wsdl:message>
+  <wsdl:portType name="IHelloIndigoService">
+    <wsdl:operation name="SaveGig">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/SaveGig" name="SaveGigRequest" message="tns:SaveGigRequest" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/SaveGigResponse" name="SaveGigResponse" message="tns:SaveGigResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGig">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/GetGig" name="GetGigRequest" message="tns:GetGigRequest" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/GetGigResponse" name="GetGigResponse" message="tns:GetGigResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,349 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E100275A-2499-4572-8CB9-0FD510F8A53E}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Arun.Manglick.Silverlight</RootNamespace>
+    <AssemblyName>Arun.Manglick.Silverlight</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Arun.Manglick.Silverlight.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Arun.Manglick.Silverlight.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BooksCollection\Book.cs" />
+    <Compile Include="BooksCollection\MyBooksCollection.xaml.cs">
+      <DependentUpon>MyBooksCollection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventHandler\EventHandler1.xaml.cs">
+      <DependentUpon>EventHandler1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EventHandler\EventHandler2.xaml.cs">
+      <DependentUpon>EventHandler2.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Page.xaml.cs">
+      <DependentUpon>Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project Rosetta\Ball Game\Ball.xaml.cs">
+      <DependentUpon>Ball.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project Rosetta\Ball Game\BallPlay.xaml.cs">
+      <DependentUpon>BallPlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project Rosetta\Dot Stars\DotStar.xaml.cs">
+      <DependentUpon>DotStar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project Rosetta\Dot Stars\DotStarPlay.xaml.cs">
+      <DependentUpon>DotStarPlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project Rosetta\Dots Animation\Dot.xaml.cs">
+      <DependentUpon>Dot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project Rosetta\Dots Animation\DotPlay.xaml.cs">
+      <DependentUpon>DotPlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project Rosetta\Drag Flower\DragFlower.xaml.cs">
+      <DependentUpon>DragFlower.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project Rosetta\Drag Flower\DragFlowerPlay.xaml.cs">
+      <DependentUpon>DragFlowerPlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scott 8 Tutorial Series\Tutorial 2\DiggSample.xaml.cs">
+      <DependentUpon>DiggSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scott 8 Tutorial Series\Tutorial 2\DiggTopic.cs" />
+    <Compile Include="Scott 8 Tutorial Series\Tutorial 2\DiggStory.cs" />
+    <Compile Include="Scott 8 Tutorial Series\Tutorial 2\SilverlightControl1.xaml.cs">
+      <DependentUpon>SilverlightControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scott 8 Tutorial Series\Tutorial 2\StoriesDetailsUC.xaml.cs">
+      <DependentUpon>StoriesDetailsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 1\Canvas.xaml.cs">
+      <DependentUpon>Canvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 1\DragAndDrop.xaml.cs">
+      <DependentUpon>DragAndDrop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 1\Grid.xaml.cs">
+      <DependentUpon>Grid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 1\StackPanel.xaml.cs">
+      <DependentUpon>StackPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 1\StackPanelHorizontal.xaml.cs">
+      <DependentUpon>StackPanelHorizontal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 2\Book.cs" />
+    <Compile Include="Tutorial 2\Library.xaml.cs">
+      <DependentUpon>Library.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 3\BookStyle.cs" />
+    <Compile Include="Tutorial 3\DBAccessUsingGridViewLINQWCF.xaml.cs">
+      <DependentUpon>DBAccessUsingGridViewLINQWCF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 3\LibraryStyle.xaml.cs">
+      <DependentUpon>LibraryStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 4\Address.cs" />
+    <Compile Include="Tutorial 4\AddressUserControl.xaml.cs">
+      <DependentUpon>AddressUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 4\KeyboardSense.xaml.cs">
+      <DependentUpon>KeyboardSense.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 5\ChatMessenger.xaml.cs">
+      <DependentUpon>ChatMessenger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 6\LibraryBookNew.cs" />
+    <Compile Include="Tutorial 6\LibraryNew.xaml.cs">
+      <DependentUpon>LibraryNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 7\Author.cs" />
+    <Compile Include="Tutorial 7\Book.cs" />
+    <Compile Include="Tutorial 7\DataBindingNTemplate.xaml.cs">
+      <DependentUpon>DataBindingNTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial 7\Library.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="BooksCollection\MyBooksCollection.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EventHandler\EventHandler1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="EventHandler\EventHandler2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Page.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project Rosetta\Ball Game\Ball.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project Rosetta\Ball Game\BallPlay.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project Rosetta\Dot Stars\DotStar.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project Rosetta\Dot Stars\DotStarPlay.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project Rosetta\Dots Animation\Dot.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project Rosetta\Dots Animation\DotPlay.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project Rosetta\Drag Flower\DragFlower.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project Rosetta\Drag Flower\DragFlowerPlay.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Scott 8 Tutorial Series\Tutorial 2\DiggSample.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Scott 8 Tutorial Series\Tutorial 2\SilverlightControl1.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Scott 8 Tutorial Series\Tutorial 2\StoriesDetailsUC.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Tutorial 1\Canvas.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 1\DragAndDrop.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 1\Grid.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 1\StackPanel.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 1\StackPanelHorizontal.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 2\Library.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 3\DBAccessUsingGridViewLINQWCF.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Tutorial 3\LibraryStyle.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 4\AddressUserControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 4\KeyboardSense.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 5\ChatMessenger.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 6\LibraryNew.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorial 7\DataBindingNTemplate.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\ServiceReference1\Service1.wsdl" />
+    <None Include="Service References\ServiceReference1\Service1.xsd" />
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Project Rosetta\Drag Flower\orchid0.png" />
+    <Resource Include="Project Rosetta\Drag Flower\orchid1.png" />
+    <Resource Include="Project Rosetta\Drag Flower\orchid2.png" />
+    <Resource Include="Project Rosetta\Drag Flower\orchid3.png" />
+    <Resource Include="Project Rosetta\Drag Flower\orchid4.png" />
+    <Resource Include="Project Rosetta\Drag Flower\orchid5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\Arun.Manglick.Silverlight.ServiceReference1.Employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\Service1.disco" />
+    <None Include="Service References\ServiceReference1\Service11.xsd" />
+    <None Include="Service References\ServiceReference1\Service12.xsd" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Tutorial 5\billg.jpg" />
+    <Content Include="XML\DiggSample.xml" />
+    <Content Include="XML\DiggSample1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Copy of Tutorial 6\" />
+    <Folder Include="Scott 8 Tutorial Series\Tutorial 1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight\v2.0\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

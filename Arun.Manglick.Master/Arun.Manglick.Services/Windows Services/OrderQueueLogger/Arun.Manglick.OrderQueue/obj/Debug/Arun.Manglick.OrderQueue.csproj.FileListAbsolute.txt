@@ -1,0 +1,13 @@
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.pdb
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\obj\Debug\Arun.Manglick.OrderQueue.exe
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\obj\Debug\Arun.Manglick.OrderQueue.pdb
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\obj\Debug\Arun.Manglick.OrderQueue.ProjectInstaller.resources
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\obj\Debug\Arun.Manglick.OrderQueue.csproj.GenerateResource.Cache
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.DataAccess.dll
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.DataManager.dll
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.Utilities.dll
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.DataAccess.pdb
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.Utilities.pdb
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.DataManager.pdb

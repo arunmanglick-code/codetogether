@@ -1,0 +1,5 @@
+D:\PSPL\Project Apps Trial\Arun.Manglick\Arun.Manglick.BL\bin\Debug\Arun.Manglick.BL.dll
+D:\PSPL\Project Apps Trial\Arun.Manglick\Arun.Manglick.BL\bin\Debug\Arun.Manglick.BL.pdb
+D:\PSPL\Project Apps Trial\Arun.Manglick\Arun.Manglick.BL\obj\Debug\ResolveAssemblyReference.cache
+D:\PSPL\Project Apps Trial\Arun.Manglick\Arun.Manglick.BL\obj\Debug\Arun.Manglick.BL.dll
+D:\PSPL\Project Apps Trial\Arun.Manglick\Arun.Manglick.BL\obj\Debug\Arun.Manglick.BL.pdb

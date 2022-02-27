@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ae140b8b-0a32-47b7-b4a1-4adccbbd08cd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/HelloIndigoUnCaught" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HelloIndigoUnCaught.xsd" MetadataType="Schema" ID="db812934-b1f4-4e9b-8e5b-83b181554d86" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoUnCaught?xsd=xsd1" />
+    <MetadataFile FileName="HelloIndigoUnCaught1.xsd" MetadataType="Schema" ID="de310670-bd96-4813-8956-74dbaaa46959" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoUnCaught?xsd=xsd0" />
+    <MetadataFile FileName="HelloIndigoUnCaught.wsdl" MetadataType="Wsdl" ID="24e924c5-650e-45a9-ab6e-3f2a545b039f" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoUnCaught?wsdl=wsdl0" />
+    <MetadataFile FileName="HelloIndigoService.wsdl" MetadataType="Wsdl" ID="a50e0258-6c70-447d-bdef-dd967e6872ca" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoUnCaught?wsdl" />
+    <MetadataFile FileName="HelloIndigoUnCaught.disco" MetadataType="Disco" ID="fc3c8f6d-4492-47f9-808d-a11e9497f95a" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoUnCaught?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

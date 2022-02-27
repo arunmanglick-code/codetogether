@@ -1,0 +1,1315 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CountySummaryResults>
+  <SearchInformation>
+    <ReportFrom></ReportFrom>
+    <ReportTo></ReportTo>
+    <CurrencyDate>10/07/2010</CurrencyDate>
+    <RtsSvcStatus>SUCCESS</RtsSvcStatus>
+    <MoreRecsAvailable>Y</MoreRecsAvailable>
+    <SearchedOldTab>N</SearchedOldTab>
+    <TotalPages>6</TotalPages>
+    <TotalRecords>100</TotalRecords>
+    <Price>0</Price>
+    <RtsSvcResult>RECORD FOUND</RtsSvcResult>
+  </SearchInformation>
+  <SummaryResults id="1">
+    <FileDate>09/21/1979</FileDate>
+    <FilingNumber>19790349400</FilingNumber>
+    <UniqueKey>19790349400^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook>13913</DocketBook>
+    <PageMap>611</PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="2">
+    <FileDate>06/30/1980</FileDate>
+    <FilingNumber>19800205419</FilingNumber>
+    <UniqueKey>19800205419^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook>14513</DocketBook>
+    <PageMap>1007</PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="3">
+    <FileDate>01/29/2002</FileDate>
+    <FilingNumber>20020090025</FilingNumber>
+    <UniqueKey>20020090025^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>REL N/G L</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="4">
+    <FileDate>01/29/2002</FileDate>
+    <FilingNumber>20020090026</FilingNumber>
+    <UniqueKey>20020090026^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>REL N/G L</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="5">
+    <FileDate>02/15/2002</FileDate>
+    <FilingNumber>20020161185</FilingNumber>
+    <UniqueKey>20020161185^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>LIS PEND</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="6">
+    <FileDate>05/24/2002</FileDate>
+    <FilingNumber>20020533117</FilingNumber>
+    <UniqueKey>20020533117^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>TR NAME</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="7">
+    <FileDate>08/22/2002</FileDate>
+    <FilingNumber>20020858212</FilingNumber>
+    <UniqueKey>20020858212^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>SUBORD</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="8">
+    <FileDate>11/04/2002</FileDate>
+    <FilingNumber>20021161579</FilingNumber>
+    <UniqueKey>20021161579^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="9">
+    <FileDate>01/27/2003</FileDate>
+    <FilingNumber>20030094156</FilingNumber>
+    <UniqueKey>20030094156^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="10">
+    <FileDate>02/06/2003</FileDate>
+    <FilingNumber>20030147799</FilingNumber>
+    <UniqueKey>20030147799^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>TR NAME</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="11">
+    <FileDate>02/24/2003</FileDate>
+    <FilingNumber>20030217750</FilingNumber>
+    <UniqueKey>20030217750^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="12">
+    <FileDate>02/24/2003</FileDate>
+    <FilingNumber>20030217751</FilingNumber>
+    <UniqueKey>20030217751^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="13">
+    <FileDate>03/13/2003</FileDate>
+    <FilingNumber>20030310215</FilingNumber>
+    <UniqueKey>20030310215^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="14">
+    <FileDate>03/13/2003</FileDate>
+    <FilingNumber>20030312183</FilingNumber>
+    <UniqueKey>20030312183^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="15">
+    <FileDate>09/23/2003</FileDate>
+    <FilingNumber>20031333761</FilingNumber>
+    <UniqueKey>20031333761^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>REL N/G L</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="16">
+    <FileDate>10/27/2003</FileDate>
+    <FilingNumber>20031492807</FilingNumber>
+    <UniqueKey>20031492807^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ORDER</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="17">
+    <FileDate>01/15/2004</FileDate>
+    <FilingNumber>20040044099</FilingNumber>
+    <UniqueKey>20040044099^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="18">
+    <FileDate>06/30/2004</FileDate>
+    <FilingNumber>20040748366</FilingNumber>
+    <UniqueKey>20040748366^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>SUBORD</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="19">
+    <FileDate>04/08/2005</FileDate>
+    <FilingNumber>20050448194</FilingNumber>
+    <UniqueKey>20050448194^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="20">
+    <FileDate>05/05/2005</FileDate>
+    <FilingNumber>20050591749</FilingNumber>
+    <UniqueKey>20050591749^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>JUDGMENT</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="21">
+    <FileDate>09/02/2005</FileDate>
+    <FilingNumber>20051288620</FilingNumber>
+    <UniqueKey>20051288620^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RE ST TAX</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="22">
+    <FileDate>09/14/2005</FileDate>
+    <FilingNumber>20051346969</FilingNumber>
+    <UniqueKey>20051346969^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="23">
+    <FileDate>01/23/2006</FileDate>
+    <FilingNumber>20060098243</FilingNumber>
+    <UniqueKey>20060098243^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>SUBORD</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="24">
+    <FileDate>01/24/2006</FileDate>
+    <FilingNumber>20060103694</FilingNumber>
+    <UniqueKey>20060103694^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>SUBORD</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="25">
+    <FileDate>10/20/2006</FileDate>
+    <FilingNumber>20061386301</FilingNumber>
+    <UniqueKey>20061386301^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="26">
+    <FileDate>02/27/2007</FileDate>
+    <FilingNumber>20070236504</FilingNumber>
+    <UniqueKey>20070236504^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>CIV JDG</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="27">
+    <FileDate>02/27/2007</FileDate>
+    <FilingNumber>20070236507</FilingNumber>
+    <UniqueKey>20070236507^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>CIV JDG</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="28">
+    <FileDate>02/27/2007</FileDate>
+    <FilingNumber>20070236508</FilingNumber>
+    <UniqueKey>20070236508^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>CIV JDG</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="29">
+    <FileDate>02/27/2007</FileDate>
+    <FilingNumber>20070236509</FilingNumber>
+    <UniqueKey>20070236509^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>CIV JDG</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="30">
+    <FileDate>03/14/2007</FileDate>
+    <FilingNumber>20070304092</FilingNumber>
+    <UniqueKey>20070304092^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RE ST TAX</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="31">
+    <FileDate>03/14/2007</FileDate>
+    <FilingNumber>20070304093</FilingNumber>
+    <UniqueKey>20070304093^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RE ST TAX</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="32">
+    <FileDate>09/21/2007</FileDate>
+    <FilingNumber>20071045031</FilingNumber>
+    <UniqueKey>20071045031^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RENW JDG</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="33">
+    <FileDate>03/17/2008</FileDate>
+    <FilingNumber>20080233704</FilingNumber>
+    <UniqueKey>20080233704^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>GOV LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="34">
+    <FileDate>08/13/2008</FileDate>
+    <FilingNumber>20080704928</FilingNumber>
+    <UniqueKey>20080704928^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RELEASE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="35">
+    <FileDate>09/10/2008</FileDate>
+    <FilingNumber>20080786454B</FilingNumber>
+    <UniqueKey>20080786454B^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RELEASE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="36">
+    <FileDate>11/04/2008</FileDate>
+    <FilingNumber>20080951551</FilingNumber>
+    <UniqueKey>20080951551^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>EC SEC LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="37">
+    <FileDate>12/02/2008</FileDate>
+    <FilingNumber>20081027475</FilingNumber>
+    <UniqueKey>20081027475^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RELEASE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="38">
+    <FileDate>03/25/2009</FileDate>
+    <FilingNumber>20090262137</FilingNumber>
+    <UniqueKey>20090262137^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>REL G/L</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="39">
+    <FileDate>05/08/2009</FileDate>
+    <FilingNumber>20090413316</FilingNumber>
+    <UniqueKey>20090413316^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>MECH LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="40">
+    <FileDate>05/12/2009</FileDate>
+    <FilingNumber>20090423034</FilingNumber>
+    <UniqueKey>20090423034^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>MECH LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="41">
+    <FileDate>06/16/2009</FileDate>
+    <FilingNumber>20090546788</FilingNumber>
+    <UniqueKey>20090546788^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>REL N/G L</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="42">
+    <FileDate>04/28/2010</FileDate>
+    <FilingNumber>20100358030</FilingNumber>
+    <UniqueKey>20100358030^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>REL G/L</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="43">
+    <FileDate>06/01/2010</FileDate>
+    <FilingNumber>20100462970</FilingNumber>
+    <UniqueKey>20100462970^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>GOV LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="44">
+    <FileDate>08/17/2010</FileDate>
+    <FilingNumber>20100704968</FilingNumber>
+    <UniqueKey>20100704968^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>CERTIFICA</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="45">
+    <FileDate>09/07/2010</FileDate>
+    <FilingNumber>20100771437</FilingNumber>
+    <UniqueKey>20100771437^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RE FED TX</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="46">
+    <FileDate>07/22/1997</FileDate>
+    <FilingNumber>19970491266</FilingNumber>
+    <UniqueKey>19970491266^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY #10542 ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="47">
+    <FileDate>04/15/1997</FileDate>
+    <FilingNumber>19970243556</FilingNumber>
+    <UniqueKey>19970243556^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>EC SEC LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY #11791 ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="48">
+    <FileDate>05/19/2000</FileDate>
+    <FilingNumber>20000380912</FilingNumber>
+    <UniqueKey>20000380912^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RE ST TAX</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY #11791 ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="49">
+    <FileDate>11/03/2000</FileDate>
+    <FilingNumber>20000848023</FilingNumber>
+    <UniqueKey>20000848023^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RE ST TAX</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY #11791 ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="50">
+    <FileDate>07/23/1997</FileDate>
+    <FilingNumber>19970495264</FilingNumber>
+    <UniqueKey>19970495264^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RE ST TAX</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY #13541 ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="51">
+    <FileDate>10/16/1992</FileDate>
+    <FilingNumber>19920585470</FilingNumber>
+    <UniqueKey>19920585470^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RE ST TAX</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY #6228 ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="52">
+    <FileDate>07/23/1997</FileDate>
+    <FilingNumber>19970495265</FilingNumber>
+    <UniqueKey>19970495265^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>RE ST TAX</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY #970 ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="53">
+    <FileDate>01/22/1997</FileDate>
+    <FilingNumber>19970040285</FilingNumber>
+    <UniqueKey>19970040285^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>REL N/G L</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY - SABERCAT INVEST INC ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="54">
+    <FileDate>04/08/2005</FileDate>
+    <FilingNumber>20050448194</FilingNumber>
+    <UniqueKey>20050448194^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 10543</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="55">
+    <FileDate>08/18/2003</FileDate>
+    <FilingNumber>20031125704</FilingNumber>
+    <UniqueKey>20031125704^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 10961</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="56">
+    <FileDate>08/06/2003</FileDate>
+    <FilingNumber>20031067456</FilingNumber>
+    <UniqueKey>20031067456^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 11791</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="57">
+    <FileDate>04/08/2005</FileDate>
+    <FilingNumber>20050448194</FilingNumber>
+    <UniqueKey>20050448194^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 11916</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="58">
+    <FileDate>01/15/2003</FileDate>
+    <FilingNumber>20030051413</FilingNumber>
+    <UniqueKey>20030051413^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 12955</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="59">
+    <FileDate>04/08/2005</FileDate>
+    <FilingNumber>20050448194</FilingNumber>
+    <UniqueKey>20050448194^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 13988</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="60">
+    <FileDate>05/10/2010</FileDate>
+    <FilingNumber>20100394352</FilingNumber>
+    <UniqueKey>20100394352^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>GOV LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 14018</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="61">
+    <FileDate>04/08/2005</FileDate>
+    <FilingNumber>20050448194</FilingNumber>
+    <UniqueKey>20050448194^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 14645</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="62">
+    <FileDate>01/17/2003</FileDate>
+    <FilingNumber>20030062779</FilingNumber>
+    <UniqueKey>20030062779^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 22340</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="63">
+    <FileDate>01/17/2003</FileDate>
+    <FilingNumber>20030062781</FilingNumber>
+    <UniqueKey>20030062781^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 2347</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="64">
+    <FileDate>01/17/2003</FileDate>
+    <FilingNumber>20030062780</FilingNumber>
+    <UniqueKey>20030062780^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 23506</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="65">
+    <FileDate>04/08/2005</FileDate>
+    <FilingNumber>20050448194</FilingNumber>
+    <UniqueKey>20050448194^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ST TAX LN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 23623</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="66">
+    <FileDate>04/08/2003</FileDate>
+    <FilingNumber>20030435049</FilingNumber>
+    <UniqueKey>20030435049^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 27110</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="67">
+    <FileDate>07/01/2010</FileDate>
+    <FilingNumber>20100560531</FilingNumber>
+    <UniqueKey>20100560531^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>GOV LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 29221</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="68">
+    <FileDate>03/24/2006</FileDate>
+    <FilingNumber>20060399117</FilingNumber>
+    <UniqueKey>20060399117^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>REL M/L</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 31506</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="69">
+    <FileDate>06/16/2010</FileDate>
+    <FilingNumber>20100510275</FilingNumber>
+    <UniqueKey>20100510275^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>GOV LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 36556</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="70">
+    <FileDate>06/18/1991</FileDate>
+    <FilingNumber>19910278938</FilingNumber>
+    <UniqueKey>19910278938^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FED TAX L</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 6228 AND 2345</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="71">
+    <FileDate>08/05/2004</FileDate>
+    <FilingNumber>20040912463</FilingNumber>
+    <UniqueKey>20040912463^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>LIEN</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY 6919</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="72">
+    <FileDate>02/15/2002</FileDate>
+    <FilingNumber>20020159813</FilingNumber>
+    <UniqueKey>20020159813^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>GEN LEASE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ESTATE CORP</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="73">
+    <FileDate>09/19/1980</FileDate>
+    <FilingNumber>19800301990</FilingNumber>
+    <UniqueKey>19800301990^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>JUDGMENT</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook>14699</DocketBook>
+    <PageMap>300</PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="74">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095158</FilingNumber>
+    <UniqueKey>19920095158^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="75">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095159</FilingNumber>
+    <UniqueKey>19920095159^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="76">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095160</FilingNumber>
+    <UniqueKey>19920095160^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="77">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095161</FilingNumber>
+    <UniqueKey>19920095161^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="78">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095162</FilingNumber>
+    <UniqueKey>19920095162^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="79">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095163</FilingNumber>
+    <UniqueKey>19920095163^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="80">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095164</FilingNumber>
+    <UniqueKey>19920095164^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="81">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095165</FilingNumber>
+    <UniqueKey>19920095165^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="82">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095166</FilingNumber>
+    <UniqueKey>19920095166^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="83">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095167</FilingNumber>
+    <UniqueKey>19920095167^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="84">
+    <FileDate>02/26/1992</FileDate>
+    <FilingNumber>19920095168</FilingNumber>
+    <UniqueKey>19920095168^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="85">
+    <FileDate>07/09/1993</FileDate>
+    <FilingNumber>19930450241</FilingNumber>
+    <UniqueKey>19930450241^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>T FIN ST</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="86">
+    <FileDate>09/14/1993</FileDate>
+    <FilingNumber>19930618795</FilingNumber>
+    <UniqueKey>19930618795^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>FIN STATE</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="87">
+    <FileDate>02/15/1994</FileDate>
+    <FilingNumber>19940128429</FilingNumber>
+    <UniqueKey>19940128429^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>MISC RCRD</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="88">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576534</FilingNumber>
+    <UniqueKey>19940576534^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="89">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576535</FilingNumber>
+    <UniqueKey>19940576535^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="90">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576536</FilingNumber>
+    <UniqueKey>19940576536^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="91">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576537</FilingNumber>
+    <UniqueKey>19940576537^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="92">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576538</FilingNumber>
+    <UniqueKey>19940576538^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="93">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576539</FilingNumber>
+    <UniqueKey>19940576539^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="94">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576540</FilingNumber>
+    <UniqueKey>19940576540^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="95">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576541</FilingNumber>
+    <UniqueKey>19940576541^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="96">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576542</FilingNumber>
+    <UniqueKey>19940576542^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="97">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576543</FilingNumber>
+    <UniqueKey>19940576543^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="98">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576544</FilingNumber>
+    <UniqueKey>19940576544^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="99">
+    <FileDate>07/29/1994</FileDate>
+    <FilingNumber>19940576545</FilingNumber>
+    <UniqueKey>19940576545^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>ASG F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+  <SummaryResults id="100">
+    <FileDate>08/15/1994</FileDate>
+    <FilingNumber>19940611888</FilingNumber>
+    <UniqueKey>19940611888^GRANTOR/GRANTEE INDEX</UniqueKey>
+    <DocumentType>AMEND F/S</DocumentType>
+    <LienType>GRANTOR/GRANTEE INDEX</LienType>
+    <DocketBook></DocketBook>
+    <PageMap></PageMap>
+    <Parties id="1">
+      <PartyName>SUBWAY ETAL</PartyName>
+      <PartyRole>NAME</PartyRole>
+    </Parties>
+  </SummaryResults>
+</CountySummaryResults>

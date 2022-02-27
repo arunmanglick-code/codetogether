@@ -1,0 +1,133 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.Tutorial7.DataBindingNTemplate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="680" Height="650" xmlns:Arun_Manglick_Silverlight_Tutorial7="clr-namespace:Arun.Manglick.Silverlight.Tutorial7" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data">
+	<UserControl.Resources>
+		<Arun_Manglick_Silverlight_Tutorial7:Library x:Key="LibraryDS" d:IsDataSource="True"/>
+		<Arun_Manglick_Silverlight_Tutorial7:Book x:Key="BookDS" d:IsDataSource="True"/>
+		<DataTemplate x:Key="AuthorsTemplate">
+			<StackPanel>
+				<TextBlock Text="{Binding Path=Name}" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Verdana" FontSize="18" Margin="0,0,15,15"/>
+			</StackPanel>
+		</DataTemplate>
+		<Arun_Manglick_Silverlight_Tutorial7:Author x:Key="AuthorDS" d:IsDataSource="True"/>
+	</UserControl.Resources>
+	
+	
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="90"/>
+			<RowDefinition Height="200"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Text="Binding Data Objects" TextWrapping="Wrap" FontFamily="Verdana" FontSize="24" FontWeight="Bold" x:Name="Title"/>
+		<ListBox SelectionChanged="LibraryList_SelectionChanged" HorizontalAlignment="Stretch" Margin="50,50,50,50" Width="Auto" Grid.Row="1" Grid.RowSpan="1" x:Name="LibraryList" FontSize="14" ItemsSource="{Binding Mode=OneWay, Path=Books, Source={StaticResource LibraryDS}}">
+			<ListBox.ItemTemplate>            
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal" Margin="5">
+						<TextBlock 
+							VerticalAlignment="Bottom" 
+							FontFamily="Comic Sans MS" 
+							FontSize="16" Foreground="red" 
+							Text="{Binding Path=Title}"/>
+						<TextBlock 
+							VerticalAlignment="Bottom" 
+							FontFamily="Verdana" FontSize="14" 
+							Foreground="Black" Text=" (ISBN: " />
+						<TextBlock 
+							VerticalAlignment="Bottom" 
+							FontFamily="Verdana" FontSize="14" 
+							Foreground="Black" 
+							Text="{Binding Path=ISBN10}"/>
+						<TextBlock 
+							VerticalAlignment="Bottom" 
+							FontFamily="Verdana" FontSize="14" 
+							Foreground="Black" 
+							Text=") List price:  " />
+						<TextBlock 
+							VerticalAlignment="Bottom" 
+							FontFamily="Verdana" FontSize="14" 
+							Foreground="Black" 
+							Text="{Binding Path=CoverPrice}" />
+					</StackPanel>            
+				</DataTemplate>  
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<Grid Grid.Row="2" ShowGridLines="False" Margin="0,0,0,0" x:Name="DetailsGrid">		
+		<Grid.RowDefinitions>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.5*"/>
+				<ColumnDefinition Width="0.5*"/>
+			</Grid.ColumnDefinitions>
+			<StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Grid.Row="0" Orientation="Horizontal">
+			<TextBlock x:Name="NumAuthorsPrompt"  Text="{Binding Mode=OneWay, Path=NumAuthors}" 
+			    VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Verdana"
+			    FontSize="18" FontWeight="Medium" Margin="0,0,15,15"/>
+			 <TextBlock x:Name="AuthorsPrompt"  Text="Authors" 
+			    VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Verdana"
+			    FontSize="18" FontWeight="Medium" Margin="0,0,15,15"/>
+			</StackPanel>
+			<ListBox HorizontalAlignment="Stretch" Margin="10,5,10,5" Width="Auto" Grid.Column="1" Grid.RowSpan="1" x:Name="AuthorsListBox" ItemsSource="{Binding Mode=OneWay, Path=Authors}" ItemTemplate="{StaticResource AuthorsTemplate}"/>
+			<TextBlock x:Name="PublisherPrompt" Grid.Row="1" Grid.Column="0" Text="Publisher" 
+			    VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Verdana"
+			    FontSize="18" FontWeight="Medium" Margin="0,0,15,15"/>
+			    
+			<TextBlock x:Name="Publisher" Grid.Row="1" Grid.Column="1" 
+                VerticalAlignment="Bottom" HorizontalAlignment="Left" 
+                FontFamily="Verdana" FontSize="18" FontWeight="Medium" 
+                Height="Auto" Width="Auto" Margin="10,0,15,15"
+                Text="{Binding Publisher}" />
+    
+	    
+
+			<TextBlock x:Name="EditionPrompt" Grid.Row="2" Grid.Column="0" Text="Edition" 
+			    VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Verdana"
+			    FontSize="18" FontWeight="Medium" Margin="0,0,15,15"/>
+
+			<TextBlock x:Name="Edition" Grid.Row="2" Grid.Column="1" 
+                VerticalAlignment="Bottom" HorizontalAlignment="Left" 
+                FontFamily="Verdana" FontSize="18" FontWeight="Medium" 
+                Height="Auto" Width="Auto" Margin="10,0,15,15"
+                Text="{Binding Edition}" />
+   
+
+			<TextBlock x:Name="PrintingPrompt" Grid.Row="3" Grid.Column="0" Text="Printing" 
+			    VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Verdana"
+			    FontSize="18" FontWeight="Medium" Margin="0,0,15,15"/>
+
+			<TextBlock x:Name="Printing" Grid.Row="3" Grid.Column="1" 
+                VerticalAlignment="Bottom" HorizontalAlignment="Left" 
+                FontFamily="Verdana" FontSize="18" FontWeight="Medium" 
+                Height="Auto" Width="Auto" Margin="10,0,15,15"
+                Text="{Binding Printing}" />
+			    
+			<TextBlock x:Name="YearPrompt" Grid.Row="4" Grid.Column="0" Text="Publication Year" 
+			    VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Verdana"
+			    FontSize="18" FontWeight="Medium" Margin="0,0,15,15"/>
+
+			<TextBlock x:Name="Year" Grid.Row="4" Grid.Column="1" 
+                VerticalAlignment="Bottom" HorizontalAlignment="Left" 
+                FontFamily="Verdana" FontSize="18" FontWeight="Medium" 
+                Height="Auto" Width="Auto" Margin="10,0,15,15"
+                Text="{Binding PubYear}" />
+			
+			<TextBlock x:Name="RatingPrompt" Grid.Row="5" Grid.Column="0" Text="Rating" 
+			    VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Verdana"
+			    FontSize="18" FontWeight="Medium" Margin="0,0,15,15"/>   
+			
+			 <StackPanel Grid.Row="5"  Margin="0,0,0,15"   Grid.Column="1" Orientation="Horizontal" >
+			 	<Slider x:Name="RatingSlider" Width="150" LargeChange="1.0" ValueChanged="RatingSlider_ValueChanged" SmallChange="0.1" Minimum="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,5,0" Maximum="5" DataContext="{Binding Mode=OneWay, Path=Rating}"/>
+			 	<TextBlock x:Name="SliderValueDisplay" Margin="5,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Verdana" FontSize="18"/>
+			 </StackPanel>
+			
+		</Grid>
+		
+	</Grid>
+</UserControl>

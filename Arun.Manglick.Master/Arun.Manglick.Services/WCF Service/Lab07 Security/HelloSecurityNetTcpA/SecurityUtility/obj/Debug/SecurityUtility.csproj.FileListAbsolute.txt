@@ -1,0 +1,7 @@
+D:\Arun.Manglick.EDU\Manglick.Arun.EDU\CIPL\Audio & Video\WCF\LearningWCFVS2008\LearningWCF\Common\SecurityUtility\bin\Debug\SecurityUtility.dll
+D:\Arun.Manglick.EDU\Manglick.Arun.EDU\CIPL\Audio & Video\WCF\LearningWCFVS2008\LearningWCF\Common\SecurityUtility\bin\Debug\SecurityUtility.pdb
+D:\Arun.Manglick.EDU\Manglick.Arun.EDU\CIPL\Audio & Video\WCF\LearningWCFVS2008\LearningWCF\Common\SecurityUtility\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.EDU\Manglick.Arun.EDU\CIPL\Audio & Video\WCF\LearningWCFVS2008\LearningWCF\Common\SecurityUtility\obj\Debug\SecurityUtility.LoginForm.resources
+D:\Arun.Manglick.EDU\Manglick.Arun.EDU\CIPL\Audio & Video\WCF\LearningWCFVS2008\LearningWCF\Common\SecurityUtility\obj\Debug\SecurityUtility.csproj.GenerateResource.Cache
+D:\Arun.Manglick.EDU\Manglick.Arun.EDU\CIPL\Audio & Video\WCF\LearningWCFVS2008\LearningWCF\Common\SecurityUtility\obj\Debug\SecurityUtility.dll
+D:\Arun.Manglick.EDU\Manglick.Arun.EDU\CIPL\Audio & Video\WCF\LearningWCFVS2008\LearningWCF\Common\SecurityUtility\obj\Debug\SecurityUtility.pdb

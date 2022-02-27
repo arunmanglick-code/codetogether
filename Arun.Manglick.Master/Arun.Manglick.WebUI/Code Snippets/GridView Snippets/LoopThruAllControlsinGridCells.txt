@@ -1,0 +1,60 @@
+﻿
+To loop thru all the Controls present in GridView Cells
+------------------------------------------------------------
+
+foreach (GridViewRow gridRow in gdvProgramTCTC.Rows)
+{
+    count = 0; rowIndex++;
+    if (gridRow.RowType == DataControlRowType.DataRow)
+    {
+        drProgramTCTCRow = dtProgramTCTCRow.Rows[index++];
+
+        foreach (TableCell cell in gridRow.Cells)
+        {
+            foreach (Control ctrl in cell.Controls)
+            {
+                if (ctrl.GetType().ToString().Equals("System.Web.UI.WebControls.TextBox"))
+                {
+                    TextBox txtTemp = ctrl as TextBox;
+                    if (validate)
+                    {
+                        status = ValidateProgramTCTCRow(txtTemp, rowIndex);
+                        if (!status)
+                        {
+                            return null;
+                        }
+                        drProgramTCTCRow[count] = (object)txtTemp.Text;
+
+                    }
+                    else
+                    {
+                        drProgramTCTCRow[count] = (object)txtTemp.Text;
+                    }
+                    count++;
+                }
+                else if (ctrl.GetType().ToString().Equals("System.Web.UI.WebControls.Label"))
+                {
+                    Label lblTemp = ctrl as Label;
+                    if (lblTemp.ClientID.Contains("Id"))
+                    {
+                        if (lblTemp.Text.Length > 0)
+                        {
+                            drProgramTCTCRow[count] = (object)lblTemp.Text;
+                        }
+                        else
+                        {
+                            drProgramTCTCRow[count] = -1;
+                        }
+                        count++;
+                    }
+                }
+
+            }
+            if ((cell.Text.Length > 0) && (cell.Text.Replace("&nbsp;", String.Empty).Trim().Length > 0))
+            {
+                drProgramTCTCRow[count] = cell.Text;
+                count++;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+﻿Installing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe assembly.
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe assembly.
+Remove InstallState file because there are no installers.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog
+Installing service OrderQueueService...
+Service OrderQueueService has been successfully installed.
+Creating EventLog source OrderQueueService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog
+Uninstalling assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog
+Removing EventLog source OrderQueueService.
+Service OrderQueueService is being removed from the system...
+Service OrderQueueService was successfully removed from the system.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog
+Installing service OrderQueueService...
+Service OrderQueueService has been successfully installed.
+Creating EventLog source OrderQueueService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog
+Uninstalling assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog
+Removing EventLog source OrderQueueService.
+Service OrderQueueService is being removed from the system...
+Service OrderQueueService was successfully removed from the system.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog
+Installing service OrderQueueService...
+Service OrderQueueService has been successfully installed.
+Creating EventLog source OrderQueueService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\OrderQueueLogger\Arun.Manglick.OrderQueue\bin\Debug\Arun.Manglick.OrderQueue.InstallLog

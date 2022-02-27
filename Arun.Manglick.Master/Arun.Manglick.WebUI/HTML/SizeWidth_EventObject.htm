@@ -1,0 +1,56 @@
+﻿<html>
+<body>
+<script language="JavaScript">
+function function2() {
+    myX.innerHTML = window.event.offsetX;
+    myY.innerHTML = window.event.offsetY;
+    mySX.innerHTML = window.event.screenX;
+    mySY.innerHTML = window.event.screenY;
+    mySH.innerHTML = myDiv.scrollHeight;
+    mySW.innerHTML = myDiv.scrollWidth; 
+}
+function function1() {
+    mySL.innerHTML = myDiv.scrollLeft;
+    myST.innerHTML = myDiv.scrollTop; 
+} 
+</script>
+<p>
+   <b>X Coordinate:</b> 
+   <span id="myX">0</span>
+</p>
+<p>
+   <b>Y Coordinate:</b> 
+   <span id="myY">0</span>
+</p>
+<p>
+   <b>Screen X:</b> 
+   <span id="mySX">0</span>
+</p>
+<p>
+   <b>Screen Y:</b> 
+   <span id="mySY">0</span>
+</p>
+<p>
+   <b>Scroll Height:</b> 
+   <span id="mySH">0</span>
+</p>
+<p>
+   <b>Scroll Width:</b> 
+   <span id="mySW">0</span>
+</p>
+<p>
+   <b>Scroll Left:</b> 
+   <span id="mySL">0</span>
+</p>
+<p>
+   <b>Scroll Top:</b> 
+   <span id="myST">0</span>
+</p>
+<div id="myDiv" 
+     onmousemove="function2();" 
+     onscroll="function1();" 
+     style="border:solid; width:200; height:200; overflow:scroll;">
+   <img src="../Images/House.GIF" />
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.NUnit\CSTools\TestProjectNUnit\bin\Debug\TestProjectNUnit.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.NUnit\CSTools\TestProjectNUnit\bin\Debug\TestProjectNUnit.pdb
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.NUnit\CSTools\TestProjectNUnit\bin\Debug\nunit.framework.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.NUnit\CSTools\TestProjectNUnit\bin\Debug\nunit.framework.xml
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.NUnit\CSTools\TestProjectNUnit\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.NUnit\CSTools\TestProjectNUnit\obj\Debug\TestProjectNUnit.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.NUnit\CSTools\TestProjectNUnit\obj\Debug\TestProjectNUnit.pdb

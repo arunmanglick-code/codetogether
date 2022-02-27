@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="adf7577a-5b42-46f0-a2df-209d13a642af" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3213/Arun.Manglick.WebUI/AMService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AMService.disco" MetadataType="Disco" ID="55c582f3-269b-428e-8ec7-c0916df5eb63" SourceId="1" SourceUrl="http://localhost:3213/Arun.Manglick.WebUI/AMService.svc?disco" />
+    <MetadataFile FileName="AMService.xsd" MetadataType="Schema" ID="76d6f96f-291a-4485-ac41-0bf12a0110a9" SourceId="1" SourceUrl="http://localhost:3213/Arun.Manglick.WebUI/AMService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AMService.wsdl" MetadataType="Wsdl" ID="ddff7d83-7104-49ae-ba9c-fe026ff40ec0" SourceId="1" SourceUrl="http://localhost:3213/Arun.Manglick.WebUI/AMService.svc?wsdl" />
+    <MetadataFile FileName="AMService1.xsd" MetadataType="Schema" ID="10c1ef1e-7a84-4591-b3b6-3831967d79ae" SourceId="1" SourceUrl="http://localhost:3213/Arun.Manglick.WebUI/AMService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AMService2.xsd" MetadataType="Schema" ID="119309eb-3c3c-47c3-8cf4-c0671942ae32" SourceId="1" SourceUrl="http://localhost:3213/Arun.Manglick.WebUI/AMService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

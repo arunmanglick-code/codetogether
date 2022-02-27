@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://www.thatindigogirl.com/samples/2006/06" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://www.thatindigogirl.com/samples/2006/06" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.thatindigogirl.com/samples/2006/06/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/HelloIndigoFault?xsd=xsd0" namespace="http://www.thatindigogirl.com/samples/2006/06" />
+      <xsd:import schemaLocation="http://localhost:8000/HelloIndigoFault?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:8000/HelloIndigoFault?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHelloIndigoService_ThrowSimpleFault_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThrowSimpleFault" />
+  </wsdl:message>
+  <wsdl:message name="IHelloIndigoService_ThrowSimpleFault_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThrowSimpleFaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHelloIndigoService_ThrowSimpleFault_InvalidOperationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/System" name="detail" element="q1:InvalidOperationException" />
+  </wsdl:message>
+  <wsdl:message name="IHelloIndigoService_ThrowFaultException_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThrowFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IHelloIndigoService_ThrowFaultException_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThrowFaultExceptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHelloIndigoService_ThrowFaultException_InvalidOperationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/System" name="detail" element="q2:InvalidOperationException" />
+  </wsdl:message>
+  <wsdl:message name="IHelloIndigoService_ThrowMessageFault_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThrowMessageFault" />
+  </wsdl:message>
+  <wsdl:message name="IHelloIndigoService_ThrowMessageFault_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThrowMessageFaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHelloIndigoService_ThrowMessageFault_InvalidOperationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/System" name="detail" element="q3:InvalidOperationException" />
+  </wsdl:message>
+  <wsdl:portType name="IHelloIndigoService">
+    <wsdl:operation name="ThrowSimpleFault">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/ThrowSimpleFault" message="tns:IHelloIndigoService_ThrowSimpleFault_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/ThrowSimpleFaultResponse" message="tns:IHelloIndigoService_ThrowSimpleFault_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/ThrowSimpleFaultInvalidOperationExceptionFault" name="InvalidOperationExceptionFault" message="tns:IHelloIndigoService_ThrowSimpleFault_InvalidOperationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThrowFaultException">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/ThrowFaultException" message="tns:IHelloIndigoService_ThrowFaultException_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/ThrowFaultExceptionResponse" message="tns:IHelloIndigoService_ThrowFaultException_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/ThrowFaultExceptionInvalidOperationExceptionFault" name="InvalidOperationExceptionFault" message="tns:IHelloIndigoService_ThrowFaultException_InvalidOperationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThrowMessageFault">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/ThrowMessageFault" message="tns:IHelloIndigoService_ThrowMessageFault_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/ThrowMessageFaultResponse" message="tns:IHelloIndigoService_ThrowMessageFault_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/IHelloIndigoService/ThrowMessageFaultInvalidOperationExceptionFault" name="InvalidOperationExceptionFault" message="tns:IHelloIndigoService_ThrowMessageFault_InvalidOperationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

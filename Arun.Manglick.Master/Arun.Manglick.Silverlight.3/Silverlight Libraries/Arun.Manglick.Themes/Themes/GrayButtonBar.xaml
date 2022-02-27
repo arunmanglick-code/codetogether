@@ -1,0 +1,530 @@
+﻿<ResourceDictionary xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns="http://schemas.microsoft.com/client/2007"
+                    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+                    xmlns:abc="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls"
+                                        xmlns:abc2="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Core">
+
+    <sys:String x:Key="FontFamily">Trebuchet MS,Verdana, Sans-Serif</sys:String>
+
+    <!--TextBlock Base Style-->
+    <Style x:Key="GlobalSiteSettings"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily"
+                Value="{StaticResource FontFamily}"></Setter>
+        <Setter Property="FontSize"
+                Value="10"></Setter>
+    </Style>
+
+    <!--Gray Button Text Style-->
+    <Style x:Key="GrayButtonTextStyle"
+           TargetType="TextBlock"
+           BasedOn="{StaticResource GlobalSiteSettings}">
+        <Setter Property="VerticalAlignment"
+                Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"></Setter>
+        <Setter Property="Foreground"
+                Value="White"></Setter>
+        <Setter Property="FontWeight"
+                Value="Bold"></Setter>
+    </Style>
+
+    <!-- MenuItem Style "Gray"-->
+    <Style x:Key="ctaGrayButtonBarItem"
+           TargetType="abc:MenuItem">
+        <Setter Property="Margin"
+                Value="3,3,3,3" />
+        <Setter Property="Padding"
+                Value="10,3,10,3" />
+        <Setter Property="Height"
+                Value="17" />
+        <Setter Property="Width"
+                Value="60" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="CornerRadius"
+                Value="0" />
+
+        <!--<Setter Property="BorderBrush"
+                Value="#747474" />
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="Background"
+                Value="#747474" />-->
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="abc:MenuItem">
+                    <Grid>
+
+                        <!-- MenuItem Visual states -->
+                        <vsm:VisualStateManager.VisualStateGroups>
+
+                            <!-- CommonStates: Normal, MouseOver, Pressed and Disabled -->
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="ButtonBorder"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="White" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="Background"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="White" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="Background"
+                                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                        To="#CACACA" />
+                                        <ColorAnimation Storyboard.TargetName="ButtonText"
+                                                        Storyboard.TargetProperty="(Foreground).(Color)"
+                                                        To="#949495"
+                                                        Duration="0" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+
+                                <vsm:VisualState x:Name="Pressed" />
+                                <vsm:VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="ButtonBorder"
+                                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                        To="#CDCDCD" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="ButtonBorder"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="#F6F6F6" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="Background"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="#CDCDCD" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="Background"
+                                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                        To="#CDCDCD" />
+                                        <ColorAnimation Storyboard.TargetName="ButtonText"
+                                                        Storyboard.TargetProperty="(Foreground).(Color)"
+                                                        To="White"
+                                                        Duration="0" />
+
+                                        <!-- Change disabled-overlay's opacity to 50% -->
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value=".5" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+
+                            <!-- FocusStates: Focused and Unfocused; -->
+                            <vsm:VisualStateGroup x:Name="FocusStates">
+                                <vsm:VisualState x:Name="Focused" />
+                                <vsm:VisualState x:Name="Unfocused" />
+                            </vsm:VisualStateGroup>
+
+                            <!-- SelectionStates: Selected and Unselected; Typically used for 'current-tab' of TopNavBar -->
+                            <vsm:VisualStateGroup x:Name="SelectionStates">
+                                <vsm:VisualState x:Name="Selected" />
+                                <vsm:VisualState x:Name="Unselected" />
+                            </vsm:VisualStateGroup>
+
+                        </vsm:VisualStateManager.VisualStateGroups>
+
+                        <Border x:Name="ButtonBorder"
+                                Height="16"
+                                BorderBrush="#949495"
+                                Background="#CACACA"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid Margin="1">
+                                <Border x:Name="Background"
+                                        Background="#949495"
+                                        BorderBrush="#949495"
+                                        BorderThickness="1">
+                                    <TextBlock x:Name="ButtonText"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Style="{StaticResource GrayButtonTextStyle}"
+                                               Margin="{TemplateBinding Padding}"
+                                               Text="{TemplateBinding Caption}" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                        <!-- Layer #0: Background -->
+                        <!--<Border x:Name="ButtonBorder"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Background="{TemplateBinding Background}">
+                            <Grid Margin="1">
+                                <Border x:Name="Background"
+                                        Background="{TemplateBinding BorderBrush}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="1">
+                                </Border>
+                            </Grid>
+                        </Border>-->
+
+                        <!-- Layer #1: Inner content of menu item if provided  -->
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}"
+                                          Content="{TemplateBinding Content}" />
+
+                        <!-- Layer #2: Caption of menu item if provided -->
+                        <!--<TextBlock x:Name="ButtonText"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Style="{StaticResource GrayButtonTextStyle}"
+                                   Margin="{TemplateBinding Padding}"
+                                   Text="{TemplateBinding Caption}" />-->
+
+                        <!-- Layer #9: Used by Disabled visual state to reduce visibility to 50% -->
+                        <Rectangle x:Name="DisabledVisualElement"
+                                   Fill="#FFFFFFFF"
+                                   RadiusX="3"
+                                   RadiusY="3"
+                                   IsHitTestVisible="false"
+                                   Opacity="0" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Applied to MenuBar style; Manipulates nav bar as well as nav items "Gray"-->
+    <Style x:Key="ctaGrayButtonBar"
+           TargetType="abc:MenuBar">
+
+        <!-- Spacing around and with-in -->
+        <Setter Property="Margin"
+                Value="0,3,0,0" />
+        <Setter Property="Padding"
+                Value="0" />
+
+        <!-- Border and background -->
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="CornerRadius"
+                Value="0" />
+
+        <!-- Font and foreground -->
+        <Setter Property="FontSize"
+                Value="11"></Setter>
+        <Setter Property="FontFamily"
+                Value="Verdana"></Setter>
+
+        <!-- Apply top nav bar menu items style -->
+        <Setter Property="MenuItemStyle"
+                Value="{StaticResource ctaGrayButtonBarItem}"></Setter>
+    </Style>
+
+    <!--Gray Button Style-->
+    <Style x:Key="ctaGrayButtonStyles"
+           TargetType="Button">
+        <Setter Property="FontSize"
+                Value="8.25"></Setter>
+        <Setter Property="FontFamily"
+                Value="Verdana"></Setter>
+        <Setter Property="Foreground"
+                Value="White"></Setter>
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="ButtonBorder"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="White" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="Background"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="White" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="Background"
+                                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                        To="#CACACA" />
+                                        <ColorAnimation Storyboard.TargetName="ButtonText"
+                                                        Storyboard.TargetProperty="(Foreground).(Color)"
+                                                        To="#949495"
+                                                        Duration="0" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Pressed" />
+                                <vsm:VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="ButtonBorder"
+                                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                        To="#CDCDCD" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="ButtonBorder"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="#F6F6F6" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="Background"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="#CDCDCD" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="Background"
+                                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                        To="#CDCDCD" />
+                                        <ColorAnimation Storyboard.TargetName="ButtonText"
+                                                        Storyboard.TargetProperty="(Foreground).(Color)"
+                                                        To="White"
+                                                        Duration="0" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <vsm:VisualStateGroup x:Name="FocusStates">
+                                <vsm:VisualState x:Name="Focused" />
+                                <vsm:VisualState x:Name="Unfocused" />
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+
+                        <Border x:Name="ButtonBorder"
+                                Height="16"
+                                BorderBrush="#949495"
+                                Background="#CACACA"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid Margin="1">
+                                <Border x:Name="Background"
+                                        Background="#949495"
+                                        BorderBrush="#949495"
+                                        BorderThickness="1">
+                                    <TextBlock x:Name="ButtonText"
+                                               FontSize="{TemplateBinding FontSize}"
+                                               FontFamily="{TemplateBinding FontFamily}"
+                                               Text="{TemplateBinding Content}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Foreground="White"></TextBlock>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Page Nav Link Style "Gray" -->
+    <Style TargetType="abc2:PageNavLink"
+           x:Key="ctaPageNavLinkGrayStyle">
+        <Setter Property="FontFamily"
+                Value="{StaticResource FontFamily}"></Setter>
+        <Setter Property="FontSize"
+                Value="10"></Setter>
+        <Setter Property="Foreground"
+                Value="White"></Setter>
+        <Setter Property="FontWeight"
+                Value="Bold"></Setter>
+        <Setter Property="VerticalAlignment"
+                Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"></Setter>
+        <Setter Property="HorizontalContentAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Stretch" />
+        <!--<Setter Property="Background" Value="Transparent"/>-->
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="abc2:PageNavLink">
+
+                    <Grid Cursor="{TemplateBinding Cursor}"
+                          Background="{TemplateBinding Background}">
+
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver">
+
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ColoredTextBlock"
+                                                                       Storyboard.TargetProperty="Visibility"
+                                                                       Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="contentPresenter"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+
+                                </vsm:VisualState>
+
+
+                                <vsm:VisualState x:Name="Pressed" />
+                                <vsm:VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <!-- Change disabled-overlay's opacity to 50% -->
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledOverlay"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value=".5" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <vsm:VisualStateGroup x:Name="FocusStates">
+                                <vsm:VisualState x:Name="Focused" />
+                                <vsm:VisualState x:Name="Unfocused" />
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+
+                        <TextBlock x:Name="ColoredTextBlock"
+                                   Foreground="#CACACA"
+                                   Text="{TemplateBinding Content}"
+                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}"
+                                   Style="{StaticResource GrayButtonTextStyle}"
+                                   Visibility="Collapsed" />
+
+
+                        <ContentPresenter x:Name="contentPresenter"
+                                          Opacity="1"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}" />
+
+                        <!-- Used by Disabled visual state to reduce visibility to 50% -->
+                        <Rectangle x:Name="DisabledOverlay"
+                                   Fill="#FFFFFFFF"
+                                   RadiusX="3"
+                                   RadiusY="3"
+                                   IsHitTestVisible="false"
+                                   Opacity="0" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--View Nav Link Style "Gray"-->
+    <Style TargetType="abc2:ViewNavLink"
+           x:Key="ctaViewNavLinkGrayStyle">
+        <Setter Property="FontFamily"
+                Value="{StaticResource FontFamily}"></Setter>
+        <Setter Property="FontSize"
+                Value="10"></Setter>
+        <Setter Property="Foreground"
+                Value="White"></Setter>
+        <Setter Property="FontWeight"
+                Value="Bold"></Setter>
+        <Setter Property="VerticalAlignment"
+                Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"></Setter>
+        <Setter Property="HorizontalContentAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Stretch" />
+        <!--<Setter Property="Background" Value="Transparent"/>-->
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="abc2:ViewNavLink">
+
+                    <Grid Cursor="{TemplateBinding Cursor}"
+                          Background="{TemplateBinding Background}">
+
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver">
+
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ColoredTextBlock"
+                                                                       Storyboard.TargetProperty="Visibility"
+                                                                       Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="contentPresenter"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+
+                                </vsm:VisualState>
+
+
+                                <vsm:VisualState x:Name="Pressed" />
+                                <vsm:VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <!-- Change disabled-overlay's opacity to 50% -->
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledOverlay"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value=".5" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <vsm:VisualStateGroup x:Name="FocusStates">
+                                <vsm:VisualState x:Name="Focused" />
+                                <vsm:VisualState x:Name="Unfocused" />
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+
+                        <TextBlock x:Name="ColoredTextBlock"
+                                   Foreground="#CACACA"
+                                   Text="{TemplateBinding Content}"
+                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}"
+                                   Style="{StaticResource GrayButtonTextStyle}"
+                                   Visibility="Collapsed" />
+
+
+                        <ContentPresenter x:Name="contentPresenter"
+                                          Opacity="1"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}" />
+
+                        <!-- Used by Disabled visual state to reduce visibility to 50% -->
+                        <Rectangle x:Name="DisabledOverlay"
+                                   Fill="#FFFFFFFF"
+                                   RadiusX="3"
+                                   RadiusY="3"
+                                   IsHitTestVisible="false"
+                                   Opacity="0" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

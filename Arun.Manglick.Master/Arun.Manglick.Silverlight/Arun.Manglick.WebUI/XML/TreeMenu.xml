@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MDEMenu Text="Root">
+  <Level1 Text="Getting Started" Secure="false" Flag="~/SilverlightHome.aspx">
+    <Level2 Text="Hello Word" Secure="false" Flag="~/SilverlightHome.aspx"></Level2>
+  </Level1>
+  <Level1 Text="Dynamic User Interface" Secure="false" Flag="~/SilverlightHome.aspx">
+    <Level2 Text="Writing Handlers" Secure="false" Flag="~/SilverlightHome.aspx"></Level2>
+  </Level1>
+</MDEMenu>
+

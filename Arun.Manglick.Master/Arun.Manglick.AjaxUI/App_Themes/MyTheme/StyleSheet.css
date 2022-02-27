@@ -1,0 +1,57 @@
+﻿body {
+}
+.DivClassFloat
+{ 
+    border: solid 1px #d7d7d7; 
+    float:left;
+    margin: 5px;
+    padding: 5px; 
+}
+
+
+.DivClassFeature
+{ 
+    border: solid 1px #d7d7d7;
+    float:none;
+    margin: 5px;
+    width : 400px;
+    padding: 5px;
+    color:Navy;
+    line-height:15px;
+}
+
+.DivClassFeature1
+{ 
+    border: solid 1px #d7d7d7;
+    float:left;
+    margin: 5px;
+    width : 400px;
+    padding: 5px;
+    color:Navy;
+    line-height:15px;
+}
+
+.DivDiagram
+{ 
+    background: #F2F2F2;
+	border:solid 1px #88B0CA;
+    margin: 5px;
+    height: 550px;
+    padding: 5px;
+    color:Navy;
+    line-height:15px;
+    overflow:scroll;
+}
+
+.AlertStyle {
+      font-size:x-large;
+      background-color: #FFC080;
+      width: 400px;
+      height: 50px;
+      visibility: hidden;
+    }
+
+.Show { display:inline; }
+.Hide { display:none; }
+
+a img { border: 0px none; }

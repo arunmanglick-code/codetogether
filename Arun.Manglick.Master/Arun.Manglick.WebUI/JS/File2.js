@@ -1,0 +1,4 @@
+﻿function GetMessage()
+{
+    return 'Hello';
+}

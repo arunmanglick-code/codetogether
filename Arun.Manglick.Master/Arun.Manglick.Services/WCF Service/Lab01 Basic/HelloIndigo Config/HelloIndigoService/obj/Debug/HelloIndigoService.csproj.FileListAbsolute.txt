@@ -1,0 +1,9 @@
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab01 Basic\HelloIndigo Config\HelloIndigoService\bin\Debug\HelloIndigoService.dll
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab01 Basic\HelloIndigo Config\HelloIndigoService\bin\Debug\HelloIndigoService.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab01 Basic\HelloIndigo Config\HelloIndigoService\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab01 Basic\HelloIndigo Config\HelloIndigoService\obj\Debug\HelloIndigoService.dll
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab01 Basic\HelloIndigo Config\HelloIndigoService\obj\Debug\HelloIndigoService.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Services\WCF Service\Lab01 Basic\HelloIndigo Config\HelloIndigoService\bin\Debug\HelloIndigoService.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Services\WCF Service\Lab01 Basic\HelloIndigo Config\HelloIndigoService\bin\Debug\HelloIndigoService.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Services\WCF Service\Lab01 Basic\HelloIndigo Config\HelloIndigoService\obj\Debug\HelloIndigoService.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Services\WCF Service\Lab01 Basic\HelloIndigo Config\HelloIndigoService\obj\Debug\HelloIndigoService.pdb

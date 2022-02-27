@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.BusinessProvider", "Arun.Manglick.BusinessProvider\Arun.Manglick.BusinessProvider.csproj", "{21FBE146-F9B1-43D6-879B-41D97AA0C57F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.QuoteWindowsService", "Arun.Manglick.QuoteWindowsService\Arun.Manglick.QuoteWindowsService.csproj", "{1C44F79F-D789-4709-9F28-DDFE31898944}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21FBE146-F9B1-43D6-879B-41D97AA0C57F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FBE146-F9B1-43D6-879B-41D97AA0C57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FBE146-F9B1-43D6-879B-41D97AA0C57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FBE146-F9B1-43D6-879B-41D97AA0C57F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C44F79F-D789-4709-9F28-DDFE31898944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C44F79F-D789-4709-9F28-DDFE31898944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C44F79F-D789-4709-9F28-DDFE31898944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C44F79F-D789-4709-9F28-DDFE31898944}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

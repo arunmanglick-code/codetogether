@@ -1,0 +1,5 @@
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab04 Exception\HelloIndigo Fault\HelloIndigoService\bin\Debug\HelloIndigoService.dll
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab04 Exception\HelloIndigo Fault\HelloIndigoService\bin\Debug\HelloIndigoService.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab04 Exception\HelloIndigo Fault\HelloIndigoService\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab04 Exception\HelloIndigo Fault\HelloIndigoService\obj\Debug\HelloIndigoService.dll
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab04 Exception\HelloIndigo Fault\HelloIndigoService\obj\Debug\HelloIndigoService.pdb

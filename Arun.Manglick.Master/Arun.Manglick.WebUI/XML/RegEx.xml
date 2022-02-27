@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentElement>
+  <RegEx>
+    <Key>AlphaNumeric</Key>
+    <Value>^[a-zA-Z0-9]+$</Value>
+    <Description>Alpha Numeric</Description>
+  </RegEx> 
+  <RegEx>
+    <Key>PositiveInteger</Key>
+    <Value>^0*[1-9]+\d*$</Value>
+    <Description>Positive Integer</Description>
+  </RegEx>
+  <RegEx>
+    <Key>PositiveInteger</Key>
+    <Value>^0*\d*$</Value>
+    <Description>Positive Integer</Description>
+  </RegEx>
+  <RegEx>
+    <Key>ZipCodeRegx</Key>
+    <Value>^(\d{5})$</Value>
+    <Description>ZipCode Regx</Description>
+  </RegEx>
+  <RegEx>
+    <Key>PositiveInteger</Key>
+    <Value>^-[0-9]+$|^[0-9]+$</Value>
+    <Description>Integer</Description>
+  </RegEx>
+  <RegEx>
+    <Key>Negation</Key>
+    <Value>[^\[\]%^]+$</Value>
+    <Description>Negate Characters ][%^</Description>
+  </RegEx>
+  <RegEx>
+    <Key>OneTwoDecimalPlaces</Key>
+    <Value>^0*\d{1,2}(\.\d{1,2})?$</Value>
+    <Description>Positive Integer with Optional One-Two Decimal Places</Description>
+  </RegEx>
+  <RegEx>
+    <Key>Date</Key>
+    <Value>(0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d</Value>
+    <Description>Date format is MM/DD/YYYY</Description>
+  </RegEx>
+</DocumentElement>

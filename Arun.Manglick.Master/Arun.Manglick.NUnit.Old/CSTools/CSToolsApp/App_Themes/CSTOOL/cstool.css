@@ -1,0 +1,633 @@
+body 
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	margin:0 0 0 0;
+	scrollbar-face-color:#C2D3FC;
+	scrollbar-arrow-color:#4D6185;
+	scrollbar-track-color:#EDE9E3;
+	scrollbar-shadow-color:#ffffff;
+	scrollbar-highlight-color:#E8E7DC;
+	scrollbar-3dlight-color:#F6F5F0;
+	scrollbar-darkshadow-Color:#6C92CB;
+	SCROLLBAR-BASE-COLOR:#F6F5F0;
+	background-attachment: fixed;
+	background-image: url(../../img/Page_bg.jpg);
+	background-repeat: repeat-y;
+}
+
+.bodyIframe
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	margin: 0 0 0 0;
+	background-color: #ffffff;
+	background-image: url(../../img/1px.gif);
+}
+
+select
+{	
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;	/*font-weight: bold;*/
+}
+
+.FrmSelectUser /*For making logged in txt bold in drop down*/
+{
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+input
+{
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    padding: 0 0 0 2px;
+}
+
+textarea 
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;	
+}
+.Frmbutton
+{
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    background-color: #DFDFDF;
+    border: 1px solid #909090;
+    cursor: hand;
+}
+.FrmbuttonDisabled
+{
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    background-color: #DFDFDF;
+    border: 1px solid #909090;
+    cursor:default ;
+}
+table 
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+td 
+{	
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+th 
+{	
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight:bold;
+}
+
+.Link
+{
+	color:blue;
+	background-position: center;
+}
+
+.DivBg
+{
+    background-color: #ffffff;
+}
+/*.BottomBg
+{
+    vertical-align: top;
+    margin: 10 0 0 0;
+    background-color: #ffffff;
+}
+*/
+.bodyBg {
+	background-color:#FFFFFF;
+		background-image: url(../../img/1px.gif);
+}
+
+
+.popupHover {
+	background-image:url(img/header-opened.png);
+	background-repeat:repeat-x;
+	background-position:left top;
+	background-color:#F5F7F8;
+}
+
+.popupMenu {
+	position:absolute;
+	visibility:hidden;	
+}
+
+form{
+margin:0 0 0 0px;
+}
+A {
+	COLOR:blue; 
+	TEXT-DECORATION: underline;
+}
+A:hover {
+	TEXT-DECORATION: none;
+}
+/*	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#8AB0C4, EndColorStr=#668EA4);*/
+	
+.LoginGrd {
+		filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#AACDE0, EndColorStr=#FFFFFF);
+	}
+
+.radioButton
+	{				    
+	border:0px;	
+	}
+	.FrmChkBox
+	{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border: 0px solid #909090;
+	}
+
+.LinkBlk
+{
+	color:#000000;
+
+}
+.Hd1 
+	{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	height:20px;
+	padding:0 0 0 5;
+	border-bottom:1px solid #B9B6A6;
+	background-color:#E8E4D0;
+	font-weight:bold;
+
+	}
+	.Hd2 
+	{	
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	height:25px;
+	vertical-align:bottom;
+	padding:0 0 0 0;
+	font-weight:bold;
+	}
+	.Hd3 
+	{	
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight:bold;
+	height:30px;
+	vertical-align:bottom;
+	}
+	.Hd4 
+	{	
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight:bold;
+	color:#2B75C2;
+	}
+.TopBg {
+	background-color: #E8E4D0;
+}
+.ContentBg {
+	vertical-align:top;
+	margin:10 0 0 0;
+	background-color: #ffffff;
+	}
+
+.DateTime
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	text-align:right;
+	padding:0 10 0 0;
+	white-space:nowrap;
+}
+.CopyRight
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	text-align:Left;
+	color:#666666;
+	padding:0 0 5 10;
+}
+/*START fixed header and footer styles*/
+.TSelected
+{
+    background-color:#CAEAFD; 
+    color:#000000;
+    /*border:solid 1px #ff0000;*/
+}
+.AltRow /*Blue*/
+{
+    background-color:#CAEAFD; 
+    color:#000000;
+    padding-left:4px;
+}
+
+.Row2 /*White*/
+{
+    background-color:#FFFFFF; 
+    color:#000000;
+	padding-left:4px;
+}
+
+.Row3 /*BLUE*/
+{
+    background-color:#CAEAFD; 
+    color:#000000;
+		padding-left:4px;
+}
+
+
+.THeader
+{
+	position:relative;
+    background-color:#FDF2DA;
+	top: expression(this.offsetParent.scrollTop-2);
+   	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+	color: #000000;
+    height:22px;
+}
+.THeaderNoScroll
+{
+	position:relative;
+	/*background-image: url(../../img/Theader_bg.gif);*/
+    background-color:#FDF2DA;
+	/*background-repeat: repeat;*/
+	top: expression(this.offsetParent.scrollTop - 2);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+	color: #000000;
+    height:20px;
+}
+th
+{
+    font-weight:bold;
+    border-right:solid 1px #C0C0C0;
+    border-bottom:solid 1px #C0C0C0;
+    text-align:left;
+	padding-left:4px;
+}
+.THeaderNS
+{
+	/*background-color: #006666;*/
+
+    color:#000000; 
+	font-weight:bold;
+    height:20px;
+    background-color:#FDF2DA;
+    /*background-image: url(../../img/Theader_bg.gif);
+	background-repeat: repeat;*/
+
+}
+
+.TBody
+{    
+    /*overflow:auto;*/
+    background-color:#FFFFFF;
+}
+.TDiv
+{
+    overflow:auto; 
+    border:solid 1px #cccccc; 
+}
+.TDiv2
+{
+    overflow:auto;
+    height:410px;
+    border:solid 1px #cccccc; 
+    width:99%;
+	margin:5 0 0 5;
+}
+.TDiv3 /*For single record on details page*/
+{
+    border:solid 1px #cccccc; 
+    width:99%;
+	margin:5 0 0 5;
+}
+
+TBody.TBODY td
+{
+     border:solid 1px #E8E8E8;
+}
+.Step
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight:bold;
+}
+fieldset
+{
+border:solid 1px #558FCB;
+width:98%;
+padding:10 10 10 10;
+margin-left:15px;
+}
+
+.innerFieldset
+{
+ border: solid 1px #CCCCCC;
+color:Black;
+width:98%;
+padding:10 10 10 10;
+/*margin-left:15px;*/
+}
+/*END fixed header and footer styles*/
+.LoginTxt {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+.LoginTxtHd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.SectionBrk {
+	background-attachment: fixed;
+	background-image: url(../../img/section_bg.jpg);
+	background-repeat: repeat-x;
+}
+/*Start new styles for cs tools*/
+.LeftMenuBg
+{
+	BACKGROUND-COLOR: #749CB4;
+	border-right:solid 1px #4D7A93;
+}
+.BreadCrumb
+{
+	BACKGROUND-COLOR: #A4C1D1 ;
+	border-bottom:solid 1px #4D7A93;
+	padding-left:15px;
+	text-align:left;
+}
+.BreadCrumbLink
+{
+color:#000000;
+font-size:8PT;
+font-weight:bold;
+}
+
+.divBrk
+{
+height:0px;
+}
+.legend
+{   
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:bold; 
+}
+
+.innerLegend
+{   
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:bold; 
+    color:#2B75C2;
+}
+/* ######### Style for Drop Down Menu ######### */
+.dropmenudiv{
+position:absolute;
+color:White;
+text-align:left;
+top: 0;
+border: 1px solid #195C82; /*THEME CHANGE HERE*/
+border-bottom-width: 0;
+font:normal 12px Verdana;
+line-height:22px;
+z-index:100;
+background-color: #3D9DD1;
+width: 200px;
+visibility: hidden;
+}
+.dropmenudiv a{
+font-family:verdana;
+color:White;
+font-size:8pt;
+font-weight:normal;
+width: auto;
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid #195C82; /*THEME CHANGE HERE*/
+text-decoration: none;
+font-weight: normal;
+color: white;
+background-color:#226F9B;
+}
+* html .dropmenudiv a{ /*IE only hack*/
+width: 100%;
+color:White;
+}
+.dropmenudiv a:hover
+{ 
+background: url(../../img/chromebg-over.gif) center center repeat-x;
+color:White;
+}
+.navOverMsg /*MESSAGE CENTER*/ {
+    background: url(../../img/t_msg_center_o.gif);
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal;
+    width:127px;
+    height:23px; 
+}
+.navOutMsg {
+    background: url(../../img/t_msg_center.gif); 
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal;
+    width:127px;
+    height:23px;
+}
+.navMsg {
+    background: url(../../img/t_msg_center.gif); 
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal;
+    width:127px;
+    height:23px;
+}
+.navOverClist /*CUSTOMER LIST*/ {
+    background: url(../../img/t_customer_list_o.gif); 
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal;
+    width:115px;
+    height:23px;
+}
+
+.navOutClist {
+   background: url(../../img/t_customer_list.gif);
+   font-family:verdana;
+   font-size:8pt;
+   font-weight:normal;
+    width:115px;
+    height:23px; 
+}
+.navClist {
+   background: url(../../img/t_customer_list.gif);
+   font-family:verdana;
+   font-size:8pt;
+   font-weight:normal;
+    width:115px;
+    height:23px; 
+}
+
+.navOverSearch /*SEARCH*/ {
+    background: url(../../img/t_search_o.gif); 
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal;
+    width:80px;
+    height:23px;
+}
+.navOutSearch {
+    background: url(../../img/t_search.gif);
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal;
+    width:80px;
+    height:23px;
+}
+.navSearch {
+    background: url(../../img/t_search.gif);
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal; 
+    width:80px;
+    height:23px; 
+}
+
+
+.navOverTools /*TOOLS*/ {
+    background: url(../../img/t_tools_o.gif); 
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal;
+    width:79px;
+    height:23px;
+}
+.navOutTools {
+   background: url(../../img/t_tools.gif);
+   font-family:verdana;
+   font-size:8pt;
+   font-weight:normal; 
+       width:79px;
+    height:23px;
+}
+.navTools {
+    background: url(../../img/t_tools.gif);
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal; 
+    width:79px;
+    height:23px;
+    text-decoration:none;
+}
+
+.navOverRep /*REPORT*/ {
+    background: url(../../img/t_rep_o.gif); 
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal;
+        width:81px;
+    height:23px;
+}
+.navOutRep {
+   background: url(../../img/t_rep.gif);
+   font-family:verdana;
+   font-size:8pt;
+   font-weight:normal; 
+    width:81px;
+    height:23px;
+}
+.navRep {
+   background: url(../../img/t_rep.gif);
+   font-family:verdana;
+   font-size:8pt;
+   font-weight:normal; 
+           width:81px;
+    height:23px;
+}
+.navOverSysAdmin /*System Admin*/ {
+    background: url(../../img/t_system_admin_o.gif); 
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal;
+    width:117px;
+    height:23px;
+}
+.navOutSysAdmin {
+   background: url(../../img/t_system_admin.gif);
+   font-family:verdana;
+   font-size:8pt;
+   font-weight:normal; 
+       width:117px;
+    height:23px;
+}
+.navSysAdmin {
+    background: url(../../img/t_system_admin.gif);
+    font-family:verdana;
+    font-size:8pt;
+    font-weight:normal; 
+    width:117px;
+    height:23px;
+    text-decoration:none;
+}
+.Rdinput
+{
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    padding: 0 0 0 2px;
+    border: solid 0px #ffffff;
+}
+/*END Drop Down menu styles*/
+.MessageTDiv /*Controls the height of div scroll*/
+{
+	overflow: auto;	
+    top: expression(this.offsetParent.scrollTop);
+	border: solid 1px #cccccc;
+	width: 99%;
+	margin: 5 0 0 5;
+}
+.THeader
+{
+	position: relative;
+	top: expression(this.offsetParent.scrollTop - 2);
+    color:#000000;
+    height:22px;
+    font-weight:bold;
+    background-color:#FDF2DA;
+}
+.GridHeader
+{
+	background-color: #ffffff;
+	font-weight: normal;
+	height: 22px;
+	border-right: solid 1px #C0C0C0;
+	border-bottom: solid 1px #C0C0C0;
+	text-align: left;
+	padding-left: 4px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+.fieldsetBlue
+{
+    border: solid 1px #558FCB;
+    width: 98%;
+    /*font-size:9pt;*/
+    margin-left: 15px;
+    font-weight: bold;
+}
+.fieldsetCBlue
+{
+    border: solid 1px #558FCB;
+    width: 100%;
+    font-weight: bold;
+    margin-left:0px;
+}
+/*End new styles for cs tools*/

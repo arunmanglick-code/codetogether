@@ -1,0 +1,103 @@
+﻿<navigation:Page xmlns:dataFormToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit"
+                 xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"
+                 x:Class="Arun.Manglick.Silverlight.Views.DataControls.DataFormTemplate"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+                 xmlns:convertor="clr-namespace:Arun.Manglick.Silverlight.Convertors"
+                 mc:Ignorable="d"
+                 d:DesignWidth="640"
+                 d:DesignHeight="480"
+                 Title="Home"
+                 Style="{StaticResource PageStyle}">
+    <StackPanel>
+        <dataFormToolkit:DataForm x:Name="productDataForm"
+                                  AutoCommit="False"
+                                  AutoEdit="False"
+                                  CancelButtonContent="Cancel Me!"
+                                  CommitButtonContent="Save Me!"
+                                  Header="My First Rich Data Form"
+                                  AutoGenerateFields="False"                                   
+                                  CommandButtonsVisibility="All"
+                                  AddingNewItem="productDataForm_AddingNewItem"
+                                  EditEnded="productDataForm_EditEnded"                                  
+                                  DeletingItem="productDataForm_DeletingItem">
+            <dataFormToolkit:DataForm.ReadOnlyTemplate>
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch">
+                        <dataFormToolkit:DataField  Label="Id">
+                            <TextBlock Text="{Binding Path=ProductId}"></TextBlock>
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="Module Number">
+                            <TextBlock Text="{Binding Path=ModelNumber, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="Module Name">
+                            <TextBlock Text="{Binding Path=ModelName, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="UnitCost">
+                            <TextBlock Text="{Binding Path=UnitCost, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="Description">
+                            <TextBlock Text="{Binding Path=Description, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                    </StackPanel>
+                </DataTemplate>
+            </dataFormToolkit:DataForm.ReadOnlyTemplate>
+            <dataFormToolkit:DataForm.EditTemplate>
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch">
+                        <dataFormToolkit:DataField  Label="Id">
+                            <TextBox Text="{Binding Path=ProductId}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="Module Number">
+                            <TextBox Text="{Binding Path=ModelNumber, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="Module Name">
+                            <TextBox Text="{Binding Path=ModelName, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="UnitCost">
+                            <TextBox Text="{Binding Path=UnitCost, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="Description">
+                            <StackPanel>
+                                <TextBox x:Name="txtDesc" Text="{Binding Path=Description, Mode=TwoWay}" Visibility="Collapsed" />
+                                <ListBox x:Name="lstColors" SelectionChanged="lstColors_SelectionChanged">
+                                    <ListBoxItem Content="Green"></ListBoxItem>
+                                    <ListBoxItem Content="Blue"></ListBoxItem>
+                                    <ListBoxItem Content="Yellow"></ListBoxItem>
+                                    <ListBoxItem Content="Red"></ListBoxItem>
+                                </ListBox>
+                            </StackPanel>
+                        </dataFormToolkit:DataField>
+                    </StackPanel>
+                </DataTemplate>
+            </dataFormToolkit:DataForm.EditTemplate>
+            <dataFormToolkit:DataForm.NewItemTemplate>
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch">
+                        <dataFormToolkit:DataField  Label="Id">
+                            <TextBox Text="{Binding Path=ProductId}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="Module Number">
+                            <TextBox Text="{Binding Path=ModelNumber, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="Module Name">
+                            <TextBox Text="{Binding Path=ModelName, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="UnitCost">
+                            <TextBox Text="{Binding Path=UnitCost, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                        <dataFormToolkit:DataField  Label="Description">
+                            <TextBox Text="{Binding Path=Description, Mode=TwoWay}" />
+                        </dataFormToolkit:DataField>
+                    </StackPanel>
+                </DataTemplate>
+            </dataFormToolkit:DataForm.NewItemTemplate>
+        </dataFormToolkit:DataForm>
+    </StackPanel>
+</navigation:Page>

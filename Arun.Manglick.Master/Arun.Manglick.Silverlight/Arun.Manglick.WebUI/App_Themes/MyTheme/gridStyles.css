@@ -1,0 +1,143 @@
+﻿.Grid 
+{ 
+  background-color: #FFFFFF; 
+  border: 1px solid #919191; 
+  cursor: default;
+}
+
+.HeadingCell 
+{ 
+  background-image: url(images/header_bg.gif);   
+  padding: 3px;
+  padding-bottom: 3px;
+  padding-right: 1px;
+}
+
+.HeadingCellHover 
+{ 
+  background-image: url(images/header_hoverBg.gif);   
+  padding: 3px;
+  padding-bottom: 3px;
+  padding-right: 1px;
+}
+
+.HeadingCellActive
+{ 
+  background-image: url(images/header_activeBg.gif);   
+  padding: 3px;
+  padding-bottom: 3px;
+  border-right: 1px solid #808099; 
+  padding-right: 0px;
+}
+
+.HeadingCellText
+{
+  font-family: MS Sans Serif; 
+  font-size: 10px; 
+  padding-right: 5px;
+}
+
+.Row 
+{ 
+  background-color: #FFFFFF; 
+}
+
+.Row td.DataCell 
+{ 
+  cursor: default;
+  padding: 3px; 
+  padding-top: 2px; 
+  padding-bottom: 2px; 
+  font-family: MS Sans Serif; 
+  font-size: 10px; 
+} 
+
+.SortedDataCell 
+{ 
+  background-color: #F5F5F5; 
+} 
+
+
+.Row td.LastDataCell 
+{ 
+  background-color: #EFEFF4; 
+} 
+
+.SelectedRow 
+{ 
+}
+
+.SelectedRow td.DataCell 
+{ 
+  background-color: #FFEEC2; 
+  padding: 2px; 
+  padding-left: 3px; 
+  padding-top: 1px; 
+  padding-bottom: 1px; 
+  font-family: MS Sans Serif; 
+  font-size: 10px; 
+  border-bottom: 1px solid #4B4B6F; 
+  border-top: 1px solid #4B4B6F; 
+  border-right: 0px; 
+}
+
+.SelectedRow td.FirstDataCell 
+{ 
+  background-color: #FFEEC2; 
+  border-left: 1px solid #4B4B6F; 
+  border-right: 0px; 
+  padding-left: 2px; 
+  padding-right: 3px; 
+}
+
+.SelectedRow td.LastDataCell 
+{ 
+  background-color: #FFEEC2; 
+  border-right: 1px solid #4B4B6F; 
+}
+
+.ScrollBar
+{
+  background-image: url(images/scroller/scroller_bg.gif); 
+}
+
+.ScrollGrip
+{
+  background-image: url(images/scroller/scroll_gripBg.gif); 
+}
+
+.ScrollPopup
+{
+  background-color: #FFFFFF; 
+  border: 1px solid #666666;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  height: 23px;
+}
+.SliderPopup
+{
+  background-color: #ffffff; 
+  border: 1px solid #4B4B6F; 
+  border-top-color: #9495A2; 
+  border-left-color: #9495A2; 
+  font-size: 11px; 
+  font-family: Verdana;
+  color: #000000;
+}
+
+
+/* Class for scroll bars start */
+
+.ScrllBarStyle
+{
+	scrollbar-base-color: #89DDF9;
+	scrollbar-arrow-color: #000000;
+	scrollbar-3dlight-color: #CFEFF9;
+	scrollbar-darkshadow-color: #75B9D6;
+	scrollbar-face-color: #A3C9ED;
+	scrollbar-highlight-color: #AEE7F9;
+	scrollbar-shadow-color: #5F94C6;
+	scrollbar-track-color: #BCCED6;
+}
+
+/* Class for scroll bars end */

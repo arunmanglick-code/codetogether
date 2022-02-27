@@ -1,0 +1,5 @@
+D:\Arun.Manglick.PRJ\DIPL\Project Apps\ICLSP2\Code\PrebuiltBinaries\CTLS.ICLS.UX.Data.dll
+D:\Arun.Manglick.PRJ\DIPL\Project Apps\ICLSP2\Code\PrebuiltBinaries\CTLS.ICLS.UX.Data.pdb
+D:\Arun.Manglick.PRJ\DIPL\Project Apps\ICLSP2\Code\Source\CTLS.ICLS.UX\CTLS.ICLS.UX.Data\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.PRJ\DIPL\Project Apps\ICLSP2\Code\Source\CTLS.ICLS.UX\CTLS.ICLS.UX.Data\obj\Debug\CTLS.ICLS.UX.Data.dll
+D:\Arun.Manglick.PRJ\DIPL\Project Apps\ICLSP2\Code\Source\CTLS.ICLS.UX\CTLS.ICLS.UX.Data\obj\Debug\CTLS.ICLS.UX.Data.pdb

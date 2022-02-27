@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.MVC.NerdDinner", "Arun.Manglick.MVC.NerdDinner\Arun.Manglick.MVC.NerdDinner.csproj", "{8DF1EFCE-2073-4A0B-B423-27DBF954489B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.MVC.NerdDinner.Tests", "Arun.Manglick.MVC.NerdDinner.Tests\Arun.Manglick.MVC.NerdDinner.Tests.csproj", "{A584288D-4167-40AA-A511-FD0E3E44971D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DF1EFCE-2073-4A0B-B423-27DBF954489B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF1EFCE-2073-4A0B-B423-27DBF954489B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF1EFCE-2073-4A0B-B423-27DBF954489B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF1EFCE-2073-4A0B-B423-27DBF954489B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A584288D-4167-40AA-A511-FD0E3E44971D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A584288D-4167-40AA-A511-FD0E3E44971D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A584288D-4167-40AA-A511-FD0E3E44971D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A584288D-4167-40AA-A511-FD0E3E44971D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

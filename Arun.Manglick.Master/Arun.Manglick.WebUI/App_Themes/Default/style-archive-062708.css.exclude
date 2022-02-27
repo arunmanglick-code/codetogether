@@ -1,0 +1,851 @@
+﻿body
+{
+	padding: 0px;
+	margin: 0px;
+	font-size: 10px;
+}
+
+a
+{
+	text-decoration: underline;
+}
+a:link
+{
+	color: #284E98;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #284E98;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #284E98;
+	text-decoration: underline;
+}
+a:active
+{
+	color: #284E98;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#tdHeaderLinks a
+{
+	font-family: Verdana, Arial;
+	font-weight:normal;
+	font-size:7pt;
+	text-decoration:underline;
+}
+
+table
+{
+	padding: 0px;
+	margin: 0px;
+	font-size: 10px;
+}
+
+#tblObjectDetails td {
+    padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px; }
+
+#tblObjectDetails th
+{
+	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    background-color:#E1E9EC;
+}
+
+/*--Master page framework -----------------------------*/
+.divmaster
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+.tablemaster
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	border: 0px;
+}
+
+/*--Header -----------------------------*/
+.appheader
+{
+	padding: 5px;
+	font-weight: bold;
+	margin: 0px;
+	vertical-align: middle;
+	overflow: hidden;
+	width: 100%;
+	color: #999999;
+	font-family: Arial, Verdana;
+	height: 40px;
+	background: #F2F2F2;
+	text-align: left;
+	border-bottom: 1px solid #999999;
+}
+
+.appheadernoborder
+{
+	padding: 5px;
+	font-weight: bold;
+	margin: 0px;
+	vertical-align: middle;
+	overflow: hidden;
+	width: 100%;
+	color: #999999;
+	font-family: Arial, Verdana;
+	height: 40px;
+	background: #F2F2F2;
+	text-align: left;
+}
+
+/*--Footer -----------------------------*/
+.footer
+{
+	border-top: 3px solid #f7f7f7;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: middle;
+	font-family: Verdana, Arial;
+	font-size: 9px;
+	height: 40px;
+	background-color: #ffffff;
+	text-align: center;
+	border-top: 2px solid #99BDCB;
+}
+
+
+/*--Left navigation space and tree navigation-----------------------------*/
+.leftnavigation
+{
+	border-right: 2px solid #99BDCB;
+	background: #ffffff;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 4px;
+	margin: 0px;
+	width: 175px;
+	vertical-align: top;
+}
+
+.TreeNavigation
+{
+	font-size: 9pt;
+	font-family: Arial, Verdana, Sans-Serif;
+	left: 0px;
+	vertical-align: top;
+	color: #999999;
+	position: relative; /*top: 2px; */
+	background-color: transparent;
+	text-align: left;
+	width: 175px; /*line-height: 8pt;*/
+}
+/*.TreeNavigation a { }
+.TreeNavigation a:link {color:#000033;}
+.TreeNavigation a:visited {color:#000099;}
+.TreeNavigation a:hover {color:Red}
+.TreeNavigation a:active {color:Green;}*/
+.SelectedNode
+{
+	font-weight: bold;
+}
+.RootNode
+{
+	font-family: Arial;
+	font-size: 9pt; /*line-height: 8pt;*/
+}
+.ParentNode
+{
+	font-family: Arial;
+	font-size: 9pt; /*line-height: 8pt;*/
+}
+.HoverNode
+{
+}
+.LeafNode
+{
+	font-family: Arial;
+	font-size: 9pt; /*line-height: 8pt;*/
+}
+.Node
+{
+	font-family: Arial;
+	font-size: 9pt; /*line-height: 8pt;*/
+}
+
+/*--Workspace -----------------------------*/
+.workspace
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	background-color: white;
+	vertical-align: top;
+}
+
+/*--Breadcrumb trail navigation in the workspace -----------------------------*/
+.breadcrumb
+{
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background: #F2F2F2;
+	height: 25px;
+	padding-left: 8px;
+	border-bottom: solid 2px #E4E8EA;
+}
+/*.breadcrumb  a { }
+.breadcrumb  a:link {color:#000033;}
+.breadcrumb  a:visited {color:#000099;}
+.breadcrumb  a:hover {color:Red}
+.breadcrumb  a:active {color:Green;}*/
+
+.backbutton /*cell for back button formatting with class=button */
+{
+	background: #F2F2F2;
+	height: 25px;
+	border-bottom: solid 2px #E4E8EA;
+}
+
+.mdelogo
+{
+	color: #CB8E34;
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	height: 25px;
+}
+
+/*---Sits above task space - this is the name of the active task ----*/
+.title
+{
+	color: #CB8E34;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	border-bottom: solid 1px #E5A335;
+	height: 25px;
+	font-style: italic;
+}
+
+.titleInner
+{
+	color: Green;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	height: 25px;
+	font-style: italic;
+}
+
+.titlelogin
+{
+	color: #CB8E34;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	border-bottom: solid 2px #E5A335;
+	height: 27px;
+	font-style: italic;
+}
+
+.titleloginnew
+{
+	color: #000000;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	height: 27px;
+	font-style: normal;
+}
+
+
+/*-- used for NEGATIVE validation messages--*/
+.validation-error
+{
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 8pt;
+	padding-bottom: 1px;
+	vertical-align: middle;
+	color: red;
+	padding-top: 1px;
+	font-family: Arial;
+	list-style-type: none;
+	background-color: white;
+	text-align: left;
+}
+
+.validation-error-select
+{
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 8pt;
+	padding-bottom: 1px;
+	vertical-align: middle;
+	color: red;
+	padding-top: 1px;
+	font-family: Arial;
+	list-style-type: none;
+	background-color: white;
+	text-align: left;
+	display:none;
+}
+
+/*-- used for POSITIVE validation messages--*/
+.validation-no-error
+{
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 8pt;
+	padding-bottom: 1px;
+	vertical-align: middle;
+	color: Navy;
+	padding-top: 1px;
+	font-family: Arial;
+	list-style-type: none;
+	background-color: white;
+	text-align: left;
+}
+
+/*--Holds the tabs------------*/ 
+.tabtable {
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	/*background-color:#F7F7F7;*/
+	background-color:#FFFFFF;
+	/*width:100%; */}
+
+.tabtable-selected-tab {
+   padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align:middle;
+	text-align: center;
+	background-color:#FFFFFF;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    width: 125px;
+    border-top: 1px solid #00529b; 
+    border-right: 1px solid #00529b; 
+    border-left: 1px solid #00529b; }
+ 
+.tabtable-unselected-tab {
+   padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align:middle;
+	text-align: center;
+	background-color:#00529b;
+	color: #ffffff;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	width: 125px; }   
+
+/*--Forms within the workspace -----------------------------*/
+/*--Holds the table that formats the form------------*/
+#divForm
+{
+	padding: 2px;
+	font-family: Arial, Verdana, Sans-Serif; /*font-size:10pt;*/
+	line-height: 1em;
+}
+
+/*--Holds the entire interaction element from primary form to button row------------*/
+#divtable
+{
+	padding: 0px;
+	margin: 0px;
+	border:solid 0px blue;
+}
+#divtable td
+{
+	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align: middle;
+	border:solid 0px red;
+}
+#divtable td #buttonTable td, #divtable td #buttonTable2 td
+{
+	padding: 0px;
+	border:solid 0px green;
+}
+
+
+/*--Holds the primary form------------*/
+#formtable
+{
+	width: 100%;
+	padding: 0px;
+	margin: 0px; /*background-color:#F7F7F7;*/
+	background-color: #FFFFFF;
+}
+#formtable td
+{
+	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+#headertable
+{
+	width: 510px;
+	padding: 0px;
+	margin: 0px; 
+	background-color: #FFFFFF;
+}
+/*--TASK Header------------*/
+.requiredfieldmessage
+{
+	/* *Required Fields */
+	text-align: left;
+	font-family: inherit;
+	font-size: 9px;
+	font-style: italic;
+	line-height: inherit;
+}
+
+.asterisk
+{
+	font-family: inherit;
+	font-size: 9px;
+	color: red;
+}
+
+.formheader
+{
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	background-color: #E1E9EC;
+	line-height: 18px;
+	padding-left: 5px;
+}
+
+/*--THIS IS THE ASTERISK FORMATTING FOR REQUIRED FIELDS------------*/
+.requiredcolumn
+{
+	text-align: right;
+	width: 10px;
+	font-family: Verdana, Arial;
+	font-size: 9px;
+	color: red;
+}
+
+/*--Label tds------------*/
+.labelcolumn
+{
+	text-align: left;
+	font-family: Verdana, Arial;
+	font-size: 9px;
+	line-height: .95em;
+}
+
+.labelterms
+{
+	text-align: left;
+	font-family: Verdana, Arial;
+	font-size: 11px;
+}
+
+.labellogin
+{
+	text-align: left;
+	font-family: Verdana, Arial;
+	font-size: 12px;
+}
+
+.labelcolumnbold
+{
+	text-align: left;
+	font-family: Verdana, Arial;
+	font-size: 9px;
+	font-weight: bold;
+	line-height: .95em;
+}
+/*--Input field tds------------*/
+.inputcolumn
+{
+	text-align: left;
+	font-family: Arial;
+	font-size: 9px;
+}
+
+.inputcolumnRight
+{
+	text-align: right;
+	font-family: Arial;
+	font-size: 9px;
+}
+/*--Input fields, all types------------*/
+.inputfield
+{
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: #F2F2F2;
+	border: solid 1px #88B0CA;
+}
+
+
+/*--review versions for text only views, no input fields used --*/
+.inputcolumnreview
+{
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 9px;
+	font-weight: bold;
+}
+.labelcolumnreview
+{
+	text-align: left;
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	line-height: .95em;
+	border-left: 1px solid #999999;
+}
+
+/* div.checkboxlist {
+    width: 300px;
+    height: 100px;
+    overflow:scroll; } */
+
+/* Commented as new Grid Styles added at the end..*/
+/*GRIDS - REVIEW WHEN GRID SOLUTION IS IN PLACE */
+/*div.largegrid {
+    width: 700px;
+    height: 250px;
+    overflow:scroll; }
+ div.mediumgrid {
+    width: 500px;
+    height: 250px;
+    overflow:scroll; }   
+div.smallgrid {
+    width: 250px;
+    height: 250px;
+    overflow:scroll; }
+.gridcell{
+    border-right: 1px solid #e8e8e8;
+    border-left: 1px solid #999999;
+    align: left;
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:9px; }
+.grid {
+    width: 100%;
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:8px;
+    padding: 0px; 
+	margin: 0px; }
+.grid th {
+    font-family:Verdana, Arial, Sans-Serif;
+    padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:baseline;
+	font-weight:bold;
+	font-size:9px;
+	border: 1px solid #c8c8c8;
+	border-collapse:collapse;
+	background-color: #e8e8e8; }
+.grid td {
+    font-family:Verdana, Arial, Sans-Serif;
+    padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	font-size:9px;
+	border: 1px solid #c8c8c8;
+	border-collapse:collapse; }
+	*/
+/*END GRIDS STYLES*/
+/* END Commented as new Grid Styles added at the end..*/
+
+/* for buttons at bottom of screen(task-level buttons) */
+.buttoncell
+{
+	/*this is applied to the cell holding the buttontable*/ /*text-align: left;     background-color: #e8e8e8;*/
+}
+.buttontable, .buttontable2
+{
+	/*three-cell table holding the button*/ /*-CLOSE- -HISTORY- -RESET-  |  -DELETE- -NEW-   | -SAVE- or -SEARCH- */
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.button
+{
+	/* DO NOT APPLY WIDTHS TO BUTTONS */
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background: #B5C2C7;
+	border: solid 1px #70868F;
+	color: #000000;
+	font-weight: bold;
+}
+
+.buttonlogin
+{
+	/* DO NOT APPLY WIDTHS TO BUTTONS */
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background: #000099;
+	border: solid 1px #70868F;
+	color: #CCFFFF;
+	font-weight: bold;
+}
+
+.button[disabled]
+{
+	/* DO NOT APPLY WIDTHS TO BUTTONS */
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background-color: #CFDEE4;
+	border: solid 1px #70868F;
+	color: #ACA899;
+	font-weight: bold;
+}
+
+.Splitter
+{
+	cursor: e-resize;
+	width: 2px;
+	background-color: Gray;
+	height: 100%;
+}
+.FullScreen
+{
+	height: 600px;
+}
+
+/* mmmmmmmmmmmmmmmmmmmmmmm -- START GRID STYLES --  mmmmmmmmmmmmmmmmmmmmmmmm */
+
+.Grid
+{
+	border: solid 1px #BEC6C8;
+	padding: 3px 3px 3px 3px;
+}
+
+/*.Grid td
+{
+	border: solid 3px #FFFFFF;
+	margin: 3px 3px 3px 3px;
+	font-family: Arial;
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+}*/
+
+/*GRIDS - REVIEW WHEN GRID SOLUTION IS IN PLACE */
+ div.largegrid {
+    width: 770px;
+    height: 350px;
+    overflow:scroll; }
+ div.mediumgrid {
+    width: 500px;
+    height: 250px;
+    overflow:scroll; }   
+div.smallgrid {
+    width: 250px;
+    height: 250px;
+    overflow:scroll; }
+
+.gridcell{
+    /*border-right: 1px solid #e8e8e8;
+    border-left: 1px solid #999999;
+    align: left;*/
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:9px; }
+
+.GridHeader
+{
+	background-color: #CAD2D4;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	line-height: 18px;
+	border-bottom: solid 1px #FFFFFF;
+	position: relative;
+}
+
+.GridHeader1
+{
+	background-color: #CAD2D4;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	line-height: 18px;
+	border-bottom: solid 1px #FFFFFF;
+	/*position: relative;*/
+}
+
+.GridHeader a, .GridHeader a:active, .GridHeader a:visited
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridHeader a:hover
+{
+	text-decoration: underline;
+}
+
+.GridItem, .GridAltItem
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	font-weight: normal;
+	padding: 3px 3px 3px 3px;
+	border: solid 1px #FFFFFF;
+}
+.GridItem
+{
+	background-color: #EFEFEF;
+}
+.GridAltItem
+{
+	background-color: #F7F7F7;
+}
+.GridItem a
+{
+	text-decoration: underline;
+	color: #456AAE;
+}
+
+.GridItem a:hover, .GridItem a:active, .GridItem a:visited
+{
+	text-decoration: underline;
+}
+.GridAltItem a
+{
+	text-decoration: underline;
+	color: #456AAE;
+}
+
+.GridAltItem a:, .GridAltItem a:active, .GridAltItem a:visited
+{
+	text-decoration: underline;
+}
+.GridPager
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #000000;
+	font-weight: normal;
+	background-color: #CAD2D4;
+	text-align: right;
+}
+
+
+/* mmmmmmmmmmmmmmmmmmmmmmm -- STOP GRID STYLES --  mmmmmmmmmmmmmmmmmmmmmmmm */
+
+
+/* -------- Pagination element -------- */
+.results-returned
+{
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+	color: #102162;
+	/*display: inline;*/
+	font-size: 9px;
+}
+.results-pagination
+{
+	text-align: right;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+	color: #102162;
+	background-color: #e8e8e8;
+	padding: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #dddddd;
+	margin: 0;
+	/*display: inline;*/
+	font-size: 9px;
+}
+
+
+.results-pagination a
+{
+	font-family: Arial, sans-serif;
+	font-size: 9px;
+	background-color: #e8e8e8;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+.results-pagination a:visited
+{
+	color: #666666;
+	background-color: #e8e8e8;
+	text-decoration: underline;
+}
+.results-pagination a:hover
+{
+	color: #ff0000;
+	background-color: #e8e8e8;
+	text-decoration: underline;	
+}
+.results-pagination a:link
+{
+	color: #102162;
+	background-color: #e8e8e8;
+	text-decoration: underline;
+}
+
+.results-pagination a:active
+{
+	color: #ff0000;
+	background-color: #e8e8e8;
+	text-decoration: underline;
+}
+/*
+.results-pagination-current-page
+{
+	font-family: Arial, sans-serif;
+	font-size: 9px;
+	background-color: #e8e8e8;
+	text-decoration: none;
+	font-weight: bold;
+}*/
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+.divContainerClass
+{
+	overflow: auto;
+	height: 250px;
+}
+
+.divPaginationContainer
+{
+	padding-left: 0px;
+	padding-bottom: 0px;
+    margin: 0px; 
+    overflow: auto;
+    padding-top: 0px;    	
+}

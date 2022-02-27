@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MDEMenu Text="Root">
+  <Level1 Text="Code Snippets" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Grid View" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="Other" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="ATLAS Cafe" Secure="false" Flag="">
+    <Level2 Text="ScriptManager" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="ScriptManager APIs" Secure="false" Flag="~/Home.aspx"></Level3>
+    </Level2>
+    <Level2 Text="UpdatePanel" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="UpdatePanel Introduction" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Single UpdatePanel" Secure="false" Flag="~/ATLAS Cafe/UpdatePanelsAndTriggers/SingleUpdatePanel.aspx"></Level4>
+        <Level4 Text="Multiple UpdatePanel" Secure="false" Flag="~/ATLAS Cafe/UpdatePanelsAndTriggers/MultipleUpdatePanel.aspx"></Level4>
+        <Level4 Text="Nested UpdatePanel" Secure="false" Flag="~/ATLAS Cafe/UpdatePanelsAndTriggers/NestedUpdatePanel.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Controlling UpdatePanel" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Disabling Automatic Triggers" Secure="false" Flag="~/ATLAS Cafe/ControllingUpdatePanelsAndTriggers/DisablingAutomaticTriggers.aspx"></Level4>
+        <Level4 Text="Programmatically Adding Triggers" Secure="false" Flag="~/ATLAS Cafe/ControllingUpdatePanelsAndTriggers/ProgrammaticallyAddingTriggers.aspx"></Level4>
+        <Level4 Text="UpdatePanel FromAnother UpdatePanel Trigger" Secure="false" Flag="~/ATLAS Cafe/ControllingUpdatePanelsAndTriggers/UpdatePanelFromAnotherUpdatePanelTrigger.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Cancelling-Controlling Asynchronous Postback" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Cancelling New Postback" Secure="false" Flag="~/ATLAS Cafe/Cancelling_Controlling_AsynchronousPostback/CancelNewAsynchPostback.aspx"></Level4>
+        <Level4 Text="Abort Existing Asynch Postback" Secure="false" Flag="~/ATLAS Cafe/Cancelling_Controlling_AsynchronousPostback/AbortExistingAsynchPostback.aspx"></Level4>
+        <Level4 Text="Giving Precedence" Secure="false" Flag="~/ATLAS Cafe/Cancelling_Controlling_AsynchronousPostback/GivingPrecedence.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Error Handling" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Customize error handling - Custom MessageBox " Secure="false" Flag="~/ATLAS Cafe/Error Handling/CustomizeErrorHandling_CustomMsgBox.aspx"></Level4>
+        <Level4 Text="Customize error handling - Default MessageBox " Secure="false" Flag="~/ATLAS Cafe/Error Handling/CustomizeErrorHandling_DefaultMsgBox.aspx"></Level4>
+      </Level3>
+      <Level3 Text="UpdatePanel With Master Pages" Secure="false" Flag="~/Home.aspx"></Level3>
+      <Level3 Text="UpdatePanel With User Control" Secure="false" Flag="~/Home.aspx"></Level3>
+    </Level2>
+    <Level2 Text="UpdateProgress" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="Introduction" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="UpdateProgress Introduction" Secure="false" Flag="~/ATLAS Cafe/UpdateProgress Control/Introduction/SingleProgressControl.aspx"></Level4>
+        <Level4 Text="Multiple Progress Control" Secure="false" Flag="~/ATLAS Cafe/UpdateProgress Control/Introduction/MultipleProgressControl.aspx"></Level4>
+      </Level3>
+      <Level3 Text="Cancelling And Controlling" Secure="false" Flag="~/Home.aspx">
+        <Level4 Text="Abort Existing Asynch Postback" Secure="false" Flag="~/ATLAS Cafe/UpdateProgress Control/CancellingAndControlling/AbortExistingAsynchPostback.aspx"></Level4>
+        <Level4 Text="Force To Display UpdateProgress-1" Secure="false" Flag="~/ATLAS Cafe/UpdateProgress Control/CancellingAndControlling/ForceToDisplayUpdateProgress-1.aspx"></Level4>
+        <Level4 Text="Force To Display UpdateProgress-2" Secure="false" Flag="~/ATLAS Cafe/UpdateProgress Control/CancellingAndControlling/ForceToDisplayUpdateProgress-2.aspx"></Level4>
+      </Level3>
+    </Level2>
+    <Level2 Text="Extenders" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="CollapsiblePanelExtender" Secure="false" Flag="~/Home.aspx"/>
+      <Level3 Text="Confirm" Secure="false" Flag="~/Home.aspx"/>
+      <Level3 Text="DragPanel" Secure="false" Flag="~/Home.aspx"/>
+      <Level3 Text="ModalPopup" Secure="false" Flag="~/Home.aspx"/>
+      <Level3 Text="Popup" Secure="false" Flag="~/Home.aspx"/>
+      <Level3 Text="UpdateProgress" Secure="false" Flag="~/Home.aspx"/>
+      <Level3 Text="ValidatorCallOut" Secure="false" Flag="~/Home.aspx"/>
+    </Level2>    
+  </Level1>
+  <Level1 Text="JS to ServerSide Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Web Services" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="Simple WebService" Secure="false" Flag="~/JS to ServerSide Cafe/Web Services/SimpleWebService.aspx"/>
+      <Level3 Text="Complex WebService" Secure="false" Flag="~/JS to ServerSide Cafe/Web Services/ComplexWebService.aspx"/>
+    </Level2>
+    <Level2 Text="PageMethods Technique" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="Simple 1" Secure="false" Flag="~/JS to ServerSide Cafe/PageMethods Technique/Simple1.aspx"></Level3>
+      <Level3 Text="Simple 2" Secure="false" Flag="~/JS to ServerSide Cafe/PageMethods Technique/Simple2.aspx"></Level3>
+      <Level3 Text="Advanced" Secure="false" Flag="~/JS to ServerSide Cafe/PageMethods Technique/Advanced.aspx"></Level3>
+    </Level2>
+    <Level2 Text="ClientScriptManager Technique" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="Timer" Secure="false" Flag="~/JS to ServerSide Cafe/CallbackEventReference/Timer.aspx"></Level3>
+      <Level3 Text="Drop Down" Secure="false" Flag="~/JS to ServerSide Cafe/CallbackEventReference/DropDown.aspx"></Level3>
+    </Level2>
+    <Level2 Text="PostBack Technique" Secure="false" Flag="~/Home.aspx">
+      <Level3 Text="Client Postback" Secure="false" Flag="~/JS to ServerSide Cafe/ClientPostBack/DoPostBack.aspx"></Level3>
+    </Level2>
+    <Level2 Text="Core AJAX Technique" Secure="false" Flag="~/Home.aspx"></Level2>
+    <Level2 Text="AJAX DLL Technique" Secure="false" Flag="~/Home.aspx"></Level2>
+  </Level1>
+  <Level1 Text="JSON Serialization" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="JavaScriptSerializer" Secure="false" Flag="~/JSON Serialization/JavaScriptSerializer.aspx" />
+    <Level2 Text="AJAX.JSONSerialization" Secure="false" Flag="http://localhost/AJAX.JSONSerialization/Default.aspx" />
+  </Level1>
+  <Level1 Text="Few More" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Handle OnLoad Event" Secure="false" Flag="~/ATLAS Cafe/FewMore/HandleLoadEvent.aspx" />
+    <Level2 Text="IFrame" Secure="false" Flag="~/ATLAS Cafe/FewMore/IFrames.aspx" />
+    <Level2 Text="Trial Page" Secure="false" Flag="~/ATLAS Cafe/FewMore/Trial.aspx" />
+  </Level1>
+  <Level1 Text="jQuery Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Simple Page" Secure="false" Flag="~/JQuery Cafe/JQuerySimplePage.aspx" />
+    <Level2 Text="Slide Animation Page" Secure="false" Flag="~/JQuery Cafe/JQuerySlideAnimation.aspx" />
+    <Level2 Text="AutoComplete External Page" Secure="false" Flag="http://localhost/JqueryAutoComplete/Default.aspx" />
+  </Level1>
+</MDEMenu>
+

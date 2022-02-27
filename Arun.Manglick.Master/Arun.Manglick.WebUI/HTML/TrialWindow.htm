@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+
+    OpenCenteredWindow();
+    
+    var myWindow;
+
+    function OpenCenteredWindow() 
+    {
+        var width = 400;
+        var height = 300;
+
+        var left = parseInt((screen.availWidth / 2) - (width / 2));   // parseInt((screen.availWidth  - width) / 2);    // Either will Do
+        var top = parseInt((screen.availHeight / 2) - (height / 2));  // parseInt((screen.availHeight -  height) / 2);  // Either will Do
+        
+        var windowFeatures = "width=" + width;
+        windowFeatures += ",height=" + height;
+        windowFeatures += ",status,resizable";
+        windowFeatures += ",left=" + left;
+        windowFeatures += ",top=" + top;
+        windowFeatures += "screenX=" + left;
+        windowFeatures += ",screenY=" + top;
+        
+        myWindow = window.open('CenteredWindow.htm', "subWind", windowFeatures);
+    }
+    
+    </script>
+</head>
+<body style="width: 500px; height:600px;">
+    Hello
+</body>
+</html>

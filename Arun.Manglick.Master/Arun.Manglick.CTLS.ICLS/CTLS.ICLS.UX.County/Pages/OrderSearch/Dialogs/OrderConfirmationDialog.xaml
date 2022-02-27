@@ -1,0 +1,84 @@
+﻿<iclscontrols:ICLSDialog x:Class="CTLS.ICLS.UX.CountySearch.OrderConfirmationDialog"
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                         xmlns:uxcontrols="clr-namespace:CTLS.Shared.UX.Controls;assembly=CTLS.Shared.UX.Controls"
+                         xmlns:iclscontrols="clr-namespace:CTLS.ICLS.UX.Controls;assembly=CTLS.ICLS.UX.Controls"
+                         xmlns:tk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+                         xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+                         xmlns:slabbcontrols="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls">
+    <Grid x:Name="LayoutRoot"
+          Background="White" Margin="10,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Order Confirmation"
+                   Style="{StaticResource PageHeaderText}"
+                   Grid.Row="0"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0"
+                    Margin="70,30,0,50">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Tracking #"
+                                   Width="200" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="3567" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Order #"
+                                   Width="200" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="2100458" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Jurisdiction"
+                                   Width="200" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="AZ:Maricopa" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Searched Key/Document #"
+                                   Width="200" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="Subway" />
+                    </StackPanel>
+                    <StackPanel Margin="0,20,0,0">
+                        <TextBlock TextWrapping="Wrap">Your order has been successfully completed. The system is in the process of downloading images from the County web site.<LineBreak></LineBreak> 
+You will receive a system generated email notification once the downloading of images has been completed.</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <slabbcontrols:MenuBar Grid.Row="1"
+                                   Grid.ColumnSpan="2"
+                                   Margin="0,0,0,0"
+                                   HorizontalAlignment="Center"
+                                   Style="{StaticResource ctaBlueButtonBar}">
+                <slabbcontrols:MenuItem Caption="New Search"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnNewSearchbtm" />
+                <slabbcontrols:MenuItem Caption="View Order Details"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnFormPreviewbtm" />
+                <slabbcontrols:MenuItem Caption="Return to Portfolio"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnNoRecordsbtm" />
+            </slabbcontrols:MenuBar>
+        </Grid>
+    </Grid>
+</iclscontrols:ICLSDialog>

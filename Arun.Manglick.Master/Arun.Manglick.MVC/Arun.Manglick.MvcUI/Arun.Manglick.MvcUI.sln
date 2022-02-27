@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.MvcUI", "Arun.Manglick.MvcUI\Arun.Manglick.MvcUI.csproj", "{9B9BB8FB-09D5-4952-A3FC-EFB4730A75D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.MvcUI.Tests", "Arun.Manglick.MvcUI.Tests\Arun.Manglick.MvcUI.Tests.csproj", "{FA61B612-A2DC-4AC0-9205-4244FCED98CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B9BB8FB-09D5-4952-A3FC-EFB4730A75D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9BB8FB-09D5-4952-A3FC-EFB4730A75D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9BB8FB-09D5-4952-A3FC-EFB4730A75D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9BB8FB-09D5-4952-A3FC-EFB4730A75D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA61B612-A2DC-4AC0-9205-4244FCED98CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA61B612-A2DC-4AC0-9205-4244FCED98CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA61B612-A2DC-4AC0-9205-4244FCED98CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA61B612-A2DC-4AC0-9205-4244FCED98CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

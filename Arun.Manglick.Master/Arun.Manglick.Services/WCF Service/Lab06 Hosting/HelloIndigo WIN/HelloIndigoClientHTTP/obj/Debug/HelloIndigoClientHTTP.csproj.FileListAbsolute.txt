@@ -1,0 +1,6 @@
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClientHTTP\bin\Debug\HelloIndigoClientHTTP.exe.config
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClientHTTP\bin\Debug\HelloIndigoClientHTTP.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClientHTTP\bin\Debug\HelloIndigoClientHTTP.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClientHTTP\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClientHTTP\obj\Debug\HelloIndigoClientHTTP.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClientHTTP\obj\Debug\HelloIndigoClientHTTP.pdb

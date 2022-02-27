@@ -1,0 +1,683 @@
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+             x:Class="CTLS.ICLS.UX.CountySearch.DesktopView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:uxcontrols="clr-namespace:CTLS.Shared.UX.Controls;assembly=CTLS.Shared.UX.Controls"
+             xmlns:tk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+             xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+             xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"
+             xmlns:vds="clr-namespace:CT.SLABB.Data;assembly=CT.SLABB.Controls"
+             xmlns:local="clr-namespace:CTLS.ICLS.UX.CountySearch"
+             xmlns:slabbrefreshable="clr-namespace:CT.SLABB.Data;assembly=CT.SLABB.Data.Refreshables"
+             xmlns:slabbcore="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Core"
+             xmlns:slabbcontrols="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls"
+             xmlns:AppViewState="clr-namespace:CTLS.ICLS.UX.Shared.ViewStates;assembly=CTLS.ICLS.UX.Shared"
+             xmlns:theme="clr-namespace:CTLS.Shared.UX.Theme;assembly=CTLS.Shared.UX.Theme">
+    <Grid x:Name="LayoutRoot"
+          Background="White">
+        <Grid.Resources>
+            <local:StringToBool x:Key="StringToBool" />
+            <local:StringToVisibility x:Key="StringToVisibility" />
+            <local:ObjectToString x:Key="ObjectToString"></local:ObjectToString>
+            <local:ListToSingle x:Key="ListToSingle"></local:ListToSingle>
+            <local:NumericToString x:Key="NumericToString"></local:NumericToString>
+            <local:StringToDateTime x:Key="StringToDateTime"></local:StringToDateTime>
+            <theme:DateConverter x:Key="DateConverter"></theme:DateConverter>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <vds:DataSource Name="dsOrderItemListData">
+            <vds:DataSource.DataProvider>
+                <local:OrderSearchDataProvider x:Name="dpOrderItemList" />
+            </vds:DataSource.DataProvider>
+        </vds:DataSource>
+        <local:CountySearchViewModelConnector x:Name="countySearchVMC" />
+        <AppViewState:ApplicationContextViewStateConnector x:Name="ApplicationContext"></AppViewState:ApplicationContextViewStateConnector>
+        <TextBlock Text="Home"
+                   Style="{StaticResource PageHeaderText}"
+                   Grid.Row="0"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.400*"></ColumnDefinition>
+                <ColumnDefinition Width="0.600*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Row 0 -->
+            <Border Grid.Row="0"
+                    Grid.Column="0"
+                    Style="{StaticResource RoundedPanel}"
+                    Padding="0,0,10,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0"
+                            Style="{StaticResource RoundedPanelHeaderBorder}">
+                        <TextBlock  Style="{StaticResource RoundedPanelTextHeader}"
+                                    Text="Search Criteria" />
+                    </Border>
+                    <Border Grid.Row="1"
+                            Style="{StaticResource RoundedPanelContentBorder}">
+                        <StackPanel Orientation="Vertical">
+                            <dataInput:ValidationSummary x:Name="vlsValidationSummary"
+                                                         MaxWidth="380"
+                                                         Margin="0,0,0,0"></dataInput:ValidationSummary>
+                            <tk:DataForm x:Name="dfCountySearch"
+                                         AutoGenerateFields="False"
+                                         AutoEdit="True"
+                                         CommandButtonsVisibility="None"
+                                         Background="White"
+                                         HorizontalAlignment="Stretch"
+                                         BorderThickness="0"
+                                         Loaded="DataForm_Loaded">
+                                <tk:DataForm.ValidationSummaryStyle>
+                                    <Style TargetType="dataInput:ValidationSummary">
+                                        <Setter Property="Visibility"
+                                                Value="Collapsed" />
+                                    </Style>
+                                </tk:DataForm.ValidationSummaryStyle>
+                                <tk:DataForm.EditTemplate>
+                                    <DataTemplate>
+                                        <Grid VerticalAlignment="Top">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+                                            <slabbrefreshable:RefreshManager Name="prefetchRefreshManager"
+                                                                             EnsureDataOnLoad="True">
+                                                <local:TeamList x:Name="TeamList" />
+                                                <local:LienTypeList x:Name="LienTypeList" />
+                                                <local:LocationList x:Name="LocationList" />
+                                                <local:CountyList x:Name="CountyList" />
+                                                <local:CustomerSpecialistList x:Name="CustomerSpecialistList"
+                                                                              CustomerSpecialistListCompleted="CustomerSpecialistList_CustomerSpecialistListCompleted" />
+                                            </slabbrefreshable:RefreshManager>
+                                            <!-- Row 0 -->
+                                            <tk:DataField x:Name="dfldOrder"
+                                                          Grid.Row="0"
+                                                          Grid.Column="0"
+                                                          Label="Order #"
+                                                          LabelPosition="Top"
+                                                          Margin="0">
+                                                <TextBox Width="150"
+                                                         x:Name="txtOrderNumber"
+                                                         Style="{StaticResource TextBoxStyle}"
+                                                         Text="{Binding Path=OrderNumber,Mode=TwoWay,UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True, NotifyOnValidationError=True}"
+                                                         Margin="0" />
+                                            </tk:DataField>
+                                            <tk:DataField x:Name="dfldOrderItem"
+                                                          Grid.Row="0"
+                                                          Grid.Column="1"
+                                                          Label="Order Item #"
+                                                          LabelPosition="Top"
+                                                          Margin="0">
+                                                <TextBox Width="150"
+                                                         x:Name="txtOrderItemNumber"
+                                                         Style="{StaticResource TextBoxStyle}"
+                                                         Text="{Binding Path=OrderItemNumber,Mode=TwoWay, UpdateSourceTrigger=Explicit,ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                            </tk:DataField>
+                                            <!-- Row 1 -->
+                                            <!--<Button Content="Validate"
+                                                    Width="80"
+                                                    Margin="0,3,26,0"
+                                                    HorizontalAlignment="Right"
+                                                    x:Name="btnValidate"
+                                                    Click="btnValidate_Click"
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"></Button>-->
+                                            <slabbcontrols:MenuBar Grid.Row="1"
+                                                                   Grid.Column="1"
+                                                                   HorizontalAlignment="Right"
+                                                                   Style="{StaticResource ctaBlueButtonBar}">
+                                                <slabbcontrols:MenuItem Caption="Validate"
+                                                                        Cursor="Hand"
+                                                                        Margin="0,3,26,0"
+                                                                        Click="btnValidate_Click"
+                                                                        x:Name="btnValidate" />
+                                            </slabbcontrols:MenuBar>
+                                            <!-- Row 2 -->
+                                            <TextBlock x:Name="lblOrderValidationMsg"
+                                                       Visibility="Collapsed"
+                                                       Grid.Row="2"
+                                                       Grid.Column="0"
+                                                       Margin="5"
+                                                       Width="300"
+                                                       Grid.ColumnSpan="2"
+                                                       HorizontalAlignment="Left"
+                                                       Foreground="OrangeRed" />
+                                            <!-- Row 3 -->
+                                            <tk:DataField x:Name="dfldLocation"
+                                                          Grid.Row="3"
+                                                          Grid.Column="0"
+                                                          Margin="0,0,0,10"
+                                                          Label="Location"
+                                                          LabelPosition="Top"
+                                                          VerticalAlignment="Top">
+                                                <slabbrefreshable:RefreshIndicator x:Name="refreshIndicatorLocation"
+                                                                                   Status="{Binding Path=Status, ElementName=LocationList, Mode=TwoWay}">
+                                                    <uxcontrols:DropDownList Width="150"
+                                                                             IsDefaultItemRequired="True"
+                                                                             DisplayMemberPath="LocationName"
+                                                                             SelectedValuePath="LocationId"
+                                                                             SelectedValue="{Binding Path=Location,Mode=TwoWay,UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True, NotifyOnValidationError=True}"
+                                                                             ItemsSource="{Binding Path=Data, ElementName=LocationList, Mode=TwoWay}"
+                                                                             SelectionChanged="ddlLocation_SelectionChanged"
+                                                                             x:Name="ddlLocation" />
+                                                </slabbrefreshable:RefreshIndicator>
+                                            </tk:DataField>
+                                            <tk:DataField x:Name="dfldCounty"
+                                                          Grid.Row="3"
+                                                          Grid.Column="1"
+                                                          Margin="0,0,0,10"
+                                                          Label="County"
+                                                          LabelPosition="Top"
+                                                          VerticalAlignment="Top">
+                                                <slabbrefreshable:RefreshIndicator x:Name="refreshIndicatorCounty"
+                                                                                   Status="{Binding Path=Status, ElementName=CountyList, Mode=TwoWay}">
+                                                    <uxcontrols:DropDownList Width="150"
+                                                                             IsDefaultItemRequired="True"
+                                                                             DisplayMemberPath="CountyName"
+                                                                             SelectedValuePath="CountyCode"
+                                                                             SelectedValue="{Binding Path=County,Mode=TwoWay,UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True, NotifyOnValidationError=True}"
+                                                                             ItemsSource="{Binding Path=FilteredData, Mode=TwoWay, ElementName=CountyList}"
+                                                                             SelectionChanged="ddlCounty_SelectionChanged"
+                                                                             x:Name="ddlCounty" />
+                                                </slabbrefreshable:RefreshIndicator>
+                                            </tk:DataField>
+                                            <!-- Row 4 -->
+                                            <tk:DataField x:Name="dfldFrom"
+                                                          Grid.Row="4"
+                                                          Grid.Column="0"
+                                                          Margin="0,0,0,10"
+                                                          Label="From"
+                                                          LabelPosition="Top"
+                                                          VerticalAlignment="Top">
+                                                <uxcontrols:CustomDatePicker x:Name="dtpFromDate"
+                                                                             HorizontalAlignment="Left"
+                                                                             Margin="0,0,0,0"
+                                                                             IsEnabled="False"
+                                                                             Text="{Binding Path=FromDate,Mode=TwoWay, UpdateSourceTrigger=Explicit,ValidatesOnExceptions=True, NotifyOnValidationError=True,Converter={StaticResource DateConverter}}"
+                                                                             Width="150" />
+                                            </tk:DataField>
+                                            <tk:DataField x:Name="dfldTo"
+                                                          Grid.Row="4"
+                                                          Grid.Column="1"
+                                                          Margin="0,0,0,10"
+                                                          Label="To"
+                                                          LabelPosition="Top"
+                                                          VerticalAlignment="Top">
+                                                <uxcontrols:CustomDatePicker HorizontalAlignment="Left"
+                                                                             x:Name="dtpToDate"
+                                                                             Margin="0,0,0,0"
+                                                                             Text="{Binding Path=ToDate,Mode=TwoWay, UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True, NotifyOnValidationError=True,Converter={StaticResource DateConverter}}"
+                                                                             Width="150" />
+                                            </tk:DataField>
+                                            <!-- Row 5 -->
+                                            <tk:DataField x:Name="dfldSearchCriteria"
+                                                          Grid.Row="5"
+                                                          Grid.Column="0"
+                                                          Margin="0,0,0,10"
+                                                          Label="Search Criteria"
+                                                          LabelPosition="Top"
+                                                          VerticalAlignment="Top">
+                                                <uxcontrols:DropDownList Width="150"
+                                                                         x:Name="ddlSearchCriteria"
+                                                                         SelectedItem="{Binding Path=SelectedSearchCriteria,Mode=TwoWay,UpdateSourceTrigger=Default}"
+                                                                         SelectedIndex="0"
+                                                                         SelectionChanged="ddlSearchCriteria_SelectionChanged">
+                                                    <ComboBoxItem Content="Lien Types"></ComboBoxItem>
+                                                    <ComboBoxItem Content="Document Number"></ComboBoxItem>
+                                                </uxcontrols:DropDownList>
+                                            </tk:DataField>
+                                            <tk:DataField x:Name="dfldLienTypes"
+                                                          Grid.Row="5"
+                                                          Grid.Column="1"
+                                                          Margin="0,0,0,10"
+                                                          Label="Lien Types"
+                                                          LabelPosition="Top"
+                                                          VerticalAlignment="Top">
+                                                <ListBox x:Name="lstLienTypes"
+                                                         Margin="-10,0,0,0"
+                                                         Height="100"
+                                                         Width="150"
+                                                         SelectionMode="Extended"
+                                                         DisplayMemberPath="LienType"
+                                                         Tag="{Binding Path=LienTypeSelected,UpdateSourceTrigger=Explicit, Mode=TwoWay,ValidatesOnExceptions=True, NotifyOnValidationError=True}"
+                                                         SelectionChanged="lstLienTypes_SelectionChanged"
+                                                         ItemsSource="{Binding Path=FilteredData, ElementName=LienTypeList,UpdateSourceTrigger=Explicit, Mode=TwoWay,ValidatesOnExceptions=True, NotifyOnValidationError=True}"
+                                                         ScrollViewer.HorizontalScrollBarVisibility="Hidden" />
+                                            </tk:DataField>
+                                            <!-- Row 6 -->
+                                            <StackPanel x:Name="pnlRadios"
+                                                        Grid.Row="6"
+                                                        Grid.ColumnSpan="2"
+                                                        Orientation="Horizontal">
+                                                <RadioButton x:Name="rdoOrganization"
+                                                             Content="Organization"
+                                                             GroupName="usageTypeGroup1"
+                                                             IsChecked="{Binding Path=Type,Mode=TwoWay, Converter={StaticResource StringToBool}, ConverterParameter='Org'}"
+                                                             Grid.Row="6"
+                                                             Grid.Column="0"
+                                                             Checked="rdoType_Checked"
+                                                             Margin="5,0,0,10" />
+                                                <RadioButton x:Name="rdoIndividual"
+                                                             Content="Individual"
+                                                             GroupName="usageTypeGroup1"
+                                                             IsChecked="{Binding Path=Type,Mode=TwoWay, Converter={StaticResource StringToBool}, ConverterParameter='Ind'}"
+                                                             Grid.Row="6"
+                                                             Grid.Column="1"
+                                                             Checked="rdoType_Checked"
+                                                             Margin="80,0,0,10" />
+                                            </StackPanel>
+                                            <!-- Row 7 -->
+                                            <Grid Grid.Row="7"
+                                                  x:Name="grdNames"
+                                                  Visibility="{Binding Path=Type, Mode=TwoWay, Converter={StaticResource StringToVisibility}, ConverterParameter='Ind'}"
+                                                  Grid.ColumnSpan="2">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <tk:DataField x:Name="dfldLastName"
+                                                              Grid.Row="0"
+                                                              Grid.Column="0"
+                                                              Label="Last Name"
+                                                              LabelPosition="Top"
+                                                              Margin="0,0,0,10">
+                                                    <TextBox Width="90"
+                                                             x:Name="txtLastName"
+                                                             Style="{StaticResource TextBoxStyle}"
+                                                             Text="{Binding Path=LastName,Mode=TwoWay,UpdateSourceTrigger=Explicit,ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                                </tk:DataField>
+                                                <tk:DataField x:Name="dfldFirstName"
+                                                              Grid.Row="0"
+                                                              Grid.Column="1"
+                                                              Label="First Name"
+                                                              LabelPosition="Top"
+                                                              Margin="0,0,0,10">
+                                                    <TextBox Width="90"
+                                                             x:Name="txtFirstName"
+                                                             Style="{StaticResource TextBoxStyle}"
+                                                             Text="{Binding Path=FirstName,Mode=TwoWay,UpdateSourceTrigger=Explicit,ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                                </tk:DataField>
+                                                <tk:DataField x:Name="dfldMiddleName"
+                                                              Grid.Row="0"
+                                                              Grid.Column="2"
+                                                              Label="M. Name"
+                                                              LabelPosition="Top"
+                                                              Margin="0,0,0,10">
+                                                    <TextBox Width="90"
+                                                             x:Name="txtMiddleName"
+                                                             Text="{Binding Path=MiddleName,Mode=TwoWay,UpdateSourceTrigger=Explicit,ValidatesOnExceptions=True, NotifyOnValidationError=True}"
+                                                             Style="{StaticResource TextBoxStyle}" />
+                                                </tk:DataField>
+                                            </Grid>
+                                            <!-- Row 8 -->
+                                            <tk:DataField x:Name="dfldCountyDirectSearchKey"
+                                                          Grid.Row="8"
+                                                          Grid.ColumnSpan="2"
+                                                          Label="County Direct Search Key"
+                                                          LabelPosition="Top"
+                                                          Visibility="{Binding Path=Type, Mode=TwoWay, Converter={StaticResource StringToVisibility}, ConverterParameter='Org'}"
+                                                          Margin="0,0,0,10">
+                                                <TextBox Width="320"
+                                                         x:Name="txtCountyDirectSearchKey"
+                                                         Style="{StaticResource TextBoxStyle}"
+                                                         Text="{Binding Path=SearchKey, Mode=TwoWay, UpdateSourceTrigger=Explicit,ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                            </tk:DataField>
+                                            <!-- Row 9 -->
+                                            <tk:DataField x:Name="dfldTeam"
+                                                          Grid.Row="9"
+                                                          Grid.Column="0"
+                                                          Margin="0,0,0,10"
+                                                          Label="Team"
+                                                          LabelPosition="Top"
+                                                          VerticalAlignment="Top">
+                                                <uxcontrols:DropDownList Width="150"
+                                                                         x:Name="ddlTeam"
+                                                                         IsDefaultItemRequired="True"
+                                                                         DisplayMemberPath="TeamName"
+                                                                         SelectedValuePath="TeamId"
+                                                                         ItemsSource="{Binding Path=Data, ElementName=TeamList, Mode=TwoWay}"
+                                                                         SelectionChanged="ddlTeam_SelectionChanged" />
+                                            </tk:DataField>
+                                            <tk:DataField x:Name="dfldCustomerSpecialist"
+                                                          Grid.Row="9"
+                                                          Grid.Column="1"
+                                                          Margin="0,0,0,10"
+                                                          Label="Customer Specialist"
+                                                          LabelPosition="Top"
+                                                          VerticalAlignment="Top">
+                                                <ListBox x:Name="lstCustomerSpecialist"
+                                                         Margin="-10,0,0,0"
+                                                         Height="100"
+                                                         Width="150"
+                                                         SelectionMode="Single"
+                                                         DisplayMemberPath="CustomerName"
+                                                         SelectionChanged="lstCustomerSpecialist_SelectionChanged"
+                                                         Tag="{Binding Path=CustomerSpecialistSelected,UpdateSourceTrigger=Explicit, Mode=TwoWay,ValidatesOnExceptions=True, NotifyOnValidationError=True}"
+                                                         ItemsSource="{Binding Path=FilteredData, ElementName=CustomerSpecialistList,UpdateSourceTrigger=Explicit, Mode=TwoWay,ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                            </tk:DataField>
+                                            <!-- Row 10 -->
+                                            <slabbcontrols:MenuBar Grid.Row="10"
+                                                                   Grid.ColumnSpan="2"
+                                                                   Margin="0,0,0,0"
+                                                                   HorizontalAlignment="Center"
+                                                                   Style="{StaticResource ctaBlueButtonBar}">
+                                                <slabbcontrols:MenuItem Caption="Perform Search($)"
+                                                                        Cursor="Hand"
+                                                                        Click="btnSearch_Click"
+                                                                        IsTabStop="True"
+                                                                        Margin="0,5,0,5"
+                                                                        x:Name="btnSearch" />
+                                            </slabbcontrols:MenuBar>
+                                        </Grid>
+                                    </DataTemplate>
+                                </tk:DataForm.EditTemplate>
+                            </tk:DataForm>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+            <StackPanel Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalAlignment="Stretch"
+                        Orientation="Vertical">
+                <Border  Style="{StaticResource RoundedPanel}"
+                         Padding="0,0,20,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="23" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0"
+                                Style="{StaticResource RoundedPanelHeaderBorder}">
+                            <TextBlock  Style="{StaticResource RoundedPanelTextHeader}"
+                                        Text="County Search Instructions" />
+                        </Border>
+                        <Border Grid.Row="1"
+                                Style="{StaticResource RoundedPanelContentBorder}">
+                            <slabbrefreshable:RefreshIndicator x:Name="refreshIndicatorSearchInstructions"
+                                                               Status="{Binding Path=Status, ElementName=CountySearchInstructionsList, Mode=TwoWay}">
+                                <ScrollViewer HorizontalScrollBarVisibility="Hidden"
+                                              VerticalScrollBarVisibility="Auto"
+                                              BorderThickness="0"
+                                              Height="210">
+                                    <ListBox x:Name="lstInstructions"
+                                             ItemsSource="{Binding Path=FilteredData, ElementName=CountySearchInstructionsList, Mode=TwoWay}"
+                                             Style="{StaticResource liststyle}">
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock FontWeight="Bold"
+                                                               Padding="0"
+                                                               Text="●"
+                                                               Style="{StaticResource listdot}"></TextBlock>
+                                                    <TextBlock Text="{Binding InstructionText}"
+                                                               Width="515"
+                                                               TextWrapping="Wrap"></TextBlock>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </ScrollViewer>
+                            </slabbrefreshable:RefreshIndicator>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Border  Style="{StaticResource RoundedPanel}"
+                         Padding="0,0,20,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="23" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0"
+                                Style="{StaticResource RoundedPanelHeaderBorder}">
+                            <TextBlock  Style="{StaticResource RoundedPanelTextHeader}"
+                                        Text="Copy Cost" />
+                        </Border>
+                        <Border Grid.Row="1"
+                                Style="{StaticResource RoundedPanelContentBorder}">
+                            <slabbrefreshable:RefreshIndicator x:Name="refreshIndicatorCopyCostInstrunction"
+                                                               Status="{Binding Path=Status, ElementName=CopyCostInstrunctionList, Mode=TwoWay}">
+                                <ScrollViewer HorizontalScrollBarVisibility="Hidden"
+                                              VerticalScrollBarVisibility="Auto"
+                                              BorderThickness="0"
+                                              Height="130">
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Copy Cost amount ($):"
+                                                       Margin="10,5,5,5"></TextBlock>
+                                            <TextBlock DataContext="{Binding Path=Cost, ElementName=CopyCostInstrunctionList, Mode=TwoWay}"
+                                                       Text="{Binding}"
+                                                       Margin="5,5,5,5"></TextBlock>
+                                        </StackPanel>
+                                        <ListBox x:Name="lstCopyCost"
+                                                 ItemsSource="{Binding Path=FilteredData, ElementName=CopyCostInstrunctionList, Mode=TwoWay}"
+                                                 Style="{StaticResource liststyle}">
+                                            <ListBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock FontWeight="Bold"
+                                                                   Text="●"
+                                                                   Style="{StaticResource listdot}"></TextBlock>
+                                                        <TextBlock Text="{Binding Path=InstructionText }"
+                                                                   Width="515"
+                                                                   TextWrapping="Wrap"></TextBlock>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ListBox.ItemTemplate>
+                                        </ListBox>
+                                    </StackPanel>
+                                </ScrollViewer>
+                            </slabbrefreshable:RefreshIndicator>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Border  Style="{StaticResource RoundedPanel}"
+                         Padding="0,0,20,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="23" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0"
+                                Style="{StaticResource RoundedPanelHeaderBorder}">
+                            <TextBlock  Style="{StaticResource RoundedPanelTextHeader}"
+                                        Text="Alerts" />
+                        </Border>
+                        <Border Grid.Row="1"
+                                Style="{StaticResource RoundedPanelContentBorder}">
+                            <slabbrefreshable:RefreshIndicator x:Name="refreshIndicatorAlertList"
+                                                               Status="{Binding Path=Status, ElementName=AlertList, Mode=TwoWay}">
+                                <ScrollViewer HorizontalScrollBarVisibility="Hidden"
+                                              VerticalScrollBarVisibility="Auto"
+                                              BorderThickness="0"
+                                              Height="100">
+                                    <ListBox x:Name="lstAlerts"
+                                             ItemsSource="{Binding Path=Data, ElementName=AlertList}"
+                                             Style="{StaticResource liststyle}">
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock FontWeight="Bold"
+                                                               Text="●"
+                                                               Style="{StaticResource listdot}"></TextBlock>
+                                                    <TextBlock Text="{Binding}"
+                                                               Width="515"
+                                                               TextWrapping="Wrap"></TextBlock>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </ScrollViewer>
+                            </slabbrefreshable:RefreshIndicator>
+                        </Border>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <!-- Row 1 -->
+            <slabbrefreshable:RefreshManager Name="prefetchRefreshManager"
+                                             EnsureDataOnLoad="True">
+                <local:CountySearchInstructionsList x:Name="CountySearchInstructionsList" />
+                <local:CopyCostInstrunctionList x:Name="CopyCostInstrunctionList" />
+                <local:AlertList x:Name="AlertList" />
+            </slabbrefreshable:RefreshManager>
+            <Border Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource RoundedPanel}"
+                    Padding="0,0,20,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0"
+                            Style="{StaticResource RoundedPanelHeaderBorder}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Style="{StaticResource RoundedPanelTextHeader}"
+                                        Text="Message Center"
+                                        Grid.Column="0" />
+                            <HyperlinkButton Content="Refresh"
+                                             x:Name="lnkRefresh"
+                                             Grid.Column="1"
+                                             HorizontalAlignment="Right"
+                                             Click="lnkRefresh_Click"
+                                             Style="{StaticResource refreshlink}" />
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="1"
+                            Style="{StaticResource RoundedPanelContentBorder}">
+                        <StackPanel>
+                            <slabbrefreshable:RefreshIndicator x:Name="refreshIndicator"
+                                                               Status="{Binding Status,ElementName=dsOrderItemListData, Mode=TwoWay}">
+                                <ScrollViewer HorizontalScrollBarVisibility="Hidden"
+                                              VerticalScrollBarVisibility="Auto"
+                                              BorderThickness="0">
+                                    <StackPanel Orientation="Vertical"
+                                                HorizontalAlignment="Stretch">
+                                        <uxcontrols:ListPager x:Name="pgrTop"
+                                                              Margin="5,5,5,5"
+                                                              Source="{Binding Path=Data,ElementName=dsOrderItemListData}"
+                                                              ListPageSize="{Binding Path=ListPageSize,ElementName=pgrBottom,Mode=TwoWay}"
+                                                              DefaultListPageSize="10"
+                                                              HorizontalAlignment="Center"
+                                                              VerticalAlignment="Top" />
+                                        <uxcontrols:GridView x:Name="gvwAcceptedOrders"
+                                                             Style="{StaticResource uxcontrolsGridView}"
+                                                             ItemsSource="{Binding Path=Data, ElementName=dsOrderItemListData, Mode=TwoWay}"
+                                                             VerticalScrollBarVisibility="Auto"
+                                                             CanUserSortColumns="True"
+                                                             AlternatingRowBackground="#FFdddddd"
+                                                             Grid.Row="2">
+                                            <uxcontrols:GridView.Columns>
+                                                <data:DataGridTemplateColumn Header="Order #"
+                                                                             SortMemberPath="OrderNo"
+                                                                             Width="90">
+                                                    <data:DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                                             Text="{Binding OrderNo}" />
+                                                        </DataTemplate>
+                                                    </data:DataGridTemplateColumn.CellTemplate>
+                                                </data:DataGridTemplateColumn>
+                                                <data:DataGridTemplateColumn Header="Order Item #"
+                                                                             SortMemberPath="OrderItemNo"
+                                                                             Width="80">
+                                                    <data:DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                                             Text="{Binding OrderItemNo}" />
+                                                        </DataTemplate>
+                                                    </data:DataGridTemplateColumn.CellTemplate>
+                                                </data:DataGridTemplateColumn>
+                                                <data:DataGridTemplateColumn Header="Summary"
+                                                                             SortMemberPath="Summary"
+                                                                             Width="440">
+                                                    <data:DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Tag="{Binding Path=TrackingNo}"
+                                                                       Text="{Binding Path=Summary}"
+                                                                       TextWrapping="Wrap"
+                                                                       Cursor="Hand"
+                                                                       TextDecorations="Underline"
+                                                                       Foreground="#FF73A9D8"
+                                                                       MouseLeftButtonDown="lnkSummary_MouseLeftButtonDown"></TextBlock>
+                                                        </DataTemplate>
+                                                    </data:DataGridTemplateColumn.CellTemplate>
+                                                </data:DataGridTemplateColumn>
+                                                <data:DataGridTemplateColumn Header="Tracking #"
+                                                                             SortMemberPath="TrackingNo"
+                                                                             Width="75">
+                                                    <data:DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                                             Text="{Binding TrackingNo}" />
+                                                        </DataTemplate>
+                                                    </data:DataGridTemplateColumn.CellTemplate>
+                                                </data:DataGridTemplateColumn>
+                                                <data:DataGridTemplateColumn Header="Location"
+                                                                             SortMemberPath="LocationCode"
+                                                                             Width="120">
+                                                    <data:DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                                             Text="{Binding LocationCode}" />
+                                                        </DataTemplate>
+                                                    </data:DataGridTemplateColumn.CellTemplate>
+                                                </data:DataGridTemplateColumn>
+                                                <data:DataGridTemplateColumn Header="Order Date"
+                                                                             SortMemberPath="Date"
+                                                                             Width="150">
+                                                    <data:DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                                             Text="{Binding Path=Date,Mode=TwoWay,Converter={StaticResource StringToDateTime}}" />
+                                                        </DataTemplate>
+                                                    </data:DataGridTemplateColumn.CellTemplate>
+                                                </data:DataGridTemplateColumn>
+                                            </uxcontrols:GridView.Columns>
+                                        </uxcontrols:GridView>
+                                        <uxcontrols:ListPager x:Name="pgrBottom"
+                                                              Margin="5,5,5,5"
+                                                              Source="{Binding Path=Data,ElementName=dsOrderItemListData}"
+                                                              ListPageSize="{Binding Path=ListPageSize,ElementName=pgrTop,Mode=TwoWay}"
+                                                              DefaultListPageSize="10"
+                                                              HorizontalAlignment="Center"
+                                                              VerticalAlignment="Top" />
+                                    </StackPanel>
+                                </ScrollViewer>
+                            </slabbrefreshable:RefreshIndicator>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

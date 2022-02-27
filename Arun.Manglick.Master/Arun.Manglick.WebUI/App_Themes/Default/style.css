@@ -1,0 +1,1337 @@
+﻿body {
+	padding: 0px; 
+	margin: 0px; 
+	font-size:11px;
+	font-family: Verdana; 
+	background-color: #edeef4; }
+
+a { text-decoration: underline;}
+a:link {color:#00529b; text-decoration: none;}
+a:visited {color:#00529b; text-decoration: none;}
+a:hover {color:#00529b; text-decoration: underline;}
+a:active {color:#00529b; text-decoration: none; font-weight: bold;}
+
+
+#tdHeaderLinks a {
+	font-family: Verdana, Arial;
+	font-weight:normal;
+	font-size:9px;
+	text-decoration:underline; }
+
+.text-normal{
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 9px;}
+
+.text-bold {
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 9px;}
+
+.text-bold-medium {
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 10px;}
+
+.text-bold-medium-title {
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    background-color: #e8e8e8;}
+
+.table {
+	padding: 0px;
+	margin: 0px;
+	font-size: 10px;}
+
+#tblObjectDetails td {
+    padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px; }
+
+#tblObjectDetails th
+{
+	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    background-color:#f4f4f8;
+}
+
+/*--Master page framework -----------------------------*/
+.divmaster
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+.tablemaster
+{
+	padding-left: 0px; 
+	padding-right: 4px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	width: 100%;
+	border: 0px;
+}
+
+/*--Header -----------------------------*/	
+.appheader {
+	padding: 5px; 
+	font-weight: bold; 
+	margin: 0px; 
+	vertical-align: middle;
+    overflow: hidden; 
+	width: 100%; 
+	color: #00529b;
+    font-family: Arial, Verdana;
+    height: 40px; 
+	background:#edeef4;
+	text-align: left;
+	/*border-bottom: 1px solid #00529b;*/
+	}
+
+.appheader a { text-decoration: underline;}
+.appheader a:link {color:#00529b; text-decoration: none;}
+.appheader a:visited {color:#00529b; text-decoration: none;}
+.appheader a:hover {color:#ff0000; text-decoration: none;}
+.appheader a:active {color:#00529b; text-decoration: none; font-weight: normal;}
+
+
+
+/*--Footer -----------------------------*/
+.footer { 
+    /*border-top: 2px solid #edeef4;*/
+    padding: 0px; 
+    font-size: 9px; 
+    margin: 0px; 
+    vertical-align: middle;
+    font-family: Verdana, Arial; 
+    height: 40px; 
+    background-color: #edeef4; 
+    text-align: center; }
+
+
+/*--Left navigation space and tree navigation-----------------------------*/
+.leftnavigation
+{
+	/*border-right: 1px solid #00529b;*/
+	background: #edeef4;
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	padding-left: 0px; 
+	padding-right: 4px; 
+	margin: 0px; 
+	margin: 0px;
+	width: 175px;
+	vertical-align: top;
+}
+
+
+.TreeNavigation {
+    font-size: 10px;
+    font-family:Verdana, Arial, Sans-Serif;
+    left: 0px; 
+    vertical-align: top;
+    color: #999999; 
+    position:  relative;
+    /*top: 2px; */
+    background-color: transparent; 
+    text-align: left; 
+    width: 175px;
+    /*line-height: 15px;*/
+    }
+
+/*.TreeNavigation a { }
+.TreeNavigation a:link {color:#000033;}
+.TreeNavigation a:visited {color:#000099;}
+.TreeNavigation a:hover {color:Red}
+.TreeNavigation a:active {color:Green;}*/
+.SelectedNode
+{
+	font-weight: bold;
+}
+.RootNode {
+    Font-family:Verdana;
+    Font-Size:10px;
+    line-height: 6px; }
+.ParentNode { 
+    Font-family:Verdana;
+    Font-Size:10px;
+    line-height: 10px; }
+.HoverNode { }
+.LeafNode { 
+    Font-family:Verdana;
+    Font-Size:10px;
+    line-height: 10px;
+   }
+.Node { 
+    Font-family:Verdana;
+    Font-Size:10px;
+    line-height: 10px;  }
+
+/*--Workspace -----------------------------*/
+.workspace 
+{
+    border-top: 1px solid #00529b;
+    border-left: 1px solid #00529b;
+	border-bottom: 1px solid #00529b;
+	padding-left: 0px; 
+	padding-right: 4px;
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+    margin: 0px; 
+    width: 100%;
+    background-color:white;
+    vertical-align: top; }
+
+/*////////////////////!!!!!!!!!!!!!!!!!!!!!!/////////////////////*/
+/*////////////////////!!!!!!!!!!!!!!!!!!!!!!/////////////////////*/
+/*////////////////////!!!!!!!!!!!!!!!!!!!!!!/////////////////////*/
+
+/*---REMOVE ALL REFS TO these styles---what are they used for???-----*/
+
+/*--- use .appheader ---*/
+.appheadernoborder {
+	padding: 5px;
+	font-weight: bold;
+	margin: 0px;
+	vertical-align: middle;
+	overflow: hidden;
+	width: 100%;
+	color: #00529b;
+	font-family: Arial, Verdana;
+	height: 40px;
+	background:#edeef4;
+	text-align: left;
+	}
+	
+/*--- use .workspace ---*/
+.workspacetopmenu {
+    border-top: 1px solid #00529b;
+    border-left: 1px solid #00529b;
+	padding-left: 0px; 
+	padding-right: 4px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+    margin: 0px; 
+    width: 100%;
+    background-color:white;
+    vertical-align: top; }
+
+/*--- how is this being used???? --- */   
+.mdelogo {
+	color: #CB8E34;
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	height: 25px; }
+
+/*--- use .title ---*/
+.titleInner {
+	color: Green;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	height: 25px;
+	font-style: italic; }
+
+/*--- use .title ---*/
+.titlelogin {
+    color:#000000;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border-top:solid 2px #e8a713;
+	/*padding-left: 4px;*/
+	height:25px;
+	font-style:normal;
+	background-color:#edeef4; }
+
+/*--- use .title ---*/
+.titleloginnew {
+    color:#000000;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border-top:solid 2px #e8a713;
+	padding-left: 4px;
+	height:25px;
+	font-style:normal;
+	background-color:#edeef4; }
+
+/*--- use .validation-error ---*/	
+.validation-error-select {
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 8pt;
+	padding-bottom: 1px;
+	vertical-align: middle;
+	color: red;
+	padding-top: 1px;
+	font-family: Arial;
+	list-style-type: none;
+	background-color: white;
+	text-align: left;
+	display:none; }
+
+/* ----use  .tabtable-selected-tab----*/
+.consumer-selected-tab {
+    padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align:middle;
+	text-align: center;
+	color: #CC0066;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    /*width: 125px;*/
+    border-top: 2px outset #edeef4; 
+    border-right: 2px outset #edeef4; 
+    border-left: 2px outset #edeef4; }
+ 
+ /* ----use  .tabtable-unselected-tab----*/
+.consumer-unselected-tab {
+    padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align:middle;
+	text-align: center;
+	color: #00529b;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	/*width: 125px;*/
+	border-top: 2px outset #edeef4; 
+    border-right: 2px outset #edeef4; 
+    border-left: 2px outset #edeef4;
+    border-bottom: 1px inset #edeef4;} 
+
+
+/*////////////////////!!!!!!!!!!!!!!!!!!!!!!/////////////////////*/
+/*////////////////////!!!!!!!!!!!!!!!!!!!!!!/////////////////////*/
+/*////////////////////!!!!!!!!!!!!!!!!!!!!!!/////////////////////*/
+
+
+/*--Breadcrumb trail navigation in the workspace -----------------------------*/
+.breadcrumb {
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background:#f4f4f8;
+	height: 25px;
+	padding-left:4px;
+	/*border-bottom:solid 2px #E4E8EA; 
+	border-bottom:solid 2px #edeef4;*/ }
+/*.breadcrumb  a { }
+.breadcrumb  a:link {color:#000033;}
+.breadcrumb  a:visited {color:#000099;}
+.breadcrumb  a:hover {color:Red}
+.breadcrumb  a:active {color:Green;}*/
+
+.backbutton /*cell for back button formatting with class=button */{
+	background: #f4f4f8;
+	height: 25px;
+	/*border-bottom:solid 2px #E4E8EA;
+	border-bottom:solid 2px #edeef4;*/ 
+	padding-right: 4px;}
+
+
+
+
+/*---Sits above task space - this is the name of the active task ----*/
+.title {
+    color:#000000;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border-top:solid 2px #e8a713;
+	padding-left: 4px;
+	height:25px;
+	font-style:normal;
+	background-color:#edeef4; }
+
+.titlelogin
+{
+    color:#000000;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border-top:solid 2px #e8a713;
+	/*padding-left: 4px;*/
+	height:25px;
+	font-style:normal;
+	background-color:#edeef4; }
+
+.titleloginnew
+{
+    color:#000000;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border-top:solid 2px #e8a713;
+	padding-left: 4px;
+	height:25px;
+	font-style:normal;
+	background-color:#edeef4; }
+
+.titleborderbottom {
+    color:#000000;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border-bottom:solid 2px #e8a713;
+	padding-left: 0px;
+	height:25px;
+	font-style:normal;
+	background-color:#edeef4; }
+
+.titlenoborder {
+    color:#000000;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding-left: 0px;
+	height:25px;
+	font-style:normal;
+	background-color:#edeef4; }
+
+.titleplain {
+    color:#000000;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding-left: 0px;
+	height:25px;
+	font-style:normal;}
+
+/*-- used for NEGATIVE validation messages--*/
+.validation-error
+{
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 8pt;
+	padding-bottom: 1px;
+	vertical-align: middle;
+	color: red;
+	padding-top: 1px;
+	font-family: Arial;
+	list-style-type: none;
+	background-color: white;
+	text-align: left;
+}
+/*-- used for POSITIVE validation messages--*/
+.validation-no-error
+{
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 8pt;
+	padding-bottom: 1px;
+	vertical-align: middle;
+	color: Navy;
+	padding-top: 1px;
+	font-family: Arial;
+	list-style-type: none;
+	background-color: white;
+	text-align: left;
+}
+
+/*--Holds the tabs------------*/ 
+.tabtable {
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	/*background-color:#F7F7F7;*/
+	background-color:#FFFFFF;
+	/*width:100%; */}
+
+.tabtable-selected-tab {
+   padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align:middle;
+	text-align: center;
+	background-color:#FFFFFF;
+	color: #00529b;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    /*width: 125px;*/
+    border-top: 1px solid #00529b; 
+    border-right: 1px solid #00529b; 
+    border-left: 1px solid #00529b;
+    border-bottom: 1px solid #ffffff; }
+ 
+.tabtable-unselected-tab {
+   padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align:middle;
+	text-align: center;
+	background-color:#00529b;
+	color: #ffffff;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	/*width: 125px;*/
+	border-top: 1px solid #00529b; 
+    border-right: 1px solid #00529b; 
+    border-left: 1px solid #00529b;
+    border-bottom: 1px solid #00529b;} 
+    
+.tabtable-negative-space {
+   padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align:middle;
+	text-align: center;
+	background-color:#ffffff;
+	color: #00529b;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	width: 125px;
+	/*border-top: 2px outset #edeef4; 
+    border-right: 2px outset #edeef4; 
+    border-left: 2px outset #edeef4;*/
+    border-bottom: 1px solid #00529b;} 
+
+.tabtable-selected-tab a { text-decoration: none;}
+.tabtable-selected-tab a:link {color:#FF0000; text-decoration: none;}
+.tabtable-selected-tab a:visited {color:#FF0000; text-decoration: none;}
+.tabtable-selected-tab a:hover {color:#FF0000; text-decoration: underline;}
+.tabtable-selected-tab a:active {color:#FF0000; text-decoration: none; font-weight: bold;} 
+
+.tabtable-unselected-tab a { text-decoration: none;}
+.tabtable-unselected-tab a:link {color:#ffffff; text-decoration: none;}
+.tabtable-unselected-tab a:visited {color:#ffffff; text-decoration: none;}
+.tabtable-unselected-tab a:hover {color:#ffffff; text-decoration: underline;}
+.tabtable-unselected-tab a:active {color:#ffffff; text-decoration: none; font-weight: bold;} 
+
+/*--Forms within the workspace -----------------------------*/
+/*--Holds the table that formats the form------------*/
+#divform {
+    padding:0px;
+	margin:0px;
+    font-family:Verdana, Arial, Sans-Serif;
+    /*font-size:10pt;
+    line-height:1em;*/
+    width: 100%; } 
+
+/*--Holds the entire interaction element from primary form to button row------------*/
+#divtable {
+	padding-left: 0px; 
+	padding-right: 4px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px; 
+	/*width: 100%;*/}
+#divtable td {
+    padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 0px; }
+
+#divtable td #buttonTable td, #divtable td #buttonTable2 td
+{
+	padding: 0px;
+	/*border:solid 0px green;*/
+}
+
+#divtable th {
+    padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 0px;
+	vertical-align:middle;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    background-color:#edeef4;
+    /*border-bottom: 1px solid #E1E9Ec;*/} 
+
+
+/*--Holds the primary form------------*/
+#formtable {
+	padding-left: 3px; 
+	padding-right: 4px; 
+	padding-top: 3px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	background-color:#FFFFFF;
+	/*width:100%; */}
+#formtable td {
+   padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	border-collapse: collapse;
+    /*border-right: 1px solid #999999;*/ }
+#formtable th {
+   	padding-top: 5px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	background-color: #f7f7f7;
+	border-collapse: collapse;
+    /*border-right: 1px solid #999999;*/ }
+
+.formtable {
+	padding-left: 2px; 
+	padding-right: 4px; 
+	padding-top: 3px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	background-color:#FFFFFF;
+	/*width:100%; */}
+.formtable td {
+   	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	border-collapse: collapse;
+    /*border-right: 1px solid #999999;*/ }
+.formtable th {
+   	padding-top: 5px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	background-color: #e8e8e8;
+	font: 10px Verdana;
+    	font-size:10px;
+    	font-weight:bold;
+    	border-collapse: collapse;
+    /*border-right: 1px solid #999999;*/}
+	
+.formheader { 
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+	border-top: 2px solid #f4f4f8;
+	border-bottom: 2px dotted #f4f4f8;
+    /*background-color:#f4f4f8;*/
+    /*border-bottom: 1px solid #E1E9Ec;*/ } 
+
+#headertable {
+	width: 510px;
+	padding: 0px;
+	margin: 0px; 
+	background-color: #FFFFFF; }
+
+/*--Holds  summary content------------*/ 
+#summarytable {
+	padding-left: 0px; 
+	padding-right: 4px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	/*background-color:#F7F7F7;*/
+	background-color:#FFFFFF;
+	/*width:100%; */}
+#summarytable td {
+   	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	/*border: 1px solid #102162;
+	border-collapse:collapse;*/ }
+#summarytable th {
+   	padding-top: 5px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	border: 1px solid #f7f7f7;
+	border-collapse:collapse;
+	background-color: #f7f7f7 }
+	
+.summarytable {
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	/*background-color:#F7F7F7;*/
+	background-color:#FFFFFF;
+	/*width:100%; */}
+.summarytable td {
+   	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	/*border: 1px solid #f7f7f7;*/
+	border-collapse:collapse; }
+.summarytable th {
+  	padding-top: 4px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	border: 1px solid #f7f7f7;
+	border-collapse:collapse;
+	background-color: #f7f7f7 }
+
+/*--Holds consumer pages forms------------*/ 
+.tablenoborder {
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	border: 0px;
+	background-color:#FFFFFF;}
+.tablenoborder td {
+    padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border: 0px;
+	vertical-align:middle;
+	text-align:center;}
+.tablenoborder th  
+{
+    font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	vertical-align:middle;
+	text-align:center;
+	border: 0px;
+	background-color: #e8e8e8;}
+    
+.consumertable {
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	background-color:#FFFFFF;
+	empty-cells: show; }
+.consumertable td {
+   padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	border: 1px solid #AFB9C9;
+	border-collapse:collapse;
+	empty-cells: show; }
+.consumertable th  
+{
+    font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    padding-top: 4px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	border: 1px solid #AFB9C9;
+	border-collapse:collapse;
+	background-color: #e8e8e8;
+	empty-cells: show; }
+
+.consumerdecisiontable {
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	background-color:#FFFFFF;
+	empty-cells: hide;}
+.consumerdecisiontable td {
+    padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 1px;
+	padding-right: 1px;
+	margin: 0px;
+	vertical-align:middle;
+	text-align:center;
+	border: 1px solid #AFB9C9;
+	border-collapse:collapse; }
+.consumerdecisiontable th  
+{
+    font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    padding-top: 4px;
+	padding-bottom: 2px;
+	padding-left: 1px;
+	padding-right: 1px;
+	margin: 0px;
+	vertical-align:middle;
+	text-align:center;
+	border: 1px solid #AFB9C9;
+	border-collapse:collapse;
+	background-color: #e8e8e8; }
+
+.consumertablenoborder {
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	margin: 0px;
+	border:none 0px;
+	background-color:#FFFFFF;
+	empty-cells: hide; }
+.consumertablenoborder td {
+    padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	border: none 0px;
+	border-collapse:collapse;
+	empty-cells: hide; }
+.consumertablenoborder th  
+{
+    font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    padding-top: 4px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	border: none 0px;
+	border-collapse:collapse;
+	background-color: #e8e8e8;
+	empty-cells: hide; }
+
+/*--TASK Header------------*/
+.requiredfieldmessage { /* *Required Fields */
+    	text-align:left;
+    	font-family:inherit; 
+    	font-size:8px;
+    	font-style:italic;
+    	line-height: inherit; }
+    
+.asterisk {
+    	font-family:inherit; 
+    	font-size:8px;
+    	color: red; }
+
+.formheader { 
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+	border-top: 2px solid #f4f4f8;
+	border-bottom: 2px dotted #f4f4f8;
+    	/*background-color:#f4f4f8;*/
+    	/*border-bottom: 1px solid #E1E9Ec;*/ } 
+
+
+/*--THIS IS THE ASTERISK FORMATTING FOR REQUIRED FIELDS------------*/
+.requiredcolumn { 
+    	text-align:center;
+    	width: 5px;
+    	font-family:Verdana, Arial; 
+    	font-size:9px;
+    	color: red; }
+
+
+/*--Label tds------------*/
+.labelcolumn { 
+    	text-align:left;
+    	font-family:Verdana, Arial; 
+    	font-size:9px;
+    	/*line-height: .90em;*/
+	/*width:100px;*/  }
+
+.labelterms {
+	text-align: left;
+	font-family: Verdana, Arial;
+	font-size: 11px; }
+
+.labellogin {
+	text-align: left;
+	font-family: Verdana, Arial;
+	font-size: 12px; }
+
+.logoutmessage {
+	text-align: left;
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	background-color:#edeef4; }
+
+.labelcolumnbold {
+	text-align: left;
+	font-family: Verdana, Arial;
+	font-size: 9px;
+	font-weight: bold;
+	line-height: .95em; }
+
+
+/*--Input field tds------------*/
+.inputcolumn { 
+    	text-align:left;
+   	 font-family:Verdana; 
+    	font-size:9px;
+	/*line-height: .95em;*/
+	/*width:auto;*/  }
+
+.inputcolumnRight {
+	text-align: right;
+	font-family: Arial;
+	font-size: 9px; }
+
+/*--Info field tds------------*/
+.infocolumn { 
+    	text-align:left;
+    	font-family:Verdana, Arial; 
+    	font-size:9px;
+   	font-weight:bold;
+   	/* line-height: .90em;*/
+	/*width:auto;*/  }
+
+
+/*--Input fields, all types------------*/
+.inputfield {
+    	font-size: 10px;
+    	font-family: Verdana, Arial, Helvetica, sans-serif;
+	/*background: #ffffff;
+	border:solid 1px #00529b;*/ }
+
+.inputfield-numeric {
+    	font-size: 10px;
+    	font-family: Verdana, Arial, Helvetica, sans-serif;
+    	text-align:right;
+	/*background: #ffffff;
+	border:solid 1px #00529b;*/ }
+
+.Input-Field-Small-Button { 
+	font-family: Verdana, Arial, sans-serif; 
+	font-size: 10px; 
+	padding: 0px; } 
+
+.inputfieldreadonly {
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: #CCCCCC;
+	border:solid 1px #666666; }
+
+/*--review versions for text only views, no input fields used --*/
+.inputcolumnreview {
+    	font-family:Arial, Verdana, Sans-Serif;
+   	font-size:9px;
+    	font-weight:bold; }
+
+.labelcolumnreview { 
+    	text-align:left;
+    	font-family:Verdana, Arial; 
+    	font-size:10px;
+    	line-height: .95em;
+    	border-left: 1px solid #00529b; } 
+    
+.workspacereview {
+    	border-top: 1px solid #00529b;
+    	border-left: 1px solid #00529b;
+	border-bottom: 1px solid #00529b;
+    	padding: 0px; 
+    	margin: 0px; 
+    	width: 100%;
+    	background-color:#edeef4;
+    	vertical-align: top; }
+
+/* div.checkboxlist {
+    	width: 300px;
+    	height: 100px;
+    	overflow:scroll; } */
+
+/* Commented as new Grid Styles added at the end..*/
+/*GRIDS - REVIEW WHEN GRID SOLUTION IS IN PLACE */
+/*div.largegrid {
+    	width: 700px;
+    	height: 250px;
+    	overflow:scroll; }
+
+ div.mediumgrid {
+    	width: 500px;
+    	height: 250px;
+    	overflow:scroll; } 
+  
+div.smallgrid {
+    	width: 250px;
+    	height: 250px;
+    	overflow:scroll; }
+
+.gridcell{
+    	border-right: 1px solid #e8e8e8;
+    	border-left: 1px solid #999999;
+    	align: left;
+    	font-family:Verdana, Arial, Sans-Serif;
+    	font-size:9px; }
+
+.grid {
+    	width: 100%;
+    	font-family:Verdana, Arial, Sans-Serif;
+    	font-size:8px;
+    	padding: 0px; 
+	margin: 0px; }
+
+.grid th {
+    	font-family:Verdana, Arial, Sans-Serif;
+   	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:baseline;
+	font-weight:bold;
+	font-size:9px;
+	border: 1px solid #c8c8c8;
+	border-collapse:collapse;
+	background-color: #e8e8e8; }
+
+.grid td {
+    	font-family:Verdana, Arial, Sans-Serif;
+    	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	font-size:9px;
+	border: 1px solid #c8c8c8;
+	border-collapse:collapse; }
+/*END GRIDS STYLES*/
+/* END Commented as new Grid Styles added at the end..*/
+
+/* for buttons at bottom of screen(task-level buttons) */
+.buttoncell{
+    /*this is applied to the cell holding the buttontable*/
+    /*text-align: left;*/
+    background-color: #ffffff; }
+
+
+.buttontable, .buttontable2 {
+    	/*three-cell table holding the button*/
+    	/*-CLOSE- -RESET-  |  -DELETE- -NEW-   | -SAVE- or -SEARCH- */
+    	width: 100%;
+	margin: 0px;
+	padding-right:4px; }
+
+.buttontable td {
+    	padding-right: 4px;
+    	padding-top: 4px;
+    	padding-bottom: 4px;
+	width:33%;}
+
+
+.button { 
+    	/* DO NOT APPLY WIDTHS TO BUTTONS */
+    	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background: #00529b;
+	border:solid 1px #00529b;
+	color:#edeef4;
+	font-weight:bold;    }
+
+.buttonlogin { 
+    	/* DO NOT APPLY WIDTHS TO BUTTONS */
+    	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background: #00529b;
+	border:solid 1px #00529b;
+	color:#edeef4;
+	font-weight:bold;    }
+
+.button[disabled] {
+	/* DO NOT APPLY WIDTHS TO BUTTONS */
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background-color: #d7d7d7;
+	border: solid 1px #d7d7d7;
+	color: #898989;
+	font-weight: bold; }
+
+.Splitter {
+	cursor: e-resize;
+	width: 2px;
+	background-color: Gray;
+	height: 100%; }
+
+.FullScreen {
+	height: 600px; }
+
+/* mmmmmmmmmmmmmmmmmmmmmmm -- START GRID STYLES --  mmmmmmmmmmmmmmmmmmmmmmmm */
+
+.Grid {
+    
+	padding: 3px 3px 3px 3px; }
+
+/*.Grid td {
+	border: solid 3px #FFFFFF;
+	margin: 3px 3px 3px 3px;
+	font-family: Arial;
+	padding: 5px 5px 5px 5px;
+	text-align: center; }
+*/
+
+/*GRIDS - REVIEW WHEN GRID SOLUTION IS IN PLACE */
+ div.largegrid {
+    width: 770px;
+    height: 350px;
+    overflow:scroll; }
+ div.mediumgrid {
+    width: 500px;
+    height: 250px;
+    overflow:scroll; }   
+div.smallgrid {
+    width: 320px;
+    height: 250px;
+    overflow:auto; }
+
+.gridcell{
+    /*border-right: 1px solid #e8e8e8;
+    border-left: 1px solid #999999;
+    align: left;*/
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:9px;border-top: 1px solid #edeef4;
+	border-bottom: 1px solid #edeef4;
+	/*border-left: 1px solid #00529b;*/
+	border-right: 1px solid #666666;
+	border-collapse:collapse; }
+
+.GridHeader
+{
+	background-color: #edeef4;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	line-height: 18px;
+	border-bottom: solid 1px #FFFFFF;
+	position: relative;border-top: 1px solid #edeef4;
+	border-bottom: 1px solid #edeef4;
+	/*border-left: 1px solid #00529b;*/
+	border-right: 1px solid #666666;
+	border-collapse:collapse;
+	z-index: 0;
+}
+
+.GridHeader1
+{
+	background-color: #edeef4;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	line-height: 18px;
+	border-bottom: 1px solid #edeef4;
+	/*border-left: 1px solid #00529b;*/
+	border-right: 1px solid #666666;
+	border-collapse:collapse;
+	/*position: relative;*/
+}
+
+.GridHeader a, .GridHeader a:active, .GridHeader a:visited
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridHeader a:hover
+{
+	text-decoration: underline;
+}
+
+.GridItem, .GridAltItem
+{
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	font-weight: normal;
+	padding: 3px 3px 3px 3px;
+	border: solid 1px #FFFFFF;
+}
+.GridItem
+{
+	background-color: #EFEFEF;
+}
+.GridAltItem
+{
+	background-color: #F7F7F7;
+}
+.GridItem a
+{
+	text-decoration: underline;
+	color: #456AAE;
+}
+
+.GridItem a:hover, .GridItem a:active, .GridItem a:visited
+{
+	text-decoration: underline;
+}
+.GridAltItem a
+{
+	text-decoration: underline;
+	color: #00529b;
+}
+
+.GridAltItem a:, .GridAltItem a:active, .GridAltItem a:visited
+{
+	text-decoration: underline;
+}
+.GridPager
+{
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	font-weight: normal;
+	background-color: #edeef4;
+	text-align: right;
+}
+
+
+/* mmmmmmmmmmmmmmmmmmmmmmm -- STOP GRID STYLES --  mmmmmmmmmmmmmmmmmmmmmmmm */
+
+
+/* -------- Pagination element -------- */
+.results-returned { 
+	font-family: Verdana, Arial, sans-serif; 
+	font-weight: bold;  
+	text-decoration: none; 
+	color: #102162; 
+	/*display: inline; */
+	background-color: #edeef4;
+	font-size: 9px;}
+.results-pagination {  
+	font-family: Verdana, Arial, sans-serif; 
+	font-weight: normal;  
+	text-decoration: none; 
+	color: #102162; 
+	background-color: #edeef4; 
+	padding-left: 6px; 
+	padding-right: 6px;
+	/*border: 1px solid #dddddd; */
+	margin:0; 
+	/*display: inline; */
+	font-size: 9px;}
+.results-pagination a { 
+	font-family: Verdana, Arial, sans-serif; 
+	background-color: #edeef4; 
+	text-decoration: none; 
+	font-weight: bold; }
+.results-pagination a:link { color: #102162; }
+.results-pagination a:visited { color: #666666; }
+.results-pagination a:hover  { color: #ff0000; }
+.results-pagination a:active  { color: #ff0000; }
+
+/*.results-pagination-current-page { 
+	font-family: Verdana, Arial, sans-serif; 
+	background-color: #ffffff; 
+	border: 1px solid #dddddd;
+	text-decoration: none; 
+	font-weight: bold;
+	font-size: 9px; }*/
+
+
+
+
+/*----------LAYOUT FOR EDIT ELEMENTS ON PROGRAM PAGE----------------*/
+.program-layout-grid {
+	background-color:#ffffff;
+	FONT-WEIGHT: normal;
+	font-size: 10px;
+	font-family: Arial, Verdana, sans-serif;
+	padding: 2px;
+	width: 100%;
+	vertical-align: top;}
+	
+.program-layout-grid td {
+    width: 50%;
+    vertical-align: top;
+    border: 1px solid #e8e8e8;
+    border-collapse:collapse;
+    /*border-top: 2px solid #f4f4f8;
+	border-bottom: 2px dotted #f4f4f8;*/ }
+    
+.program-layout-grid th {
+    width: 50%;
+    vertical-align: top;
+    border: 1px solid #e8e8e8;
+    border-collapse:collapse;
+    background-color: #e8e8e8;
+    text-align:left;
+    /*border-top: 2px solid #f4f4f8;
+	border-bottom: 2px dotted #f4f4f8;*/ }
+    
+.program-layout-grid-content {
+	background-color:#ffffff;
+	FONT-WEIGHT: normal;
+	font-size: 10px;
+	font-family: Arial, Verdana, sans-serif;
+	padding: 2px;
+	width: 100%;
+	vertical-align: top; }
+	
+.program-layout-grid-content td {
+    vertical-align: top; }
+/*-------------------------------------------------------------------------------------------*/
+
+.divContainerClass
+{
+	overflow: auto;
+	height: 250px;
+}
+
+.divPaginationContainer
+{
+	padding-left: 0px;
+	padding-bottom: 0px;
+    margin: 0px; 
+    overflow: auto;
+    padding-top: 0px;    	
+}
+
+.buttonNoBorder 
+{
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 10px;
+    background: #ffffff;
+    border-style: none;
+    border-width: 0px;
+	color:#000099;
+}
+
+.buttonNoBorderSelected 
+{
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    background: #ffffff;
+    border-style: none;
+    border-width: 0px;
+	color: Black;
+}
+
+.buttonNoBorderDisabled 
+{
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    background: #ffffff;
+    border-style: none;
+    border-width: 0px;
+	color: Gray;
+}
+
+.ProgramGridDivisionStyle
+{
+    border: solid 1px #88B0CA;
+    overflow: auto;
+    height: 100px;
+    /*width: 350px;*/
+    width: 75%;
+}

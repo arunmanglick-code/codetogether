@@ -1,0 +1,206 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="cs_tool.master.cs" Inherits="cs_tool" %>
+<html>
+
+<script language="JavaScript" src="Javascript/common.js" type="text/JavaScript"></script>
+
+<script language="javascript" src="Javascript/masterPage.js" type="text/javascript"></script>
+
+<script language="javascript" src="Javascript/chrome.js" type="text/javascript"></script>
+
+<head id="Head1" runat="server">
+    <title>Nuance CS Tool</title>
+    <link href="App_Themes/csTool/cstool.css" rel="stylesheet" type="text/css" />
+    <style>
+.cpYearNavigation,.cpMonthNavigation { background-color:#FFFFFF; text-align:center; vertical-align:center; text-decoration:none; color:#000000; font-weight:normal; }.cpDayColumnHeader, .cpYearNavigation,.cpMonthNavigation,.cpCurrentMonthDate,.cpCurrentMonthDateDisabled,.cpOtherMonthDate,.cpOtherMonthDateDisabled,.cpCurrentDate,.cpCurrentDateDisabled,.cpTodayText,.cpTodayTextDisabled,.cpText { font-family:arial; font-size:8pt; }TD.cpDayColumnHeader { text-align:right; border:solid thin #C0C0C0;color:#FFFFFF;font-weight:normal;border-width:0px 0px 1px 0px; }.cpCurrentMonthDate, .cpOtherMonthDate, .cpCurrentDate  { text-align:right; text-decoration:none; }.cpCurrentMonthDateDisabled, .cpOtherMonthDateDisabled, .cpCurrentDateDisabled { color:#D0D0D0; text-align:right; text-decoration:line-through; }.cpCurrentMonthDate, .cpCurrentDate { color:#000000;font-weight:normal; }.cpOtherMonthDate { color:#9B9B9B;font-weight:normal; }TD.cpCurrentDate { color:#FFFFFF; background-color: #A7A7A7;font-weight:normal;}TD.cpCurrentDateDisabled { border-width:1px; border:solid thin #FFAAAA; }TD.cpTodayText, TD.cpTodayTextDisabled { font-weight:normal;border:solid thin #C0C0C0; border-width:1px 0px 0px 0px;}A.cpTodayText, SPAN.cpTodayTextDisabled { height:20px; }A.cpTodayText { color:White; }.cpTodayTextDisabled { color:#D0D0D0;font-weight:normal; }.cpBorder { border:solid thin #716F64; }</style>
+
+    <script type="text/javascript">
+    </script>
+
+</head>
+<body id="bdMasterPage" runat="server" style="overflow-y: hidden; margin-left: 0;
+    margin-top: 0; margin-right: 0;">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="atlSMMaster" EnablePartialRendering="true" runat="server"  ScriptMode="release"
+        AsyncPostBackTimeout="1800">
+        </asp:ScriptManager>
+        <div>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" height="100%">
+                <tr height="6%">
+                    <td>
+                        <input type="hidden" id="TabClick" runat="server" name="TabClick" value="false" />
+                        <input type="hidden" runat="server" id="varHelp" name="varHelp" value="true" />
+                        <!-- START table for logo and logged in user -->
+                        <table width="100%" id="tblMasterLogo" height="13%" border="0" cellpadding="0" cellspacing="0"
+                            class="TopBg" style="background-color: #E8E4D0;">
+                            <tr>
+                                <td width="35%" height="60" style="padding: 0 0 0 10;">
+                                    <img src="img/logo.gif" alt="CSTools by Nuance" width="245" height="57" /></td>
+                                <td width="65%">
+                                    <table width="100%" height="15%" border="0" align="right" cellpadding="0" cellspacing="0"
+                                        class="TopBg">
+                                        <tr>
+                                            <td width="58%" align="right">
+                                                <a style="cursor: hand">
+                                                    <img src="img/ic_help.gif" alt="Help" onclick="window.parent.CallHelp(mapId);return false;" /></a></td>
+                                            <td width="10%" align="right">
+                                                <img src="img/ic_user.gif" alt="User" width="14" height="14" border="0" /></td>
+                                            <td width="19%">
+                                                &nbsp;<asp:Label ID="lblLoggedinUser" runat="server" Font-Bold="True" Text="Paul Jenkins"></asp:Label>
+                                            </td>
+                                            <td width="11%" style="padding: 0 8 0 0;">
+                                                <a href="logout.aspx" target="_top" onmouseover="MM_swapImage('Logout','','img/btn_logout_over.gif',1)"
+                                                    onmouseout="MM_swapImgRestore()">
+                                                    <img src="img/btn_logout_up.gif" alt="Logout" name="Logout" width="57" height="24"
+                                                        border="0" id="Img1" /></a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr height="0%" valign="Bottom">
+                    <td class="TopBg" valign="bottom">
+                        <table cellpadding="0" cellspacing="0" border="0" width="98%" height="10px" align="center">
+                            <tr valign="bottom">
+                                <td id="tdLoading" runat="server" style="width: 126px;">
+                                    <img id="imgLoading" src="img/icon_fg_loading_n.gif" runat="server" alt="Message Center"
+                                        style="border: 0px; vertical-align: bottom;" width="126" height="23" />
+                                </td>
+                                <td id="tdMessageList" runat="server" style="visibility: hidden; display: none;"
+                                    width="127">
+                                    <a id="lnkMsgCenter" runat="server" href="message_center.aspx" target="_self">
+                                        <img id="imgMsgCenter" src="img/t_msg_center.gif" runat="server" alt="Message Center"
+                                            border="0" width="126" height="23" /></a></td>
+                                <td id="tcnavGrpMonitor" runat="server" width="114" align="center">
+                                    <a id="lnkGroupMonitor" runat="server" href="group_monitor.aspx" target="_self">
+                                        <img id="imgGroupMonitor" src="img/t_grp_monitor.gif" runat="server" alt="Group Monitor"
+                                            style="border: 0;" width="114" height="23" /></a></td>
+                                <td id="tcnavTools" runat="server" width="78">
+                                    <table runat="server" id="chromemenu" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                           <td id="tdToolsLoading" runat="server" style="width: 79px;">
+                                                <img id="imgToolsLoading" src="img/t_tools_o_loading.gif" runat="server" alt="Tools"
+                                                    style="border: 0px; vertical-align: bottom;" width="79" height="23" />
+                                            </td>
+                                            <td ID="tdTools" runat="server">
+                                                <a id="lnkTools" runat="server" href="add_directory.aspx" rel="dropmenu1" target="_self">
+                                                    <img id="imgTools" src="img/t_tools.gif" height="23" width="79" border="0" runat="server"
+                                                        alt="Tools" /></a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td id="tcnavSystemAdmin" runat="server" width="117">
+                                    <table id="chromemenu1" runat="server" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td>
+                                                <a id="lnkSystemAdmin" runat="server" href="institution_information.aspx" rel="dropmenu2"
+                                                    target="_self">
+                                                    <img id="imgSystemAdmin" runat="server" src="img/t_system_admin.gif" height="23"
+                                                        width="117" style="border: 0" alt="System Admin" /></a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                 <td id="tcnavCallCenter" runat="server" width="117">
+                                    <table id="chromemenu2" runat="server" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td>
+                                                <a id="lnkCallCenter" runat="server" href="add_callcenter.aspx" rel="dropmenu3"
+                                                    target="_self">
+                                                    <img id="imgCallCenter" runat="server" src="img/t_call_Center.gif" height="23"
+                                                         style="border: 0" alt="Agent Team" /></a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="right">
+                                    <span id="clock" class="DateTime"></span>
+                                </td>
+                            </tr>
+                        </table>
+                        <iframe id="DivShim" src="blankHTMLPage.htm" scrolling="no" frameborder="0" style="position: absolute;
+                            top: 0; left: 0; display: none;"></iframe>
+                        <div id="dropmenu1" class="dropmenudiv" style="position: absolute; top: 25px; left: 50px;
+                            z-index: 100">
+                            <a runat="server" id="mitemAddDirectory" href="add_directory.aspx">Add/Edit OC Directory</a>
+                            <a runat="server" id="mitemAddNurseDir" href="add_nurse_directory.aspx">Add/Edit Nurse
+                                Directory</a> <a runat="server" id="mitemAddGroup" href="add_group.aspx">Add Group</a>
+                            <a runat="server" id="mitemAddOC" href="add_rp.aspx">Add Ordering Clinician</a> <a runat="server"
+                                id="mitemAddSubscriber" href="add_subscriber.aspx">Add Subscriber</a> <a runat="server"
+                                    id="mitemAddFinding" href="add_findings.aspx">Add Findings</a> <a runat="server"
+                                        id="mitemOCGrammer" href="grammar.aspx">OC Grammars</a> <a runat="server" id="mitemOCVoiceover"
+                                            href="voiceover_utility.aspx">OC Voice-over Utility</a> <a runat="server" id="mitemTestResult"
+                                                href="test_result_definitions.aspx">Lab Test Definitions</a>
+                                                 <a runat="server" id="mitemCustomNotifications"
+                                                href="custom_notifications.aspx">Custom Notifications</a>
+                            <a runat="server" id="mitemDeviceError" href="device_notification_error.aspx">Device
+                                Notification Errors</a> <a runat="server" id="mitemVUIErrors" href="vuiErrorReport.aspx">
+                                    VUI Errors</a>
+                        </div>
+                        <iframe id="DivShim1" src="blankHTMLPage.htm" scrolling="no" frameborder="0" style="position: absolute;
+                            top: 0; left: 0; display: none;"></iframe>
+                        <div id="dropmenu2" class="dropmenudiv" style="position: absolute; top: 25px; left: 50px;
+                            z-index: 100">
+                            <a runat="server" id="mitemInstitueInfo" href="institution_information.aspx">Institution
+                                List</a><a runat="server" id="mitemUserManagement" href="user_management.aspx">Manage Users</a>
+                        </div>
+                        <iframe id="DivShim2" src="blankHTMLPage.htm" scrolling="no" frameborder="0" style="position: absolute;
+                            top: 0; left: 0; display: none;"></iframe>
+                        <div id="dropmenu3" class="dropmenudiv" style="position: absolute; top: 25px; left: 50px;
+                            z-index: 100">
+                            <a runat="server" id="A1" href="add_callcenter.aspx">Agent Team Setup</a>
+                        </div>
+                        <script type="text/javascript">
+             var access = "<%= strAccess %>";
+              if(access=="YES")
+              {
+                 cssdropdown.startchrome('<%=chromemenu.ClientID%>');
+                 cssdropdown1.startchrome1('<%=chromemenu1.ClientID%>');
+                 cssdropdown2.startchrome2('<%=chromemenu2.ClientID%>');
+              }
+              else if (access=="NO")
+              {
+                cssdropdown.startchrome('<%=chromemenu.ClientID%>');
+              }
+                        </script>
+
+                    </td>
+                </tr>
+                <!-- END table for logo and logged in user -->
+                <tr height="89%" valign="toP" style="padding-top: 15px">
+                    <td align="center" class="BottomBg">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr height="20px" class="CopyRight" valign="bottom">
+                    <td class="CopyRight">
+                        © 2008 Nuance, Inc. All rights reserved. Portions of Veriphy covered under US Patent
+                        6,778,644- CSTools 3.0 (101)
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <script language="javascript"> 
+        try
+        {
+            //Added By Rajendra D for Loading icon changes.
+            document.getElementById("ctl00_tdMessageList").style.visibility='visible';
+            document.getElementById("ctl00_tdLoading").style.visibility='hidden';
+            document.getElementById("ctl00_tdLoading").style.display='none';
+            document.getElementById("ctl00_tdMessageList").style.display='inline';
+            //Added By Prerak
+            document.getElementById("ctl00_tdTools").style.visibility='visible';
+            document.getElementById("ctl00_tdToolsLoading").style.visibility='hidden';
+            document.getElementById("ctl00_tdToolsLoading").style.display='none';
+            document.getElementById("ctl00_tdTools").style.display='inline';
+
+         }
+         catch(e){}
+      
+       
+    </script>
+
+</body>
+</html>

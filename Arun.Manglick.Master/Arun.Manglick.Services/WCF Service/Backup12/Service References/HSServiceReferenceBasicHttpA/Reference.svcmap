@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="121ff8db-bde3-424f-937f-83b9bb213bed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/HelloSecureBasicHttpSiteA/Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="d359f8d2-fb40-4866-a7d5-2bc37d77cc3f" SourceId="1" SourceUrl="http://xipl0060.xpanxion.co.in/HelloSecureBasicHttpSiteA/Service.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="a9f7e7ab-c146-4aef-bf90-222da7e7d478" SourceId="1" SourceUrl="http://xipl0060.xpanxion.co.in/HelloSecureBasicHttpSiteA/Service.svc?disco" />
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="c113d95d-23fa-4637-a0d7-ecbc3b90b0bc" SourceId="1" SourceUrl="http://xipl0060.xpanxion.co.in/HelloSecureBasicHttpSiteA/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="d5a94daf-2ffd-40d3-a9a8-8b69c169cb4f" SourceId="1" SourceUrl="http://xipl0060.xpanxion.co.in/HelloSecureBasicHttpSiteA/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="HelloSecureService.wsdl" MetadataType="Wsdl" ID="dbbc8ab2-f298-496e-be32-2ea2b733201b" SourceId="1" SourceUrl="http://xipl0060.xpanxion.co.in/HelloSecureBasicHttpSiteA/Service.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

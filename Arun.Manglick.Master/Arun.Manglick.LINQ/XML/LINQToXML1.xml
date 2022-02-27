@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentElement>
+  <Employee status ="Y">
+    <CourseId>1</CourseId>
+    <Sequence>1</Sequence>
+    <YearOfPassing>2002-03-03</YearOfPassing>
+    <Institution>AAA America</Institution>
+    <Course>BE</Course>
+    <Average>63</Average>
+  </Employee>
+  <Employee status ="Y">
+    <CourseId>2</CourseId>
+    <Sequence>2</Sequence>
+    <YearOfPassing>2002-02-02</YearOfPassing>
+    <Institution>BBB Bangkok</Institution>
+    <Course>BE</Course>
+    <Average>65</Average>
+  </Employee>
+  <Employee status ="Y">
+    <CourseId>3</CourseId>
+    <Sequence>3</Sequence>
+    <YearOfPassing>2002-04-04</YearOfPassing>
+    <Institution>CCC China</Institution>
+    <Course>BE</Course>
+    <Average>65</Average>
+  </Employee>
+  <Employee status ="N">
+    <CourseId>4</CourseId>
+    <Sequence>4</Sequence>
+    <YearOfPassing>2002-05-05</YearOfPassing>
+    <Institution>DDD Denmark</Institution>
+    <Course>BE</Course>
+    <Average>66</Average>
+  </Employee>
+  <Employee status ="Y">
+    <CourseId>5</CourseId>
+    <Sequence>5</Sequence>
+    <YearOfPassing>2002-05-05</YearOfPassing>
+    <Institution>EEE Europe</Institution>
+    <Course>BE</Course>
+  </Employee>
+</DocumentElement>

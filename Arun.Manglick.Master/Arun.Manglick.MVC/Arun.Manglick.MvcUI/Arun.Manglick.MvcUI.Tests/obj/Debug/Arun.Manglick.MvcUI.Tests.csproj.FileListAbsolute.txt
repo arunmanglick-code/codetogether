@@ -1,0 +1,8 @@
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC\Arun.Manglick.MvcUI\Arun.Manglick.MvcUI.Tests\bin\Debug\Arun.Manglick.MvcUI.Tests.dll.config
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC\Arun.Manglick.MvcUI\Arun.Manglick.MvcUI.Tests\bin\Debug\Arun.Manglick.MvcUI.Tests.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC\Arun.Manglick.MvcUI\Arun.Manglick.MvcUI.Tests\bin\Debug\Arun.Manglick.MvcUI.Tests.pdb
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC\Arun.Manglick.MvcUI\Arun.Manglick.MvcUI.Tests\bin\Debug\Arun.Manglick.MvcUI.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC\Arun.Manglick.MvcUI\Arun.Manglick.MvcUI.Tests\bin\Debug\Arun.Manglick.MvcUI.pdb
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC\Arun.Manglick.MvcUI\Arun.Manglick.MvcUI.Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC\Arun.Manglick.MvcUI\Arun.Manglick.MvcUI.Tests\obj\Debug\Arun.Manglick.MvcUI.Tests.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC\Arun.Manglick.MvcUI\Arun.Manglick.MvcUI.Tests\obj\Debug\Arun.Manglick.MvcUI.Tests.pdb

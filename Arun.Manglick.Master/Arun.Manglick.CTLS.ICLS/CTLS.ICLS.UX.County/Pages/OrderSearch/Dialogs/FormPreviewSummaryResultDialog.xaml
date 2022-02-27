@@ -1,0 +1,131 @@
+﻿<iclscontrols:ICLSDialog x:Class="CTLS.ICLS.UX.CountySearch.FormPreviewSummaryResultDialog"
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:uxcontrols="clr-namespace:CTLS.Shared.UX.Controls;assembly=CTLS.Shared.UX.Controls"
+                         xmlns:local="clr-namespace:CTLS.ICLS.UX.CountySearch"
+                         xmlns:iclscontrols="clr-namespace:CTLS.ICLS.UX.Controls;assembly=CTLS.ICLS.UX.Controls"
+                         xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+                         xmlns:slabbcontrols="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls">
+    <Grid x:Name="LayoutRoot"
+          Background="White"
+          Margin="10,0,10,0">
+        <local:CountySearchViewModelConnector x:Name="countySearchVMC"
+                                              Loaded="countySearchVMC_Loaded" />
+        <Grid x:Name="grdHeaderInfo">
+            <Grid.Resources>
+                <local:EmptyStringToVisibility x:Name="EmptyStringToVisibility"></local:EmptyStringToVisibility>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="130" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <slabbcontrols:MenuBar Grid.Row="0"
+                                   Grid.ColumnSpan="2"
+                                   Margin="0,0,20,0"
+                                   HorizontalAlignment="Right"
+                                   Style="{StaticResource ctaBlueButtonBar}">
+                <slabbcontrols:MenuItem Caption="Export"
+                                        Click="btnExport_Click"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnExport" />
+                <slabbcontrols:MenuItem Caption="Print"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnPrint"
+                                        Click="btnPrint_Click"/>
+                <slabbcontrols:MenuItem Caption="Close"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnClose" 
+                                        Click="btnClose_Click"/>
+            </slabbcontrols:MenuBar>
+            <Border Grid.Row="1">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Order #"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.OrderNo}" />
+                        <TextBlock Text="-"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.OrderItemNo}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Tracking #"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.TrackingNo}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="County Name"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.CountyName}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Searched On"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.SearchKey}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Currency Date"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.CurrencyDate}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Visibility="{Binding Path=HeaderInfo.FromDate,Converter={StaticResource EmptyStringToVisibility}}">
+                        <TextBlock Text="Searched From"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.FromDate}" />
+                        <TextBlock Text=" To " />
+                        <TextBlock Text="{Binding Path=HeaderInfo.ToDate}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Searched Lien Types"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.LienType}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Total Records"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="0"
+                                   x:Name="txbTotalRecords" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <local:AZMaricopaPreviewSummarySearchResultBlock Grid.Row="2"
+                                                             Visibility="Collapsed"
+                                                             x:Name="AZMaricopaPreviewSummarySearchResultBlock"></local:AZMaricopaPreviewSummarySearchResultBlock>
+            <local:CASanDiegoPreviewSummarySearchResultBlock Grid.Row="2"
+                                                             Visibility="Collapsed"
+                                                             x:Name="CASanDiegoPreviewSummarySearchResultBlock"></local:CASanDiegoPreviewSummarySearchResultBlock>
+            <local:CASantaClaraPreviewSummarySearchResultBlock Grid.Row="2"
+                                                               Visibility="Collapsed"
+                                                               x:Name="CASantaClaraPreviewSummarySearchResultBlock"></local:CASantaClaraPreviewSummarySearchResultBlock>
+            <local:FLDadePreviewSummarySearchResultBlock Grid.Row="2"
+                                                         Visibility="Collapsed"
+                                                         x:Name="FLDadePreviewSummarySearchResultBlock"></local:FLDadePreviewSummarySearchResultBlock>
+            <local:FLPalmBeachPreviewSummarySearchResultBlock Grid.Row="2"
+                                                              Visibility="Collapsed"
+                                                              x:Name="FLPalmBeachPreviewSummarySearchResultBlock"></local:FLPalmBeachPreviewSummarySearchResultBlock>
+        </Grid>
+    </Grid>
+</iclscontrols:ICLSDialog>

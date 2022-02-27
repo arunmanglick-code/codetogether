@@ -1,0 +1,10 @@
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe.config
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\bin\Debug\HelloIndigoHost.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\bin\Debug\HelloIndigoService.dll
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\bin\Debug\HelloIndigo ContentType.dll
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\bin\Debug\HelloIndigoService.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\bin\Debug\HelloIndigo ContentType.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\obj\Debug\HelloIndigoHost.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoHost\obj\Debug\HelloIndigoHost.pdb

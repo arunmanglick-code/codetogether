@@ -1,0 +1,702 @@
+﻿<UserControl x:Class="CTLS.ICLS.UX.CountySearch.NameResultView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:uxcontrols="clr-namespace:CTLS.Shared.UX.Controls;assembly=CTLS.Shared.UX.Controls"
+             xmlns:tk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:CTLS.ICLS.UX.CountySearch"
+             xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+             xmlns:AppViewState="clr-namespace:CTLS.ICLS.UX.Shared.ViewStates;assembly=CTLS.ICLS.UX.Shared"
+             xmlns:slabbrefreshable="clr-namespace:CT.SLABB.Data;assembly=CT.SLABB.Data.Refreshables"
+             xmlns:slabbcontrols="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls">
+    <UserControl.Resources>
+        <Style x:Key="BusyIndicatorStyle1"
+               TargetType="tk:BusyIndicator">
+            <Setter Property="BusyContent"
+                    Value="Please wait..." />
+            <Setter Property="IsTabStop"
+                    Value="False" />
+            <Setter Property="OverlayStyle">
+                <Setter.Value>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Fill"
+                                Value="White" />
+                        <Setter Property="Opacity"
+                                Value="0.5" />
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ProgressBarStyle">
+                <Setter.Value>
+                    <Style TargetType="ProgressBar">
+                        <Setter Property="IsIndeterminate"
+                                Value="True" />
+                        <Setter Property="Height"
+                                Value="15" />
+                        <Setter Property="Margin"
+                                Value="0,0,0,0" />
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="DisplayAfter"
+                    Value="00:00:00.1" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Stretch" />
+            <Setter Property="VerticalAlignment"
+                    Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Stretch" />
+            <Setter Property="VerticalContentAlignment"
+                    Value="Stretch" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="tk:BusyIndicator">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="VisibilityStates">
+                                    <VisualState x:Name="Hidden">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+                                                                           Duration="00:00:00.001"
+                                                                           Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                                           Storyboard.TargetName="busycontent">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+                                                                           Duration="00:00:00.001"
+                                                                           Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                                           Storyboard.TargetName="overlay">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Visible">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+                                                                           Duration="00:00:00.001"
+                                                                           Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                                           Storyboard.TargetName="busycontent">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+                                                                           Duration="00:00:00.001"
+                                                                           Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                                           Storyboard.TargetName="overlay">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="BusyStatusStates">
+                                    <VisualState x:Name="Idle">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+                                                                           Duration="00:00:00.001"
+                                                                           Storyboard.TargetProperty="(Control.IsEnabled)"
+                                                                           Storyboard.TargetName="content">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <System:Boolean>True</System:Boolean>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Busy">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+                                                                           Duration="00:00:00.001"
+                                                                           Storyboard.TargetProperty="(Control.IsEnabled)"
+                                                                           Storyboard.TargetName="content">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <System:Boolean>False</System:Boolean>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentControl x:Name="content"
+                                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                                            Content="{TemplateBinding Content}"
+                                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            <Rectangle x:Name="overlay"
+                                       Style="{TemplateBinding OverlayStyle}" />
+                            <ContentPresenter x:Name="busycontent">
+                                <Grid>
+                                    <Border BorderThickness="1"
+                                            Background="White"
+                                            CornerRadius="2">
+                                        <Border.BorderBrush>
+                                            <LinearGradientBrush EndPoint="0.5,1"
+                                                                 StartPoint="0.5,0">
+                                                <GradientStop Color="#FFA3AEB9"
+                                                              Offset="0" />
+                                                <GradientStop Color="#FF8399A9"
+                                                              Offset="0.375" />
+                                                <GradientStop Color="#FF718597"
+                                                              Offset="0.375" />
+                                                <GradientStop Color="#FF617584"
+                                                              Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Border.BorderBrush>
+                                        <Border CornerRadius="1.5"
+                                                Margin="1">
+                                            <Border.Background>
+                                                <LinearGradientBrush EndPoint="0.5,1"
+                                                                     StartPoint="0.5,0">
+                                                    <GradientStop Color="#FFF6F8F9"
+                                                                  Offset="0.02" />
+                                                    <GradientStop Color="#FFB8B8B8"
+                                                                  Offset="0.996" />
+                                                </LinearGradientBrush>
+                                            </Border.Background>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <ContentPresenter ContentTemplate="{TemplateBinding BusyContentTemplate}"
+                                                                  Content="{TemplateBinding BusyContent}"
+                                                                  Margin="8" />
+                                                <ProgressBar Grid.Row="1"
+                                                             Style="{TemplateBinding ProgressBarStyle}" />
+                                            </Grid>
+                                        </Border>
+                                    </Border>
+                                </Grid>
+                            </ContentPresenter>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="BusyIndicatorStyle2"
+               TargetType="tk:BusyIndicator">
+            <Setter Property="IsTabStop"
+                    Value="False" />
+            <Setter Property="Background"
+                    Value="White" />
+            <Setter Property="BusyContent"
+                    Value="Please wait..." />
+            <Setter Property="FontFamily"
+                    Value="Verdana" />
+            <Setter Property="FontSize"
+                    Value="10" />
+            <Setter Property="Foreground"
+                    Value="Blue" />
+            <Setter Property="DisplayAfter"
+                    Value="00:00:00.1" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Stretch" />
+            <Setter Property="VerticalAlignment"
+                    Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Stretch" />
+            <Setter Property="VerticalContentAlignment"
+                    Value="Stretch" />
+            <Setter Property="OverlayStyle">
+                <Setter.Value>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Fill"
+                                Value="White" />
+                        <Setter Property="Opacity"
+                                Value="0.6" />
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ProgressBarStyle">
+                <Setter.Value>
+                    <Style TargetType="ProgressBar">
+                        <Setter Property="Background"
+                                Value="Gray" />
+                        <Setter Property="Foreground"
+                                Value="Violet" />
+                        <Setter Property="IsIndeterminate"
+                                Value="True" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ProgressBar">
+                                    <Grid>
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Determinate" />
+                                                <VisualState x:Name="Indeterminate">
+                                                    <Storyboard BeginTime="0:0:0.15"
+                                                                Duration="0:0:2.4"
+                                                                RepeatBehavior="Forever">
+                                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="p1"
+                                                                                       Storyboard.TargetProperty="Opacity">
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.15"
+                                                                                  Value="0" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.26"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.35"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.46"
+                                                                                  Value="0" />
+                                                        </DoubleAnimationUsingKeyFrames>
+                                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="p2"
+                                                                                       Storyboard.TargetProperty="Opacity">
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.30"
+                                                                                  Value="0" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.41"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.50"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.61"
+                                                                                  Value="0" />
+                                                        </DoubleAnimationUsingKeyFrames>
+                                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="p3"
+                                                                                       Storyboard.TargetProperty="Opacity">
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.45"
+                                                                                  Value="0" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.56"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.65"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.76"
+                                                                                  Value="0" />
+                                                        </DoubleAnimationUsingKeyFrames>
+                                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="p4"
+                                                                                       Storyboard.TargetProperty="Opacity">
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.60"
+                                                                                  Value="0" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.71"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.80"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.91"
+                                                                                  Value="0" />
+                                                        </DoubleAnimationUsingKeyFrames>
+                                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="p5"
+                                                                                       Storyboard.TargetProperty="Opacity">
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.75"
+                                                                                  Value="0" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.86"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.95"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:2.06"
+                                                                                  Value="0" />
+                                                        </DoubleAnimationUsingKeyFrames>
+                                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="p6"
+                                                                                       Storyboard.TargetProperty="Opacity">
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:0.90"
+                                                                                  Value="0" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.01"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:2.10"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:2.21"
+                                                                                  Value="0" />
+                                                        </DoubleAnimationUsingKeyFrames>
+                                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="p7"
+                                                                                       Storyboard.TargetProperty="Opacity">
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.05"
+                                                                                  Value="0" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.16"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:2.25"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:2.36"
+                                                                                  Value="0" />
+                                                        </DoubleAnimationUsingKeyFrames>
+                                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="p8"
+                                                                                       Storyboard.TargetProperty="Opacity">
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.20"
+                                                                                  Value="0" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:1.31"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:2.40"
+                                                                                  Value="1" />
+                                                            <LinearDoubleKeyFrame KeyTime="0:0:2.40"
+                                                                                  Value="0" />
+                                                        </DoubleAnimationUsingKeyFrames>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                        <Viewbox>
+                                            <Grid Height="35"
+                                                  Width="35">
+                                                <Path x:Name="p5"
+                                                      Opacity="0"
+                                                      Data="M5.3666506,0.5000003 L5.7133517,0.72223777 C6.6946535,1.3184171 7.7845569,1.7536836 8.9464264,1.9914073 L8.9809875,1.998026 L8.9809875,8.876935 L8.8369169,8.8604708 C5.7175508,8.4639959 2.862067,7.2222071 0.50738931,5.3719926 L0.5,5.3660407 z"
+                                                      Margin="6.496,0,0,0.124"
+                                                      Stretch="Fill"
+                                                      Stroke="#FF7E7E7E"
+                                                      UseLayoutRounding="False"
+                                                      HorizontalAlignment="Left"
+                                                      Height="9.377"
+                                                      VerticalAlignment="Bottom"
+                                                      Width="9.481"
+                                                      StrokeThickness="0"
+                                                      Fill="{TemplateBinding Background}" />
+                                                <Path x:Name="p4"
+                                                      Opacity="0"
+                                                      Data="M4.1121063,0.5000006 L8.9784365,5.3657207 L8.9678411,5.3742528 C6.6131639,7.2244673 3.7576799,8.4662561 0.63831252,8.862731 L0.50000048,8.8785391 L0.50000048,1.999184 L0.52880186,1.9936675 C1.6906725,1.7559438 2.7805767,1.3206773 3.761878,0.72449797 z"
+                                                      Margin="0,0,6.497,0.124"
+                                                      Stretch="Fill"
+                                                      Stroke="#FF7E7E7E"
+                                                      UseLayoutRounding="False"
+                                                      HorizontalAlignment="Right"
+                                                      Height="9.379"
+                                                      VerticalAlignment="Bottom"
+                                                      Width="9.478"
+                                                      StrokeThickness="0"
+                                                      Fill="{TemplateBinding Background}" />
+                                                <Path x:Name="p3"
+                                                      Opacity="0"
+                                                      Data="M1.9976557,0.5 L8.8776493,0.5 L8.8615131,0.64116967 C8.4649878,3.7601461 7.2230439,6.615272 5.3725972,8.969655 L5.366652,8.9770346 L0.5,4.110992 L0.7222597,3.7643437 C1.3185138,2.7831655 1.7538347,1.6933979 1.9915864,0.53167284 z"
+                                                      Margin="0,0,0.124,6.499"
+                                                      Stretch="Fill"
+                                                      Stroke="#FF7E7E7E"
+                                                      UseLayoutRounding="False"
+                                                      HorizontalAlignment="Right"
+                                                      Height="9.477"
+                                                      VerticalAlignment="Bottom"
+                                                      Width="9.378"
+                                                      StrokeThickness="0"
+                                                      Fill="{TemplateBinding Background}" />
+                                                <Path x:Name="p6"
+                                                      Opacity="0"
+                                                      Data="M0.5,0.5 L7.3799934,0.5 L7.3860626,0.53167284 C7.623816,1.6933979 8.0591364,2.7831655 8.6553907,3.7643437 L8.8799105,4.1145191 L4.0135803,8.9802399 L4.0050535,8.969655 C2.1546073,6.615272 0.91266096,3.7601461 0.51613933,0.64116967 z"
+                                                      Margin="0.12,0,0,6.496"
+                                                      Stretch="Fill"
+                                                      Stroke="#FF7E7E7E"
+                                                      UseLayoutRounding="False"
+                                                      HorizontalAlignment="Left"
+                                                      Height="9.48"
+                                                      VerticalAlignment="Bottom"
+                                                      Width="9.38"
+                                                      StrokeThickness="0"
+                                                      Fill="{TemplateBinding Background}" />
+                                                <Path x:Name="p2"
+                                                      Opacity="0"
+                                                      Data="M5.3666501,0.50000006 L5.3726025,0.50738847 C7.2230492,2.8617713 8.4649935,5.7168975 8.8615189,8.8358727 L8.877655,8.9770498 L1.9976631,8.9770498 L1.991592,8.9453697 C1.7538403,7.7836447 1.3185194,6.6938791 0.72226524,5.7126989 L0.5,5.3660417 z"
+                                                      Margin="0,6.499,0.124,0"
+                                                      Stretch="Fill"
+                                                      Stroke="#FF7E7E7E"
+                                                      UseLayoutRounding="False"
+                                                      HorizontalAlignment="Right"
+                                                      Height="9.477"
+                                                      VerticalAlignment="Top"
+                                                      Width="9.378"
+                                                      StrokeThickness="0"
+                                                      Fill="{TemplateBinding Background}" />
+                                                <Path x:Name="p7"
+                                                      Opacity="0"
+                                                      Data="M4.013588,0.50000024 L8.8799181,5.3657212 L8.6553917,5.7159047 C8.0591364,6.6970849 7.6238165,7.7868505 7.3860636,8.948576 L7.379993,8.9802561 L0.5,8.9802561 L0.51614022,8.8390789 C0.91266179,5.7201033 2.154608,2.8649771 4.0050545,0.51059425 z"
+                                                      Margin="0.12,6.496,0,0"
+                                                      Stretch="Fill"
+                                                      Stroke="#FF7E7E7E"
+                                                      UseLayoutRounding="False"
+                                                      HorizontalAlignment="Left"
+                                                      Height="9.48"
+                                                      VerticalAlignment="Top"
+                                                      Width="9.38"
+                                                      StrokeThickness="0"
+                                                      Fill="{TemplateBinding Background}" />
+                                                <Path x:Name="p1"
+                                                      Opacity="0"
+                                                      Data="M0.50000048,0.5 L0.63831252,0.5158087 C3.7576799,0.91228062 6.6131639,2.1540713 8.9678411,4.0042858 L8.9784269,4.0128117 L4.1120973,8.8785334 L3.761878,8.6540403 C2.7805767,8.0578604 1.6906725,7.6225948 0.52880186,7.3848715 L0.50000048,7.379354 z"
+                                                      Margin="0,0.125,6.497,0"
+                                                      Stretch="Fill"
+                                                      Stroke="#FF7E7E7E"
+                                                      UseLayoutRounding="False"
+                                                      HorizontalAlignment="Right"
+                                                      Height="9.379"
+                                                      VerticalAlignment="Top"
+                                                      Width="9.478"
+                                                      StrokeThickness="0"
+                                                      Fill="{TemplateBinding Background}" />
+                                                <Path x:Name="p8"
+                                                      Opacity="0"
+                                                      Data="M8.9809799,0.5 L8.9809799,7.3789091 L8.9464188,7.3855295 C7.7845492,7.6232529 6.6946459,8.0585184 5.7133441,8.6546984 L5.366652,8.8769302 L0.50000006,4.0108881 L0.50738156,4.0049438 C2.8620591,2.1547294 5.7175431,0.91293871 8.8369093,0.5164668 z"
+                                                      Margin="6.496,0.124,0,0"
+                                                      Stretch="Fill"
+                                                      Stroke="#FF7E7E7E"
+                                                      UseLayoutRounding="False"
+                                                      HorizontalAlignment="Left"
+                                                      Height="9.377"
+                                                      VerticalAlignment="Top"
+                                                      Width="9.481"
+                                                      StrokeThickness="0"
+                                                      Fill="{TemplateBinding Background}" />
+                                            </Grid>
+                                        </Viewbox>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="tk:BusyIndicator">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="BusyStatusStates">
+                                    <VisualState x:Name="Idle" />
+                                    <VisualState x:Name="Busy">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)"
+                                                                           Storyboard.TargetName="progressBar">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Thickness>0</Thickness>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="overlay"
+                                       Style="{TemplateBinding OverlayStyle}" />
+                            <Border Background="{TemplateBinding Background}">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"
+                                                      BlurRadius="6"
+                                                      ShadowDepth="0" />
+                                </Border.Effect>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ProgressBar x:Name="progressBar"
+                                                 Style="{TemplateBinding ProgressBarStyle}"
+                                                 Grid.Row="2"
+                                                 IsIndeterminate="True"
+                                                 Margin="0,5" />
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot"
+          Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <local:CountySearchViewModelConnector x:Name="countySearchVMC" />
+        <AppViewState:ApplicationContextViewStateConnector x:Name="ApplicationContext"></AppViewState:ApplicationContextViewStateConnector>
+        <TextBlock Text="Name Search Results"
+                   Style="{StaticResource PageHeaderText}"
+                   Grid.Row="0"></TextBlock>
+        <Grid Grid.Row="1"
+              Margin="10,0,10,0"
+              x:Name="grdHeaderInfo"
+              DataContext="{Binding Path=NameResultBindableModel, ElementName=countySearchVMC, Mode=TwoWay}">
+            <Grid.Resources>
+                <local:EmptyStringToVisibility x:Name="EmptyStringToVisibility"></local:EmptyStringToVisibility>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition MinHeight="50" />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <slabbcontrols:MenuBar Grid.Row="0"
+                                   Grid.ColumnSpan="2"
+                                   Margin="0,0,0,0"
+                                   HorizontalAlignment="Right"
+                                   Style="{StaticResource ctaBlueButtonBar}">
+                <slabbcontrols:MenuItem Caption="New Search"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Click="btnNewSearch_Click"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnNewSearch" />
+                <slabbcontrols:MenuItem Caption="Form Preview"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        Click="btnFormPreview_Click"
+                                        x:Name="btnFormPreview" />
+                <slabbcontrols:MenuItem Caption="No Records Report"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        Click="btnNoRecords_Click"
+                                        x:Name="btnNoRecords" />
+                <slabbcontrols:MenuItem Caption="Perform Search($)"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnPerformSearch"
+                                        Click="btnPerformSearch_Click" />
+                <slabbcontrols:MenuItem Caption="Submit"
+                                        Cursor="Hand"
+                                        Click="btnSubmit_Click"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnSubmit" />
+            </slabbcontrols:MenuBar>
+            <Border Grid.Row="1"
+                    Margin="0,0,0,20">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Order #"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.OrderNo}" />
+                        <TextBlock Text="-"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.OrderItemNo}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Tracking #"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.TrackingNo}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="County Name"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.CountyName}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Searched On"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.SearchKey}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Currency Date"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.CurrencyDate}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Visibility="{Binding Path=HeaderInfo.FromDate,Converter={StaticResource EmptyStringToVisibility}}">
+                        <TextBlock Text="Searched From"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.FromDate}" />
+                        <TextBlock Text=" To " />
+                        <TextBlock Text="{Binding Path=HeaderInfo.ToDate}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Visibility="{Binding Path=HeaderInfo.LienType,Converter={StaticResource EmptyStringToVisibility}}">
+                        <TextBlock Text="Searched Lien Types"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=HeaderInfo.LienType}" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <TextBlock x:Name="lblMoreRecordsAvailable"
+                       Text="County website's summary searches has data exceeding the upper cap [100 Records]."
+                       Foreground="Red"
+                       Grid.Row="3"
+                       Visibility="Collapsed" />
+            <tk:BusyIndicator x:Name="busyIndicator"
+                              Grid.Row="3"
+                              BusyContent="Please Wait While Submittng Details..."></tk:BusyIndicator>
+            <TextBlock x:Name="lblSearchedOldTab"
+                       Text="The 1871 thru 1946 search was not performed."
+                       Foreground="Red"
+                       Grid.Row="4"
+                       Visibility="Collapsed" />
+            <slabbrefreshable:RefreshIndicator x:Name="refreshIndicator"
+                                               Grid.Row="5"
+                                               Status="{Binding Status,ElementName=NameList, Mode=TwoWay}">
+                <uxcontrols:MultiSelectGridView x:Name="grvAcceptedOrders"
+                                                ItemsSource="{Binding Path=NameList}"
+                                                LoadingRow="grvAcceptedOrders_LoadingRow"
+                                                Style="{StaticResource uxcontrolsGridView}"
+                                                CanUserSortColumns="False"
+                                                EmptyGridMessage="Requested Party not on file.">
+                    <uxcontrols:MultiSelectGridView.Columns>
+                        <data:DataGridTemplateColumn Header="NAME"
+                                                     SortMemberPath="PartyName"
+                                                     Width="*">
+                            <data:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                     Text="{Binding PartyName}" />
+                                </DataTemplate>
+                            </data:DataGridTemplateColumn.CellTemplate>
+                        </data:DataGridTemplateColumn>
+                    </uxcontrols:MultiSelectGridView.Columns>
+                </uxcontrols:MultiSelectGridView>
+            </slabbrefreshable:RefreshIndicator>
+            <slabbcontrols:MenuBar Grid.Row="6"
+                                   Grid.ColumnSpan="2"
+                                   Margin="0,0,0,0"
+                                   HorizontalAlignment="Right"
+                                   Style="{StaticResource ctaBlueButtonBar}">
+                <slabbcontrols:MenuItem Caption="New Search"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        Click="btnNewSearch_Click"
+                                        x:Name="btnNewSearchbtm" />
+                <slabbcontrols:MenuItem Caption="Form Preview"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        Click="btnFormPreview_Click"
+                                        x:Name="btnFormPreviewbtm" />
+                <slabbcontrols:MenuItem Caption="No Records Report"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        Click="btnNoRecords_Click"
+                                        x:Name="btnNoRecordsbtm" />
+                <slabbcontrols:MenuItem Caption="Perform Search($)"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Click="btnPerformSearch_Click"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnPerformSearchbtm" />
+                <slabbcontrols:MenuItem Caption="Submit"
+                                        Cursor="Hand"
+                                        Click="btnSubmit_Click"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnSubmitbtm" />
+            </slabbcontrols:MenuBar>
+        </Grid>
+    </Grid>
+</UserControl>

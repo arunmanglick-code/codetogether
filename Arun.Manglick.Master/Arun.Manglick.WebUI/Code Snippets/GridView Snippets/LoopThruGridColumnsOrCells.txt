@@ -1,0 +1,40 @@
+﻿To loop thru all the DataFields Columns in GridView
+-----------------------------------------------------
+
+foreach (DataControlField field in gridView.Columns)
+{
+    if (field.SortExpression == sortExpression)
+    {
+        return gridView.Columns.IndexOf(field);
+    }
+}
+-----------------------------------------------------
+-----------------------------------------------------
+
+
+To loop thru all the Cells in a Row in GridView
+-----------------------------------------------------
+
+foreach (TableCell cell in e.Row.Cells)
+{
+    if (cell.Controls.Count > 0)
+    {
+        LinkButton sortLink = cell.Controls[0] as LinkButton;
+        if (sortLink != null)
+        {
+            if (sortLink.Text == mSortExpression)
+            {
+                if (gdvStipulationSearch.SortDirection == SortDirection.Ascending)
+                {
+                    sortLink.Text += " ASC";
+                }
+                else
+                {
+                    sortLink.Text += " DESC";
+                }
+            }
+        }
+    }
+}
+-----------------------------------------------------
+-----------------------------------------------------

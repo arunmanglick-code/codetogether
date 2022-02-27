@@ -1,0 +1,11 @@
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\bin\Debug\HelloIndigoClient.exe.config
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\bin\Debug\HelloIndigoClient.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\bin\Debug\HelloIndigoClient.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\obj\Debug\HelloIndigoClient.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\obj\Debug\HelloIndigoClient.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\bin\Debug\HelloIndigoClient.exe.config
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\bin\Debug\HelloIndigoClient.exe
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\bin\Debug\HelloIndigoClient.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\obj\Debug\HelloIndigoClient.exe
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Services\WCF Service\Lab06 Hosting\HelloIndigo IIS\HelloIndigoClient\obj\Debug\HelloIndigoClient.pdb

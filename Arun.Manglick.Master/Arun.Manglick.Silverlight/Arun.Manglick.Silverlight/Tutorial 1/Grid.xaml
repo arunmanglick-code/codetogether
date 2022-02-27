@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.GridPage"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="800" Height="300">
+    <Canvas>
+        <Grid x:Name="LayoutRoot" Background="CadetBlue" ShowGridLines="true">        
+            <Grid.RowDefinitions>
+                <RowDefinition  MinHeight="5" MaxHeight="50" />
+                <RowDefinition  MinHeight="5" MaxHeight="50"/>
+                <RowDefinition  MinHeight="5" MaxHeight="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+           
+        </Grid>
+    </Canvas>
+</UserControl>

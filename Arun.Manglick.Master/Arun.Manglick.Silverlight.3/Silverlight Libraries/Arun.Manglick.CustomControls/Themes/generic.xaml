@@ -1,0 +1,289 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:local="clr-namespace:Arun.Manglick.CustomControls;assembly=Arun.Manglick.CustomControls"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="local:GenericLoginControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:GenericLoginControl">
+                    <Grid x:Name="LayoutRoot"
+                          Background="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="200" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="UserIdElement"
+                                   Text="{TemplateBinding UserIdHeader}"
+                                   Grid.Row="0"
+                                   Grid.Column="0"></TextBlock>
+                        <TextBlock x:Name="PwdElement"
+                                   Text="{TemplateBinding PasswordHeader}"
+                                   Grid.Row="1"
+                                   Grid.Column="0"></TextBlock>
+                        <TextBox x:Name="txtUserId"
+                                 Grid.Row="0"
+                                 Grid.Column="1"></TextBox>
+                        <TextBox x:Name="txtPwd"
+                                 Grid.Row="1"
+                                 Grid.Column="1"></TextBox>
+                        <Button x:Name="ButtonElement"
+                                Content="{TemplateBinding LoginButtonContent}"
+                                Grid.Row="2"
+                                Margin="0,10,0,0"
+                                Grid.ColumnSpan="2"
+                                Grid.Column="1"></Button>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Button Styles -->
+    <Style x:Key="ctaGrayButtonStyles"
+           TargetType="Button">
+        <Setter Property="FontSize"
+                Value="8.25"></Setter>
+        <Setter Property="FontFamily"
+                Value="Verdana"></Setter>
+        <Setter Property="Foreground"
+                Value="White"></Setter>
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>                        
+                        <Border x:Name="ButtonBorder"
+                                Height="16"
+                                BorderBrush="#949495"
+                                Background="#CACACA"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid Margin="1">
+                                <Border x:Name="Background"
+                                        Background="#949495"
+                                        BorderBrush="#949495"
+                                        BorderThickness="1">
+                                    <TextBlock x:Name="ButtonText"
+                                               FontSize="{TemplateBinding FontSize}"
+                                               FontFamily="{TemplateBinding FontFamily}"
+                                               Text="{TemplateBinding Content}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Foreground="White"></TextBlock>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ListBoxItem Styles -->
+    <Style TargetType="ListBoxItem"
+           x:Key="listBoxItemStyle">
+        <Setter Property="Padding"
+                Value="3" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Left" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Top" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="TabNavigation"
+                Value="Local" />
+        <Setter Property="IsTabStop"
+                Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Rectangle x:Name="FocusElementBackground"
+                                   Opacity="0"
+                                   Fill="#316AC5"
+                                   IsHitTestVisible="False" />
+                        <ContentControl x:Name="ItemText"
+                                        VerticalAlignment="Center"
+                                        Foreground="Black"
+                                        HorizontalAlignment="Left"
+                                        Margin="3,0,0,0"
+                                        Content="{TemplateBinding Content}"
+                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                        IsTabStop="False" />
+                        <Rectangle  x:Name="FocusVisualElement"
+                                    Stroke="White"
+                                    StrokeDashArray="1, 1"
+                                    StrokeThickness="1"
+                                    Visibility="Collapsed"
+                                    RadiusX="1"
+                                    RadiusY="1"></Rectangle>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ListBox Styles -->
+    <Style TargetType="ListBox"
+           x:Key="listBoxStyle">
+        <Setter Property="Padding"
+                Value="1" />
+        <Setter Property="Background"
+                Value="#FFFFFFFF" />
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="FontFamily"
+                Value="Trebuchet MS" />
+        <Setter Property="FontSize"
+                Value="11" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Left" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Top" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="TabNavigation"
+                Value="Once" />
+        <Setter Property="IsTabStop"
+                Value="False" />
+        <Setter Property="ItemContainerStyle"
+                Value="{StaticResource listBoxItemStyle}" />
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#7F9DB9"></SolidColorBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBox">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ScrollViewer x:Name="ScrollViewer"
+                                      Padding="{TemplateBinding Padding}"
+                                      Background="{TemplateBinding Background}"
+                                      BorderBrush="Transparent"
+                                      BorderThickness="0"
+                                      IsTabStop="False">
+                            <ItemsPresenter />
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    
+    <!-- List Mover Control Template Definition -->
+    <Style TargetType="local:ListMover">
+        <Setter Property="FontFamily"
+                Value="Verdana"></Setter>           
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ListMover">
+                    <Grid x:Name="RootElement"
+                          Height="{TemplateBinding Height}"
+                          Width="{TemplateBinding Width}"
+                          HorizontalAlignment="Left">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="18" />
+                            <RowDefinition />
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="220" />
+                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="LeftListBoxHeaderElement"
+                                   FontFamily="Verdana"
+                                   Text="{TemplateBinding LeftListBoxHeader}"
+                                   Visibility="{TemplateBinding LeftListBoxHeaderTextVisibility}"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   HorizontalAlignment="Left" />
+                        <ListBox x:Name="LeftListBoxElement"
+                                 Grid.Row="1"
+                                 Style="{StaticResource listBoxStyle}"
+                                 Grid.Column="0"
+                                 HorizontalContentAlignment="Center"
+                                 SelectionMode="{TemplateBinding LeftListSelectionMode}"
+                                 IsTabStop="False" />
+                        <StackPanel Orientation="Vertical"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="MoveRightButtonElement"                                    
+                                    MinWidth="30"
+                                    Content="{TemplateBinding MoveRightButtonContent}"
+                                    Margin="2,2,2,2" />
+                            <Button x:Name="MoveRightAllButtonElement"
+                                    Style="{StaticResource ctaGrayButtonStyles}"
+                                    MinWidth="30"
+                                    Content="{TemplateBinding MoveRightAllButtonContent}"
+                                    Margin="2,2,2,10" />
+                            <Button x:Name="MoveLeftButtonElement"
+                                    Style="{StaticResource ctaGrayButtonStyles}"
+                                    MinWidth="30"
+                                    Content="{TemplateBinding MoveLeftButtonContent}"
+                                    Margin="2,10,2,2" />
+                            <Button x:Name="MoveLeftAllButtonElement"
+                                    Style="{StaticResource ctaGrayButtonStyles}"
+                                    MinWidth="30"
+                                    Content="{TemplateBinding MoveLeftAllButtonContent}"
+                                    Margin="2,2,2,2" />
+                        </StackPanel>
+                        <TextBlock x:Name="RightListBoxHeaderElement"
+                                   Text="{TemplateBinding RightListBoxHeader}"
+                                   Visibility="{TemplateBinding RightListBoxHeaderTextVisibility}"
+                                   Grid.Row="0"
+                                   Grid.Column="2"
+                                   FontFamily="Verdana"
+                                   HorizontalAlignment="Left" />
+                        <ListBox x:Name="RightListBoxElement"
+                                 Style="{StaticResource listBoxStyle}"
+                                 Grid.Row="1"
+                                 Grid.Column="2"
+                                 HorizontalContentAlignment="Center"
+                                 SelectionMode="{TemplateBinding RightListSelectionMode}"
+                                 IsTabStop="False" />
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Visibility="{TemplateBinding UpDownButtonVisibility}"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="UpLeftButtonElement"                                    
+                                    MinWidth="30"
+                                    Content="{TemplateBinding UpLeftButtonContent}"
+                                    Margin="2,2,2,2" />
+                            <Button x:Name="DownLeftButtonElement"
+                                    Style="{StaticResource ctaGrayButtonStyles}"
+                                    MinWidth="30"
+                                    Content="{TemplateBinding DownLeftButtonContent}"
+                                    Margin="2,2,2,2" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Row="2"
+                                    Grid.Column="2"
+                                    Visibility="{TemplateBinding UpDownButtonVisibility}"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="UpRightButtonElement"                                   
+                                    MinWidth="30"
+                                    Content="{TemplateBinding UpLeftButtonContent}"
+                                    Margin="2,2,2,2" />
+                            <Button x:Name="DownRightButtonElement"
+                                    MinWidth="30"
+                                    Content="{TemplateBinding DownLeftButtonContent}"
+                                    Margin="2,2,2,2" />
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

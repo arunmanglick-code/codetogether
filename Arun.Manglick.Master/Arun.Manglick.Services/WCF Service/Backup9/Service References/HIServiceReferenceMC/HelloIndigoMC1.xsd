@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.thatindigogirl.com/samples/2006/06" elementFormDefault="qualified" targetNamespace="http://www.thatindigogirl.com/samples/2006/06" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/HelloIndigoMC?xsd=xsd1" namespace="http://schemas.thatindigogirl.com/samples/2006/06" />
+  <xs:element xmlns:q1="http://schemas.thatindigogirl.com/samples/2006/06" name="Item" nillable="true" type="q1:LinkItem" />
+  <xs:element name="LicenseKey" nillable="true" type="xs:string" />
+</xs:schema>

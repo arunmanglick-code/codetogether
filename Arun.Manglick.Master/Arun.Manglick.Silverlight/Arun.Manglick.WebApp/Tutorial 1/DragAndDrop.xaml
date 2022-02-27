@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Arun.Manglick.WebApp.DragAndDrop"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="600" Height="800">
+    <Grid x:Name="LayoutRoot" Background="Bisque">
+        <Canvas x:Name="myCanvas">
+            <Button x:Name="myButton" Content="Hello" Canvas.Left="10" Canvas.Top="10"/>
+            <CheckBox x:Name="rushOrder" Content="Rush" Canvas.Left="50" Canvas.Top="10" />
+            <Canvas x:Name="CompositeButton" Canvas.Left="150" Canvas.Top="10" >
+                <Button Content="Press the VLGM!" Width="180" Height="40" />
+                <Canvas x:Name="VLGM"  Canvas.Left="140" Canvas.Top="0" >
+                   <Ellipse Canvas.Left="2"
+                       Canvas.Top="2"
+                       Width="32"
+                       Height="32"
+                       Fill="LimeGreen"
+                       Stroke="Black" />
+                   <Ellipse Canvas.Left="7"
+                       Canvas.Top="10"
+                       Width="5"
+                       Height="5"
+                       Fill="Black"
+                       Stroke="Black" />
+                   <Ellipse Canvas.Left="15"
+                       x:Name="MiddleEye"
+                       Canvas.Top="10"
+                       Width="5"
+                       Height="5"
+                       Fill="Black"
+                       Stroke="Black" />
+                   <Ellipse Canvas.Left="22"
+                       Canvas.Top="10"
+                       Width="5"
+                       Height="5"
+                       Fill="Black"
+                       Stroke="Black" />
+                  <Path Data="M 10,20 A 6,6,180 0 0 26,20" Stroke="Red"/>
+                </Canvas>   
+            </Canvas>       
+         </Canvas>         
+    </Grid>                
+</UserControl>

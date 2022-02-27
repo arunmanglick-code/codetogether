@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This xml contains the list for the Status dropdown-->
+<GradeType>
+  <grade>
+		<key>A</key>
+		<value>AA</value>
+	</grade>
+  <grade>
+    <key>B</key>
+    <value>BB</value>
+  </grade>
+  <grade>
+    <key>C</key>
+    <value>CC</value>
+  </grade>
+  <grade>
+    <key>D</key>
+    <value>DD</value>
+  </grade>
+</GradeType>

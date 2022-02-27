@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ea33daf-d453-4dd9-90d9-1b990a88a086" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3091/HelloIndigoHost/Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="fcf8b4e8-6635-4c2d-adb3-af053808c9ca" SourceId="1" SourceUrl="http://localhost:3091/HelloIndigoHost/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="44d03d89-1c20-4c26-9bd7-d7b2c5dd820d" SourceId="1" SourceUrl="http://localhost:3091/HelloIndigoHost/Service.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="HelloIndigoService.wsdl" MetadataType="Wsdl" ID="4e47b614-94cc-4f2d-bdae-f5efa0a1ee3f" SourceId="1" SourceUrl="http://localhost:3091/HelloIndigoHost/Service.svc?wsdl" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="32ff30ef-6eb4-4b85-b44f-c22d36f73008" SourceId="1" SourceUrl="http://localhost:3091/HelloIndigoHost/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="058d60d6-580d-4777-bf6b-48fa57cede8b" SourceId="1" SourceUrl="http://localhost:3091/HelloIndigoHost/Service.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,39 @@
+﻿<UserControl xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data" x:Class="Arun.Manglick.WebApp.Search"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="800" Height="600">
+    <Grid x:Name="LayoutRoot" Background="White" ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <!--0 Margin-->
+            <RowDefinition Height="50" />
+            <!--1 Prompts-->
+            <RowDefinition Height="*" />
+            <!--2 DataGrid-->
+            <RowDefinition Height="10" />
+            <!--3 Margin-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <!--0 Margin-->
+            <ColumnDefinition Width="*" />
+            <!--1 Controls-->
+            <ColumnDefinition Width="10" />
+            <!--2 Margin-->
+        </Grid.ColumnDefinitions>
+
+        <Border BorderBrush="Black" BorderThickness="2" 
+        Grid.Row="1" Grid.Column="1"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <TextBlock Text="Last name to search for: " VerticalAlignment="Bottom" 
+              FontSize="18" Margin="15,0,0,0" />
+            <TextBox x:Name="LastName" Width="250" Height="30" Margin="2,0,0,4" 
+            VerticalAlignment="Bottom"/>
+            <Button x:Name="SearchButton" Width="75" Height="30" Margin="20,0,0,4" Content="Search"
+            VerticalAlignment="Bottom"  Background="Blue" FontWeight="Bold" FontSize="14" />
+        </StackPanel>
+        <my:DataGrid x:Name="theDataGrid" AlternatingRowBackground="Beige" AutoGenerateColumns="True" 
+            Width="700" Height="500" Grid.Row="2" Grid.Column="1" CanUserResizeColumns="True"></my:DataGrid>
+
+    </Grid>
+</UserControl>

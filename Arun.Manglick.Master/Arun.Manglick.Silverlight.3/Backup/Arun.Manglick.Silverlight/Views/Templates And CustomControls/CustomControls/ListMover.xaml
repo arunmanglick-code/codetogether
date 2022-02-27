@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.Views.Templates_And_CustomControls.CustomControls.ListMover"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot">
+        <Border BorderThickness="5" BorderBrush="BlueViolet" Width="500" VerticalAlignment="Top">
+            <Grid x:Name="RootElement"                  
+                  Margin="10,10,10,10"
+                  HorizontalAlignment="Center"                  
+                  ShowGridLines="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="18" />
+                    <RowDefinition Height="150" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="220" />
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!-- Row 0-->
+                <TextBlock x:Name="LeftListBoxHeaderElement"
+                           Text="Available"
+                           Visibility="Visible"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           HorizontalAlignment="Left" />
+                <TextBlock x:Name="RightListBoxHeaderElement"
+                           Text="Selected"
+                           Visibility="Visible"
+                           Grid.Row="0"
+                           Grid.Column="2"
+                           Width="100"
+                           HorizontalAlignment="Left" />
+                <!-- Row 1-->
+                <ListBox x:Name="LeftListBoxElement"
+                         Grid.Row="1"
+                         Grid.Column="0"
+                         Height="100"
+                         DisplayMemberPath="MyText"
+                         HorizontalContentAlignment="Center"
+                         VerticalAlignment="Top"
+                         SelectionMode="Extended"
+                         IsTabStop="False" />
+                <StackPanel Orientation="Vertical"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top">
+                    <Button x:Name="MoveRightButtonElement"
+                            MinWidth="30"
+                            MinHeight="20"
+                            Click="MoveRightButtonElement_Click"
+                            Content=">"
+                            Margin="2,2,2,2" />
+                    
+                    <Button x:Name="MoveRightAllButtonElement"
+                            MinWidth="30"
+                            MinHeight="20"
+                            Content=">>"
+                            Margin="2,2,2,10" />
+                    
+                    <Button x:Name="MoveLeftButtonElement"
+                            MinWidth="30"
+                            MinHeight="20"
+                            Content="&lt;"
+                            Click="MoveLeftButtonElement_Click"
+                            Margin="2,10,2,2" />
+                    
+                    <Button x:Name="MoveLeftAllButtonElement"
+                            MinWidth="30"
+                            MinHeight="20"
+                            Content="&lt;&lt;"
+                            Margin="2,2,2,2" />
+                </StackPanel>
+                <ListBox x:Name="RightListBoxElement"
+                         Grid.Row="1"
+                         Grid.Column="2"
+                         Height="100"
+                         VerticalAlignment="Top"
+                         DisplayMemberPath="MyText"
+                         HorizontalContentAlignment="Center"
+                         SelectionMode="Extended"
+                         IsTabStop="False" />
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

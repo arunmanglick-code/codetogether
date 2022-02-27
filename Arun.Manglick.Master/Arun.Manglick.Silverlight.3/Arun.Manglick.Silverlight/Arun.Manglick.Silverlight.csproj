@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B16C3BE-DE33-4DBB-A1D3-0A019B0CA90B}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Arun.Manglick.Silverlight</RootNamespace>
+    <AssemblyName>Arun.Manglick.Silverlight</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Arun.Manglick.Silverlight.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Arun.Manglick.Silverlight.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Arun.Manglick.Custom.FlipControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Silverlight Libraries\Arun.Manglick.Custom.FlipControl\Bin\Debug\Arun.Manglick.Custom.FlipControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Arun.Manglick.CustomControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Silverlight Libraries\Arun.Manglick.CustomControls\Bin\Debug\Arun.Manglick.CustomControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data.DataForm.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Windows.Controls" />
+    <Reference Include="System.Windows.Controls.Navigation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Product.cs" />
+    <Compile Include="BO\State.cs" />
+    <Compile Include="Convertors\PriceToBackGroundConvertor.cs" />
+    <Compile Include="Convertors\ImagePathConverter.cs" />
+    <Compile Include="Convertors\PriceConvertor.cs" />
+    <Compile Include="Custom Annotation\ProductAnnotation.cs" />
+    <Compile Include="MainTreePage.xaml.cs">
+      <DependentUpon>MainTreePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Proxy\ProductProxy.cs" />
+    <Compile Include="Views\Browser Integration\Browser Information\BrowserDetails.xaml.cs">
+      <DependentUpon>BrowserDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Browser Integration\Browser Information\ManipulateHtmlElement.xaml.cs">
+      <DependentUpon>ManipulateHtmlElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Browser Integration\JS To Silverlight\ScriptableSilverlight.xaml.cs">
+      <DependentUpon>ScriptableSilverlight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\ListBoxBindingValidations.xaml.cs">
+      <DependentUpon>ListBoxBindingValidations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\PriceToBackGroundConvertor.xaml.cs">
+      <DependentUpon>PriceToBackGroundConvertor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\ImagePathConvertor.xaml.cs">
+      <DependentUpon>ImagePathConvertor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\PriceConvertor.xaml.cs">
+      <DependentUpon>PriceConvertor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\SimpleResourceTemplateListBinding.xaml.cs">
+      <DependentUpon>SimpleResourceTemplateListBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\SimpleTemplateListBinding.xaml.cs">
+      <DependentUpon>SimpleTemplateListBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\SimpleListBinding.xaml.cs">
+      <DependentUpon>SimpleListBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\SimpleBindingNotificationValidations.xaml.cs">
+      <DependentUpon>SimpleBindingNotificationValidations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\SimpleBindingValidations.xaml.cs">
+      <DependentUpon>SimpleBindingValidations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\SimpleBindingProducts.xaml.cs">
+      <DependentUpon>SimpleBindingProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\DataForm\DataFormTemplate.xaml.cs">
+      <DependentUpon>DataFormTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\DataForm\DataForm.xaml.cs">
+      <DependentUpon>DataForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\PagedCollectionView\DataGridRowSorting.xaml.cs">
+      <DependentUpon>DataGridRowSorting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\DataGrid\DataGridRowPaging.xaml.cs">
+      <DependentUpon>DataGridRowPaging.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\PagedCollectionView\DataGridRowFiltering.xaml.cs">
+      <DependentUpon>DataGridRowFiltering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\PagedCollectionView\DataGridRowGrouping.xaml.cs">
+      <DependentUpon>DataGridRowGrouping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\DataGrid\DataGridDefineColumns.xaml.cs">
+      <DependentUpon>DataGridDefineColumns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\Basic\Label.xaml.cs">
+      <DependentUpon>Label.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\Basic\DescriptionViewer.xaml.cs">
+      <DependentUpon>DescriptionViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\DataGrid\DataGrid.xaml.cs">
+      <DependentUpon>DataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\ProductsBO.xaml.cs">
+      <DependentUpon>ProductsBO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\Products.xaml.cs">
+      <DependentUpon>Products.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBinding\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\Annotation\AnnotationValidations.xaml.cs">
+      <DependentUpon>AnnotationValidations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\Basic\ValidationSummary.xaml.cs">
+      <DependentUpon>ValidationSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataControls\TreeView\SimpleTreeview.xaml.cs">
+      <DependentUpon>SimpleTreeview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dependency And RoutedEvents\DependencyProperties\WrapBreakPanel.cs" />
+    <Compile Include="Views\Dependency And RoutedEvents\DependencyProperties\WrapPanelTest.xaml.cs">
+      <DependentUpon>WrapPanelTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dependency And RoutedEvents\RoutedEvents\DragCircles.xaml.cs">
+      <DependentUpon>DragCircles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dependency And RoutedEvents\RoutedEvents\EventBubbling.xaml.cs">
+      <DependentUpon>EventBubbling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dependency And RoutedEvents\RoutedEvents\KeyPressEvents.xaml.cs">
+      <DependentUpon>KeyPressEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dependency And RoutedEvents\RoutedEvents\MouseWheelZoom.xaml.cs">
+      <DependentUpon>MouseWheelZoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Elements\TabBlock.xaml.cs">
+      <DependentUpon>TabBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Elements\TabControlUsingBlock.xaml.cs">
+      <DependentUpon>TabControlUsingBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Elements\TabControl.xaml.cs">
+      <DependentUpon>TabControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErrorWindow.xaml.cs">
+      <DependentUpon>ErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Navigation\Caching\CachedPage.xaml.cs">
+      <DependentUpon>CachedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Navigation\Caching\CustomCachedPage.xaml.cs">
+      <DependentUpon>CustomCachedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Navigation\Caching\InitialPage.xaml.cs">
+      <DependentUpon>InitialPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Navigation\ChildWindows\ShowChildWindow.xaml.cs">
+      <DependentUpon>ShowChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Navigation\ChildWindows\UserInformation.xaml.cs">
+      <DependentUpon>UserInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Service Cafe\HelloIndigoCallBack.cs" />
+    <Compile Include="Views\Service Cafe\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Style And Behaviors\Styles\SimpleStyles.xaml.cs">
+      <DependentUpon>SimpleStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates And CustomControls\CustomControls\ListMoverControl.xaml.cs">
+      <DependentUpon>ListMoverControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates And CustomControls\CustomControls\LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates And CustomControls\CustomControls\CustomListMover.xaml.cs">
+      <DependentUpon>CustomListMover.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates And CustomControls\CustomControls\FlipPanel.xaml.cs">
+      <DependentUpon>FlipPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates And CustomControls\CustomControls\ListMover.xaml.cs">
+      <DependentUpon>ListMover.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates And CustomControls\Templates\TemplateStates.xaml.cs">
+      <DependentUpon>TemplateStates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates And CustomControls\Templates\SimpleButtonTemplate.xaml.cs">
+      <DependentUpon>SimpleButtonTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Test Views\Test.xaml.cs">
+      <DependentUpon>Test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\XAML\ElementBinding.xaml.cs">
+      <DependentUpon>ElementBinding.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Resource Include="Assets\Styles.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="MainTreePage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\MyDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Browser Integration\Browser Information\BrowserDetails.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Browser Integration\Browser Information\ManipulateHtmlElement.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Browser Integration\JS To Silverlight\ScriptableSilverlight.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\ListBoxBindingValidations.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\PriceToBackGroundConvertor.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\ImagePathConvertor.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\PriceConvertor.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\SimpleResourceTemplateListBinding.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\SimpleTemplateListBinding.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\SimpleListBinding.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\SimpleBindingNotificationValidations.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\SimpleBindingValidations.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\SimpleBindingProducts.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\DataForm\DataFormTemplate.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\DataForm\DataForm.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\PagedCollectionView\DataGridRowSorting.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\DataGrid\DataGridRowPaging.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\PagedCollectionView\DataGridRowFiltering.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\PagedCollectionView\DataGridRowGrouping.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\DataGrid\DataGridDefineColumns.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\Basic\Label.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\Basic\DescriptionViewer.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\DataGrid\DataGrid.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\ProductsBO.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\Products.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataBinding\Home.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\Home.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\Annotation\AnnotationValidations.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\Basic\ValidationSummary.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataControls\TreeView\SimpleTreeview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dependency And RoutedEvents\DependencyProperties\WrapPanelTest.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dependency And RoutedEvents\RoutedEvents\DragCircles.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dependency And RoutedEvents\RoutedEvents\EventBubbling.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dependency And RoutedEvents\RoutedEvents\KeyPressEvents.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dependency And RoutedEvents\RoutedEvents\MouseWheelZoom.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Elements\TabBlock.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Elements\TabControlUsingBlock.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Elements\TabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Navigation\Caching\CachedPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Navigation\Caching\CustomCachedPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Navigation\Caching\InitialPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Navigation\ChildWindows\ShowChildWindow.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Navigation\ChildWindows\UserInformation.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Service Cafe\Home.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Style And Behaviors\Styles\SimpleStyles.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Templates And CustomControls\CustomControls\ListMoverControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Templates And CustomControls\CustomControls\LoginControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Templates And CustomControls\CustomControls\CustomListMover.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Templates And CustomControls\CustomControls\FlipPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Templates And CustomControls\CustomControls\ListMover.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Templates And CustomControls\Templates\TemplateStates.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Templates And CustomControls\Templates\SimpleButtonTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Test Views\Test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\XAML\ElementBinding.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <Content Include="ServiceReferences.ClientConfig" />
+    <Resource Include="Images\FlipTrain.jpg" />
+    <Resource Include="Images\FlipSlimTrain.jpg" />
+    <Resource Include="Images\FlipSlimTrainFlip.jpg" />
+    <Resource Include="Images\BMW.jpg" />
+    <Resource Include="Images\DMW.jpg" />
+    <Resource Include="Images\EMW.jpg" />
+    <Resource Include="Images\FMW.jpg" />
+    <Resource Include="Images\SMW.jpg" />
+    <Resource Include="Images\info.jpg" />
+    <Resource Include="Images\ajax-loader.gif" />
+    <Resource Include="Images\ajaxloader.jpeg" />
+    <Content Include="Images\Copy of BMW.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Copy of happyface.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Browser Integration\Browser Information\BigIP.html" />
+    <Resource Include="Images\happyface.jpg" />
+    <Resource Include="Views\Test Views\FlipTrain1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libraries\Arun.Manglick.SL3.BL\Arun.Manglick.SL3.BL.csproj">
+      <Project>{9ca62821-73be-45ea-8675-b331a716057d}</Project>
+      <Name>Arun.Manglick.SL3.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Silverlight Libraries\Arun.Manglick.CustomControl\Arun.Manglick.CustomControl.csproj">
+      <Project>{03E32384-F483-4DCC-974F-A510D9D37A97}</Project>
+      <Name>Arun.Manglick.CustomControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Browser Integration\Resizing\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

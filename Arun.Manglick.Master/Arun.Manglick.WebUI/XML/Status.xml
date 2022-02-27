@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This xml contains the list for the Status dropdown-->
+<StatusType>
+  <status>
+		<key>A</key>
+		<value>Active</value>
+	</status>
+  <status>
+    <key>N</key>
+    <value>Inactive</value>
+  </status>  
+</StatusType>

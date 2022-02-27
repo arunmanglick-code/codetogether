@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.LibraryNew"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="600" Height="400">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="30" />
+            <RowDefinition MaxHeight="30" />
+            <RowDefinition MaxHeight="70" />
+            <RowDefinition MaxHeight="30" />
+            <RowDefinition MaxHeight="40" />
+            <RowDefinition MaxHeight="200" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MaxWidth="250"/>
+            <ColumnDefinition MaxWidth="250" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="TitlePrompt" Text="Title:  "
+            Grid.Row="0"  Grid.Column="0" Style="{StaticResource Tutorial6_Prompt}" />
+       <TextBlock x:Name="Title" 
+            Text="{Binding Title, Mode=OneWay }"
+            Grid.Row="0" Grid.Column="1" />
+
+        <TextBlock x:Name="AuthorPrompt" Text="Author: "
+            Grid.Row="1"  Grid.Column="0" Style="{StaticResource Tutorial6_Prompt}" />
+       <TextBlock x:Name="Author" 
+            Text="{Binding Author, Mode=OneWay }"
+            Grid.Row="1" Grid.Column="1" />
+  
+      <TextBlock x:Name="ChapterPrompt" Text="Chapters:  "
+            Grid.Row="2" Grid.Column="0" Style="{StaticResource Tutorial6_Prompt}"  />
+            
+        <ListBox x:Name="Chapters" 
+            ItemsSource="{Binding  Chapters, Mode=OneWay}"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Height="60" Width="200"
+            Grid.Row="2" Grid.Column="1" />
+
+        <TextBlock x:Name="MultipleAuthorPrompt" 
+            Text="Multiple authors?:  "
+            Grid.Row="3" Grid.Column="0" Style="{StaticResource Tutorial6_Prompt}"  />
+            
+        <CheckBox x:Name="MultipleAuthor" 
+          IsChecked="{Binding MultipleAuthor, Mode=TwoWay}" 
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Grid.Row="3" Grid.Column="1"/>            
+       
+        <TextBlock x:Name="QOHPrompt" 
+        Text="Quantity On Hand:  "
+        Grid.Row="4" Grid.Column="0" Style="{StaticResource Tutorial6_Prompt}" />
+            
+        <TextBox x:Name="QuantityOnHand"   
+            Text="{Binding QuantityOnHand, Mode=TwoWay}"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Height="30" Width="90"
+            Grid.Row="4" Grid.Column="1" />
+
+
+        <Button x:Name="Change" 
+        Content="Change Book"  
+        Height="Auto" Width="Auto" 
+        HorizontalAlignment="Stretch" 
+        Grid.Row="5" Grid.Column="0" Template="{StaticResource Tutorial6_RoundButon}" Margin="0,0,0,0"  />
+        
+        
+    </Grid>
+</UserControl>

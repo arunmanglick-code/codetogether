@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.Console", "Arun.Manglick.Console.csproj", "{7162D47E-1D8E-4D71-9AF7-773175A048A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathsHelper", "..\MathsHelper\MathsHelper.csproj", "{C2074696-6E3E-498B-9E76-A61345CD4720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit", "NUnit\NUnit.csproj", "{FECF4E2C-464E-4EE1-8164-964D8AEF062C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathsCommonHelper", "..\MathsCommonHelper\MathsCommonHelper.csproj", "{45EEEFC2-39FA-4089-B147-3D5DAFD4D3C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7162D47E-1D8E-4D71-9AF7-773175A048A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7162D47E-1D8E-4D71-9AF7-773175A048A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7162D47E-1D8E-4D71-9AF7-773175A048A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7162D47E-1D8E-4D71-9AF7-773175A048A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2074696-6E3E-498B-9E76-A61345CD4720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2074696-6E3E-498B-9E76-A61345CD4720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2074696-6E3E-498B-9E76-A61345CD4720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2074696-6E3E-498B-9E76-A61345CD4720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FECF4E2C-464E-4EE1-8164-964D8AEF062C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECF4E2C-464E-4EE1-8164-964D8AEF062C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECF4E2C-464E-4EE1-8164-964D8AEF062C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECF4E2C-464E-4EE1-8164-964D8AEF062C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45EEEFC2-39FA-4089-B147-3D5DAFD4D3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45EEEFC2-39FA-4089-B147-3D5DAFD4D3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45EEEFC2-39FA-4089-B147-3D5DAFD4D3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45EEEFC2-39FA-4089-B147-3D5DAFD4D3C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

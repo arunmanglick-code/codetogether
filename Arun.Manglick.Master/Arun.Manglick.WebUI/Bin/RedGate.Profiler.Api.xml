@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RedGate.Profiler.Api</name>
+    </assembly>
+    <members>
+        <member name="T:RedGate.Profiler.Api">
+            <summary>
+            Use this class as an API for Red Gate ANTS Profiler. It controls the parts of your 
+            application to profile, and then while your application is executing, use it to 
+            take snapshots on demand. Note that you must run the application from within the 
+            ANTS Profiler UI. The methods for this class are the same as the commands that 
+            are available in the UI; however the API does not provide a ‘stop profiling’ method.
+            </summary>
+        </member>
+        <member name="M:RedGate.Profiler.Api.Enable">
+            <summary>
+            Enables the performance profiler
+            </summary>
+        </member>
+        <member name="M:RedGate.Profiler.Api.Disable">
+            <summary>
+            Disables the performance profiler
+            </summary>
+        </member>
+        <member name="M:RedGate.Profiler.Api.Reset">
+            <summary>
+            Discards the current set of results and resets the performance profiler
+            </summary>
+        </member>
+        <member name="M:RedGate.Profiler.Api.TakeSnapshot">
+            <summary>
+            Takes a results snapshot
+            </summary>
+        </member>
+        <member name="T:RedGate.Profiler.ProfilerNotRunningException">
+            <summary>
+            If API calls are made while the process is not being profiled by ANTS Profiler,
+            this exception will be thrown.
+            </summary>
+        </member>
+    </members>
+</doc>

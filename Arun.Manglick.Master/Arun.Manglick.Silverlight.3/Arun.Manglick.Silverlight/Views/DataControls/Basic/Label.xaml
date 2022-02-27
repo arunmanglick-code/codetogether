@@ -1,0 +1,64 @@
+﻿<navigation:Page 
+    xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"  
+    x:Class="Arun.Manglick.Silverlight.Views.DataControls.Label" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+    mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480"
+    Title="Home"
+    Style="{StaticResource PageStyle}">
+
+    <StackPanel>
+        <Grid Name="gridProductDetails" BindingValidationError="Grid_BindingValidationError">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Margin="7">Product ID:</TextBlock>
+            <TextBox Margin="5" Grid.Column="1" x:Name="txtProductId" Text="{Binding ProductId, Mode=TwoWay, ValidatesOnExceptions=True, UpdateSourceTrigger=Explicit}" TextChanged="txtProductId_TextChanged"></TextBox>
+            <dataInput:DescriptionViewer Grid.Column="2" 
+                                     Target="{Binding ElementName=txtProductId}"></dataInput:DescriptionViewer>
+
+            <TextBlock Margin="7" Grid.Row="1">Model Number:</TextBlock>
+            <TextBox Margin="5" Grid.Row="1" Grid.Column="1" x:Name="txtProductModelNumber"  Text="{Binding ModelNumber}"></TextBox>
+
+            <dataInput:Label Margin="7" Grid.Row="2" Target="{Binding ElementName=txtProductModelName}"></dataInput:Label>
+            <TextBox Margin="5" Grid.Row="2" Grid.Column="1" x:Name="txtProductModelName" Text="{Binding ModelName ,Mode=TwoWay, ValidatesOnExceptions=True, NotifyOnValidationError=True}"
+                 dataInput:ValidationSummary.ShowErrorsInSummary="False"></TextBox>           
+
+            <TextBlock Margin="7" Grid.Row="3">Unit Cost:</TextBlock>            
+            <TextBox Margin="5" Grid.Row="3" Grid.Column="1" x:Name="txtProductUnitCost"  Text="{Binding UnitCost, Mode=TwoWay,  ValidatesOnExceptions=True, NotifyOnValidationError=True}"
+                 dataInput:ValidationSummary.ShowErrorsInSummary="True" ></TextBox>
+
+            <TextBlock Margin="7,7,7,0" Grid.Row="4">Description:</TextBlock>
+            <TextBox Margin="7" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding Description , Mode=TwoWay, ValidatesOnExceptions=True, NotifyOnValidationError=True}"></TextBox>
+
+            <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+                <Button x:Name="btnChange" Content="Change" Width="100" Click="btnChange_Click"></Button>
+                <Button x:Name="btnCheck" Content="Check" Width="100" Click="btnCheck_Click"></Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical">
+                <TextBlock Foreground="Blue" FontWeight="Bold" x:Name="lblHeaderInfo" Margin="7"></TextBlock>
+                <TextBlock Foreground="Red" FontWeight="Bold" x:Name="lblInfo" Margin="7"></TextBlock>
+            </StackPanel>
+
+            <dataInput:ValidationSummary Margin="10" Grid.Row="7" Grid.Column="1"></dataInput:ValidationSummary>
+        </Grid>
+    </StackPanel>
+
+</navigation:Page>

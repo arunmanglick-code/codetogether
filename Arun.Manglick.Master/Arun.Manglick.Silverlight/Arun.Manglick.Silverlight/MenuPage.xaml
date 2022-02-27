@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.MenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="750" Height="300">
+    <Grid x:Name="LayoutRoot" Background="Red" ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Content="Ball Play" Click="BallPlay_Click"></Button>
+        <Button Grid.Row="0" Grid.Column="1" Content="DotStar Play" Click="DotStarPlay_Click"></Button>
+        <Button Grid.Row="0" Grid.Column="2" Content="Dot Play" Click="DotPlay_Click"></Button>
+        <Button Grid.Row="0" Grid.Column="3" Content="Flower Play" Click="DragFlowerPlay_Click"></Button>
+
+        <Button Grid.Row="1" Grid.Column="0" Content="Canvas" Click="CanvasPage_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="1" Content="Drag n Drop" Click="DragAndDrop_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="2" Content="Grid" Click="GridPage_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="3" Content="StackPanel" Click="StackPanel_Click"></Button>
+        
+        <Button Grid.Row="2" Grid.Column="0" Content="StackPanel Horizontal" Click="StackPanelHorizontal_Click" ></Button>
+        <Button Grid.Row="2" Grid.Column="1" Content="Library" Click="Library_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="2" Content="Library Style" Click="LibraryStyle_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="3" Content="Books Collection" Click="MyBooksCollection_Click"></Button>        
+        <Button Grid.Row="3" Grid.Column="0" Content="RnD Digg Sample" Click="DiggSampleResearch_Click" ></Button>
+        
+        <Button Grid.Row="4" Grid.Column="0" Content="Geek Toturial 2 - Data Access" Click="Library_Click" ></Button>
+        <Button Grid.Row="4" Grid.Column="1" Content="Geek Toturial 3 - Data Access" Click="DataAccess_Click" ></Button>
+        <Button Grid.Row="4" Grid.Column="2" Content="Geek Toturial 4 - UserControl" Click="UserControl_Click" ></Button>
+        <Button Grid.Row="4" Grid.Column="3" Content="Geek Toturial 5 - Chat Messenger" Click="ChatMessenger_Click" ></Button>
+        
+        <Button Grid.Row="5" Grid.Column="0" Content="Geek Toturial 6 - Skin N Template" Click="SkinTemplate_Click" ></Button>
+        <Button Grid.Row="5" Grid.Column="1" Content="Geek Toturial 7 - DataBinding N Template." Click="DataBindingNTemplate_Click" ></Button>
+        
+    </Grid>
+    
+    
+</UserControl>

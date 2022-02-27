@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.Views.Templates_And_CustomControls.Templates.SimpleButtonTemplate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border BorderBrush="Orange" BorderThickness="3" CornerRadius="10" Background="Green">
+                <TextBlock Foreground="White" Text="A Custom Template"></TextBlock>
+            </Border>
+        </ControlTemplate>
+        
+        <ControlTemplate x:Key="ButtonTemplateContentPresenter" TargetType="Button">
+            <Border BorderBrush="Orange" BorderThickness="3" CornerRadius="10" Background="Gray">
+                <ContentPresenter Content="{TemplateBinding Content}"
+                                  Margin="{TemplateBinding Padding}">                    
+                </ContentPresenter>
+            </Border>
+        </ControlTemplate>
+
+        <Color x:Key="BackgroundColor">#FF800000</Color>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource BackgroundColor}"></Setter>
+            <Setter Property="Background" Value="Red"></Setter>
+            <Setter Property="Template" Value="{StaticResource ButtonTemplateContentPresenter}"></Setter>
+        </Style>
+    </UserControl.Resources>       
+    
+    <Grid x:Name="LayoutRoot" ShowGridLines="False" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="50"></RowDefinition>
+            <RowDefinition MaxHeight="50"></RowDefinition>
+            <RowDefinition MaxHeight="50"></RowDefinition>
+            <RowDefinition MaxHeight="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Button Content="Template Button" Grid.Row="0">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderBrush="Orange" BorderThickness="3" CornerRadius="10" Background="Red">
+                        <TextBlock Foreground="White" Text="A Custom Template"></TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>        
+        <Button Content="Template Button" Template="{StaticResource ButtonTemplate}" Grid.Row="1"> 
+        </Button>
+        <Button Content="Template Button thru ContentPresenter" Template="{StaticResource ButtonTemplateContentPresenter}" Grid.Row="2">
+        </Button>        
+        <Button Content="Template Button thru Style" Style="{StaticResource ButtonStyle}" Grid.Row="3">
+        </Button>
+    </Grid>
+</UserControl>

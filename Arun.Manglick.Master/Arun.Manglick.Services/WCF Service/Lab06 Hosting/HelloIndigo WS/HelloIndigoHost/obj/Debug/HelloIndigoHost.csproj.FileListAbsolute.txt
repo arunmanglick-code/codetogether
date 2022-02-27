@@ -1,0 +1,10 @@
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoService.dll
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoService.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\obj\Debug\HelloIndigoHost.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\obj\Debug\HelloIndigoHost.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\obj\Debug\HelloIndigoHost.ProjectInstaller.resources
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\obj\Debug\HelloIndigoHost.csproj.GenerateResource.Cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe.config

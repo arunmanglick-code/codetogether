@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.Tutorial_1.Trial"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30*" MaxHeight="70" />
+            <RowDefinition Height="40*" MaxHeight="70" />
+            <RowDefinition Height="*" MinHeight="30" MaxHeight="50" />
+            <RowDefinition Height="Auto" MinHeight="5" MaxHeight="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="FirstNamePrompt "
+Grid.Row="0" Grid.Column="0" Text="First Name:" Margin="5"/>
+        <TextBox x:Name="FirstName"
+Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+Width="150" Background="Bisque" Margin="5" />
+        <TextBlock x:Name="LastNamePrompt "
+Grid.Row="1" Grid.Column="0" Text="First Name:" Margin="5"/>
+        <TextBox x:Name="LastName"
+Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+Width="150" Background="Beige" Margin="5" />
+        <TextBlock x:Name="SubscriberPrompt"
+Grid.Row="2" Grid.Column="0"
+Text="Subscriber?" VerticalAlignment="Bottom" />
+        <CheckBox x:Name="PlanA" Grid.Row="2" Grid.Column="1"
+Content="Plan A" IsChecked="true"
+VerticalAlignment="Bottom" />
+        <CheckBox x:Name="PlanB" Grid.Row="2" Grid.Column="2"
+Content="Plan B" VerticalAlignment="Bottom" />
+        <TextBlock x:Name="Hello" Text="Hello"
+Grid.Row="3" Grid.Column="2" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="World" Text="World"
+Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom"
+FontFamily="Comic Sans MS" FontSize="24"
+FontWeight="Bold" Margin="0,20,0,0"/>
+    </Grid>
+</UserControl>

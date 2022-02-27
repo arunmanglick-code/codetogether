@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost/CSToolsUI/", "http://localhost/CSToolsUI", "{1B53261F-E75F-4CA5-B31F-1A8114504B90}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""$/Vocada/Veriphy/CSTools/CSTools for Production/CSToolsApp", FHFUAAAA"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:Microsoft Visual SourceSafe"
+		ProjectReferences = "{8077AA96-93D6-4771-BA60-81C7D07023B0}|Vocada.CSTools.Common.dll;{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}|Vocada.CSTools.DataAccess.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/CSToolsUI"
+		Debug.AspNetCompiler.PhysicalPath = "..\CSToolsApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CSToolsUI\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/CSToolsUI"
+		Release.AspNetCompiler.PhysicalPath = "..\CSToolsApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CSToolsUI\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\CSToolsApp\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vocada.CSTools.Common", "..\Vocada.CSTools.Common\Vocada.CSTools.Common.csproj", "{8077AA96-93D6-4771-BA60-81C7D07023B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vocada.CSTools.DataAccess", "..\Vocada.CSTools.DataAccess\Vocada.CSTools.DataAccess.csproj", "{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccProjectUniqueName0 = ..\\Vocada.CSTools.DataAccess\\Vocada.CSTools.DataAccess.csproj
+		SccProjectName0 = \u0022$/Vocada/Veriphy/CSTools/CSTools\u0020for\u0020Production/Vocada.CSTools.DataAccess\u0022,\u0020HHFUAAAA
+		SccLocalPath0 = ..\\Vocada.CSTools.DataAccess
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = ..\\Vocada.CSTools.Common\\Vocada.CSTools.Common.csproj
+		SccProjectName1 = \u0022$/Vocada/Veriphy/CSTools/CSTools\u0020for\u0020Production/Vocada.CSTools.Common\u0022,\u0020GHFUAAAA
+		SccLocalPath1 = ..\\Vocada.CSTools.Common
+		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccWebProject2 = true
+		SccProjectUniqueName2 = http://localhost/CSToolsUI
+		SccProjectName2 = \u0022$/Vocada/Veriphy/CSTools/CSTools\u0020for\u0020Production/CSToolsApp\u0022,\u0020FHFUAAAA
+		SccLocalPath2 = .
+		SccProvider2 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Debug|.NET.ActiveCfg = Debug|.NET
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Debug|.NET.Build.0 = Debug|.NET
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Release|.NET.ActiveCfg = Debug|.NET
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Release|.NET.Build.0 = Debug|.NET
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{1B53261F-E75F-4CA5-B31F-1A8114504B90}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Release|.NET.ActiveCfg = Release|Any CPU
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8077AA96-93D6-4771-BA60-81C7D07023B0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Release|.NET.ActiveCfg = Release|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{55981C93-432A-4AC3-A281-6E0BD4D8A2DC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://www.thatindigogirl.com/2006/06/Samples" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://www.thatindigogirl.com/2006/06/Samples" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.thatindigogirl.com/2006/06/Samples/Imports">
+      <xsd:import schemaLocation="http://xipl0060.xpanxion.co.in/HelloSecureWsHttpSiteB/Service.svc?xsd=xsd0" namespace="http://www.thatindigogirl.com/2006/06/Samples" />
+      <xsd:import schemaLocation="http://xipl0060.xpanxion.co.in/HelloSecureWsHttpSiteB/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SecureServiceContract_AdminOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminOperation" />
+  </wsdl:message>
+  <wsdl:message name="SecureServiceContract_AdminOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecureServiceContract_UserOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserOperation" />
+  </wsdl:message>
+  <wsdl:message name="SecureServiceContract_UserOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecureServiceContract_GuestOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuestOperation" />
+  </wsdl:message>
+  <wsdl:message name="SecureServiceContract_GuestOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuestOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecureServiceContract_NormalOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:NormalOperation" />
+  </wsdl:message>
+  <wsdl:message name="SecureServiceContract_NormalOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NormalOperationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SecureServiceContract">
+    <wsdl:operation name="AdminOperation">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/2006/06/Samples/SecureServiceContract/AdminOperation" message="tns:SecureServiceContract_AdminOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/2006/06/Samples/SecureServiceContract/AdminOperationResponse" message="tns:SecureServiceContract_AdminOperation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserOperation">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/2006/06/Samples/SecureServiceContract/UserOperation" message="tns:SecureServiceContract_UserOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/2006/06/Samples/SecureServiceContract/UserOperationResponse" message="tns:SecureServiceContract_UserOperation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuestOperation">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/2006/06/Samples/SecureServiceContract/GuestOperation" message="tns:SecureServiceContract_GuestOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/2006/06/Samples/SecureServiceContract/GuestOperationResponse" message="tns:SecureServiceContract_GuestOperation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NormalOperation">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/2006/06/Samples/SecureServiceContract/NormalOperation" message="tns:SecureServiceContract_NormalOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/2006/06/Samples/SecureServiceContract/NormalOperationResponse" message="tns:SecureServiceContract_NormalOperation_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94E0D9A6-37E9-4E71-A0A0-B30E7F44200A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>WindowsApplication1</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>bin\myfile.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DesignPatterns\Behavioral\Observer\Observer_Banks.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Observer\Subject.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Strategy\Strategy_Builder.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Strategy\Product_Home.cs" />
+    <Compile Include="DesignPatterns\Creational\Abstract Factory\AbstractProduct_Home.cs" />
+    <Compile Include="DesignPatterns\Creational\Abstract Factory\AbstractProduct_Car.cs" />
+    <Compile Include="DesignPatterns\Creational\Abstract Factory\AbstractFactory_Builder.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CLR Profile\Code1.cs" />
+    <Compile Include="CLR Profile\Code3.cs" />
+    <Compile Include="CLR Profile\Code2.cs" />
+    <Compile Include="CLR Profile\ProfileCode2.cs" />
+    <Compile Include="CLR Profile\ProfileCode1.cs" />
+    <Compile Include="CollectionMyth\MyIteratorOnArray.cs" />
+    <Compile Include="CollectionMyth\MyIterator.cs" />
+    <Compile Include="CollectionMyth\MyIEnumerableOnArray.cs" />
+    <Compile Include="CollectionMyth\MyICollectionOnArray.cs" />
+    <Compile Include="CollectionMyth\MyIEnumerable.cs" />
+    <Compile Include="CollectionMyth\MyCollectionBase.cs" />
+    <Compile Include="CollectionMyth\MyICollection.cs" />
+    <Compile Include="CollectionMyth\UserI.cs" />
+    <Compile Include="DesignPatterns\Creational\Factory\Factory_Builder.cs" />
+    <Compile Include="DesignPatterns\Creational\Factory\Product_Home.cs" />
+    <Compile Include="DesignPatterns\Creational\Singleton\Singleton.cs" />
+    <Compile Include="DesignPatterns\Structural\Bridge\Implementor_Builder.cs" />
+    <Compile Include="DesignPatterns\Structural\Bridge\Product_Home.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\Facade.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade\FacadeLayer.cs" />
+    <Compile Include="Inheritance_Myth\MajorBase.cs" />
+    <Compile Include="Inheritance_Myth\MinorBase.cs" />
+    <Compile Include="Enums\Enum.cs" />
+    <Compile Include="Generics\Generic.cs" />
+    <Compile Include="IDisposable Myth\TestClass.cs" />
+    <Compile Include="InnerException\Class1.cs" />
+    <Compile Include="ShallowDeepCopyMyth\ShallowDeepCopyMyth.cs" />
+    <Compile Include="StackTrace\Class1.cs" />
+    <Compile Include="StackTrace\Class2.cs" />
+    <Compile Include="StackTrace\Class3.cs" />
+    <Compile Include="IDisposable Myth\IDisposableMyth.cs" />
+    <Compile Include="Properties Myth\Class1.cs" />
+    <Compile Include="Properties Myth\Employee.cs" />
+    <Compile Include="CopyConstructor Myth\Employee.cs" />
+    <Compile Include="PublicPrivateInterfaceInheritanceMyth\Child.cs" />
+    <Compile Include="PublicPrivateInterfaceInheritanceMyth\InterfaceA.cs" />
+    <Compile Include="PublicPrivateInterfaceInheritanceMyth\Parent.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="Equality_Myth\Class1.cs" />
+    <Compile Include="Equality_Myth\ReferenceTypes.cs" />
+    <Compile Include="Equality_Myth\StringTypes.cs" />
+    <Compile Include="Equality_Myth\ValueTypes.cs" />
+    <Compile Include="GC Myth\Class1.cs" />
+    <Compile Include="GC Myth\Class2.cs" />
+    <Compile Include="MultiInheritanceMyth\InterfaceB.cs" />
+    <Compile Include="MultiInheritanceMyth\InterfaceA.cs" />
+    <Compile Include="MultiInheritanceMyth\MyClass.cs" />
+    <Compile Include="MultiThread\WithoutThreadPool.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shadow_Myth\MajorBase.cs" />
+    <Compile Include="Shadow_Myth\MinorBase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="bin\myfile.snk" />
+    <None Include="CLR Profile\Demo.dat" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SingleTon.cs" />
+    <Compile Include="Swap Myth\Employee.cs" />
+    <Compile Include="Swap Myth\Swap.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testlab.cs" />
+    <Compile Include="Trial\Trial1.cs" />
+    <Compile Include="UsingMyth\Resource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DesignPatterns\Structural\Decorator\" />
+    <Folder Include="Misc\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

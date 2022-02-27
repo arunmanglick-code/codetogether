@@ -1,0 +1,9 @@
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoClient\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoClient\obj\Debug\HelloIndigoClient.Properties.Resources.resources
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoClient\obj\Debug\HelloIndigoClient.csproj.GenerateResource.Cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoClient\bin\Debug\HelloIndigoClient.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoClient\bin\Debug\HelloIndigoClient.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoClient\obj\Debug\HelloIndigoClient.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoClient\obj\Debug\HelloIndigoClient.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoClient\obj\Debug\HelloIndigoClient.ClientForm.resources
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab02 Contracts\HelloIndigo DC\HelloIndigoClient\bin\Debug\HelloIndigoClient.exe.config

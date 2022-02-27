@@ -1,0 +1,382 @@
+﻿body { padding: 0px; 
+	margin: 0px;
+	font-size:10px; 
+	}
+
+a { text-decoration: underline;}
+a:link {color:#284E98; text-decoration: none;}
+a:visited {color:#284E98; text-decoration: none;}
+a:hover {color:#284E98; text-decoration: underline;}
+a:active {color:#284E98; text-decoration: none; font-weight: bold;}
+
+table { padding: 0px; 
+	margin: 0px;
+	font-size:10px; 
+	}
+
+/*--Master page framework -----------------------------*/
+.divmaster {
+	padding: 0px; 
+	margin: 0px;
+	width: 100%; 
+	}
+.tablemaster {
+	padding: 0px; 
+	margin: 0px; 
+	width: 100%;           
+	border:0px;
+	}
+		
+/*--Header -----------------------------*/	
+.appheader {
+	padding: 5px; 
+	font-weight: bold; 
+	margin: 0px; 
+	vertical-align: middle;
+    overflow: hidden; 
+	width: 100%; 
+	color: #999999;
+    font-family: Arial, Verdana;
+    height: 40px; 
+	background: #F2F2F2;
+	text-align: left;
+	border-bottom: 1px solid #99BDCB;
+	
+	}	
+
+/*--Footer -----------------------------*/
+.footer { 
+    border-top: 3px solid #f7f7f7;
+    padding: 0px; 
+    font-size: x-small; 
+    margin: 0px; 
+    vertical-align: middle;
+    font-family: Verdana, Arial; 
+    height: 40px; 
+    background-color: #ffffff; 
+    text-align: center;
+    border-top: 1px solid #99BDCB;
+    }
+    
+    
+/*--Left navigation space and tree navigation-----------------------------*/
+.leftnavigation {
+	border-right: 0px solid #99BDCB;
+	background: #ffffff;
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	padding-left: 0px; 
+	padding-right: 4px; 
+	margin: 0px; 
+	width: 175px; 
+    vertical-align:top
+	}
+
+.TreeNavigation {
+    font-size: 9pt;
+    font-family:Arial, Verdana, Sans-Serif;
+    left: 0px; 
+    vertical-align: top;
+    color: #999999; 
+    position: relative;
+    /*top: 2px; */
+    background-color: transparent; 
+    text-align: left; 
+    width: 175px;
+    /*line-height: 8pt;*/
+    }
+/*.TreeNavigation a { }
+.TreeNavigation a:link {color:#000033;}
+.TreeNavigation a:visited {color:#000099;}
+.TreeNavigation a:hover {color:Red}
+.TreeNavigation a:active {color:Green;}*/
+.SelectedNode { Font-weight:bold }
+.RootNode {
+    Font-family:Arial;
+    Font-Size:9pt;
+    /*line-height: 8pt;*/ }
+.ParentNode { 
+    Font-family:Arial;
+    Font-Size:9pt;
+    /*line-height: 8pt;*/ }
+.HoverNode { }
+.LeafNode { 
+    Font-family:Arial;
+    Font-Size:9pt;
+    /*line-height: 8pt;*/ }
+.Node { 
+    Font-family:Arial;
+    Font-Size:9pt;
+    
+    /*line-height: 8pt;*/  }
+	
+/*--Workspace -----------------------------*/
+.workspace {
+    padding: 0px; 
+    margin: 0px; 
+    width: 100%;
+    background-color:white;
+    vertical-align: top; }
+
+/*--Breadcrumb trail navigation in the workspace -----------------------------*/
+.breadcrumb {
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background: #F2F2F2;
+	height: 25px;
+	padding-left:8px;
+	border-bottom:solid 2px #E4E8EA; }
+/*.breadcrumb  a { }
+.breadcrumb  a:link {color:#000033;}
+.breadcrumb  a:visited {color:#000099;}
+.breadcrumb  a:hover {color:Red}
+.breadcrumb  a:active {color:Green;}*/
+
+.backbutton /*cell for back button formatting with class=button */{
+	background: #F2F2F2;
+	height: 25px;
+	border-bottom:solid 2px #E4E8EA; }
+
+/*---Sits above task space - this is the name of the active task ----*/   
+.title {
+    color: #CB8E34;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	border-bottom:solid 1px #E5A335;
+	height:25px;
+	font-style:italic; }
+ 
+ .titleInner {
+    color: Green;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	height:25px;
+	font-style:italic; }
+	
+/*-- used for NEGATIVE validation messages--*/   
+.validation-error {
+    padding-right: 4px; 
+    padding-left: 4px; 
+    font-size: 8pt;
+    padding-bottom: 1px; 
+    vertical-align: middle; 
+    color: red; 
+    padding-top: 1px; 
+    font-family: Arial;
+    list-style-type: none; 
+    background-color: white; 
+    text-align: left; }
+    
+/*-- used for POSITIVE validation messages--*/   
+.validation-no-error {
+    padding-right: 4px; 
+    padding-left: 4px; 
+    font-size: 8pt;
+    padding-bottom: 1px; 
+    vertical-align: middle; 
+    color:Navy;
+    padding-top: 1px; 
+    font-family: Arial;
+    list-style-type: none; 
+    background-color: white; 
+    text-align: left; }
+
+
+ 
+
+    
+
+    
+/*--Forms within the workspace -----------------------------*/
+/*--Holds the table that formats the form------------*/
+#divform {
+    padding:2px;
+    font-family:Arial, Verdana, Sans-Serif;
+    /*font-size:10pt;*/
+    line-height:1em; } 
+
+/*--Holds the entire interaction element from primary form to button row------------*/ 
+#divtable {
+    padding: 0px; 
+	margin: 0px; }
+#divtable td {
+    padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle; }   
+    
+
+/*--Holds the primary form------------*/ 
+#formtable {
+    width: 100%;
+    padding: 0px; 
+	margin: 0px;
+	/*background-color:#F7F7F7;*/
+	background-color:#FFFFFF; }
+#formtable td {
+    padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle; }
+
+/*--TASK Header------------*/
+.requiredfieldmessage { /* *Required Fields */
+    text-align:left;
+    font-family:inherit; 
+    font-size:8px;
+    font-style:italic;
+    line-height: inherit; }
+    
+.asterisk {
+    font-family:inherit; 
+    font-size:8px;
+    color: red; }
+    	
+.formheader { font: 10px Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    background-color:#E1E9EC; } 
+
+/*--THIS IS THE ASTERISK FORMATTING FOR REQUIRED FIELDS------------*/
+.requiredcolumn { 
+    text-align:center;
+    width: 10px;
+    font-family:Verdana, Arial; 
+    font-size:9px;
+    color: red; }
+
+/*--Label tds------------*/
+.labelcolumn { 
+    text-align:left;
+    font-family:Verdana, Arial; 
+    font-size:9px;
+    line-height: .95em; }
+
+/*--Input field tds------------*/
+.inputcolumn { 
+    text-align:left;
+    font-family:Arial; 
+    font-size:9px; }
+
+/*--Input fields, all types------------*/
+.inputfield {
+    font-size: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: #F2F2F2;	
+	border:solid 1px #88B0CA; }
+
+ 
+/*--review versions for text only views, no input fields used --*/
+.inputcolumnreview {
+    font-family:Arial, Verdana, Sans-Serif;
+    font-size:9px;
+    font-weight:bold; }
+.labelcolumnreview { 
+    text-align:left;
+    font-family:Verdana, Arial; 
+    font-size:10px;
+    line-height: .95em;
+    border-left: 1px solid #999999; } 
+ 
+   
+/* div.checkboxlist {
+    width: 300px;
+    height: 100px;
+    overflow:scroll; } */
+
+/*GRIDS - REVIEW WHEN GRID SOLUTION IS IN PLACE */
+ div.largegrid {
+    width: 700px;
+    height: 250px;
+    overflow:scroll; }
+ div.mediumgrid {
+    width: 500px;
+    height: 250px;
+    overflow:scroll; }   
+div.smallgrid {
+    width: 250px;
+    height: 250px;
+    overflow:scroll; }
+.gridcell{
+    /*border-right: 1px solid #e8e8e8;
+    border-left: 1px solid #999999;
+    align: left;*/
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:9px; }
+.grid {
+    /*width: 100%;*/
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:8px;
+    padding: 0px; 
+	margin: 0px; }
+.grid th {
+    font-family:Verdana, Arial, Sans-Serif;
+    padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:baseline;
+	font-weight:bold;
+	font-size:9px;
+	border: 1px solid #c8c8c8;
+	border-collapse:collapse;
+	background-color: #e8e8e8; }
+.grid td {
+    font-family:Verdana, Arial, Sans-Serif;
+    padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align:middle;
+	font-size:9px;
+	border: 1px solid #c8c8c8;
+	border-collapse:collapse; }
+ /*END GRIDS STYLES*/  
+  
+
+ /* for buttons at bottom of screen(task-level buttons) */
+.buttoncell{
+    /*this is applied to the cell holding the buttontable*/
+    /*text-align: left;
+    background-color: #e8e8e8;*/ }
+.buttontable {
+    /*three-cell table holding the button*/
+    /*-CLOSE- -HISTORY- -RESET-  |  -DELETE- -NEW-   | -SAVE- or -SEARCH- */
+    width: 100%;
+    padding: 4px; 
+	margin: 0px; }
+.button { 
+    /* DO NOT APPLY WIDTHS TO BUTTONS */
+    font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background: #B5C2C7;
+	border:solid 1px #70868F;
+	color:#000000;
+	font-weight:bold;    }
+
+.Splitter{
+    cursor: e-resize;
+    width: 1px;
+    background-color:#99BDCB;
+    height: 100%; }
+
+.LeftMenu {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	background-color: #f0f0f0;
+	float: left;
+	width: 24.5em;
+	overflow: hidden;	
+	padding-right: 0.5em;
+	padding-bottom: 1200px;
+	border-right: solid 1px #d7d7d7;
+	color: #36c;
+}
+
+
+
+
+
+
+            

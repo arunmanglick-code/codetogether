@@ -1,0 +1,83 @@
+﻿http://weblogs.asp.net/jcogley/archive/2005/09/21/425762.aspx
+
+public static void ReadOnlyControls(Control control)
+{
+	LiteralControl litTemp;
+    if (control is WebControl)
+    {
+        WebControl webControl = control as WebControl;
+        String typeName = webControl.GetType().Name;
+        switch (typeName)
+        {
+            case "TextBox":
+                webControl.Enabled = false;
+                break;
+            case "HyperLink":
+                HyperLink hypTemp = webControl as HyperLink;
+                if (!hypTemp.Text.ToUpper(CultureInfo.InvariantCulture).Equals("PRINT") && (!hypTemp.Text.ToUpper(CultureInfo.InvariantCulture).Equals("CLOSE")))
+                {
+                    litTemp = new LiteralControl(hypTemp.Text);
+                    SwapControl(webControl, litTemp);
+                }
+                break;
+            case "LinkButton":
+            case "DataGridLinkButton":
+            case "RadioButton":
+            case "CheckBox":
+                webControl.Enabled = false;
+                break;
+            case "Button":
+                webControl.Enabled = false;
+                break;
+            case "RadioButtonList":
+            case "ListBox":
+            case "DropDownList":
+                ListControl list = webControl as ListControl;
+                list.Enabled = false;
+                break;
+            case "ImageButton":
+                webControl.Enabled = false;
+                break;
+            case "GridView":
+                GridView grid = webControl as GridView;
+                foreach (GridViewRow item in grid.Rows)
+                {
+                    foreach (Control itemControl in item.Controls)
+                    {
+                        ReadOnlyControls(itemControl);
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    for (int n = 0; n < control.Controls.Count; n++)
+    {
+        Control childControl = control.Controls[n];
+        ReadOnlyControls(childControl);
+    }
+}
+
+public static void SwapControl(Control oldControl, Control newControl) 
+{
+	Control parent = oldControl.Parent;
+	int index = parent.Controls.IndexOf(oldControl);
+	parent.Controls.RemoveAt(index);
+	parent.Controls.AddAt(index, newControl);
+}
+
+public static void SwapControl(Control oldControl, string text) 
+{
+	SwapControl(oldControl, new LiteralControl(text));
+}
+
+public static string GetPropertyValue(Control control, string propertyName)
+{
+	Type type = control.GetType();
+	object o = type.InvokeMember(propertyName, BindingFlags.Instance | 
+
+           BindingFlags.GetProperty | BindingFlags.Public, null, control, null);
+	return Convert.ToString(o);
+}
+

@@ -1,0 +1,23 @@
+﻿Installing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.InstallLog
+Rolling back assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.InstallLog
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.InstallLog
+Installing service EventLoggerService...
+Service EventLoggerService has been successfully installed.
+Creating EventLog source EventLoggerService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.InstallLog

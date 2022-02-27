@@ -1,0 +1,49 @@
+﻿<navigation:Page 
+    xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"  
+    xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"  
+    x:Class="Arun.Manglick.Silverlight.Views.DataControls.DataGridRowSorting" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+    xmlns:convertor="clr-namespace:Arun.Manglick.Silverlight.Convertors"    
+    mc:Ignorable="d" d:DesignWidth="640"
+    Title="Home"
+    Style="{StaticResource PageStyle}">
+
+    <UserControl.Resources>
+        <convertor:PriceConvertor x:Key="PriceConverter"></convertor:PriceConvertor>
+        <convertor:ImagePathConverter x:Key="ImagePathConverter"></convertor:ImagePathConverter>
+        <convertor:PriceToBackGroundConvertor x:Key="PriceToBackGroundConvertor" DefaultBrush="White" HighlightBrush="LightBlue"></convertor:PriceToBackGroundConvertor>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <Grid Name="gridProductDetails" BindingValidationError="Grid_BindingValidationError">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+                
+            <data:DataGrid x:Name="gridProducts" AutoGenerateColumns="True" RowDetailsVisibilityMode="VisibleWhenSelected" LoadingRow="gridProducts_LoadingRow"
+                           AlternatingRowBackground="Green" 
+                           GridLinesVisibility="All" 
+                           CanUserResizeColumns="True" 
+                           CanUserReorderColumns="True"
+                           CanUserSortColumns="True"
+                           Grid.Row="0" Grid.Column="0">
+                <data:DataGrid.RowGroupHeaderStyles>
+                    <Style TargetType="data:DataGridRowGroupHeader">
+                        <Setter Property="Background" Value="Gray" />
+                        <Setter Property="Foreground" Value="#FFEEEEEE" />
+                    </Style>
+                </data:DataGrid.RowGroupHeaderStyles>               
+            </data:DataGrid>
+
+        </Grid>
+    </StackPanel>
+
+</navigation:Page>

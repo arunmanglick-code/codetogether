@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NerdDinnerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="NerdDinnerModelStoreContainer">
+          <EntitySet Name="Dinners" EntityType="NerdDinnerModel.Store.Dinners" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RSVP" EntityType="NerdDinnerModel.Store.RSVP" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_RSVP_Dinners" Association="NerdDinnerModel.Store.FK_RSVP_Dinners">
+            <End Role="Dinners" EntitySet="Dinners" />
+            <End Role="RSVP" EntitySet="RSVP" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Dinners">
+          <Key>
+            <PropertyRef Name="DinnerID" />
+          </Key>
+          <Property Name="DinnerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EventDate" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="HostedBy" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ContactPhone" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Longitude" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RSVP">
+          <Key>
+            <PropertyRef Name="RsvpID" />
+          </Key>
+          <Property Name="RsvpID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DinnerID" Type="int" Nullable="false" />
+          <Property Name="AttendeeName" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <Association Name="FK_RSVP_Dinners">
+          <End Role="Dinners" Type="NerdDinnerModel.Store.Dinners" Multiplicity="1" />
+          <End Role="RSVP" Type="NerdDinnerModel.Store.RSVP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dinners">
+              <PropertyRef Name="DinnerID" />
+            </Principal>
+            <Dependent Role="RSVP">
+              <PropertyRef Name="DinnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NerdDinnerModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="NerdDinnerEntities">
+          <EntitySet Name="Dinners" EntityType="NerdDinnerModel.Dinners" />
+          <EntitySet Name="RSVP" EntityType="NerdDinnerModel.RSVP" />
+          <AssociationSet Name="FK_RSVP_Dinners" Association="NerdDinnerModel.FK_RSVP_Dinners">
+            <End Role="Dinners" EntitySet="Dinners" />
+            <End Role="RSVP" EntitySet="RSVP" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Dinners">
+          <Key>
+            <PropertyRef Name="DinnerID" />
+          </Key>
+          <Property Name="DinnerID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EventDate" Type="DateTime" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="HostedBy" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ContactPhone" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="Longitude" Type="Double" Nullable="false" />
+          <NavigationProperty Name="RSVP" Relationship="NerdDinnerModel.FK_RSVP_Dinners" FromRole="Dinners" ToRole="RSVP" />
+        </EntityType>
+        <EntityType Name="RSVP">
+          <Key>
+            <PropertyRef Name="RsvpID" />
+          </Key>
+          <Property Name="RsvpID" Type="Int32" Nullable="false" />
+          <Property Name="AttendeeName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Dinners" Relationship="NerdDinnerModel.FK_RSVP_Dinners" FromRole="RSVP" ToRole="Dinners" />
+        </EntityType>
+        <Association Name="FK_RSVP_Dinners">
+          <End Role="Dinners" Type="NerdDinnerModel.Dinners" Multiplicity="1" />
+          <End Role="RSVP" Type="NerdDinnerModel.RSVP" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="NerdDinnerModelStoreContainer" CdmEntityContainer="NerdDinnerEntities">
+          <EntitySetMapping Name="Dinners">
+            <EntityTypeMapping TypeName="IsTypeOf(NerdDinnerModel.Dinners)">
+              <MappingFragment StoreEntitySet="Dinners">
+                <ScalarProperty Name="DinnerID" ColumnName="DinnerID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="HostedBy" ColumnName="HostedBy" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RSVP">
+            <EntityTypeMapping TypeName="IsTypeOf(NerdDinnerModel.RSVP)">
+              <MappingFragment StoreEntitySet="RSVP">
+                <ScalarProperty Name="RsvpID" ColumnName="RsvpID" />
+                <ScalarProperty Name="AttendeeName" ColumnName="AttendeeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_RSVP_Dinners" TypeName="NerdDinnerModel.FK_RSVP_Dinners" StoreEntitySet="RSVP">
+            <EndProperty Name="Dinners">
+              <ScalarProperty Name="DinnerID" ColumnName="DinnerID" />
+            </EndProperty>
+            <EndProperty Name="RSVP">
+              <ScalarProperty Name="RsvpID" ColumnName="RsvpID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="NerdDinnerEDM">
+        <EntityTypeShape EntityType="NerdDinnerModel.Dinners" Width="1.5" PointX="0.75" PointY="1" Height="2.7427376302083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="NerdDinnerModel.RSVP" Width="1.5" PointX="3" PointY="1.625" Height="1.4279589843749998" IsExpanded="true" />
+        <AssociationConnector Association="NerdDinnerModel.FK_RSVP_Dinners" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.3389794921875" />
+          <ConnectorPoint PointX="3" PointY="2.3389794921875" /></AssociationConnector></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

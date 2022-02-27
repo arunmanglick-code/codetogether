@@ -1,0 +1,14 @@
+D:\Manglick.Arun.EDU\CIPL\Code Downloads\MVC\NerdDinner_1.0\NerdDinner 1.0\NerdDinner\bin\NerdDinner.dll
+D:\Manglick.Arun.EDU\CIPL\Code Downloads\MVC\NerdDinner_1.0\NerdDinner 1.0\NerdDinner\bin\NerdDinner.pdb
+D:\Manglick.Arun.EDU\CIPL\Code Downloads\MVC\NerdDinner_1.0\NerdDinner 1.0\NerdDinner\bin\System.Web.Mvc.dll
+D:\Manglick.Arun.EDU\CIPL\Code Downloads\MVC\NerdDinner_1.0\NerdDinner 1.0\NerdDinner\bin\System.Web.Mvc.xml
+D:\Manglick.Arun.EDU\CIPL\Code Downloads\MVC\NerdDinner_1.0\NerdDinner 1.0\NerdDinner\obj\Debug\ResolveAssemblyReference.cache
+D:\Manglick.Arun.EDU\CIPL\Code Downloads\MVC\NerdDinner_1.0\NerdDinner 1.0\NerdDinner\obj\Debug\NerdDinner.dll
+D:\Manglick.Arun.EDU\CIPL\Code Downloads\MVC\NerdDinner_1.0\NerdDinner 1.0\NerdDinner\obj\Debug\NerdDinner.pdb
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC.NerdDinner\NerdDinner\bin\NerdDinner.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC.NerdDinner\NerdDinner\bin\NerdDinner.pdb
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC.NerdDinner\NerdDinner\bin\System.Web.Mvc.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC.NerdDinner\NerdDinner\bin\System.Web.Mvc.xml
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC.NerdDinner\NerdDinner\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC.NerdDinner\NerdDinner\obj\Debug\NerdDinner.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.MVC.NerdDinner\NerdDinner\obj\Debug\NerdDinner.pdb

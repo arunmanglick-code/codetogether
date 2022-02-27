@@ -1,0 +1,161 @@
+﻿<ResourceDictionary xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns="http://schemas.microsoft.com/client/2007"
+                    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+                    xmlns:abc="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls">
+    <!--
+        TopNavBar style is composed of following components
+        a) TopNavBar style which applies all other components
+        b) TopNavBar template
+        c) TopNavItem control template
+        d) TopNavItem style    
+        e) Additional brushes
+    -->
+    <sys:String x:Key="FontFamily">Trebuchet MS,Verdana, Sans-Serif</sys:String>
+    <!-- MenuItem Style -->
+    <Style x:Key="secondaryNavItemStyle"
+           TargetType="abc:MenuItem">
+
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="Padding"
+                Value="0,3,8,3" />
+        <Setter Property="Cursor"
+                Value="Hand" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="abc:MenuItem">
+                    <Grid>
+                        <!-- MenuItem Visual states -->
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <!-- CommonStates: Normal, MouseOver, Pressed and Disabled -->
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <!-- Hide the normal caption, show bolder caption -->
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TheCaptionTextBlock"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TheBolderCaptionTextBlock"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Pressed" />
+                                <vsm:VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <!-- Change disabled-overlay's opacity to 50% -->
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value=".5" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <!-- FocusStates: Focused and Unfocused; -->
+                            <vsm:VisualStateGroup x:Name="FocusStates">
+                                <vsm:VisualState x:Name="Focused" />
+                                <vsm:VisualState x:Name="Unfocused" />
+                            </vsm:VisualStateGroup>
+                            <!-- SelectionStates: Selected and Unselected; Typically used for 'current-tab' of TopNavBar -->
+                            <vsm:VisualStateGroup x:Name="SelectionStates">
+                                <vsm:VisualState x:Name="Unselected">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value=".5" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Selected" />
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+                        <!-- The outer boder and background -->
+                        <Border x:Name="OuterBorder"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}">
+                            <Grid Margin="1"
+                                  Background="{TemplateBinding Background}">
+                                <!-- The outer border and background container -->
+                            </Grid>
+                        </Border>
+                        <!-- Note: 
+                            MenuItem can ALSO have some content; The default template renders ONLY caption.
+                            The two textblocks below are used for mouse-over animation.
+                            Changing FontWeight directly will result in a re-size, and surrounding elements will flicker.
+                            The bolder-version of the text-block below occupies required space, but is not visible bu default.    
+                         -->
+                        <!-- Render inner content -->
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}"
+                                          Content="{TemplateBinding Content}" />
+                        <!-- Render optional caption on top of inner content -->
+                        <TextBlock x:Name="TheCaptionTextBlock"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="{TemplateBinding Padding}"
+                                   Text="{TemplateBinding Caption}"
+                                   FontWeight="Normal"
+                                   Opacity="1" />
+                        <!-- Optional caption used for mouse over feedback -->
+                        <TextBlock x:Name="TheBolderCaptionTextBlock"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="{TemplateBinding Padding}"
+                                   Text="{TemplateBinding Caption}"
+                                   FontWeight="SemiBold"
+                                   Opacity="0" />
+                        <!-- Used by Disabled visual state to reduce visibility to 50% -->
+                        <Rectangle x:Name="DisabledVisualElement"
+                                   Fill="#FFFFFFFF"
+                                   RadiusX="3"
+                                   RadiusY="3"
+                                   IsHitTestVisible="false"
+                                   Opacity="0" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Applied to MenuBar style; Manipulates nav bar as well as nav items -->
+    <Style x:Key="secondaryNavBar"
+           TargetType="abc:MenuBar">
+
+        <!-- Spacing around and with-in -->
+        <Setter Property="Margin"
+                Value="0,3,0,0" />
+        <Setter Property="Padding"
+                Value="0" />
+
+        <!-- Border and background -->
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="CornerRadius"
+                Value="0" />
+
+        <!-- Font and foreground -->
+        <Setter Property="FontSize"
+                Value="11.5"></Setter>
+        <Setter Property="FontFamily"
+                Value="{StaticResource FontFamily}"></Setter>
+        <Setter Property="Foreground"
+                Value="Black" />
+
+
+        <!-- Apply top nav bar menu items style -->
+        <Setter Property="MenuItemStyle"
+                Value="{StaticResource secondaryNavItemStyle}"></Setter>
+    </Style>
+
+</ResourceDictionary>

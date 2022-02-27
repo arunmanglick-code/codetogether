@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Untitled Document</title>
+
+    <script type="text/javascript">
+
+        function GetWindowHeight() {
+            var myHeight = 0;
+            if (typeof (window.innerWidth) == 'number') {
+                //Non-IE
+                myHeight = window.innerHeight;
+            }
+            else {
+                if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+                    //IE 6+ in 'standards compliant mode'
+                    myHeight = document.documentElement.clientHeight;
+                }
+                else {
+                    if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+                        //IE 4 compatible
+                        myHeight = document.body.clientHeight;
+                    }
+                }
+            }
+            return myHeight;
+        }
+
+        function SetPlaceHolderWrapperHeight() {
+            var wrapperHeight = GetWindowHeight() - 6;  //the height of the lower edge of the browser window
+            document.getElementById('leftdiv').style.height = wrapperHeight + 'px';
+        }
+
+        window.onload = function() { SetPlaceHolderWrapperHeight(); }
+        window.onresize = function() { SetPlaceHolderWrapperHeight(); } 
+    </script>
+
+    <style type="text/css">
+        body, html
+        {
+            overflow: hidden;
+            font-family: Arial, Sans-Serif;
+            margin: 0;
+        }
+        #leftdiv
+        {
+            overflow-y: scroll; /*overflow: auto;*/
+            border: solid 3px red;
+        }
+    </style>
+</head>
+<body>
+    <div id="leftdiv">
+        Resize Me - You can drag the window corners :)
+    </div>
+</body>
+</html>

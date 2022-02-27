@@ -1,0 +1,62 @@
+SCC = This is a Source Code Control file.
+
+[MxUnitTests.csproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxUnitTests
+
+[MxWeb.sln]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb
+
+[CryptoZip.vbproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/CryptoZip
+
+[MessageLog.vbproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MessageLog/MessageLog
+
+[MxAppUtility.vbproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxAppUtility
+
+[MxDataMgr.csproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxDataMgr
+
+[MxDataUtility.vbproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxDataUtility
+
+[MxDTO.csproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxDTO
+
+[MxLMDO.csproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxLMDO
+
+[Monetrics.MDE.Security.DTO.csproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxSecurityDTO
+
+[MDERoleManagerTests.csproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxSecurityRolesManager/MDERoleManagerTests
+
+[MDERolesManager.sln]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxSecurityRolesManager/RolesManagerAPI
+
+[RolesManagerAPI.csproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxSecurityRolesManager/RolesManagerAPI
+
+[Monetrics.MDE.Security.Services.csproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxSecurityServices
+
+[MxServiceMgr.csproj]
+SCC_Aux_Path = 192.0.0.245:9999:VSS2
+SCC_Project_Name = $/MDE_Server/0-Development/CoreCode/MxWeb/MxWebUI
+

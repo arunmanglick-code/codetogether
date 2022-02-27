@@ -1,0 +1,99 @@
+﻿To Sort and Also Customize the Sort Header - Add the up/down image in the Header 
+--------------------------------------------------------------------------------------------
+
+private String mSortExpression = String.Empty;
+private const String SortUpImagePath = "images/SortUp.gif";
+private const String SortDownImagePath = "images/SortDown.gif";
+--------------------------------------------------------------------------------------------
+
+protected void gdvStipulationSearch_Sorting(object sender, GridViewSortEventArgs e)
+{
+    mSortExpression = e.SortExpression;
+    gdvStipulationSearch.DataSource = SortGridView(SessionManager.SearchResult, mSortExpression);
+    gdvStipulationSearch.DataBind();
+}
+--------------------------------------------------------------------------------------------
+
+protected void gdvStipulationSearch_RowDataBound(object sender, GridViewRowEventArgs e)
+{
+    base.CustomizeSortHeader(e, gdvStipulationSearch, mSortExpression, SortUpImagePath, SortDownImagePath);
+}
+--------------------------------------------------------------------------------------------
+public DataView SortGridView(DataTable gridData, string sortExpression)
+{
+    DataTable dt = gridData;
+    DataView dv = dt.DefaultView;
+
+    if (GridViewSortDirection == SortDirection.Ascending)
+    {
+	GridViewSortDirection = SortDirection.Descending;
+	dv.Sort = sortExpression + ConstantKey.DESCENDING;
+    }
+    else
+    {
+	GridViewSortDirection = SortDirection.Ascending;
+	dv.Sort = sortExpression + ConstantKey.ASCENDING;
+    }
+
+    return dv;
+}
+--------------------------------------------------------------------------------------------
+
+public SortDirection GridViewSortDirection
+{
+    get
+    {
+	if (ViewState[ViewStateKey.Direction] == null)
+	{
+	    ViewState[ViewStateKey.Direction] = SortDirection.Ascending;
+	}
+
+	return (SortDirection)ViewState[ViewStateKey.Direction];
+    }
+    set { ViewState[ViewStateKey.Direction] = value; }
+}
+--------------------------------------------------------------------------------------------
+
+public void CustomizeSortHeader(GridViewRowEventArgs e, GridView gridView, String sortExpression, String upImagePath, String downImagePath)
+{
+    if (e.Row.RowType == DataControlRowType.Header)
+    {
+	int i = GetSortColumnIndex(gridView, sortExpression);
+
+	if (i != -1)
+	{
+	    LinkButton sortLink = e.Row.Cells[i].Controls[0] as LinkButton;
+	    if (sortLink != null)
+	    {
+		if (GridViewSortDirection == SortDirection.Ascending)
+		{
+		    sortLink.Text += " img src='" + upImagePath + "' border ='0' align='absmiddle' alt='ASC' ";
+		}
+		else
+		{
+		    sortLink.Text += " img src='" + downImagePath + "' border ='0' align='absmiddle' alt='ASC' "; ;
+		}
+	    }
+	}
+    }
+}
+--------------------------------------------------------------------------------------------
+private int GetSortColumnIndex(GridView gridView, String sortExpression)
+{
+    if (gridView != null)
+    {
+	foreach (DataControlField field in gridView.Columns)
+	{
+	    if (!String.IsNullOrEmpty(sortExpression))
+	    {
+		if (field.SortExpression == sortExpression)
+		{
+		    return gridView.Columns.IndexOf(field);
+		}
+	    }
+	}
+    }
+    return -1;
+}
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------

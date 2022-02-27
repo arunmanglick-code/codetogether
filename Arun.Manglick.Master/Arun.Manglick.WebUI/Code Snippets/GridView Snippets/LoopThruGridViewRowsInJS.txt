@@ -1,0 +1,27 @@
+﻿To loop thru all the Rows in GridView
+---------------------------------------------------
+
+function SetRowColor()
+    {
+        var currGridView = document.getElementById('<%= GridView1.ClientID %>');
+        var hiddenRowId = document.getElementById('<%= hdfRowId.ClientID %>');
+        var allRows = hiddenRowId.value.split(",");
+        var indx;
+        
+        if(currGridView != null)
+        {
+            for(iCnt=0;iCnt<currGridView.rows.length;iCnt++)
+            {
+                currGridView.rows[iCnt].style.backgroundColor='';
+            }
+            
+            for(iCnt=0;iCnt<allRows.length;iCnt++)
+            {
+                indx = allRows[iCnt];
+                if(indx != "")
+                {
+                  currGridView.rows[indx].style.backgroundColor='#BAF2D4';
+                }
+            }
+        }        
+    }    

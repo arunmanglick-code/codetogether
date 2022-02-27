@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MDEMenu Text="Root">  
+  <Level1 Text="jQuery Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Simple Page" Secure="false" Flag="~/JQuery Cafe/JQuerySimplePage.aspx" />
+    <Level2 Text="Slide Animation Page" Secure="false" Flag="~/JQuery Cafe/JQuerySlideAnimation.aspx" />
+    <Level2 Text="AutoComplete External Page" Secure="false" Flag="http://localhost/JqueryAutoComplete/Default.aspx" />
+  </Level1>
+  <Level1 Text="jQuery Introductory Cafe" Secure="false" Flag="~/Home.aspx">
+    <Level2 Text="Simple Page" Secure="false" Flag="~/JQuery Cafe/Introdcution/JQuerySimplePage.aspx" />
+  </Level1>
+  
+</MDEMenu>
+

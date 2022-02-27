@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="MDE_AUTHORIZATION" Class="RoleDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=xipl245;Initial Catalog=MDE_AUTHORIZATION;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MDE_AUTHORIZATIONConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ENVIRONMENT" Member="ENVIRONMENTs">
+    <Type Name="ENVIRONMENT">
+      <Column Name="ENVIRONMENT_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SHORT_NAME" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="LONG_NAME" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="ENVIRONMENT_ROLE_USER" Member="ROLE_USERs" OtherKey="ENVIRONMENT_ID" Type="ROLE_USER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HISTORY" Member="HISTORies">
+    <Type Name="HISTORY">
+      <Column Name="RECORD_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USER_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ROLE_NAME" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="LENDER_SHORT_NAME" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ENVIRONMENT_NAME" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PERMISSION_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CHANGE_DESCRIPTION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CHANGE_REASON" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="ROLE_ID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LENDER_ID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ENVIRONMENT_ID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="COMPUTER_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOOKUP_LANGUAGE" Member="LOOKUP_LANGUAGEs">
+    <Type Name="LOOKUP_LANGUAGE">
+      <Column Name="LANGUAGE_CODE" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CATEGORY" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="[KEY]" Member="KEY" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="SEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VALUE" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MDE_LENDER" Member="MDE_LENDERs">
+    <Type Name="MDE_LENDER">
+      <Column Name="LENDER_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SHORT_NAME" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="LONG_NAME" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="MDE_LENDER_ROLE_USER" Member="ROLE_USERs" OtherKey="LENDER_ID" Type="ROLE_USER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERMISSION" Member="PERMISSIONs">
+    <Type Name="PERMISSION">
+      <Column Name="LANGUAGE_CODE" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PERMISSION_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PERMISSION_NAME" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="PERMISSION_ROLE_PERMISSION" Member="ROLE_PERMISSIONs" OtherKey="PERMISSION_ID" Type="ROLE_PERMISSION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLE" Member="ROLEs">
+    <Type Name="ROLE">
+      <Column Name="ROLE_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ROLE_NAME" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CHANGE_REASON" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="ROLE_ROLE_PERMISSION" Member="ROLE_PERMISSIONs" OtherKey="ROLE_ID" Type="ROLE_PERMISSION" />
+      <Association Name="ROLE_ROLE_USER" Member="ROLE_USERs" OtherKey="ROLE_ID" Type="ROLE_USER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLE_PERMISSION" Member="ROLE_PERMISSIONs">
+    <Type Name="ROLE_PERMISSION">
+      <Column Name="ROLE_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PERMISSION_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="READ_ONLY" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RELEASE_VERSION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PERMISSION_ROLE_PERMISSION" Member="PERMISSION" ThisKey="PERMISSION_ID" Type="PERMISSION" IsForeignKey="true" />
+      <Association Name="ROLE_ROLE_PERMISSION" Member="ROLE" ThisKey="ROLE_ID" Type="ROLE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLE_USER" Member="ROLE_USERs">
+    <Type Name="ROLE_USER">
+      <Column Name="USER_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LENDER_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ENVIRONMENT_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ROLE_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CHANGE_REASON" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="ENVIRONMENT_ROLE_USER" Member="ENVIRONMENT" ThisKey="ENVIRONMENT_ID" Type="ENVIRONMENT" IsForeignKey="true" />
+      <Association Name="MDE_LENDER_ROLE_USER" Member="MDE_LENDER" ThisKey="LENDER_ID" Type="MDE_LENDER" IsForeignKey="true" />
+      <Association Name="ROLE_ROLE_USER" Member="ROLE" ThisKey="ROLE_ID" Type="ROLE" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

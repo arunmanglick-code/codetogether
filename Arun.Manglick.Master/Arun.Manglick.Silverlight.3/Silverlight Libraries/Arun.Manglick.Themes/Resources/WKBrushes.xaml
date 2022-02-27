@@ -1,0 +1,32 @@
+﻿<ResourceDictionary 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns="http://schemas.microsoft.com/client/2007"
+>
+
+    <!-- 
+        WKBrushes stand for Well known brushes (got you!)
+        But, WKRed stand for Wolters Kluwer choice of red (got you again!)
+     -->
+
+    <SolidColorBrush x:Key="WKRed"      Color="#EE014C"/>
+    <SolidColorBrush x:Key="WKGreen"    Color="#63BB1F"/>
+    <SolidColorBrush x:Key="WKBlue"     Color="#0768A9"/>
+    <SolidColorBrush x:Key="WKGray"     Color="#474747"/>
+
+    <SolidColorBrush x:Key="WKRed75"    Color="#F24079"/>
+    <SolidColorBrush x:Key="WKGreen75"  Color="#92CC57"/>
+    <SolidColorBrush x:Key="WKBlue75"   Color="#5698C5"/>
+    <SolidColorBrush x:Key="WKGray75"   Color="#757575"/>
+
+    <SolidColorBrush x:Key="WKRed38"    Color="#F99EBB"/>
+    <SolidColorBrush x:Key="WKGreen38"  Color="#C8E5AA"/>
+    <SolidColorBrush x:Key="WKBlue38"   Color="#ABCCE2"/>
+    <SolidColorBrush x:Key="WKGray38"   Color="#B9B9B9"/>
+
+    <SolidColorBrush x:Key="PageTitleForeground"
+                     Color="#EE014C"/>
+    
+
+</ResourceDictionary>

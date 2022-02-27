@@ -1,0 +1,51 @@
+﻿<UserControl xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+             x:Class="Arun.Manglick.Silverlight.Views.Test.Test"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Width="400"
+             Height="500">
+    <UserControl.Resources>
+        <Image x:Key="TrainImage"
+               Source="FlipTrain.jpg"></Image>
+        <ControlTemplate x:Key="BusyIndicatorTemplate1"
+                         TargetType="controlsToolkit:BusyIndicator">
+            <Image Source="../../Images/ajaxloader.jpeg"
+                   MaxHeight="40"
+                   MaxWidth="40"></Image>
+        </ControlTemplate>        
+        
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot"
+          Background="White">
+        <StackPanel>
+            <TextBlock Text="Research Work"></TextBlock>
+            <Image x:Name="Train"
+                   Width="250"
+                   Source="../../Images/FlipTrain.jpg"
+                   Stretch="Fill"></Image>
+            <controlsToolkit:BusyIndicator x:Name="busyBee" 
+                                           Content=""
+                                           BusyContent="Please Wait While Retrieving PDF/Document...">
+                <controlsToolkit:BusyIndicator.BusyContentTemplate>
+                    <DataTemplate>
+                        <Image Source="../../Images/ajaxloader.jpeg"
+                               MaxHeight="40"
+                               MaxWidth="40"></Image>
+                    </DataTemplate>                    
+                </controlsToolkit:BusyIndicator.BusyContentTemplate>                
+                <controlsToolkit:BusyIndicator.ProgressBarStyle>
+                    <Style TargetType="ProgressBar">
+                        <Setter Property="Visibility"
+                                Value="Collapsed" />
+                    </Style>
+                </controlsToolkit:BusyIndicator.ProgressBarStyle>
+            </controlsToolkit:BusyIndicator>
+            <Button Click="Button_Click"
+                    Margin="0,10,0,0"
+                    Content="Make Busy"></Button>
+            <Button Click="Button_Click_1"
+                    Margin="0,10,0,0"
+                    Content="Stop Busy"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

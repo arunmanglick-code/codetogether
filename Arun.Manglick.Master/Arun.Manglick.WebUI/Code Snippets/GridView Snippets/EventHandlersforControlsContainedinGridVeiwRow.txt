@@ -1,0 +1,115 @@
+﻿
+This is about , what happens when control in a GridView Row is clicked:
+
+Example 1: Button Field
+
+------------------------------------------------------------------------------------------
+
+<asp:ButtonField HeaderText="<%$ Resources:GridHeaderReferenceNumber %>" ItemStyle-HorizontalAlign="Left" DataTextField="OrderRefNumber" CommandName="ReferenceNumber" ></asp:ButtonField>
+
+protected void GridviewClickEventHandler(Object sender, GridViewCommandEventArgs e)
+
+{
+
+if (e.CommandName.Equals("ReferenceNumber"))
+
+{
+
+int selectedIndex = Int32.Parse((e.CommandArgument).ToString());
+
+GridViewRow row = gridViewPastOrders.Rows[selectedIndex];
+
+Control cell = row.Cells[0].Controls[0];
+
+LinkButton lk = (LinkButton)cell;
+
+string str = ((LinkButton)cell).Text;
+
+}
+
+}
+
+------------------------------------------------------------------------------------------
+
+Example 2: Template Field containing control with ‘CommandName’
+
+<asp:TemplateField HeaderText="<%$ Resources:GridviewHeaderOrderReference %>" SortExpression="DocNumber" >
+
+<ItemTemplate>
+
+<asp:LinkButton id="linkButton" OnClientClick="" runat="server" Font-Underline="True" CommandName="ReferenceNumber" Text='<%# DataBinder.Eval(Container, "DataItem.DocNumber") %>' >
+
+</asp:LinkButton>
+
+</ItemTemplate>
+
+</asp:TemplateField>
+
+protected void GridviewClickEventHandlerPastOrderItems(Object sender, GridViewCommandEventArgs e)
+
+{
+
+if (e.CommandName.Equals("ReferenceNumber"))
+
+{
+
+string selectedIndex = ((LinkButton)(e.CommandSource)).Text;
+
+}
+
+}
+
+------------------------------------------------------------------------------------------
+
+Example 3: Template Field containing control with Event Handler
+
+<asp:TemplateField HeaderText="<%$ Resources:GridviewHeaderDescription %>" SortExpression= "Description">
+
+<ItemTemplate>
+
+<asp:LinkButton id="linkButtonProductNumber" OnClientClick="showProductDetails()" onclick="linkButtonProductDescription_Click" runat="server" Font-Underline="True" CommandName="View" Text='<%# DataBinder.Eval(Container, "DataItem.Description") %>'>
+
+</asp:LinkButton>
+
+</ItemTemplate>
+
+</asp:TemplateField>
+
+protected void linkButtonProductDescription_Click(object sender, EventArgs e)
+
+{
+
+GridViewRow selectedRow = (GridViewRow)((DataControlFieldCell)((LinkButton)sender).Parent).Parent;
+
+string productIPC = ((LinkButton)(selectedRow.FindControl("linkButton"))).Text;
+
+selectedID = selectedRow.RowIndex;
+
+}
+
+------------------------------------------------------------------------------------------
+
+Summary:-
+
+Template Field – Command Name
+
+    * e.CommandName –
+    * e.CommandArgument – “” (Blank)
+    * e.CommandSource - Text/Caption of the Button/Control
+    * e.Row -> GridViewRow
+    * · e.Row.RowIndex -> Selected Row Index
+
+Template Field – Click Event Handler
+
+    * (sender as Button).Parent.Parent -> GridViewRow
+    * GridViewRow.RowIndex -> Selected Row Index
+    * (sender as Button).Text -> Text/Caption of the Button/Control
+
+asp:ButtonField
+
+    * e.CommandName –
+    * e.CommandArgument – Selected Row Index
+    * e.CommandSource -> GridView
+    * GridView.Rows[e.CommandArgument] -> GridViewRow
+    * (GridViewRow.Cells[0].FindControl[“”] as Button).Text –> Text/Caption of the Button/Control
+    * e.Row -> null

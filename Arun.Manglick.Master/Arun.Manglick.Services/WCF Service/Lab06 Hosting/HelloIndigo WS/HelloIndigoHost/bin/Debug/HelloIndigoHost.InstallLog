@@ -1,0 +1,186 @@
+﻿Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Service HelloIndigo WCFHost WindowsService has been successfully installed.
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Uninstalling assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Removing EventLog source HelloIndigo WCFHost WindowsService.
+Service HelloIndigo WCFHost WindowsService is being removed from the system...
+Service HelloIndigo WCFHost WindowsService was successfully removed from the system.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Service HelloIndigo WCFHost WindowsService has been successfully installed.
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Rolling back assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Restoring event log to previous state for source HelloIndigo WCFHost WindowsService.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Rolling back assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Restoring event log to previous state for source HelloIndigo WCFHost WindowsService.
+Uninstalling assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Removing EventLog source HelloIndigo WCFHost WindowsService.
+Service HelloIndigo WCFHost WindowsService is being removed from the system...
+Service HelloIndigo WCFHost WindowsService was successfully removed from the system.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Service HelloIndigo WCFHost WindowsService has been successfully installed.
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Uninstalling assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Removing EventLog source HelloIndigo WCFHost WindowsService.
+Service HelloIndigo WCFHost WindowsService is being removed from the system...
+Service HelloIndigo WCFHost WindowsService was successfully removed from the system.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Service HelloIndigo WCFHost WindowsService has been successfully installed.
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Uninstalling assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Removing EventLog source HelloIndigo WCFHost WindowsService.
+Service HelloIndigo WCFHost WindowsService is being removed from the system...
+Service HelloIndigo WCFHost WindowsService was successfully removed from the system.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Service HelloIndigo WCFHost WindowsService has been successfully installed.
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Uninstalling assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Removing EventLog source HelloIndigo WCFHost WindowsService.
+Service HelloIndigo WCFHost WindowsService is being removed from the system...
+Service HelloIndigo WCFHost WindowsService was successfully removed from the system.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Service HelloIndigo WCFHost WindowsService has been successfully installed.
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Uninstalling assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Removing EventLog source HelloIndigo WCFHost WindowsService.
+Service HelloIndigo WCFHost WindowsService is being removed from the system...
+Service HelloIndigo WCFHost WindowsService was successfully removed from the system.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Service HelloIndigo WCFHost WindowsService has been successfully installed.
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Uninstalling assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Removing EventLog source HelloIndigo WCFHost WindowsService.
+Service HelloIndigo WCFHost WindowsService is being removed from the system...
+Service HelloIndigo WCFHost WindowsService was successfully removed from the system.
+Installing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog
+Installing service HelloIndigo WCFHost WindowsService...
+Service HelloIndigo WCFHost WindowsService has been successfully installed.
+Creating EventLog source HelloIndigo WCFHost WindowsService in log Application...
+Committing assembly 'D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.exe
+   logfile = D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WS\HelloIndigoHost\bin\Debug\HelloIndigoHost.InstallLog

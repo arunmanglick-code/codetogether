@@ -1,0 +1,48 @@
+﻿<UserControl xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+    x:Class="Arun.Manglick.Silverlight.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
+    xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+
+    <Grid x:Name="LayoutRoot" ShowGridLines="True" Style="{StaticResource LayoutRootGridStyle}">  
+         <Grid x:Name="NavigationGrid" ShowGridLines="True" Style="{StaticResource NavigationGridStyle}">
+            <Border x:Name="BrandingBorder" Style="{StaticResource BrandingBorderStyle}">
+                <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
+                    <ContentControl Style="{StaticResource LogoIcon}"/>
+                    <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" Text="Arun.Manglick.Silverlight.3"/>
+                </StackPanel>
+            </Border>
+            <Border x:Name="LinksBorder" Style="{StaticResource LinksBorderStyle}">
+                <StackPanel x:Name="LinksStackPanel" Style="{StaticResource LinksStackPanelStyle}">
+                    <HyperlinkButton x:Name="Link1" Style="{StaticResource LinkStyle}" NavigateUri="/Home" TargetName="ContentFrame" Content="Home"/>									 
+                    <Rectangle x:Name="Divider1" Style="{StaticResource DividerStyle}"/>					
+                    <HyperlinkButton x:Name="Link2" Style="{StaticResource LinkStyle}" NavigateUri="/About" TargetName="ContentFrame" Content="All About"/>
+                    <Rectangle x:Name="Divider2" Style="{StaticResource DividerStyle}"/>
+                    <HyperlinkButton x:Name="Link3" Style="{StaticResource LinkStyle}" NavigateUri="/DataBinding/Products" TargetName="ContentFrame" Content="DB"/>                    
+                    <Rectangle x:Name="Divider3" Style="{StaticResource DividerStyle}"/>
+                    <HyperlinkButton x:Name="Link4" Style="{StaticResource LinkStyle}" NavigateUri="/DataControls/ProductsGrid" TargetName="ContentFrame" Content="DC1"/>
+                    <HyperlinkButton x:Name="Link5" Style="{StaticResource LinkStyle}" NavigateUri="/DataControls/ProductsGridDefineColumns" TargetName="ContentFrame" Content="DC2"/>
+                    <HyperlinkButton x:Name="Link6" Style="{StaticResource LinkStyle}" NavigateUri="/DataControls/ProductsGrid_PageCollectionGrouping" TargetName="ContentFrame" Content="DC3"/>
+                    <HyperlinkButton x:Name="Link8" Style="{StaticResource LinkStyle}" NavigateUri="/DataControls/SimpleTreeview" TargetName="ContentFrame" Content="DC4"/>                    
+                    <HyperlinkButton x:Name="Link7" Style="{StaticResource LinkStyle}" NavigateUri="/DataControls/Label/Label" TargetName="ContentFrame" Content="DC Label"/>
+                </StackPanel>
+            </Border>
+        </Grid>    
+        <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}">
+            <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
+                              Source="/Home" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed">
+                <navigation:Frame.UriMapper>
+                  <uriMapper:UriMapper>
+                    <uriMapper:UriMapping Uri="" MappedUri="/Views/Home.xaml"/>
+                    <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/Views/{pageName}.xaml"/>
+                    <uriMapper:UriMapping Uri="/DataBinding/{pageName}" MappedUri="/Views/DataBinding/{pageName}.xaml"/>
+                    <uriMapper:UriMapping Uri="/DataControls/Label/{pageName}" MappedUri="/Views/DataControls/Label/{pageName}.xaml"/>                      
+                  </uriMapper:UriMapper>
+                </navigation:Frame.UriMapper>
+            </navigation:Frame>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,9 @@
+var ENTER_FULL_TEST_NAME = 'You must enter Test Full Name';
+var ENTER_SHORT_TEST_NAME = 'You must enter Test Short Name';
+var ENTER_TEST_VOICE_OVER = 'You must enter Test VoiceOver';
+var ENTER_TEST_GRAMMAR = 'You must enter Test Grammar';
+var ENTER_TEST_RESULT_TYPE = 'You must enter Test Type';
+var ENTER_TEST_HIGH_VAL = 'You must enter Test High Value';
+var ENTER_TEST_LOW_VAL = 'You must enter Test Low Value';
+var ENTER_TEST_MEASUREMENT = 'You must enter Test Measurement';
+var ENTER_VALID_URL = 'You must enter Valid URL';

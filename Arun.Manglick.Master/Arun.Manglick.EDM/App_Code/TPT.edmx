@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="northwndModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="northwndModel1StoreContainer">
+          <EntitySet Name="AccountTPT" EntityType="northwndModel1.Store.AccountTPT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LoanTPT" EntityType="northwndModel1.Store.LoanTPT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MortgageTPT" EntityType="northwndModel1.Store.MortgageTPT" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="AccountTPT">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="int" Nullable="false" />
+          <Property Name="Balance" Type="int" />
+        </EntityType>
+        <EntityType Name="LoanTPT">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="int" Nullable="false" />
+          <Property Name="Term" Type="int" />
+          <Property Name="Principal" Type="int" />
+        </EntityType>
+        <EntityType Name="MortgageTPT">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="int" Nullable="false" />
+          <Property Name="Tax" Type="int" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="northwndModel1" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="northwndEntities5">
+          <EntitySet Name="AccountTPT" EntityType="northwndModel1.AccountTPT" />
+          <EntitySet Name="LoanTPT" EntityType="northwndModel1.LoanTPT" />
+          <EntitySet Name="MortgageTPT" EntityType="northwndModel1.MortgageTPT" />
+        </EntityContainer>
+        <EntityType Name="AccountTPT">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="Int32" Nullable="false" />
+          <Property Name="Balance" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LoanTPT">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="Int32" Nullable="false" />
+          <Property Name="Term" Type="Int32" />
+          <Property Name="Principal" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MortgageTPT">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="Int32" Nullable="false" />
+          <Property Name="Tax" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="northwndModel1StoreContainer" CdmEntityContainer="northwndEntities5">
+          <EntitySetMapping Name="AccountTPT">
+            <EntityTypeMapping TypeName="IsTypeOf(northwndModel1.AccountTPT)">
+              <MappingFragment StoreEntitySet="AccountTPT">
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoanTPT">
+            <EntityTypeMapping TypeName="IsTypeOf(northwndModel1.LoanTPT)">
+              <MappingFragment StoreEntitySet="LoanTPT">
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="Term" ColumnName="Term" />
+                <ScalarProperty Name="Principal" ColumnName="Principal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MortgageTPT">
+            <EntityTypeMapping TypeName="IsTypeOf(northwndModel1.MortgageTPT)">
+              <MappingFragment StoreEntitySet="MortgageTPT">
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="TPT">
+        <EntityTypeShape EntityType="northwndModel1.AccountTPT" Width="1.5" PointX="1" PointY="0.75" Height="1.2636116536458335" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwndModel1.LoanTPT" Width="1.5" PointX="1" PointY="2.25" Height="1.427958984375" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwndModel1.MortgageTPT" Width="1.5" PointX="1" PointY="3.875" Height="1.2636116536458335" IsExpanded="true" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

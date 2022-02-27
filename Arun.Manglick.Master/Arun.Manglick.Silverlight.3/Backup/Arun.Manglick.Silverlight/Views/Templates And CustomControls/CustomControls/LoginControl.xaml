@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.Views.Templates_And_CustomControls.CustomControls.LoginControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:local="clr-namespace:Arun.Manglick.CustomControls;assembly=Arun.Manglick.CustomControls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot">
+        <StackPanel>
+            <local:GenericLoginControl UserIdHeader="User Information Id" PasswordHeader="Password:" LoginCompleted="GenericLoginControl_LoginCompleted" LoginButtonContent="Click Me"></local:GenericLoginControl>
+        </StackPanel>
+    </Grid>
+</UserControl>

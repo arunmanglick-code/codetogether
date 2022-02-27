@@ -1,0 +1,102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{086545A1-733A-4D82-A3B6-8C9E20A1B657}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rd Party Libraries", "3rd Party Libraries", "{93189659-501A-452B-995D-D5741D264E7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6B92B73C-2F5C-41C3-BEAA-2323515D2FBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight", "{727219F8-5B31-4EB3-8392-7222BFA7F8F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telerik", "Telerik", "{DA9A75DB-043A-4531-BE64-ABD50BBEC5BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight Libraries", "Silverlight Libraries", "{C3062837-84E3-4D35-AC56-4CA5121316E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.Silverlight", "Arun.Manglick.Silverlight\Arun.Manglick.Silverlight.csproj", "{6B16C3BE-DE33-4DBB-A1D3-0A019B0CA90B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F88112B-8333-411E-BB90-3B039B732707} = {5F88112B-8333-411E-BB90-3B039B732707}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.Silverlight.Web", "Arun.Manglick.Silverlight.Web\Arun.Manglick.Silverlight.Web.csproj", "{463996CE-4802-4FB5-8CC8-D7EFC410817B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.SL.BL", "Libraries\Arun.Manglick.SL.BL\Arun.Manglick.SL.BL.csproj", "{CDD3805F-DE71-4F61-BB42-5247578457F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.SL.Services", "Services\Arun.Manglick.SL.Services\Arun.Manglick.SL.Services.csproj", "{78741C78-E7CB-4FBA-87D8-5089003676A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.SL.Host", "Services\Arun.Manglick.SL.Host\Arun.Manglick.SL.Host.csproj", "{5F88112B-8333-411E-BB90-3B039B732707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.SL3.BL", "Libraries\Arun.Manglick.SL3.BL\Arun.Manglick.SL3.BL.csproj", "{9CA62821-73BE-45EA-8675-B331A716057D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.Custom.FlipControl", "Silverlight Libraries\Arun.Manglick.Custom.FlipControl\Arun.Manglick.Custom.FlipControl.csproj", "{CD941FD7-CBB2-4124-B7C6-FA2C4FFD31C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.CustomControl", "Silverlight Libraries\Arun.Manglick.CustomControl\Arun.Manglick.CustomControl.csproj", "{03E32384-F483-4DCC-974F-A510D9D37A97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.CustomControls", "Silverlight Libraries\Arun.Manglick.CustomControls\Arun.Manglick.CustomControls.csproj", "{87233CBD-C406-46F8-BD70-80097CA7D6F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.Themes", "Silverlight Libraries\Arun.Manglick.Themes\Arun.Manglick.Themes.csproj", "{B4F7DCAA-2E78-40F1-AF49-C7B7D67B84DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B16C3BE-DE33-4DBB-A1D3-0A019B0CA90B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B16C3BE-DE33-4DBB-A1D3-0A019B0CA90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B16C3BE-DE33-4DBB-A1D3-0A019B0CA90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B16C3BE-DE33-4DBB-A1D3-0A019B0CA90B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{463996CE-4802-4FB5-8CC8-D7EFC410817B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{463996CE-4802-4FB5-8CC8-D7EFC410817B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{463996CE-4802-4FB5-8CC8-D7EFC410817B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{463996CE-4802-4FB5-8CC8-D7EFC410817B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD3805F-DE71-4F61-BB42-5247578457F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD3805F-DE71-4F61-BB42-5247578457F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD3805F-DE71-4F61-BB42-5247578457F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD3805F-DE71-4F61-BB42-5247578457F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78741C78-E7CB-4FBA-87D8-5089003676A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78741C78-E7CB-4FBA-87D8-5089003676A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78741C78-E7CB-4FBA-87D8-5089003676A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78741C78-E7CB-4FBA-87D8-5089003676A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F88112B-8333-411E-BB90-3B039B732707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F88112B-8333-411E-BB90-3B039B732707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F88112B-8333-411E-BB90-3B039B732707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F88112B-8333-411E-BB90-3B039B732707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CA62821-73BE-45EA-8675-B331A716057D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA62821-73BE-45EA-8675-B331A716057D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA62821-73BE-45EA-8675-B331A716057D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA62821-73BE-45EA-8675-B331A716057D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD941FD7-CBB2-4124-B7C6-FA2C4FFD31C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD941FD7-CBB2-4124-B7C6-FA2C4FFD31C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD941FD7-CBB2-4124-B7C6-FA2C4FFD31C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD941FD7-CBB2-4124-B7C6-FA2C4FFD31C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E32384-F483-4DCC-974F-A510D9D37A97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E32384-F483-4DCC-974F-A510D9D37A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E32384-F483-4DCC-974F-A510D9D37A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E32384-F483-4DCC-974F-A510D9D37A97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87233CBD-C406-46F8-BD70-80097CA7D6F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87233CBD-C406-46F8-BD70-80097CA7D6F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87233CBD-C406-46F8-BD70-80097CA7D6F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87233CBD-C406-46F8-BD70-80097CA7D6F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F7DCAA-2E78-40F1-AF49-C7B7D67B84DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F7DCAA-2E78-40F1-AF49-C7B7D67B84DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F7DCAA-2E78-40F1-AF49-C7B7D67B84DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F7DCAA-2E78-40F1-AF49-C7B7D67B84DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CDD3805F-DE71-4F61-BB42-5247578457F4} = {086545A1-733A-4D82-A3B6-8C9E20A1B657}
+		{9CA62821-73BE-45EA-8675-B331A716057D} = {086545A1-733A-4D82-A3B6-8C9E20A1B657}
+		{DA9A75DB-043A-4531-BE64-ABD50BBEC5BA} = {93189659-501A-452B-995D-D5741D264E7D}
+		{78741C78-E7CB-4FBA-87D8-5089003676A9} = {6B92B73C-2F5C-41C3-BEAA-2323515D2FBF}
+		{5F88112B-8333-411E-BB90-3B039B732707} = {6B92B73C-2F5C-41C3-BEAA-2323515D2FBF}
+		{6B16C3BE-DE33-4DBB-A1D3-0A019B0CA90B} = {727219F8-5B31-4EB3-8392-7222BFA7F8F2}
+		{463996CE-4802-4FB5-8CC8-D7EFC410817B} = {727219F8-5B31-4EB3-8392-7222BFA7F8F2}
+		{CD941FD7-CBB2-4124-B7C6-FA2C4FFD31C8} = {C3062837-84E3-4D35-AC56-4CA5121316E8}
+		{03E32384-F483-4DCC-974F-A510D9D37A97} = {C3062837-84E3-4D35-AC56-4CA5121316E8}
+		{87233CBD-C406-46F8-BD70-80097CA7D6F8} = {C3062837-84E3-4D35-AC56-4CA5121316E8}
+		{B4F7DCAA-2E78-40F1-AF49-C7B7D67B84DF} = {C3062837-84E3-4D35-AC56-4CA5121316E8}
+	EndGlobalSection
+EndGlobal

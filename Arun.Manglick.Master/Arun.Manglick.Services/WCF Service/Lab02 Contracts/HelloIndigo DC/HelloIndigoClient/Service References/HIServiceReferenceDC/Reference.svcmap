@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e39f684f-df27-4def-99cc-fb47f643f560" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/HelloIndigoDC" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HelloIndigoDC.disco" MetadataType="Disco" ID="de180e7e-a4ec-4d30-b3cd-4186528d741a" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoDC?disco" />
+    <MetadataFile FileName="HelloIndigoDC.xsd" MetadataType="Schema" ID="7a1f5974-5e2b-47ff-8853-3b924ea1c11b" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoDC?xsd=xsd0" />
+    <MetadataFile FileName="HelloIndigoDC.wsdl" MetadataType="Wsdl" ID="8c393480-777a-436e-b3ae-ec8d3765043d" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoDC?wsdl=wsdl0" />
+    <MetadataFile FileName="HelloIndigoDC1.xsd" MetadataType="Schema" ID="2c195211-3546-4e34-9afa-b9d49d86f04b" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoDC?xsd=xsd1" />
+    <MetadataFile FileName="HelloIndigoService.wsdl" MetadataType="Wsdl" ID="71036d56-6118-4de9-80f8-c318dcdf22bc" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoDC?wsdl" />
+    <MetadataFile FileName="HelloIndigoDC2.xsd" MetadataType="Schema" ID="d31ed862-cb41-45ba-8cd0-f72fa45dc1f8" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoDC?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

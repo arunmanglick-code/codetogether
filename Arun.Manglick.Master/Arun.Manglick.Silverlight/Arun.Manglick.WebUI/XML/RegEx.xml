@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentElement>
+  <RegEx>
+    <Key>AlphaNumeric</Key>
+    <Value>^[a-zA-Z0-9]+$</Value>
+    <Description>Alpha Numeric</Description>
+  </RegEx>
+  <RegEx>
+    <Key>PositiveInteger</Key>
+    <Value>^0*[1-9]+\d*$</Value>
+    <Description>Positive Integer</Description>
+  </RegEx>
+  <RegEx>
+    <Key>ZipCodeRegx</Key>
+    <Value>^(\d{5})$</Value>
+    <Description>ZipCode Regx</Description>
+  </RegEx>
+  <RegEx>
+    <Key>PositiveInteger</Key>
+    <Value>^-[0-9]+$|^[0-9]+$</Value>
+    <Description>Integer</Description>
+  </RegEx>
+</DocumentElement>

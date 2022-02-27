@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DateFromThru" xml:space="preserve">
+    <value>Date Through must be greater than or Equal to Date From</value>
+  </data>
+  <data name="ErrorInDeletion" xml:space="preserve">
+    <value>Error occurred while Deleting the data</value>
+  </data>
+  <data name="ErrorInSaving" xml:space="preserve">
+    <value>Error occurred while saving the data</value>
+  </data>
+  <data name="InvalidName" xml:space="preserve">
+    <value>Invalid character ([,],^,%) entered in the Name field.</value>
+  </data>
+  <data name="NameAlreadyExist" xml:space="preserve">
+    <value>Name already exists.</value>
+  </data>
+  <data name="NameNotFound" xml:space="preserve">
+    <value>Name is required</value>
+  </data>
+  <data name="RecordTypeNotFound" xml:space="preserve">
+    <value>Record Type is required</value>
+  </data>
+  <data name="NoDataFound" xml:space="preserve">
+    <value>No Data Found</value>
+  </data>
+  <data name="StatusRequired" xml:space="preserve">
+    <value>Status is required</value>
+  </data>
+  <data name="TypeRequired" xml:space="preserve">
+    <value>Type is required</value>
+  </data>
+  <data name="ValidationError" xml:space="preserve">
+    <value>Validation failed for some fields</value>
+  </data>
+  <data name="ValidationHeader" xml:space="preserve">
+    <value>Validation message - error</value>
+  </data>
+  <data name="DateCompare" xml:space="preserve">
+    <value>Date Through must be greater than or Equal to Date From</value>
+  </data>
+  <data name="ProperDate" xml:space="preserve">
+    <value>Must be Proper Date</value>
+  </data>
+  <data name="EmptyStringArgument" xml:space="preserve">
+    <value>The passed-in argument is an  is empty string</value>
+  </data>
+  <data name="SelectCheckBox" xml:space="preserve">
+    <value>Please Select checkbox</value>
+  </data>
+  <data name="DescriptionNotFound" xml:space="preserve">
+    <value>Description is required</value>
+  </data>
+  <data name="InvalidDescription" xml:space="preserve">
+    <value>Special characters not allowed in description</value>
+  </data>
+  <data name="DescriptionLength" xml:space="preserve">
+    <value>Description allowed maximum of 75 charectors</value>
+  </data>
+  <data name="NameLength" xml:space="preserve">
+    <value>Name allowed maximum of 15 charectors</value>
+  </data>
+  <data name="AssignObjectError" xml:space="preserve">
+    <value>Error while assigning items</value>
+  </data>
+  <data name="AssignObjectSelect" xml:space="preserve">
+    <value>Please select at least one item to move</value>
+  </data>
+  <data name="AssignObjectTypeError" xml:space="preserve">
+    <value>Please select items of type {0}</value>
+  </data>
+  <data name="ReferTypeNotFound" xml:space="preserve">
+    <value>ReferType is required</value>
+  </data>
+  <data name="SearchResult" xml:space="preserve">
+    <value>There are no records available that match the provided criteria</value>
+  </data>
+  <data name="NotesLength" xml:space="preserve">
+    <value>Notes allowed maximum of 300 charactors</value>
+  </data>
+  <data name="InvalidNumericData" xml:space="preserve">
+    <value>Please enter valid numeric data</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>You  are not authorized to perform this action</value>
+  </data>
+  <data name="AdminRoleCannotDelete" xml:space="preserve">
+    <value>Administrator role cannot be deleted</value>
+  </data>
+  <data name="StateRequired" xml:space="preserve">
+    <value>State is required</value>
+  </data>
+  <data name="CityRequired" xml:space="preserve">
+    <value>City is required</value>
+  </data>
+  <data name="InvalidZipCode" xml:space="preserve">
+    <value>Please enter valid ZipCode</value>
+  </data>
+  <data name="ZipRequired" xml:space="preserve">
+    <value>Zip Code is required</value>
+  </data>
+  <data name="SelectDropdown" xml:space="preserve">
+    <value>Please select a valid version from 'View Snapshot' dropdown</value>
+  </data>
+  <data name="InvalidCity" xml:space="preserve">
+    <value>Invalid character ([,],^,%) entered in the City field.</value>
+  </data>
+  <data name="ObjectTextBoxEmpty" xml:space="preserve">
+    <value>{0} column value required at row {1}</value>
+  </data>
+  <data name="ObjectPositiveValueNeeded" xml:space="preserve">
+    <value>Positive integer required in {0} column at row {1}</value>
+  </data>
+  <data name="ObjectIntegerNeeded" xml:space="preserve">
+    <value>Positive or Negative Integer without decimal required in {0} column at row {1}</value>
+  </data>
+  <data name="CopyRow" xml:space="preserve">
+    <value>Please copy row first to paste</value>
+  </data>
+  <data name="SelectRow" xml:space="preserve">
+    <value>Please select row to delete</value>
+  </data>
+  <data name="SelectRowToCopy" xml:space="preserve">
+    <value>Please select single row to copy</value>
+  </data>
+  <data name="SelectRowToInsert" xml:space="preserve">
+    <value>Please select position to insert new row</value>
+  </data>
+  <data name="ScoreCardRequired" xml:space="preserve">
+    <value>Score Card is required</value>
+  </data>
+  <data name="PositiveRowIndex" xml:space="preserve">
+    <value>Positive value required to move row</value>
+  </data>
+  <data name="SelectRowToMove" xml:space="preserve">
+    <value>Please select row to move</value>
+  </data>
+  <data name="MoveRowError" xml:space="preserve">
+    <value>Please enter Move to row index below or equal to max rows available</value>
+  </data>
+  <data name="SelectRowToPaste" xml:space="preserve">
+    <value>Please select single row to paste</value>
+  </data>
+  <data name="AssignObjectSelectRight" xml:space="preserve">
+    <value>Please select at least one item to move in the right side table</value>
+  </data>
+  <data name="AssignObjectSelectRightPosition" xml:space="preserve">
+    <value>Please select row position different than move to position</value>
+  </data>
+  <data name="FinanceTypeRequired" xml:space="preserve">
+    <value>Finance type required</value>
+  </data>
+  <data name="ProgramTypeRequired" xml:space="preserve">
+    <value>Program type required</value>
+  </data>
+  <data name="InvalidTierData" xml:space="preserve">
+    <value>Please Enter Valid Alphanumeric (A-Z,0-9) Data in {0} column at row {1}</value>
+  </data>
+  <data name="TierDataRequired" xml:space="preserve">
+    <value>Please specify atleast one Tier to program for saving</value>
+  </data>
+  <data name="TierLimitOverlapped" xml:space="preserve">
+    <value>'From Score' at row {0} overlaps with 'To Score' at row at {1}.</value>
+  </data>
+  <data name="InvalidNumericDataTorTier" xml:space="preserve">
+    <value>Please enter valid numeric data in {0} column at row {1}</value>
+  </data>
+  <data name="RiskTierDuplication" xml:space="preserve">
+    <value>Risk tier character identifier must be unique.</value>
+  </data>
+  <data name="TierFromAndTovalue" xml:space="preserve">
+    <value>'From Score' should not be greater or equal to  'To Score' at row {0} </value>
+  </data>
+  <data name="TierRangeDifference" xml:space="preserve">
+    <value>There is a gap between ‘To Score’ of row {0} and ‘From Score’ of row {1}</value>
+  </data>
+  <data name="TierRangeRequired" xml:space="preserve">
+    <value>{0} column from row {1} cannot be blank</value>
+  </data>
+  <data name="ProgramStatusRequired" xml:space="preserve">
+    <value>Program status required</value>
+  </data>
+  <data name="RiskTierRequired" xml:space="preserve">
+    <value>Risk Tier Field  is missing from {0} column from row {1}</value>
+  </data>
+  <data name="TierRangeNumeric" xml:space="preserve">
+    <value>Please enter numeric data in {0} column from row {1}</value>
+  </data>
+  <data name="InvlidRangeForScore" xml:space="preserve">
+    <value>Please Enter Score in the Range of  -9999 to 9999 in {0} column at row {1}</value>
+  </data>
+  <data name="InvlidRangeForScoreforTCTC" xml:space="preserve">
+    <value>Please Enter Score in the Range of  -9999 to 9999 in {0} column at row {1}</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>String1</value>
+  </data>
+  <data name="SelectSelectSingleRowDelete" xml:space="preserve">
+    <value>Please select single row to delete</value>
+  </data>
+  <data name="SelectSelectSingleRowInsert" xml:space="preserve">
+    <value>Please select single row to insert</value>
+  </data>
+  <data name="InvalidAlphaNumeric" xml:space="preserve">
+    <value>Data entered must be alpha numeric</value>
+  </data>
+  <data name="VehicleGuideRequired" xml:space="preserve">
+    <value>Please select {0} column from row {1} </value>
+  </data>
+  <data name="VehicleMultiMatchDuplication" xml:space="preserve">
+    <value>There is more than one record with the same data at rows ( {0} )</value>
+  </data>
+  <data name="GuidebookDataRequired" xml:space="preserve">
+    <value>Please specify atleast one Guidebook row for saving</value>
+  </data>
+  <data name="FullNameNotFound" xml:space="preserve">
+    <value>Full Name is required</value>
+  </data>
+  <data name="InvalidSName" xml:space="preserve">
+    <value>Please use only alphanumeric characters, underscores (_) or hyphens (-) in the Name field.</value>
+  </data>
+  <data name="DealerGroupNameRequired" xml:space="preserve">
+    <value>Please select {0} column from row {1} </value>
+  </data>
+  <data name="FinancialTypeRequired" xml:space="preserve">
+    <value>Please select {0} column from row {1} </value>
+  </data>
+  <data name="FormulaPercentageRequired" xml:space="preserve">
+    <value>Please enter positive number from 1 to 100 in {0} column from row {1}</value>
+  </data>
+  <data name="ProductStatusRequired" xml:space="preserve">
+    <value>Product status required</value>
+  </data>
+  <data name="VehicleGuideDuplication" xml:space="preserve">
+    <value>There is more than one record with the same data at rows ( {0} )</value>
+  </data>
+  <data name="MultiMatchDataRequired" xml:space="preserve">
+    <value>Please specify atleast one Multi-Match Setting row</value>
+  </data>
+  <data name="CalulatedValueRequired" xml:space="preserve">
+    <value>Please select {0} column from row {1} </value>
+  </data>
+  <data name="SellRatePercentRequired" xml:space="preserve">
+    <value>Sell Rate Percent is required</value>
+  </data>
+  <data name="TermRequired" xml:space="preserve">
+    <value>Term is required</value>
+  </data>
+  <data name="VaildPercent" xml:space="preserve">
+    <value>Enter Sell Rate in the Range of 0 - 99.999 or use Blank for no default Sell Rate</value>
+  </data>
+  <data name="VaildTerm" xml:space="preserve">
+    <value>Enter Term in the Range of 1 - 99 or use Blank for no default Term</value>
+  </data>
+  <data name="CheckInactiveRowSelecion" xml:space="preserve">
+    <value>You are assigning an Inactive program. It will not run. Do you want to continue?</value>
+  </data>
+  <data name="FinanceTypeStandardPrograms" xml:space="preserve">
+    <value>Finance type of Standard Programs Assignment does not matches the Products Finance type</value>
+  </data>
+  <data name="FinanceTypeDefaultPrograms" xml:space="preserve">
+    <value>Finance type of Default Programs Assignment does not matches the Products Finance type</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>String2</value>
+  </data>
+  <data name="AssignementLost" xml:space="preserve">
+    <value>Assignments will be lost, do you want to continue?</value>
+  </data>
+  <data name="ValidDebtAmount" xml:space="preserve">
+    <value>Enter Debt Amount in the Range of 0 - 9999999.99</value>
+  </data>
+  <data name="ValidMonthlyPayment" xml:space="preserve">
+    <value>Enter Monthly Payment in the Range of 0 - 9999999.99</value>
+  </data>
+  <data name="ValidMonthlyPaymentPercent" xml:space="preserve">
+    <value>Enter Monthly Payment Parcentage in the Range of 0 - 100</value>
+  </data>
+</root>

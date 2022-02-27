@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.Silverlight.ChatApplication", "Arun.Manglick.Silverlight.ChatApplication\Arun.Manglick.Silverlight.ChatApplication.csproj", "{984CE24B-34C4-435D-960B-9DBB8F93B47B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arun.Manglick.Silverlight.ChatApplication.Web", "Arun.Manglick.Silverlight.ChatApplication.Web\Arun.Manglick.Silverlight.ChatApplication.Web.csproj", "{19A54098-4F44-4771-BDF9-DBCFA8B75524}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{984CE24B-34C4-435D-960B-9DBB8F93B47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984CE24B-34C4-435D-960B-9DBB8F93B47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984CE24B-34C4-435D-960B-9DBB8F93B47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984CE24B-34C4-435D-960B-9DBB8F93B47B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A54098-4F44-4771-BDF9-DBCFA8B75524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A54098-4F44-4771-BDF9-DBCFA8B75524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A54098-4F44-4771-BDF9-DBCFA8B75524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A54098-4F44-4771-BDF9-DBCFA8B75524}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

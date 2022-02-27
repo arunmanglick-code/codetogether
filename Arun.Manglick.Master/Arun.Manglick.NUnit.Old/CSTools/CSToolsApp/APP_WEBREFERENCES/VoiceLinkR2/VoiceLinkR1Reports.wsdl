@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="generateOverdueReports">
+        <s:complexType />
+      </s:element>
+      <s:element name="generateOverdueReportsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="generateOverdueReportsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendOverdueReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubscriberID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendOverdueReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sendOverdueReportResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="generateOverdueReportsSoapIn">
+    <wsdl:part name="parameters" element="tns:generateOverdueReports" />
+  </wsdl:message>
+  <wsdl:message name="generateOverdueReportsSoapOut">
+    <wsdl:part name="parameters" element="tns:generateOverdueReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendOverdueReportSoapIn">
+    <wsdl:part name="parameters" element="tns:sendOverdueReport" />
+  </wsdl:message>
+  <wsdl:message name="sendOverdueReportSoapOut">
+    <wsdl:part name="parameters" element="tns:sendOverdueReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VoiceLinkR1ReportsSoap">
+    <wsdl:operation name="generateOverdueReports">
+      <wsdl:input message="tns:generateOverdueReportsSoapIn" />
+      <wsdl:output message="tns:generateOverdueReportsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendOverdueReport">
+      <wsdl:input message="tns:sendOverdueReportSoapIn" />
+      <wsdl:output message="tns:sendOverdueReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VoiceLinkR1ReportsSoap" type="tns:VoiceLinkR1ReportsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="generateOverdueReports">
+      <soap:operation soapAction="http://tempuri.org/generateOverdueReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendOverdueReport">
+      <soap:operation soapAction="http://tempuri.org/sendOverdueReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VoiceLinkR1ReportsSoap12" type="tns:VoiceLinkR1ReportsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="generateOverdueReports">
+      <soap12:operation soapAction="http://tempuri.org/generateOverdueReports" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendOverdueReport">
+      <soap12:operation soapAction="http://tempuri.org/sendOverdueReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VoiceLinkR1Reports">
+    <wsdl:port name="VoiceLinkR1ReportsSoap" binding="tns:VoiceLinkR1ReportsSoap">
+      <soap:address location="http://64.240.209.153:8081/VoiceLinkR1Reports/VoiceLinkR1Reports.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VoiceLinkR1ReportsSoap12" binding="tns:VoiceLinkR1ReportsSoap12">
+      <soap12:address location="http://64.240.209.153:8081/VoiceLinkR1Reports/VoiceLinkR1Reports.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

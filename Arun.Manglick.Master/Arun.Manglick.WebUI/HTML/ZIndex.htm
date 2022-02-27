@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+    .freefloat{
+        position:absolute;
+        width:250px;
+        height:250px;
+        border:1px solid #000;
+        padding:1px;
+        }
+    .red{
+        background-color:red;
+        color:white;
+        left:10px;
+        top:10px;
+        }
+    .blue{
+        background-color:blue;
+        color:white;
+        left:200px;
+        top:50px;
+        }
+    .green{
+        background-color:green;
+        color:white;
+        left:100px;
+        top:200px;
+        }
+</style>
+
+<script type="text/javascript">
+ var start_z_index = 1000;
+ function bringtotop( item )
+ {
+    item.style.zIndex = start_z_index++;
+ }
+</script>
+
+</head>
+<body>
+<!-- html in body -->
+<div id="red" class="freefloat red" onclick="bringtotop(this)">red content</div>
+<div id="green" class="freefloat green" onclick="bringtotop(this)">green content</div>
+<div id="blue" class="freefloat blue" onclick="bringtotop(this)">blue content</div>
+</body>
+</html>

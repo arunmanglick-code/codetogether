@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="CTLS.ICLS.UX.CountySearch.CASantaClaraSummarySearchResultBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:uxcontrols="clr-namespace:CTLS.Shared.UX.Controls;assembly=CTLS.Shared.UX.Controls"
+             xmlns:local="clr-namespace:CTLS.ICLS.UX.CountySearch"
+             xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+             xmlns:slabbcontrols="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls">
+    <Grid x:Name="LayoutRoot"
+          Background="White">
+        <!--<ScrollViewer  Grid.Row="0"
+                       Height="500"
+                       Margin="0,0,0,25">-->
+        <uxcontrols:MultiSelectGridView x:Name="grvSummaryResults"
+                                        ItemsSource="{Binding Path=SummaryResultsList}"
+                                        Style="{StaticResource uxcontrolsGridView}">
+            <uxcontrols:MultiSelectGridView.Columns>
+                <data:DataGridTemplateColumn Header="NAME"
+                                             Width="350">
+                    <data:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Margin="7"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding Path=FirstParty}" />
+                                <TextBlock Margin="7"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding Path=SecondParty}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </data:DataGridTemplateColumn.CellTemplate>
+                </data:DataGridTemplateColumn>
+                <data:DataGridTemplateColumn Header="ROLE"
+                                             Width="100">
+                    <data:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding Path=FirstPartyRole}" />
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding Path=SecondPartyRole}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </data:DataGridTemplateColumn.CellTemplate>
+                </data:DataGridTemplateColumn>
+                <data:DataGridTemplateColumn Header="DOCUMENT TYPE"
+                                             Width="180">
+                    <data:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Margin="7"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding Path=DocumentType}" />
+                        </DataTemplate>
+                    </data:DataGridTemplateColumn.CellTemplate>
+                </data:DataGridTemplateColumn>
+                <data:DataGridTemplateColumn Header="FILE NO"
+                                             Width="125">
+                    <data:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <uxcontrols:TruncatableTextBlock Margin="7"
+                                                             Text="{Binding Path=FilingNumber}" />
+                        </DataTemplate>
+                    </data:DataGridTemplateColumn.CellTemplate>
+                </data:DataGridTemplateColumn>
+                <data:DataGridTemplateColumn Header="FILE DATE"
+                                             Width="100">
+                    <data:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <uxcontrols:TruncatableTextBlock Margin="7"
+                                                             Text="{Binding Path=FileDate}" />
+                        </DataTemplate>
+                    </data:DataGridTemplateColumn.CellTemplate>
+                </data:DataGridTemplateColumn>
+                <data:DataGridTemplateColumn Header="PAGES"
+                                             Width="*">
+                    <data:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <uxcontrols:TruncatableTextBlock Margin="7"
+                                                             Text="{Binding Path=Pages}" />
+                        </DataTemplate>
+                    </data:DataGridTemplateColumn.CellTemplate>
+                </data:DataGridTemplateColumn>
+            </uxcontrols:MultiSelectGridView.Columns>
+        </uxcontrols:MultiSelectGridView>
+        <!--</ScrollViewer>-->
+    </Grid>
+</UserControl>

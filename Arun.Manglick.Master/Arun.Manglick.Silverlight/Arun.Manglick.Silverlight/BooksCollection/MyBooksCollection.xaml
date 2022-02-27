@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.MyBooksCollection"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <StackPanel>
+        <ListBox x:Name="MyBooks" Margin="5" ItemsSource="{Binding Mode=OneWay}" SelectionChanged="MyBooks_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="{Binding ISBN}" Margin="0,0,50,0" />
+                        <TextBlock Text="{Binding Title}" />    
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <!--Visual division between the list and the details-->
+        <Rectangle HorizontalAlignment="Left" Width="400" Height="2" 
+        Fill="Red" Margin="0,10,0,10"/>
+
+        <!--The UI for the details view-->
+        <StackPanel x:Name="BookDetails">
+            <TextBlock Text="{Binding ISBN, Mode=OneWay}" />
+            <TextBlock Text="{Binding Title, Mode=OneWay}" />
+
+            <TextBlock Text="{Binding PublishDate, Mode=OneWay}"/>
+            <TextBlock Text="{Binding Price, Mode=OneWay}" />
+        </StackPanel>
+        
+    </StackPanel>
+    
+    
+</UserControl>

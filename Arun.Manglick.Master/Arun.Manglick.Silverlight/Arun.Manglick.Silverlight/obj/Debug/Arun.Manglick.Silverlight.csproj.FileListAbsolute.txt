@@ -1,0 +1,60 @@
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\AppManifest.xaml
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\Arun.Manglick.Silverlight.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\Arun.Manglick.Silverlight.pdb
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\Arun.Manglick.Silverlight.xap
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\TestPage.html
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\App.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Page.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Arun.Manglick.Silverlight.g.resources
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Arun.Manglick.Silverlight.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Arun.Manglick.Silverlight.pdb
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\XapCacheFile.xml
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 1\Canvas.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 1\DragAndDrop.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 1\Grid.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 1\StackPanel.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 1\StackPanelHorizontal.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 2\Library.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 3\LibraryStyle.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\BooksCollection\MyBooksCollection.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Project Rosetta\Ball Game\Ball.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Project Rosetta\Ball Game\BallPlay.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Project Rosetta\Dot Stars\DotStar.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Project Rosetta\Dot Stars\DotStarPlay.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Project Rosetta\Dots Animation\Dot.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Project Rosetta\Dots Animation\DotPlay.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Project Rosetta\Drag Flower\DragFlower.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Project Rosetta\Drag Flower\DragFlowerPlay.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\EventHandler\EventHandler1.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\EventHandler\EventHandler2.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\MenuPage.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Scott 8 Tutorial Series\Tutorial 2\DiggSample.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\System.Windows.Controls.Data.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\System.Xml.Linq.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\System.Xml.Linq.xml
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\System.Windows.Controls.Data.xml
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\de\System.Xml.Linq.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\es\System.Xml.Linq.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\fr\System.Xml.Linq.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\it\System.Xml.Linq.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\ja\System.Xml.Linq.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\ko\System.Xml.Linq.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\zh-Hans\System.Xml.Linq.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\zh-Hant\System.Xml.Linq.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\de\System.Windows.Controls.Data.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\es\System.Windows.Controls.Data.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\fr\System.Windows.Controls.Data.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\it\System.Windows.Controls.Data.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\ja\System.Windows.Controls.Data.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\ko\System.Windows.Controls.Data.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\zh-Hans\System.Windows.Controls.Data.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\Bin\Debug\zh-Hant\System.Windows.Controls.Data.resources.dll
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Scott 8 Tutorial Series\Tutorial 2\StoriesDetailsUC.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Scott 8 Tutorial Series\Tutorial 2\SilverlightControl1.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 3\DBAccessUsingGridViewLINQWCF.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 4\KeyboardSense.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 4\AddressUserControl.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 6\LibraryNew.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 7\DataBindingNTemplate.g.cs
+D:\Arun.Manglick.ORG\PSPL\Project Apps Trial\Arun.Manglick.Silverlight\Arun.Manglick.Silverlight\obj\Debug\Tutorial 5\ChatMessenger.g.cs

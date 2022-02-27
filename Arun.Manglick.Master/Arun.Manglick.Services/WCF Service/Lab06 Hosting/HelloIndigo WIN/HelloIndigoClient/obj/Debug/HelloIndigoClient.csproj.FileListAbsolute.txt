@@ -1,0 +1,6 @@
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClient\bin\Debug\HelloIndigoClient.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClient\bin\Debug\HelloIndigoClient.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClient\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClient\obj\Debug\HelloIndigoClient.exe
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClient\obj\Debug\HelloIndigoClient.pdb
+D:\Arun.Manglick.ORG\XIPL\PROJECT APPS\Arun.Manglick.Master\Arun.Manglick.Web\Services\WCF Service\Lab06 Hosting\HelloIndigo WIN\HelloIndigoClient\bin\Debug\HelloIndigoClient.exe.config

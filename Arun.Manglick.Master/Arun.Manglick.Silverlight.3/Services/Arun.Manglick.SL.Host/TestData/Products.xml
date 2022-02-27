@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+  <Product>
+    <ProductId>1</ProductId>
+    <ModelNumber>PROD01</ModelNumber>
+    <ModelName>BMW</ModelName>
+    <UnitCost>304</UnitCost>
+    <Description>Max characters count is 80. Entering any new character will raise an Exeception.</Description>
+  </Product>
+  <Product>
+    <ProductId>2</ProductId>
+    <ModelNumber></ModelNumber>
+    <ModelName>SMW</ModelName>
+    <UnitCost>200</UnitCost>
+    <Description>Honda Toy Car</Description>
+  </Product>
+  <Product>
+    <ProductId>3</ProductId>
+    <ModelNumber>PROD03</ModelNumber>
+    <ModelName>DMW</ModelName>
+    <UnitCost>300</UnitCost>
+    <Description>Hyundai Toy Car</Description>
+  </Product>
+  <Product>
+    <ProductId>4</ProductId>
+    <ModelNumber>PROD04</ModelNumber>
+    <ModelName>EMW</ModelName>
+    <UnitCost>400</UnitCost>
+    <Description>Ford Toy Car</Description>
+  </Product>
+  <Product>
+    <ProductId>5</ProductId>
+    <ModelNumber>PROD05</ModelNumber>
+    <ModelName>FMW</ModelName>
+    <UnitCost>501</UnitCost>
+    <Description>Merc Toy Car</Description>
+  </Product>
+  <Product>
+    <ProductId>6</ProductId>
+    <ModelNumber>PROD06</ModelNumber>
+    <ModelName>FMW</ModelName>
+    <UnitCost>500</UnitCost>
+    <Description>Merc Toy Car</Description>
+  </Product>
+
+</Products>

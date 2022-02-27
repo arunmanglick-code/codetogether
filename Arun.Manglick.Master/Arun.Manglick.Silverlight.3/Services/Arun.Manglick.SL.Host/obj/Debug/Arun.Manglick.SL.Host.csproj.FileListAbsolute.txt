@@ -1,0 +1,25 @@
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.Host.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.Host.pdb
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\obj\Debug\Arun.Manglick.SL.Host.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\obj\Debug\Arun.Manglick.SL.Host.pdb
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\TestData\Products.xml
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.Services.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.BL.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.Services.pdb
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.BL.pdb
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\System.ServiceModel.PollingDuplex.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\TestData\Copy of Products.xml
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\TestData\ProductsLarge.xml
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\TestData\Copy of Products.xml
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\TestData\ProductsLarge.xml
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\TestData\Products.xml
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.Host.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.Host.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.Services.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.BL.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.Services.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\bin\Arun.Manglick.SL.BL.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\obj\Debug\Arun.Manglick.SL.Host.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\obj\Debug\Arun.Manglick.SL.Host.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Host\obj\Debug\Arun.Manglick.SL.Host.csprojResolveAssemblyReference.cache

@@ -1,0 +1,11 @@
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\bin\Arun.Manglick.Silverlight.Web.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\bin\Arun.Manglick.Silverlight.Web.pdb
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\obj\Debug\Arun.Manglick.Silverlight.Web.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\obj\Debug\Arun.Manglick.Silverlight.Web.pdb
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\bin\System.ServiceModel.PollingDuplex.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\bin\Arun.Manglick.Silverlight.Web.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\bin\Arun.Manglick.Silverlight.Web.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\obj\Debug\Arun.Manglick.Silverlight.Web.csprojResolveAssemblyReference.cache
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\obj\Debug\Arun.Manglick.Silverlight.Web.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Arun.Manglick.Silverlight.Web\obj\Debug\Arun.Manglick.Silverlight.Web.pdb

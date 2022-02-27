@@ -1,0 +1,59 @@
+﻿
+------------------------------------------------------------------------
+private void StreamReader(String path)
+{
+    StreamReader myReader = new StreamReader(path);
+    SessionManager.NotePadText = myReader.ReadToEnd();
+    ShowHideError("Success", true);
+    myReader.Close();
+}
+
+private void StreamWriter(String path)
+{
+    StreamWriter myWriter = new StreamWriter(pathName2,true);
+    String str = Environment.NewLine + "Extra Wriiten Text: " + DateTime.Now.ToLongDateString() + " : " + DateTime.Now.ToLongTimeString();
+    myWriter.WriteLine(str);
+    
+    myWriter.Flush();
+    myWriter.Close();
+}
+------------------------------------------------------------------------
+private void StreamReading(String path)
+{
+    Stream myReader = File.Open(path, FileMode.Open, FileAccess.Read);
+    byte[] arr = new byte[myReader.Length];
+    myReader.Read(arr, 0, arr.Length);
+    SessionManager.NotePadText = Encoding.Default.GetString(arr);
+    ShowHideError("Success FileStreamReader", true);
+    myReader.Close();
+}
+
+private void StreamWriting(String path)
+{
+    Stream myWriter = File.Open(path, FileMode.Append, FileAccess.Write);
+    String str = Environment.NewLine + "Extra Wriiten Text: " + DateTime.Now.ToLongDateString() + " : " + DateTime.Now.ToLongTimeString();
+    byte[] arr = Encoding.Default.GetBytes(str);
+    myWriter.Write(arr, 0, arr.Length);
+    myWriter.Close();
+}
+------------------------------------------------------------------------
+private void FileStreamReader(String path)
+{
+    FileStream myReader = new FileStream(path, FileMode.Open,FileAccess.Read);
+    byte[] arr = new byte[myReader.Length];
+    myReader.Read(arr, 0, arr.Length);
+    SessionManager.NotePadText = Encoding.Default.GetString(arr);
+    ShowHideError("Success FileStreamReader", true);
+    myReader.Close();
+}
+
+
+private void FileStreamWriter(String path)
+{
+    FileStream myWriter = new FileStream(path, FileMode.Append,FileAccess.Write);
+    String str = Environment.NewLine + "Extra Wriiten Text: " + DateTime.Now.ToLongDateString() + " : " + DateTime.Now.ToLongTimeString();
+    byte[] arr = Encoding.Default.GetBytes(str);
+    myWriter.Write(arr, 0, arr.Length);
+    myWriter.Close();
+}
+------------------------------------------------------------------------

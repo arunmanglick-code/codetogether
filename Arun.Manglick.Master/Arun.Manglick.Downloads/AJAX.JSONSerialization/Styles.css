@@ -1,0 +1,43 @@
+﻿body
+{
+    font-family: Verdana;
+    font-size: medium;
+}
+
+/*AutoComplete flyout */
+.autocomplete_completionListElement 
+{  
+	background-color : white;
+	color : black;
+	border : solid 1px #444;
+	cursor : 'default';
+    text-align : left; 
+    overflow: auto;
+    font-size: 90%;
+}
+
+ul.autocomplete_completionListElement
+{
+    margin: 0px;
+}
+
+ul.autocomplete_completionListElement li
+{
+    position: relative;
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+	background-color: #ffff99;
+	color: black;
+	padding : 2px 1px 2px 5px;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+	padding : 2px 1px 2px 5px;
+}

@@ -1,0 +1,129 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" EnableTheming="true"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Master Page</title>
+
+    <script type="text/javascript">
+    function ShowHideMenu()
+    {        
+        var divMenu = document.getElementById("divMenu");
+        if (divMenu.style.display == "")
+            divMenu.style.display = "none";
+        else
+            divMenu.style.display = "";
+    }
+    </script>
+     <asp:contentplaceholder id="cphHeaderContent" runat="server">
+    <%--
+            Author      - Arun Manglick
+            Date        - Nov 02, 2007
+            Description - This content holder is added in <head> tag to allow addition of content to the
+                          header of the Page. This would generally be used to add css/js references specific
+                          to the content page. If you have nothing to add leave the content place holder blank
+                          in content page.
+            Reference   - http://www.odetocode.com/Articles/450.aspx
+    --%>
+    </asp:contentplaceholder>
+</head>
+<body>
+    <form id="frmMaster" runat="server">
+        <div class="divmaster">
+            <table cellpadding="0" cellspacing="0" class="tablemaster">
+                <!-- Header Row -->
+                <tr>
+                    <td class="appheader" style="height: 45px;" valign="middle">
+                        <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <img id="Img1" src="Images/logo2.bmp" runat="server"/></td>
+                                <td>
+                                    <img src="Images/tag_line3.gif" id="IMG2" runat="server" /></td>
+                                <td>
+                                    <asp:Label ID="lblLenderName" runat="server"></asp:Label> | 
+                                    <asp:HyperLink ID="lnkLogout" runat="server" Text="<%$ Resources:LinkLogout %>"></asp:HyperLink>| 
+                                    <asp:HyperLink ID="lnkHelp" runat="server" NavigateUrl="http://localhost/Arun.Manglick.AjaxUI/Home.aspx" Text="AJAX"></asp:HyperLink> | 
+                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://localhost/Arun.Manglick.JQuery/Home.aspx" Text="JQuery"></asp:HyperLink> | 
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://localhost/Arun.Manglick.WebUI/Home.aspx" Text="WebUI"></asp:HyperLink> |
+                                    <asp:HyperLink ID="lnkPrint" runat="server" onclick="javascript:window.print();" Text="<%$ Resources:LinkPrint %>"></asp:HyperLink> | 
+                                    <asp:HyperLink ID="lnkNewWindow" runat="server" Text="<%$ Resources:LinkNewWindow %>"></asp:HyperLink> | 
+                                    <asp:HyperLink ID="lnkChangePassword" runat="server" NavigateUrl="<%$ Resources:AppLinks, ChangePassword %>" Text="<%$ Resources:LinkChangePassword %>"></asp:HyperLink> | 
+                                    <a href="../Arun.Manglick.AjaxUI/Home.aspx">Go</a>  
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Middle Row -->
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <!-- Column 1 - TreeView -->
+                                <td class="leftnavigation" rowspan="1" valign="top" style="height: 600px;">
+                                    <div id="divMenu">
+                                        <asp:TreeView ID="trvMenu" DataSourceID="xmlDataSourceForTreeView" runat="server"
+                                            Width="175px" ShowLines="true" CssClass="TreeNavigation" NodeIndent="8" OnSelectedNodeChanged="trvMenu_SelectedNodeChanged"
+                                            ExpandDepth="0">
+                                            <DataBindings>
+                                                <asp:TreeNodeBinding DataMember="Level1" TextField="Text" TargetField="Flag" />
+                                                <asp:TreeNodeBinding DataMember="Level2" TextField="Text" TargetField="Flag"  />
+                                                <asp:TreeNodeBinding DataMember="Level3" TextField="Text" TargetField="Flag" />
+                                                <asp:TreeNodeBinding DataMember="Level4" TextField="Text" TargetField="Flag" />
+                                            </DataBindings>
+                                            <SelectedNodeStyle Font-Bold="True" CssClass="SelectedNode" />
+                                            <RootNodeStyle CssClass="RootNode" />
+                                            <ParentNodeStyle CssClass="ParentNode" />
+                                            <HoverNodeStyle CssClass="HoverNode" />
+                                            <LeafNodeStyle CssClass="LeafNode" />
+                                            <NodeStyle CssClass="Node" />
+                                        </asp:TreeView>
+                                    </div>
+                                </td>
+                                <!-- Column 2 - Splitter -->
+                                <td class="Splitter" onclick="ShowHideMenu();">
+                                </td>
+                                <!-- Column 3 - BreadCrumb & Back -->
+                                <td class="workspace">
+                                    <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                        <%--<tr>
+                                            <td class="breadcrumb">                                                
+                                            </td>
+                                            <td align="right" class="backbutton">                                                
+                                            </td>
+                                        </tr>--%>
+                                        <tr>
+                                            <td colspan="2">
+                                                <asp:ContentPlaceHolder ID="cphBodyContent" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <asp:XmlDataSource ID="xmlDataSourceForTreeView" DataFile="<%$ Resources:AppLinks,LeftTreeMenu%>" XPath="/MDEMenu/*"
+                                        runat="server"></asp:XmlDataSource>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Footer Row -->
+                <tr>
+                    <td  valign="top" class="footer" style="height: 40px">
+                        <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                            <tr>
+                                <td style="width: 175px">
+                                </td>
+                                <td style="width: 375px">
+                                    <asp:Label ID="lblFooter" runat="server" Text="<%$ Resources:Footer%>"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

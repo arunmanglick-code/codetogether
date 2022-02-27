@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.ArunManglick.Silverlight3.com/ProductSvc" elementFormDefault="qualified" targetNamespace="http://www.ArunManglick.Silverlight3.com/ProductSvc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1554/Host/Product.svc?xsd=xsd2" namespace="http://Arun.Manglick.SL3.BL" />
+  <xs:element name="GetAllProducts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://Arun.Manglick.SL3.BL" minOccurs="0" name="GetAllProductsResult" nillable="true" type="q1:ArrayOfProduct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

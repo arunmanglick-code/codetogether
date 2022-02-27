@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="Canvas_Absolute_Positioining.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Canvas Background="DarkKhaki" Width="500" Height="200">
+        <Button Canvas.Left="150" Content="I'm Indented!" />
+    </Canvas>
+ 
+</UserControl>

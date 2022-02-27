@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="CTLS.ICLS.UX.CountySearch.CASantaClaraPreviewDetailRresultsBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:uxcontrols="clr-namespace:CTLS.Shared.UX.Controls;assembly=CTLS.Shared.UX.Controls"
+             xmlns:local="clr-namespace:CTLS.ICLS.UX.CountySearch"
+             xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+             xmlns:slabbcontrols="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls">
+    <Grid x:Name="LayoutRoot"
+          Background="White">
+        <ScrollViewer  Grid.Row="0"
+                       Height="Auto"
+                       Margin="0,0,0,25">
+            <uxcontrols:GridView x:Name="grvDetailResults"
+                                 ItemsSource="{Binding Path=PreviewDetailResultList}"
+                                 Style="{StaticResource uxcontrolsGridView}"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                 ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <uxcontrols:GridView.Columns>
+                    <data:DataGridTemplateColumn Header="DOCUMENT TYPE"
+                                                 Width="200">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Margin="7"
+                                           TextWrapping="Wrap"
+                                           Text="{Binding Path=DocumentType}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="FILE NO"
+                                                 Width="100">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                     Text="{Binding Path=FileNumber}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="TYPE"
+                                                 Width="100">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                     Text="{Binding Path=PartyRole}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="NAMES"
+                                                 Width="300">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Margin="7"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding Path=PartyName}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="FILE DATE"
+                                                 Width="100">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding Path=FileDate}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>                    
+                    <data:DataGridTemplateColumn Header="BOOK"
+                                                 Width="*">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding Path=BookPage}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="PAGES"
+                                                 Width="50">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding Path=Pages}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <!--<data:DataGridTemplateColumn Header="PARCEL NUMBER"
+                                                 Width="*">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding Path=ParcelNo}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>-->
+                </uxcontrols:GridView.Columns>
+            </uxcontrols:GridView>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

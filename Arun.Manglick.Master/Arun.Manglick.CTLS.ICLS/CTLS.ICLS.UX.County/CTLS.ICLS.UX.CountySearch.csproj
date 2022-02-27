@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BF74A3F-F4F8-4B1B-A60A-8034219614F8}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CTLS.ICLS.UX.CountySearch</RootNamespace>
+    <AssemblyName>CTLS.ICLS.UX.CountySearch</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>CTLS.ICLS.UX.CountySearch.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>CTLS.ICLS.UX.CountySearch.CountySearchMain</SilverlightAppEntry>
+    <TestPageFileName>CTLS.ICLS.UX.CountyTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\PrebuiltBinaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\PrebuiltBinaries\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CT.SLABB.Controls, Version=3.0.4187.859, Culture=neutral, PublicKeyToken=594fdd720c180191, processorArchitecture=MSIL" />
+    <Reference Include="CT.SLABB.Core, Version=3.0.4187.858, Culture=neutral, PublicKeyToken=78232b10f5cacbda, processorArchitecture=MSIL" />
+    <Reference Include="CT.SLABB.Data.Refreshables, Version=3.0.4187.866, Culture=neutral, PublicKeyToken=36bdddb232c041f1, processorArchitecture=MSIL" />
+    <Reference Include="CTLS.ICLS.DX.AdminProxies">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.DX.AdminProxies.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.ICLS.DX.CommonProxies, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CTLS.ICLS.DX.CountySearchProxies">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.DX.CountySearchProxies.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.ICLS.DX.Data.SL">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.DX.Data.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.ICLS.DX.PortfolioProxies">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.DX.PortfolioProxies.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.ICLS.DX.Proxy.Common">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.DX.Proxy.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.ICLS.DX.SecurityProxies">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.DX.SecurityProxies.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.ICLS.UX.Controls">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.UX.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.ICLS.UX.Data">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.UX.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.ICLS.UX.Shared">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.UX.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.ICLS.UX.Shell">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.ICLS.UX.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.Shared.UX.Controls">
+      <HintPath>..\..\..\PrebuiltBinaries\CTLS.Shared.UX.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="CTLS.Shared.UX.Theme, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.DataForm.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit.Internals, Version=4.0.5.0, Culture=neutral, PublicKeyToken=2c5c654d367bf4a7, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindableModel\BaseBindableModel.cs" />
+    <Compile Include="BindableModel\OrderCompletedBindableModel.cs" />
+    <Compile Include="BindableModel\OrderDetailsBindableModel.cs" />
+    <Compile Include="BindableModel\DetailResultPreviewBindableModel.cs" />
+    <Compile Include="BindableModel\ViewOptionsBindableModel.cs" />
+    <Compile Include="BindableModel\OrderConfirmationBindableModel.cs" />
+    <Compile Include="BindableModel\LastItemsBindableModel.cs" />
+    <Compile Include="BindableModel\DetailResultBindableModel.cs" />
+    <Compile Include="BindableModel\OrdersPortfolioBindableModel.cs" />
+    <Compile Include="BindableModel\SummarySearchResultBindableModel.cs" />
+    <Compile Include="BindableModel\NameResultBindableModel.cs" />
+    <Compile Include="BindableModel\DesktopBindableModel.cs" />
+    <Compile Include="Convertors\PortFolioStatusToEmptyGridMessage.cs" />
+    <Compile Include="Convertors\NumericToString.cs" />
+    <Compile Include="Convertors\ListToSingle.cs" />
+    <Compile Include="Convertors\ObjectToString.cs" />
+    <Compile Include="Convertors\PortFolioStatusToVisibility.cs" />
+    <Compile Include="Convertors\StringToBackGroundConvertor.cs" />
+    <Compile Include="Convertors\StringToVisibility.cs" />
+    <Compile Include="Convertors\StringToBool.cs" />
+    <Compile Include="Pages\OrderSearch\Blocks\AZMaricopa SummarySearchResultBlock.xaml.cs">
+      <DependentUpon>AZMaricopa SummarySearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\CASanDiego SummarySearchResultBlock.xaml.cs">
+      <DependentUpon>CASanDiego SummarySearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\CASantaClara SummarySearchResultBlock.xaml.cs">
+      <DependentUpon>CASantaClara SummarySearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\AZMaricopa DetailRresultsBlock.xaml.cs">
+      <DependentUpon>AZMaricopa DetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\CASanDiego DetailRresultsBlock.xaml.cs">
+      <DependentUpon>CASanDiego DetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\CASantaClara DetailRresultsBlock.xaml.cs">
+      <DependentUpon>CASantaClara DetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\FLPalmBeach  DetailRresultsBlock.xaml.cs">
+      <DependentUpon>FLPalmBeach  DetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\FLDadeSummary DetailRresultsBlock.xaml.cs">
+      <DependentUpon>FLDadeSummary DetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\AZMaricopa PreviewDetailRresultsBlock.xaml.cs">
+      <DependentUpon>AZMaricopa PreviewDetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\AZMaricopa PreviewSummarySearchResultBlock.xaml.cs">
+      <DependentUpon>AZMaricopa PreviewSummarySearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\CASanDiego PreviewDetailRresultsBlock.xaml.cs">
+      <DependentUpon>CASanDiego PreviewDetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\CASanDiego PreviewSummarySearchResultBlock.xaml.cs">
+      <DependentUpon>CASanDiego PreviewSummarySearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\CASantaClara PreviewDetailRresultsBlock.xaml.cs">
+      <DependentUpon>CASantaClara PreviewDetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\CASantaClara PreviewSummarySearchResultBlock.xaml.cs">
+      <DependentUpon>CASantaClara PreviewSummarySearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\FLDade PreviewSummarySearchResultBlock.xaml.cs">
+      <DependentUpon>FLDade PreviewSummarySearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\FLDadeSummary PreviewDetailRresultsBlock.xaml.cs">
+      <DependentUpon>FLDadeSummary PreviewDetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\FLPalmBeach  PreviewDetailRresultsBlock.xaml.cs">
+      <DependentUpon>FLPalmBeach  PreviewDetailRresultsBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\Preview\FLPalmBeach PreviewSummarySearchResultBlock.xaml.cs">
+      <DependentUpon>FLPalmBeach PreviewSummarySearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\FLDadeSummary SearchResultBlock.xaml.cs">
+      <DependentUpon>FLDadeSummary SearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Blocks\FLPalmBeach SummarySearchResultBlock.xaml.cs">
+      <DependentUpon>FLPalmBeach SummarySearchResultBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\DetailResultsView.xaml.cs">
+      <DependentUpon>DetailResultsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Dialogs\ViewDetailDocumentDialogue.xaml.cs">
+      <DependentUpon>ViewDetailDocumentDialogue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Dialogs\ViewOptionDialogue.xaml.cs">
+      <DependentUpon>ViewOptionDialogue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\ExportDetailsResultView.xaml.cs">
+      <DependentUpon>ExportDetailsResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Dialogs\FormPreviewDetailsResultDialog.xaml.cs">
+      <DependentUpon>FormPreviewDetailsResultDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Dialogs\FormPreviewNameResultDialog.xaml.cs">
+      <DependentUpon>FormPreviewNameResultDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\FormPreviewNoRecordsView.xaml.cs">
+      <DependentUpon>FormPreviewNoRecordsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Dialogs\FormPreviewSummaryResultDialog.xaml.cs">
+      <DependentUpon>FormPreviewSummaryResultDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Dialogs\OrderConfirmationDialog.xaml.cs">
+      <DependentUpon>OrderConfirmationDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\OrderCompletedView.xaml.cs">
+      <DependentUpon>OrderCompletedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\OrderConfirmationView.xaml.cs">
+      <DependentUpon>OrderConfirmationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\OrderDetailsView.xaml.cs">
+      <DependentUpon>OrderDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Dialogs\UploadCustomReportDialogue.xaml.cs">
+      <DependentUpon>UploadCustomReportDialogue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\Dialogs\ViewOptionsDialogue.xaml.cs">
+      <DependentUpon>ViewOptionsDialogue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Portfolio\PortfolioPage.xaml.cs">
+      <DependentUpon>PortfolioPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Portfolio\PortfolioFullView.xaml.cs">
+      <DependentUpon>PortfolioFullView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RefreshableDataList\AlertList.cs" />
+    <Compile Include="RefreshableDataList\CopyCostInstrunctionList.cs" />
+    <Compile Include="RefreshableDataList\CountySearchInstructionsList.cs" />
+    <Compile Include="RefreshableDataList\CustomerSpecialistList.cs" />
+    <Compile Include="RefreshableDataList\CountyList.cs" />
+    <Compile Include="RefreshableDataList\LienTypeList.cs" />
+    <Compile Include="RefreshableDataList\LocationList.cs" />
+    <Compile Include="RefreshableDataList\TeamList.cs" />
+    <Compile Include="ViewModel\CountySearchViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModel\MessageCenterViewModel.cs" />
+    <Compile Include="BindableModel\MessageCenterBindableModel.cs" />
+    <Compile Include="CountyMain.xaml.cs">
+      <DependentUpon>CountyMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataProviders\OrderSearchDataProvider.cs" />
+    <Compile Include="Pages\OrderSearch\NameResultPage.xaml.cs">
+      <DependentUpon>NameResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\NameResultView.xaml.cs">
+      <DependentUpon>NameResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\DesktopPage.xaml.cs">
+      <DependentUpon>DesktopPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\DesktopView.xaml.cs">
+      <DependentUpon>DesktopView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderSearch\SummarySearchResultView.xaml.cs">
+      <DependentUpon>SummarySearchResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="CountyMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Pages\OrderSearch\Blocks\AZMaricopa SummarySearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\CASanDiego SummarySearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\CASantaClara SummarySearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\AZMaricopa DetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\CASanDiego DetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\CASantaClara DetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\FLPalmBeach  DetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\FLDadeSummary DetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\AZMaricopa PreviewDetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\AZMaricopa PreviewSummarySearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\CASanDiego PreviewDetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\CASanDiego PreviewSummarySearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\CASantaClara PreviewDetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\CASantaClara PreviewSummarySearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\FLDade PreviewSummarySearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\FLDadeSummary PreviewDetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\FLPalmBeach  PreviewDetailRresultsBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\Preview\FLPalmBeach PreviewSummarySearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\FLDadeSummary SearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Blocks\FLPalmBeach SummarySearchResultBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\DetailResultsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Dialogs\ViewDetailDocumentDialogue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Dialogs\ViewOptionDialogue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\ExportDetailsResultView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Dialogs\FormPreviewDetailsResultDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Dialogs\FormPreviewNameResultDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\FormPreviewNoRecordsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Dialogs\FormPreviewSummaryResultDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\NameResultPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\NameResultView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\DesktopPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OrderSearch\DesktopView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OrderSearch\Dialogs\OrderConfirmationDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\OrderCompletedView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\OrderConfirmationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\OrderDetailsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\SummarySearchResultView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Dialogs\UploadCustomReportDialogue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\OrderSearch\Dialogs\ViewOptionsDialogue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Portfolio\PortfolioPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Portfolio\PortfolioFullView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Images\DocImage.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Images\DocImage.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Images\PDFIcon.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Images\AckUnopened.png" />
+    <Resource Include="Pages\Images\Word-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Images\Ajax-loader.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

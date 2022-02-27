@@ -1,0 +1,9 @@
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.exe
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.EventLogger.pdb
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\obj\Debug\Arun.Manglick.EventLogger.exe
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\obj\Debug\Arun.Manglick.EventLogger.pdb
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\obj\Debug\Arun.Manglick.EventLogger.ProjectInstaller.resources
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\obj\Debug\Arun.Manglick.EventLogger.csproj.GenerateResource.Cache
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.Utilities.dll
+D:\Arun.Manglick.ORG\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Web\Services\Windows Services\EventLogger\Arun.Manglick.EventLogger\bin\Debug\Arun.Manglick.Utilities.pdb

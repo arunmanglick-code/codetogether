@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentElement>
+  <Employee>
+    <CourseId>1</CourseId>
+    <Sequence>1</Sequence>
+    <Institution>AAA America</Institution>
+    <Course>BE</Course>
+    <Average>63</Average>
+    <Grade>N</Grade>
+    <Status>A</Status>
+  </Employee>
+  <Employee>
+    <CourseId>2</CourseId>
+    <Sequence>2</Sequence>
+    <Institution>BBB Bangkok</Institution>
+    <Course>BE</Course>
+    <Average>65</Average>
+    <Grade>A</Grade>
+    <Status>B</Status>
+  </Employee>
+  <Employee>
+    <CourseId>3</CourseId>
+    <Sequence>3</Sequence>
+    <Institution>CCC China</Institution>
+    <Course>BE</Course>
+    <Average>65</Average>
+    <Grade>N</Grade>
+    <Status>A</Status>
+  </Employee>
+  <Employee>
+    <CourseId>4</CourseId>
+    <Sequence>4</Sequence>
+    <Institution>DDD Denmark</Institution>
+    <Course>BE</Course>
+    <Average>66</Average>
+    <Grade>N</Grade>
+    <Status>B</Status>
+  </Employee>
+  <Employee>
+    <CourseId>5</CourseId>
+    <Sequence>5</Sequence>
+    <Institution>EEE Denmark</Institution>
+    <Course>BE</Course>
+    <Average>67</Average>
+    <Grade>A</Grade>
+    <Status>B</Status>
+  </Employee> 
+</DocumentElement>

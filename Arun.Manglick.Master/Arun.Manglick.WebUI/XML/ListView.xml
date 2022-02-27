@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentElement>
+  <Employee>
+    <Device>Pager1</Device>
+    <Active>true</Active>
+  </Employee>
+  <Employee>
+    <Device>Pager2</Device>
+    <Active>true</Active>
+  </Employee>
+  <Employee>
+    <Device>Pager3</Device>
+    <Active>false</Active>
+  </Employee>
+  <Employee>
+    <Device>Pager4</Device>
+    <Active>true</Active>
+  </Employee>
+
+</DocumentElement>

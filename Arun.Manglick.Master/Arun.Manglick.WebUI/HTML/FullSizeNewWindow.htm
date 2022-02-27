@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+</head>
+<script language="javascript" type="text/javascript">
+    
+        Shoot();
+        function Shoot_Obsolete()
+        {              
+            var ah = screen.availHeight - 30;
+            var aw = screen.availWidth - 10;
+
+            window.opener=self;
+            id = window.open('Home.aspx','','width=' + aw + ',height=' + ah + ',top=0,left=0');                        
+            self.close();
+        }
+
+        function Shoot() 
+        {
+            var str = "left=0,screenX=0,top=0,screenY=0";
+            if (window.screen) {
+                var ah = screen.availHeight - 30;
+                var aw = screen.availWidth - 10;
+                str += ",height=" + ah;
+                str += ",innerHeight=" + ah;
+                str += ",width=" + aw;
+                str += ",innerWidth=" + aw;
+                str += ",resizable,scrollbars=yes";
+            }
+            else {
+                str += ",resizable"; // so the user can resize the window manually
+            }
+            window.opener = self;
+            var win = window.open("Home.aspx", "full", str);
+            window.opener.close();
+            win.focus();
+        }
+        
+    </script>
+<body>
+
+</body>
+</html>

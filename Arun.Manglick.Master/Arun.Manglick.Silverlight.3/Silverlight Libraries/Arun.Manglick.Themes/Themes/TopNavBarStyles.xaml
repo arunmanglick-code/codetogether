@@ -1,0 +1,580 @@
+﻿<ResourceDictionary xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns="http://schemas.microsoft.com/client/2007"
+                    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+                    xmlns:abc="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls">
+    <!--
+        TopNavBar style is composed of following components
+        a) TopNavBar style which applies all other components
+        b) TopNavBar template
+        c) TopNavItem control template
+        d) TopNavItem style    
+        e) Additional brushes
+    -->
+    <sys:String x:Key="FontFamily">Trebuchet MS,Verdana, Sans-Serif</sys:String>
+    <!-- MenuItem Style -->
+    <Style x:Key="ctaTopNavItemStyle"
+           TargetType="abc:MenuItem">
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="Padding"
+                Value="8,3,8,3" />
+        <Setter Property="BorderBrush"
+                Value="#7396B5" />
+        <Setter Property="BorderThickness"
+                Value="1,1,0.5,0" />
+        <Setter Property="CornerRadius"
+                Value="4,4,0,0" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <GradientStop Color="#CEDBE7"
+                                  Offset="0.25"></GradientStop>
+                    <GradientStop Color="#ADC7D6"
+                                  Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="abc:MenuItem">
+                    <Grid>
+                        <!-- MenuItem Visual states -->
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <!-- CommonStates: Normal, MouseOver, Pressed and Disabled -->
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver"></vsm:VisualState>
+                                <vsm:VisualState x:Name="MouseLeave">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Pressed" />
+                                <vsm:VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <!-- Change disabled-overlay's opacity to 50% -->
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value=".5" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <!-- FocusStates: Focused and Unfocused; -->
+                            <vsm:VisualStateGroup x:Name="FocusStates">
+                                <vsm:VisualState x:Name="Focused" />
+                                <vsm:VisualState x:Name="Unfocused" />
+                            </vsm:VisualStateGroup>
+                            <!-- SelectionStates: Selected and Unselected; Typically used for 'current-tab' of TopNavBar -->
+                            <vsm:VisualStateGroup x:Name="SelectionStates">
+                                <vsm:VisualState x:Name="Selected">
+                                    <!--When Selected-->
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Unselected">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="#CEDBE7" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="#ADC7D6" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+                        <!-- Layer #0: Background -->
+                        <Border x:Name="BackgroundGradient"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Background="{TemplateBinding Background}" />
+                        <!-- Layer #1: Inner content of menu item if provided  -->
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}"
+                                          Content="{TemplateBinding Content}" />
+                        <!-- Layer #2: Caption of menu item if provided -->
+                        <TextBlock x:Name="TheCaptionTextBlock"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="{TemplateBinding Padding}"
+                                   Text="{TemplateBinding Caption}" />
+                        <!-- Layer #4: Used by Disabled visual state to reduce visibility to 50% -->
+                        <Rectangle x:Name="DisabledVisualElement"
+                                   Fill="#FFFFFFFF"
+                                   RadiusX="3"
+                                   RadiusY="3"
+                                   IsHitTestVisible="false"
+                                   Opacity="0" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Applied to MenuBar style; Manipulates nav bar as well as nav items -->
+    <Style x:Key="ctaTopNavBar"
+           TargetType="abc:MenuBar">
+        <!-- Spacing around and with-in -->
+        <Setter Property="Margin"
+                Value="0,3,0,0" />
+        <Setter Property="Padding"
+                Value="0" />
+        <!-- Border and background -->
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="CornerRadius"
+                Value="0" />
+        <!-- Font and foreground -->
+        <Setter Property="FontSize"
+                Value="11"></Setter>
+        <Setter Property="FontFamily"
+                Value="{StaticResource FontFamily}"></Setter>
+        <Setter Property="Foreground"
+                Value="#4b4247"></Setter>
+        <!-- Apply top nav bar menu items style -->
+        <Setter Property="MenuItemStyle"
+                Value="{StaticResource ctaTopNavItemStyle}"></Setter>
+    </Style>
+    <!-- LeftNavigation Hyperlinks Class-->
+    <Style x:Key="leftNavLinks"
+           TargetType="HyperlinkButton">
+        <Setter Property="Padding"
+                Value="12,0,10,0"></Setter>
+        <Setter Property="FontSize"
+                Value="11"></Setter>
+        <Setter Property="FontFamily"
+                Value="{StaticResource FontFamily}"></Setter>
+        <Setter Property="VerticalAlignment"
+                Value="Center"></Setter>
+        <Setter Property="Margin"
+                Value="0,5,0,0"></Setter>
+        <Setter Property="IsTabStop"
+                Value="False"></Setter>
+    </Style>
+    <Style  x:Key="lnkTaskCenter"
+            TargetType="HyperlinkButton">
+        <Setter Property="Padding"
+                Value="5,3,0,0"></Setter>
+        <Setter Property="FontFamily"
+                Value="{StaticResource FontFamily}"></Setter>
+        <Setter Property="Foreground"
+                Value="#0076cc"></Setter>
+        <Setter Property="FontSize"
+                Value="11"></Setter>
+        <Setter Property="IsTabStop"
+                Value="False"></Setter>
+    </Style>
+    <Style x:Key="LeftNavSeparationBorder"
+           TargetType="Border">
+        <Setter Property="BorderThickness"
+                Value="0,0,0,1"></Setter>
+        <Setter Property="BorderBrush"
+                Value="#AEAEAB"></Setter>
+        <Setter Property="Width"
+                Value="150"></Setter>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"></Setter>
+        <Setter Property="Margin"
+                Value="0,5,0,0"></Setter>
+    </Style>
+    <!--Style for TopNav where background is white when pressed-->
+    <Style x:Key="ctaTopNavWhiteItemStyle"
+           TargetType="abc:MenuItem">
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="Padding"
+                Value="8,3,8,3" />
+        <Setter Property="BorderBrush"
+                Value="#7396B5" />
+        <Setter Property="BorderThickness"
+                Value="1,1,0.5,0" />
+        <Setter Property="CornerRadius"
+                Value="4,4,0,0" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <GradientStop Color="#CEDBE7"
+                                  Offset="0.25"></GradientStop>
+                    <GradientStop Color="#ADC7D6"
+                                  Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="abc:MenuItem">
+                    <Grid>
+                        <!-- MenuItem Visual states -->
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <!-- CommonStates: Normal, MouseOver, Pressed and Disabled -->
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver"></vsm:VisualState>
+                                <vsm:VisualState x:Name="MouseLeave"></vsm:VisualState>
+                                <vsm:VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <!-- Change disabled-overlay's opacity to 50% -->
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value=".5" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <!-- FocusStates: Focused and Unfocused; -->
+                            <vsm:VisualStateGroup x:Name="FocusStates">
+                                <vsm:VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Unfocused"></vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <!-- SelectionStates: Selected and Unselected; Typically used for 'current-tab' of TopNavBar -->
+                            <vsm:VisualStateGroup x:Name="SelectionStates">
+                                <vsm:VisualState x:Name="Selected">
+                                    <!--When Selected-->
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Unselected">
+                                    <!--<Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="#CEDBE7" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="#ADC7D6" />
+                                    </Storyboard>-->
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+                        <!-- Layer #0: Background -->
+                        <Border x:Name="BackgroundGradient"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Background="{TemplateBinding Background}" />
+                        <!-- Layer #1: Inner content of menu item if provided  -->
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}"
+                                          Content="{TemplateBinding Content}" />
+                        <!-- Layer #2: Caption of menu item if provided -->
+                        <TextBlock x:Name="TheCaptionTextBlock"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="{TemplateBinding Padding}"
+                                   Text="{TemplateBinding Caption}" />
+                        <!-- Layer #4: Used by Disabled visual state to reduce visibility to 50% -->
+                        <Rectangle x:Name="DisabledVisualElement"
+                                   Fill="#FFFFFFFF"
+                                   RadiusX="3"
+                                   RadiusY="3"
+                                   IsHitTestVisible="false"
+                                   Opacity="0" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ctaTopNavWhiteBar"
+           TargetType="abc:MenuBar">
+        <!-- Spacing around and with-in -->
+        <Setter Property="Margin"
+                Value="0,3,0,0" />
+        <Setter Property="Padding"
+                Value="0" />
+        <!-- Border and background -->
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="CornerRadius"
+                Value="0" />
+        <!-- Font and foreground -->
+        <Setter Property="FontSize"
+                Value="11"></Setter>
+        <Setter Property="FontFamily"
+                Value="{StaticResource FontFamily}"></Setter>
+        <Setter Property="Foreground"
+                Value="#4b4247"></Setter>
+        <!-- Apply top nav bar menu items style -->
+        <Setter Property="MenuItemStyle"
+                Value="{StaticResource ctaTopNavWhiteItemStyle}"></Setter>
+    </Style>
+    
+    <!--Style for CP - TopNav where background is white when pressed-->
+    <Style x:Key="cpTopNavWhiteItemStyle"
+           TargetType="abc:MenuItem">
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="Padding"
+                Value="15,5,15,5" />
+        <Setter Property="BorderBrush"
+                Value="Gray" />
+        <Setter Property="BorderThickness"
+                Value="1,1,1,1" />
+        <Setter Property="CornerRadius"
+                Value="4,4,4,4" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <!--<LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <GradientStop Color="#CEDBE7"
+                                  Offset="0.25"></GradientStop>
+                    <GradientStop Color="#ADC7D6"
+                                  Offset="1"></GradientStop>
+                </LinearGradientBrush>-->
+                <LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <GradientStop Color="#DCDFCA"
+                                  Offset="0.25"></GradientStop>
+                    <GradientStop Color="#C2BEB5"
+                                  Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="abc:MenuItem">
+                    <Grid>
+                        <!-- MenuItem Visual states -->
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <!-- CommonStates: Normal, MouseOver, Pressed and Disabled -->
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="#f9f9f8" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="#daddc7" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="MouseLeave"></vsm:VisualState>
+                                <vsm:VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <!-- Change disabled-overlay's opacity to 50% -->
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement"
+                                                                       Storyboard.TargetProperty="Opacity">
+                                            <SplineDoubleKeyFrame KeyTime="0"
+                                                                  Value=".5" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <!-- FocusStates: Focused and Unfocused; -->
+                            <vsm:VisualStateGroup x:Name="FocusStates">
+                                <vsm:VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Unfocused"></vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <!-- SelectionStates: Selected and Unselected; Typically used for 'current-tab' of TopNavBar -->
+                            <vsm:VisualStateGroup x:Name="SelectionStates">
+                                <vsm:VisualState x:Name="Selected">
+                                    <!--When Selected-->
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="White" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Unselected">
+                                    <!--<Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="#CEDBE7" />
+                                        <ColorAnimation Storyboard.TargetName="BackgroundGradient"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                                                        Duration="0"
+                                                        To="#ADC7D6" />
+                                    </Storyboard>-->
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+                        <!-- Layer #0: Background -->
+                        <Border x:Name="BackgroundGradient"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Background="{TemplateBinding Background}" />
+                        <!-- Layer #1: Inner content of menu item if provided  -->
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}"
+                                          Content="{TemplateBinding Content}" />
+                        <!-- Layer #2: Caption of menu item if provided -->
+                        <TextBlock x:Name="TheCaptionTextBlock"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="{TemplateBinding Padding}"
+                                   Text="{TemplateBinding Caption}" />
+                        <!-- Layer #4: Used by Disabled visual state to reduce visibility to 50% -->
+                        <Rectangle x:Name="DisabledVisualElement"
+                                   Fill="#FFFFFFFF"
+                                   RadiusX="3"
+                                   RadiusY="3"
+                                   IsHitTestVisible="false"
+                                   Opacity="0" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="cpTopNavWhiteBar"
+           TargetType="abc:MenuBar">
+        <!-- Spacing around and with-in -->
+        <Setter Property="Margin"
+                Value="0,1,0,1" />
+        <Setter Property="Padding"
+                Value="0" />
+        <!-- Border and background -->
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="CornerRadius"
+                Value="0" />
+        <!-- Font and foreground -->
+        <Setter Property="FontSize"
+                Value="11"></Setter>
+        <Setter Property="FontFamily"
+                Value="{StaticResource FontFamily}"></Setter>
+        <Setter Property="Foreground"
+                Value="#4b4247"></Setter>
+        <!-- Apply top nav bar menu items style -->
+        <Setter Property="MenuItemStyle"
+                Value="{StaticResource cpTopNavWhiteItemStyle}"></Setter>
+    </Style>
+    
+    <Style x:Key="cpDefaultTitleText"
+           TargetType="TextBlock"
+           BasedOn="{StaticResource GlobalSiteSettings}">
+        <Setter Property="Padding"
+                Value="5,0,0,0"></Setter>
+        <Setter Property="VerticalAlignment"
+                Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"></Setter>
+        <Setter Property="Foreground"
+                Value="Black"></Setter>
+        <Setter Property="FontSize"
+                Value="17" />
+        <Setter Property="Foreground"
+                Value="Gray" />
+        <Setter Property="Margin"
+                Value="10,20,0,0" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+    </Style>
+    
+    <Style  x:Key="cplnkGeneric"
+            TargetType="HyperlinkButton"
+            BasedOn="{StaticResource GlobalHyperlinkButtonBaseSettings}">
+        <Setter Property="Foreground"
+                Value="#0076cc"></Setter>
+        <Setter Property="Foreground"
+                Value="Gray" />
+        <Setter Property="FontSize"
+                Value="13" />
+        <Setter Property="Margin"
+                Value="10,2,10,20" />
+    </Style>
+    <Style x:Key="cpTopNavBarStyle"
+           TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <GradientStop Color="#DCDFCA"
+                                  Offset="0.25"></GradientStop>
+                    <GradientStop Color="#C2BEB5"
+                                  Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

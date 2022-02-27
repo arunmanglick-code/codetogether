@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns="http://schemas.microsoft.com/client/2007"
+                    xmlns:dataprimitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+                    xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows"
+                    xmlns:common="clr-namespace:CTLS.Shared.UX.Theme;assembly=CTLS.Shared.UX.Theme"
+                    xmlns:datainput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"
+                    xmlns:SlCore="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Core"
+                    xmlns:SlCtrl="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls">
+
+    <sys:Int32 x:Key="DefaultFieldLength">150</sys:Int32>
+    <sys:Int32 x:Key="DefaultFieldHeight">20</sys:Int32>
+    <sys:String x:Key="ExpanderMarginStyle">0,0,0,15.6</sys:String>
+    <sys:String x:Key="FontFamily">Trebuchet MS,Verdana, Sans-Serif</sys:String>
+
+    <!-- Global Base Resources Begins -->
+
+    <!-- Value Converters Begins-->
+    <common:NullValueConverter x:Key="NullValueConverter"
+                               NullDisplayText="--"></common:NullValueConverter>
+    <common:StatusConverter x:Key="LinkStatusConverter"
+                            HighlightBrush="#0076cc"
+                            DefaultBrush="#0076cc"></common:StatusConverter>
+    <common:StatusConverter x:Key="TextStatusConverter"
+                            HighlightBrush="Red"
+                            DefaultBrush="Black"></common:StatusConverter>
+    <common:DateConverter x:Key="DateConverter"></common:DateConverter>
+    <common:StringConverter x:Key="StringConverter"></common:StringConverter>
+    <common:DataProviderStatusConverter x:Key="DataProviderStatusConverter"></common:DataProviderStatusConverter>
+    <common:DatePickerDateValueConverter x:Key="DatePickerDateValueConverter"></common:DatePickerDateValueConverter>
+    <common:UTCConverter x:Key="UTCConverter"></common:UTCConverter>
+    <!-- Value Converters Ends-->
+</ResourceDictionary>

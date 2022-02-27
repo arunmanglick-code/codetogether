@@ -1,0 +1,46 @@
+Summary :-
+
+Convert string to bytes array :
+
+System.Text.Encoding.Default.GetBytes(string)
+
+Convert byte array to string :
+
+System.Text.Encoding.Default.GetString(byte arrray)
+
+
+Memory  Stream to Byte array
+
+Dim arrByte() as byte= memstrm.ToArray()
+
+Byte Array to String 
+
+System.Text.Encoding.Default.GetString(arrByte)
+
+Both the steps simultaneously
+
+Str= Convert.ToBase64String(memstrm.ToArray())
+
+
+
+String to Character Array :-
+
+  Dim arrChar As Char()
+
+  arrChar = strInput.ToCharArray()
+
+
+String to Byte Array :-
+
+Function Convert2ByteArray( strInput As String ) As Byte()
+  Dim intCounter As Integer
+  Dim arrChar As Char()
+
+  arrChar = strInput.ToCharArray()
+  Dim arrByte( arrChar.Length - 1 ) As Byte
+  For intCounter = 0 To arrChar.Length - 1
+    arrByte( intCounter ) = Convert.ToByte( arrChar( intCounter ) )
+  Next
+  Return arrByte
+End Function
+

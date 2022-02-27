@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="Arun.Manglick.Silverlight.Library"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="30" />
+            <RowDefinition MaxHeight="30" />
+            <RowDefinition MaxHeight="70" />
+            <RowDefinition MaxHeight="30" />
+            <RowDefinition MaxHeight="40" />
+            <RowDefinition MaxHeight="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MaxWidth="150"/>
+            <ColumnDefinition MaxWidth="200" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="TitlePrompt" Text="Title:  " 
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Grid.Row="0"  Grid.Column="0" />
+       <TextBlock x:Name="Title" 
+            Text="{Binding Title, Mode=OneWay }" 
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Grid.Row="0" Grid.Column="1" />
+
+        <TextBlock x:Name="AuthorPrompt" Text="Author: " 
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Grid.Row="1"  Grid.Column="0" />
+       <TextBlock x:Name="Author" 
+            Text="{Binding Author, Mode=OneWay }" 
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Grid.Row="1" Grid.Column="1" />
+  
+      <TextBlock x:Name="ChapterPrompt" Text="Chapters:  "  
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Grid.Row="2" Grid.Column="0"  />
+            
+        <ListBox x:Name="Chapters" 
+            ItemsSource="{Binding  Chapters, Mode=OneWay}"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Height="60" Width="200"
+            Grid.Row="2" Grid.Column="1" />
+
+        <TextBlock x:Name="MultipleAuthorPrompt" 
+            Text="Multiple authors?:  "   
+             VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Grid.Row="3" Grid.Column="0"  />
+            
+        <CheckBox x:Name="MultipleAuthor" 
+          IsChecked="{Binding MultipleAuthor, Mode=TwoWay}" 
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Grid.Row="3" Grid.Column="1"/>            
+       
+        <TextBlock x:Name="QOHPrompt" 
+        Text="Quantity On Hand:  " 
+        VerticalAlignment="Bottom"
+        HorizontalAlignment="Right"
+        Grid.Row="4" Grid.Column="0" />
+            
+        <TextBox x:Name="QuantityOnHand"   
+            Text="{Binding QuantityOnHand, Mode=TwoWay}"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Height="30" Width="90"
+            Grid.Row="4" Grid.Column="1" />
+
+
+        <Button x:Name="Change" 
+        Content="Change Book"  
+        Height="30" Width="80" 
+        HorizontalAlignment="Right" 
+        Grid.Row="5" Grid.Column="0"  />
+        
+        
+    </Grid>
+</UserControl>

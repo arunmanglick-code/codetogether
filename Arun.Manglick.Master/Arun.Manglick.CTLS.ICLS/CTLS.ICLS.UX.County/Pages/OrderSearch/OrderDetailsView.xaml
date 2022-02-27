@@ -1,0 +1,222 @@
+﻿<UserControl x:Class="CTLS.ICLS.UX.CountySearch.OrderDetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:uxcontrols="clr-namespace:CTLS.Shared.UX.Controls;assembly=CTLS.Shared.UX.Controls"
+             xmlns:tk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+             xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+             xmlns:local="clr-namespace:CTLS.ICLS.UX.CountySearch"
+             xmlns:AppViewState="clr-namespace:CTLS.ICLS.UX.Shared.ViewStates;assembly=CTLS.ICLS.UX.Shared"
+             xmlns:slabbcontrols="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls">
+    <Grid x:Name="LayoutRoot"
+          Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <local:CountySearchViewModelConnector x:Name="countySearchVMC" />
+        <AppViewState:ApplicationContextViewStateConnector x:Name="ApplicationContext" />
+        <TextBlock Text="Order Details"
+                   Style="{StaticResource PageHeaderText}"
+                   Grid.Row="0"></TextBlock>
+        <Grid Grid.Row="1"
+              x:Name="grdHeaderInfo"
+              Margin="10,0,10,0"
+              DataContext="{Binding Path=OrderDetailsBindableModel, ElementName=countySearchVMC, Mode=TwoWay}">
+            <Grid.Resources>
+                <local:EmptyStringToVisibility x:Name="EmptyStringToVisibility"></local:EmptyStringToVisibility>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <!-- Row 0 -->
+            <Border Grid.Row="0"
+                    Margin="0,30,0,30">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Tracking #"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock x:Name="txbTrackingNo"
+                                   Text="{Binding Path=TrackingNo}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Order #"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=OrderNo}" />
+                        <TextBlock Text="-"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=OrderItemNo}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Jurisdiction"
+                                   Width="150" />
+                        <TextBlock Text=":"
+                                   Margin="5,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Path=Jurisdiction}" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <!-- Row 1 -->
+            <slabbcontrols:MenuBar Grid.Row="1"
+                                   Grid.ColumnSpan="2"
+                                   Margin="0,0,20,0"
+                                   HorizontalAlignment="Right"
+                                   Style="{StaticResource ctaBlueButtonBar}">
+                <slabbcontrols:MenuItem Caption="View Custom Report"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnViewCustomReportBottom"
+                                        Visibility="Collapsed"
+                                        Click="btnViewCustomReport_Click" />
+                <slabbcontrols:MenuItem Caption="Upload Custom Report"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnUploadCustomReportBottom"
+                                        Visibility="Collapsed"
+                                        Click="btnUploadCustomReport_Click" />
+                <slabbcontrols:MenuItem Caption="Return to Portfolio"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnReturntoPortfolioBottom"
+                                        Click="btnReturntoPortfolio_Click" />
+            </slabbcontrols:MenuBar>
+            <!-- Row 2 -->
+            <uxcontrols:GridView x:Name="gvwOrderDetails"
+                                 Style="{StaticResource uxcontrolsGridView}"
+                                 VerticalScrollBarVisibility="Auto"
+                                 Grid.Row="2"
+                                 AlternatingRowBackground="#ffdddddd"
+                                 LoadingRow="gvwOrderDetails_LoadingRow">
+                <uxcontrols:GridView.Columns>
+                    <data:DataGridTemplateColumn Header="View"
+                                                 Width="50">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <HyperlinkButton x:Name="lnkViewImage"
+                                                 VerticalAlignment="Center"
+                                                 HorizontalAlignment="Center"
+                                                 Cursor="Arrow"
+                                                 Click="lnkViewImage_Click">
+                                    <Image x:Name="imgDocImage"
+                                           Height="20" />
+                                </HyperlinkButton>
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="Item"
+                                                 Width="50">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding TrackingItemNo}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="Name on Search Order"
+                                                 Width="250">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding SearchKey}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="Type"
+                                                 Width="175">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding Type}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="Document Details"
+                                                 Width="185">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <uxcontrols:TruncatableTextBlock Margin="7"
+                                                                 Text="{Binding DocumentDetail}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="Status"
+                                                 Width="100">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>                               
+                                <TextBlock Margin="7"
+                                           Text="{Binding Status}"
+                                           ToolTipService.ToolTip="{Binding ErrorMessage}" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                    <data:DataGridTemplateColumn Header="Action"
+                                                 Width="*">
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <slabbcontrols:MenuBar Margin="0,0,0,0"
+                                                           HorizontalAlignment="Center"
+                                                           Style="{StaticResource ctaBlueButtonBar}">
+                                        <slabbcontrols:MenuItem x:Name="btnRetry"
+                                                                Caption="Retry"
+                                                                Height="20"
+                                                                Margin="0,5"
+                                                                Click="btnRetry_Click"
+                                                                Visibility="Collapsed" />
+                                    </slabbcontrols:MenuBar>
+                                    <slabbcontrols:MenuBar Margin="0,0,0,0"
+                                                           HorizontalAlignment="Center"
+                                                           Style="{StaticResource ctaBlueButtonBar}">
+                                        <slabbcontrols:MenuItem x:Name="btnMarkCompleted"
+                                                                Caption="Mark as Completed"
+                                                                Height="20"
+                                                                Margin="0,5"
+                                                                Click="btnMarkCompleted_Click"
+                                                                Visibility="Collapsed" />
+                                    </slabbcontrols:MenuBar>
+                                </StackPanel>
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+                </uxcontrols:GridView.Columns>
+            </uxcontrols:GridView>
+            <!-- Row 3 -->
+            <slabbcontrols:MenuBar Grid.Row="3"
+                                   Grid.ColumnSpan="2"
+                                   Margin="0,0,20,0"
+                                   HorizontalAlignment="Right"
+                                   Style="{StaticResource ctaBlueButtonBar}">
+                <slabbcontrols:MenuItem Caption="View Custom Report"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnViewCustomReport"
+                                        Visibility="Collapsed"
+                                        Click="btnViewCustomReport_Click"/>
+                <slabbcontrols:MenuItem Caption="Upload Custom Report"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnUploadCustomReport"
+                                        Visibility="Collapsed"
+                                        Click="btnUploadCustomReport_Click" />
+                <slabbcontrols:MenuItem Caption="Return to Portfolio"
+                                        Cursor="Hand"
+                                        IsTabStop="True"
+                                        Margin="0,5,0,5"
+                                        x:Name="btnReturntoPortfolio"
+                                        Click="btnReturntoPortfolio_Click" />
+            </slabbcontrols:MenuBar>
+        </Grid>
+    </Grid>
+</UserControl>

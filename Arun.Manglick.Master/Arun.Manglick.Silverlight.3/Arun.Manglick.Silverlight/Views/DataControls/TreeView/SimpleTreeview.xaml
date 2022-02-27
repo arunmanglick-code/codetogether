@@ -1,0 +1,27 @@
+﻿<UserControl 
+    xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"  
+    x:Class="Arun.Manglick.Silverlight.Views.DataControls.SimpleTreeview"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <controls:TreeView>
+            <controls:TreeViewItem Header="Fruit">
+                <controls:TreeViewItem Header="Orange"/>
+                <controls:TreeViewItem Header="Banana"/>
+                <controls:TreeViewItem Header="Grapefruit"/>
+            </controls:TreeViewItem>
+            <controls:TreeViewItem Header="Vegetables">
+                <controls:TreeViewItem Header="Aubergine"/>
+                <controls:TreeViewItem Header="Squash"/>
+                <controls:TreeViewItem Header="Spinach"/>
+                <Button Content="There's a Button in this TreeView"></Button>
+                <controls:TreeViewItem>
+                    <controls:TreeViewItem.Header>
+                        <Button Content="There's Another Button in this TreeView"></Button>
+                    </controls:TreeViewItem.Header>
+                </controls:TreeViewItem>
+            </controls:TreeViewItem>
+        </controls:TreeView>
+    </Grid>
+</UserControl>

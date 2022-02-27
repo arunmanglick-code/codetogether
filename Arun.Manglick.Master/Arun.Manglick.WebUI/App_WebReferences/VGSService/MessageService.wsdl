@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateLabMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="newMessageXml">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateLabMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateLabMessageResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessageReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageReportXML">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessageReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMessageReportResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsLabTestCollectionValid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="institutionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientHash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsLabTestCollectionValidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsLabTestCollectionValidResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestLabTestCollection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="institutionId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestLabTestCollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestLabTestCollectionResult" type="tns:LabTestInstitutionCache" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LabTestInstitutionCache">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LabTestData">
+            <s:complexType>
+              <s:sequence>
+                <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="LabTestMD5Hash" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="LabTestInstitutionCache" nillable="true" type="tns:LabTestInstitutionCache" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateLabMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateLabMessage" />
+  </wsdl:message>
+  <wsdl:message name="CreateLabMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateLabMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMessageReport" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMessageReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsLabTestCollectionValidSoapIn">
+    <wsdl:part name="parameters" element="tns:IsLabTestCollectionValid" />
+  </wsdl:message>
+  <wsdl:message name="IsLabTestCollectionValidSoapOut">
+    <wsdl:part name="parameters" element="tns:IsLabTestCollectionValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestLabTestCollectionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLatestLabTestCollection" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestLabTestCollectionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLatestLabTestCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsLabTestCollectionValidHttpGetIn">
+    <wsdl:part name="institutionId" type="s:string" />
+    <wsdl:part name="clientHash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsLabTestCollectionValidHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestLabTestCollectionHttpGetIn">
+    <wsdl:part name="institutionId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestLabTestCollectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:LabTestInstitutionCache" />
+  </wsdl:message>
+  <wsdl:message name="IsLabTestCollectionValidHttpPostIn">
+    <wsdl:part name="institutionId" type="s:string" />
+    <wsdl:part name="clientHash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsLabTestCollectionValidHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestLabTestCollectionHttpPostIn">
+    <wsdl:part name="institutionId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestLabTestCollectionHttpPostOut">
+    <wsdl:part name="Body" element="tns:LabTestInstitutionCache" />
+  </wsdl:message>
+  <wsdl:portType name="MessageServiceSoap">
+    <wsdl:operation name="CreateLabMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method creates lab message in Veriphy system and sends the notification to OC/Unit.</wsdl:documentation>
+      <wsdl:input message="tns:CreateLabMessageSoapIn" />
+      <wsdl:output message="tns:CreateLabMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method fetches the messages read or created in the specified time period.</wsdl:documentation>
+      <wsdl:input message="tns:GetMessageReportSoapIn" />
+      <wsdl:output message="tns:GetMessageReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsLabTestCollectionValid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method determines the Cache Valid/Invalid state</wsdl:documentation>
+      <wsdl:input message="tns:IsLabTestCollectionValidSoapIn" />
+      <wsdl:output message="tns:IsLabTestCollectionValidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestLabTestCollection">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method retrieves LabTest data</wsdl:documentation>
+      <wsdl:input message="tns:GetLatestLabTestCollectionSoapIn" />
+      <wsdl:output message="tns:GetLatestLabTestCollectionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MessageServiceHttpGet">
+    <wsdl:operation name="IsLabTestCollectionValid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method determines the Cache Valid/Invalid state</wsdl:documentation>
+      <wsdl:input message="tns:IsLabTestCollectionValidHttpGetIn" />
+      <wsdl:output message="tns:IsLabTestCollectionValidHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestLabTestCollection">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method retrieves LabTest data</wsdl:documentation>
+      <wsdl:input message="tns:GetLatestLabTestCollectionHttpGetIn" />
+      <wsdl:output message="tns:GetLatestLabTestCollectionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MessageServiceHttpPost">
+    <wsdl:operation name="IsLabTestCollectionValid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method determines the Cache Valid/Invalid state</wsdl:documentation>
+      <wsdl:input message="tns:IsLabTestCollectionValidHttpPostIn" />
+      <wsdl:output message="tns:IsLabTestCollectionValidHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestLabTestCollection">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method retrieves LabTest data</wsdl:documentation>
+      <wsdl:input message="tns:GetLatestLabTestCollectionHttpPostIn" />
+      <wsdl:output message="tns:GetLatestLabTestCollectionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MessageServiceSoap" type="tns:MessageServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateLabMessage">
+      <soap:operation soapAction="http://tempuri.org/CreateLabMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageReport">
+      <soap:operation soapAction="http://tempuri.org/GetMessageReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLabTestCollectionValid">
+      <soap:operation soapAction="http://tempuri.org/IsLabTestCollectionValid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestLabTestCollection">
+      <soap:operation soapAction="http://tempuri.org/GetLatestLabTestCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MessageServiceSoap12" type="tns:MessageServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateLabMessage">
+      <soap12:operation soapAction="http://tempuri.org/CreateLabMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageReport">
+      <soap12:operation soapAction="http://tempuri.org/GetMessageReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLabTestCollectionValid">
+      <soap12:operation soapAction="http://tempuri.org/IsLabTestCollectionValid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestLabTestCollection">
+      <soap12:operation soapAction="http://tempuri.org/GetLatestLabTestCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MessageServiceHttpGet" type="tns:MessageServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="IsLabTestCollectionValid">
+      <http:operation location="/IsLabTestCollectionValid" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestLabTestCollection">
+      <http:operation location="/GetLatestLabTestCollection" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MessageServiceHttpPost" type="tns:MessageServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="IsLabTestCollectionValid">
+      <http:operation location="/IsLabTestCollectionValid" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestLabTestCollection">
+      <http:operation location="/GetLatestLabTestCollection" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MessageService">
+    <wsdl:port name="MessageServiceSoap" binding="tns:MessageServiceSoap">
+      <soap:address location="http://localhost/Veriphy.VIS.WebService/MessageService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MessageServiceSoap12" binding="tns:MessageServiceSoap12">
+      <soap12:address location="http://localhost/Veriphy.VIS.WebService/MessageService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MessageServiceHttpGet" binding="tns:MessageServiceHttpGet">
+      <http:address location="http://localhost/Veriphy.VIS.WebService/MessageService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MessageServiceHttpPost" binding="tns:MessageServiceHttpPost">
+      <http:address location="http://localhost/Veriphy.VIS.WebService/MessageService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

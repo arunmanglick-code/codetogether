@@ -1,0 +1,15 @@
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\bin\Debug\Arun.Manglick.SL.Services.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\bin\Debug\Arun.Manglick.SL.Services.pdb
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\obj\Debug\ResolveAssemblyReference.cache
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\obj\Debug\Arun.Manglick.SL.Services.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\obj\Debug\Arun.Manglick.SL.Services.pdb
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\bin\Debug\Arun.Manglick.SL.BL.dll
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\bin\Debug\Arun.Manglick.SL.BL.pdb
+D:\Arun.Manglick.PRJ\XIPL\Project Apps\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\bin\Debug\System.ServiceModel.PollingDuplex.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\bin\Debug\Arun.Manglick.SL.Services.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\bin\Debug\Arun.Manglick.SL.Services.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\bin\Debug\Arun.Manglick.SL.BL.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\bin\Debug\Arun.Manglick.SL.BL.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\obj\Debug\Arun.Manglick.SL.Services.dll
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\obj\Debug\Arun.Manglick.SL.Services.pdb
+C:\Arun.Manglick\Arun.Manglick.APRJ\Arun.Manglick.Master\Arun.Manglick.Silverlight.3\Services\Arun.Manglick.SL.Services\obj\Debug\Arun.Manglick.SL.Services.csprojResolveAssemblyReference.cache

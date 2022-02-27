@@ -1,0 +1,151 @@
+﻿<UserControl xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+    x:Class="Arun.Manglick.Silverlight.MainTreePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
+    xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+
+    <Grid x:Name="LayoutRoot" ShowGridLines="False" Style="{StaticResource LayoutRootGridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition  MinHeight="5" MaxHeight="50" />
+            <RowDefinition  />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MaxWidth="200" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="NavigationGrid" Grid.Row="0" Grid.ColumnSpan="2" ShowGridLines="True" Style="{StaticResource NavigationGridStyle}">
+            <Border x:Name="BrandingBorder" Style="{StaticResource BrandingBorderStyle}">
+                <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
+                    <ContentControl Style="{StaticResource LogoIcon}"/>
+                    <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" Text="Arun.Manglick.Silverlight.3"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <ScrollViewer Background="AliceBlue" Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Grid x:Name="LayoutRoot1" Background="White">
+                <controls:TreeView Height="750" BorderThickness="0">
+                    <controls:TreeViewItem Header="Home">
+                        <HyperlinkButton x:Name="HomeLink1" NavigateUri="/Home" TargetName="ContentFrame" Content="Home"/>
+                        <HyperlinkButton x:Name="HomeLink2" NavigateUri="/About" TargetName="ContentFrame" Content="All About"/>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="XAML">
+                        <HyperlinkButton x:Name="XAMLLink1" Click="XAMLLink1_Click" TargetName="ContentFrame" Content="ElementBinding"/>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Dependency and Routed">
+                        <controls:TreeViewItem Header="Dependency">
+                            <HyperlinkButton x:Name="DependencyLink1" NavigateUri="/Dependency And RoutedEvents/DependencyProperties/WrapPanelTest" TargetName="ContentFrame" Content="WrapPanel" />
+                        </controls:TreeViewItem>
+                        <controls:TreeViewItem Header="Routed Events">
+                            <HyperlinkButton x:Name="RELink1" NavigateUri="/Dependency And RoutedEvents/RoutedEvents/EventBubbling" TargetName="ContentFrame" Content="EventBubbling"/>
+                            <HyperlinkButton x:Name="RELink2" NavigateUri="/Dependency And RoutedEvents/RoutedEvents/DragCircles" TargetName="ContentFrame" Content="DragCircles"/>
+                            <HyperlinkButton x:Name="RELink3" NavigateUri="/Dependency And RoutedEvents/RoutedEvents/KeyPressEvents" TargetName="ContentFrame" Content="KeyPressEvents"/>
+                            <HyperlinkButton x:Name="RELink4" NavigateUri="/Dependency And RoutedEvents/RoutedEvents/MouseWheelZoom" TargetName="ContentFrame" Content="MouseWheelZoom"/>
+                        </controls:TreeViewItem>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Elements">
+                        <HyperlinkButton x:Name="TabControlLink1" NavigateUri="/Elements/TabControl" TargetName="ContentFrame" Content="TabControl" />
+                        <HyperlinkButton x:Name="TabControlLink2" NavigateUri="/Elements/TabControlUsingBlock" TargetName="ContentFrame" Content="TabControl Using Blocks" />
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Navigation">
+                        <HyperlinkButton x:Name="NavigationLink1" NavigateUri="/Navigation/ChildWindows/ShowChildWindow" TargetName="ContentFrame" Content="Child Windows"/>
+                        <HyperlinkButton x:Name="NavigationLink2" NavigateUri="/Navigation/Caching/InitialPage" TargetName="ContentFrame" Content="Caching" />
+                        <HyperlinkButton x:Name="NavigationLink3" NavigateUri="/Navigation/Caching/CachedPage" TargetName="ContentFrame" Content="Caching1" /> 
+                        <HyperlinkButton x:Name="NavigationLink4" NavigateUri="/Navigation/Caching/CustomCachedPage" TargetName="ContentFrame" Content="Caching2" />
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Shapes and Geometrics">
+                        <HyperlinkButton x:Name="ShapesLink1" NavigateUri="/Home" TargetName="ContentFrame" Content="Home"/>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Brushes, Transforms,and Bitmaps">
+                        <HyperlinkButton x:Name="BrushesLink1" NavigateUri="/Home" TargetName="ContentFrame" Content="Home"/>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Animation">
+                        <HyperlinkButton x:Name="AnimationLink1" NavigateUri="/Home" TargetName="ContentFrame" Content="Home"/>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Sound, Video, and Deep Zoom">
+                        <HyperlinkButton x:Name="SoundLink1" NavigateUri="/Home" TargetName="ContentFrame" Content="Home"/>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Styles and Behaviors">
+                        <HyperlinkButton x:Name="StylesLink1" NavigateUri="/Style And Behaviors/Styles/SimpleStyles" TargetName="ContentFrame" Content="Simple Styles"/>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Templates and Custom Controls">
+                        <controls:TreeViewItem Header="Templates">
+                            <HyperlinkButton x:Name="TemplateLink1" NavigateUri="/Templates And CustomControls/Templates/SimpleButtonTemplate" TargetName="ContentFrame" Content="Simple Button Template"/>
+                            <HyperlinkButton x:Name="TemplateLink2" NavigateUri="/Templates And CustomControls/Templates/TemplateStates" TargetName="ContentFrame" Content="Template States"/>
+                        </controls:TreeViewItem>
+                        <controls:TreeViewItem Header="Custom Controls">
+                            <HyperlinkButton x:Name="CustomControls1" NavigateUri="/Templates And CustomControls/CustomControls/FlipPanel" TargetName="ContentFrame" Content="Flip Panel"/>
+                            <HyperlinkButton x:Name="CustomControls2" NavigateUri="/Templates And CustomControls/CustomControls/ListMover" TargetName="ContentFrame" Content="ListMover" />
+                            <HyperlinkButton x:Name="CustomControls3" NavigateUri="/Templates And CustomControls/CustomControls/CustomListMover" TargetName="ContentFrame" Content="Custom ListMover" />
+                            <HyperlinkButton x:Name="CustomControls4"
+                                             NavigateUri="/Templates And CustomControls/CustomControls/LoginControl"
+                                             TargetName="ContentFrame"
+                                             Content="LoginControl" />
+                            <HyperlinkButton x:Name="CustomControls5"
+                                             NavigateUri="/Templates And CustomControls/CustomControls/ListMoverControl"
+                                             TargetName="ContentFrame"
+                                             Content="ListMoverControl" />
+                        </controls:TreeViewItem>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Browser Integration">
+                        <controls:TreeViewItem Header="Browser Information">
+                            <HyperlinkButton x:Name="BrowserLink1" NavigateUri="/Browser Integration/Browser Information/BrowserDetails" TargetName="ContentFrame" Content="Browser Details"/>
+                            <HyperlinkButton x:Name="BrowserLink2" NavigateUri="/Browser Integration/Browser Information/ManipulateHtmlElement" TargetName="ContentFrame" Content="Manipulate HtmlElement"/>
+                        </controls:TreeViewItem>
+                        <controls:TreeViewItem Header="JS To Silvlerlight">
+                            <HyperlinkButton x:Name="JSLink1" NavigateUri="/Browser Integration/JS To Silverlight/ScriptableSilverlight" TargetName="ContentFrame" Content="Scriptable Silverlight"/>
+                        </controls:TreeViewItem>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Data Binding">
+                        <HyperlinkButton x:Name="DBLink1" NavigateUri="/DataBinding/SimpleBindingProducts" TargetName="ContentFrame" Content="Data Binding"/>
+                        <HyperlinkButton x:Name="DBLink2" NavigateUri="/DataBinding/SimpleBindingValidations" TargetName="ContentFrame" Content="ValidatesOnExceptions"/>
+                        <HyperlinkButton x:Name="DBLink21" NavigateUri="/DataBinding/ListBoxBindingValidations" TargetName="ContentFrame" Content="ListBox BindingValidations" />
+                        <HyperlinkButton x:Name="DBLink3" NavigateUri="/DataBinding/SimpleBindingNotificationValidations" TargetName="ContentFrame" Content="NotifyOnValidationError"/>
+                        <HyperlinkButton x:Name="DBLink4" NavigateUri="/DataBinding/SimpleListBinding" TargetName="ContentFrame" Content="List Binding"/>
+                        <HyperlinkButton x:Name="DBLink5" NavigateUri="/DataBinding/SimpleTemplateListBinding" TargetName="ContentFrame" Content="Template ListBinding"/>
+                        <HyperlinkButton x:Name="DBLink6" NavigateUri="/DataBinding/SimpleResourceTemplateListBinding" TargetName="ContentFrame" Content="ResourceTemplate ListBinding"/>
+                        <HyperlinkButton x:Name="DBLink7" NavigateUri="/DataBinding/PriceConvertor" TargetName="ContentFrame" Content="Price Convertor"/>
+                        <HyperlinkButton x:Name="DBLink8" NavigateUri="/DataBinding/ImagePathConvertor" TargetName="ContentFrame" Content="ImagePath Convertor"/>
+                        <HyperlinkButton x:Name="DBLink9" NavigateUri="/DataBinding/PriceToBackGroundConvertor" TargetName="ContentFrame" Content="PriceToBackGround Convertor"/>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Data Controls">
+                        <HyperlinkButton x:Name="DCLink1" NavigateUri="/DataControls/Basic/Label" TargetName="ContentFrame" Content="Label"/>
+                        <HyperlinkButton x:Name="DCLink2" NavigateUri="/DataControls/Basic/DescriptionViewer" TargetName="ContentFrame" Content="DescriptionViewer"/>
+                        <HyperlinkButton x:Name="DCLink3" NavigateUri="/DataControls/Basic/ValidationSummary" TargetName="ContentFrame" Content="ValidationSummary"/>
+                        <HyperlinkButton x:Name="DCLink4" NavigateUri="/DataControls/Annotation/AnnotationValidations" TargetName="ContentFrame" Content="Annotation"/>
+                        <HyperlinkButton x:Name="DCLink5" NavigateUri="/DataControls/DataGrid/DataGrid" TargetName="ContentFrame" Content="DataGrid"/>
+                        <HyperlinkButton x:Name="DCLink51" NavigateUri="/DataControls/DataGrid/DataGridDefineColumns" TargetName="ContentFrame" Content="DataGrid DefineColumns"/>
+                        <HyperlinkButton x:Name="DCLink52" NavigateUri="/DataControls/PagedCollectionView/DataGridRowGrouping" TargetName="ContentFrame" Content="DataGrid RowGrouping"/>
+                        <HyperlinkButton x:Name="DCLink53" NavigateUri="/DataControls/PagedCollectionView/DataGridRowFiltering" TargetName="ContentFrame" Content="DataGrid RowFiltering"/>
+                        <HyperlinkButton x:Name="DCLink54" NavigateUri="/DataControls/PagedCollectionView/DataGridRowSorting" TargetName="ContentFrame" Content="DataGrid RowSorting"/>
+                        <HyperlinkButton x:Name="DCLink55" NavigateUri="/DataControls/DataGrid/DataGridRowPaging" TargetName="ContentFrame" Content="DataGrid RowPaging"/>
+                        <HyperlinkButton x:Name="DCLink56" NavigateUri="/DataControls/DataForm/DataForm" TargetName="ContentFrame" Content="DataForm"/>
+                        <HyperlinkButton x:Name="DCLink57" NavigateUri="/DataControls/DataForm/DataFormTemplate" TargetName="ContentFrame" Content="DataForm Template"/>                        
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Test">
+                        <HyperlinkButton x:Name="TestLink1" NavigateUri="/Test Views/Test" TargetName="ContentFrame" Content="Test"/>
+                    </controls:TreeViewItem>
+                    <controls:TreeViewItem Header="Services">
+                        <HyperlinkButton x:Name="ServicesLink1" NavigateUri="/Service Cafe/Home" TargetName="ContentFrame" Content="Home" />                        
+                    </controls:TreeViewItem>
+                </controls:TreeView>
+            </Grid>
+        </ScrollViewer>
+        <Border x:Name="ContentBorder" Grid.Row="1" Grid.Column="1" Style="{StaticResource ContentBorderStyle}">
+            <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
+                              Navigated="ContentFrame_Navigated" 
+                              NavigationFailed="ContentFrame_NavigationFailed">
+                <navigation:Frame.UriMapper>
+                    <uriMapper:UriMapper x:Name="PageMapper">
+                        <!--<uriMapper:UriMapping Uri="" MappedUri="/Views/Home.xaml"/>-->
+                        <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/Views/{pageName}.xaml"/>
+                    </uriMapper:UriMapper>
+                </navigation:Frame.UriMapper>
+            </navigation:Frame>
+        </Border>
+    </Grid>
+
+</UserControl>

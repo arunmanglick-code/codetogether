@@ -1,0 +1,72 @@
+﻿<iclscontrols:ICLSDialog x:Class="CTLS.ICLS.UX.CountySearch.UploadCustomReportDialogue"
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+                         xmlns:iclscontrols="clr-namespace:CTLS.ICLS.UX.Controls;assembly=CTLS.ICLS.UX.Controls"
+                         xmlns:slabbcontrols="clr-namespace:CT.SLABB.UX.Controls;assembly=CT.SLABB.Controls"
+                         Width="400"
+                         Height="300">
+    <Grid x:Name="LayoutRoot"
+          Margin="10,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <!-- Row 0 -->
+        <TextBlock Text="Upload Custom Report"
+                   Style="{StaticResource PageHeaderText}"
+                   Grid.Row="0"></TextBlock>
+        <!-- Row 1 -->
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    HorizontalAlignment="Center">
+            <TextBox x:Name="UploadFile"
+                     Width="200"></TextBox>
+            <Button x:Name="btnBrowse"
+                    Click="btnBrowse_Click"
+                    Content="Browse"
+                    Margin="5,0,0,0" />
+        </StackPanel>
+        <!-- Row 2 -->
+        <TextBlock x:Name="txbLoaderMsg"
+                   Grid.Row="2"
+                   HorizontalAlignment="Left"
+                   Foreground="Red"
+                   Visibility="Visible"
+                   Margin="0,3,0,0" />
+        <!-- Row 3 -->
+        <slabbcontrols:MenuBar Grid.Row="3"
+                               Grid.ColumnSpan="2"
+                               Margin="0,0,0,0"
+                               HorizontalAlignment="Center"
+                               Style="{StaticResource ctaBlueButtonBar}">
+            <slabbcontrols:MenuItem Caption="Upload"
+                                    Cursor="Hand"
+                                    IsTabStop="True"
+                                    Margin="0,5,0,5"
+                                    x:Name="btnUpload" />
+            <slabbcontrols:MenuItem Caption="Cancel"
+                                    Cursor="Hand"
+                                    IsTabStop="True"
+                                    Margin="0,5,0,5"
+                                    x:Name="btnCancel" />
+        </slabbcontrols:MenuBar>
+        <!-- Row 4 -->
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="4"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Margin="0,2,0,0">
+            <TextBlock Text="@ 2010,"
+                       Style="{StaticResource txbGeneric}"
+                       Margin="0,3,0,0" />
+            <HyperlinkButton Content="CT Lien Solutions" />
+            <TextBlock Text=". All rights reserved."
+                       Style="{StaticResource txbGeneric}"
+                       Margin="0,3,0,0" />
+        </StackPanel>
+    </Grid>
+</iclscontrols:ICLSDialog>

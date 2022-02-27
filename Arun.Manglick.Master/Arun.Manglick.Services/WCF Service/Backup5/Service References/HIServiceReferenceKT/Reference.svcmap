@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e52e0e9a-d00e-473b-a096-6785429227d1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/HelloIndigoKT" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HelloIndigoService.wsdl" MetadataType="Wsdl" ID="214ad28d-d194-4166-9608-e77ac540a7e7" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoKT?wsdl" />
+    <MetadataFile FileName="HelloIndigoKT.wsdl" MetadataType="Wsdl" ID="688fc768-3905-47b4-9194-55fe603d1b54" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoKT?wsdl=wsdl0" />
+    <MetadataFile FileName="HelloIndigoKT.disco" MetadataType="Disco" ID="58ec0634-a8fb-40c4-98a7-188e32de1110" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoKT?disco" />
+    <MetadataFile FileName="HelloIndigoKT.xsd" MetadataType="Schema" ID="760fba24-1ea3-4354-b3e6-cca120f89503" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoKT?xsd=xsd1" />
+    <MetadataFile FileName="HelloIndigoKT1.xsd" MetadataType="Schema" ID="fd3f867c-c860-476c-95a4-18b0c3582e2a" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoKT?xsd=xsd2" />
+    <MetadataFile FileName="HelloIndigoKT2.xsd" MetadataType="Schema" ID="a65a0ba7-d564-4bd9-95a0-3fdacba85e93" SourceId="1" SourceUrl="http://localhost:8000/HelloIndigoKT?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
