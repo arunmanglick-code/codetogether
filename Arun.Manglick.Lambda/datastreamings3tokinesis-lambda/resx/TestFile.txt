@@ -1,0 +1,5 @@
+This is an input file uploaded to S3
+S3 will trigger Lambda 1
+Lambda 1 will read the S3 content and push data to Kinesis
+Kinesis will further be heard by two consumer lamddas
+

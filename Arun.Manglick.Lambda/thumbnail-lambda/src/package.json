@@ -1,0 +1,17 @@
+{
+  "name": "thumbnail-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "makethumbnail_func.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.1",
+    "aws-sdk": "^2.968.0",
+    "gm": "^1.23.1",
+    "util": "^0.12.4"
+  }
+}
