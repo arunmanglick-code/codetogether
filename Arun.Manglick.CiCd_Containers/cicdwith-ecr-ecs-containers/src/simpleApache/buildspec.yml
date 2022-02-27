@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - echo $AWS_DEFAULT_REGION
+      - REPOSITORY_URI=791309171132.dkr.ecr.ap-south-1.amazonaws.com/cicdwith-ecr-ecs-ecrrepository
+      - echo $REPOSITORY_URI
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 791309171132.dkr.ecr.ap-south-1.amazonaws.com/cicdwith-ecr-ecs-ecrrepository
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - echo $COMMIT_HASH
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - echo $IMAGE_TAG
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t $REPOSITORY_URI:latest .
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - printf '[{"name":"cicdwith-ecr-ecs-containers_simpleApachecontainer","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > cicdwith-ecr-ecs-containers_imagedefiniton.json
+artifacts:
+    files: cicdwith-ecr-ecs-containers_imagedefiniton.json
