@@ -1,0 +1,59 @@
+#Part01 - Deployment Server
+# Create Two Roles - 
+  # Role 1: Allow Ec2 - To Access Zip file Stored in S3 as part of 'aws deploy push' command  (S3FullAccess)
+  # Role 2: Allow CodeDeploy - To Deloy Application (AWSCodeDeployRole)
+# Create Ec2 - With Role #1 (No Bash Script to create anything)
+# Connect to Ec2 & Install CodeDeploy agent on your EC2 instance:
+
+sudo yum update
+sudo yum install ruby
+sudo yum install wget
+cd /home/ec2-user
+
+# Download Code Deploy
+wget https://aws-codedeploy-eu-central-1.s3.amazonaws.com/latest/install
+
+# Change Permissions to install
+chmod +x ./install
+
+# Run Installation
+sudo ./install auto
+
+# Check Status
+sudo service codedeploy-agent status
+
+# -------------------------------------------------------------------------
+#Part02 - Development Machine - Creates Application using AWS Deploy, Push it in S3 as Zip File
+
+# Setup local machine or another ec2 Instance as 'developer machine'
+# Copy Application Code Zip file on this developer machine (Application Code location for 'mywebapp' application is available 'mywebapp.zip' just one level up in this Git Repo)
+# Unzip the file
+
+# Create an IAM User and note down it's credentials
+# In developer machine - Go to command prompt and connect to aws using user created above. (aws configure) including setting your aws-region
+
+# Now Manually Create S3 where you’ll Deploy Code using AWS Code Deploy  
+
+# Then run below commands to Create Web Application as 'mywebapp' in AWS Deploy and Push Code to S3
+# Below both commands supposed to be run from your 'developer machine'
+
+# Create Application
+aws deploy create-application --application-name mywebapp
+
+# Push the applicaiton code in S3 (As Zipped File)
+aws deploy push --application-name mywebapp --s3-location s3://<MY_BUCKET_NAME>/mywebappdepoyed.zip --ignore-hidden-files
+
+# -------------------------------------------------------------------------
+#Part03 - AWS Code Deploy (Console)
+
+# Now go to Code Deploy in UI (AWS Console) -> Applications
+# You'll find the application you created above is present there
+# Follow further steps to create deployment group and then finally deploy.
+
+# As last step, choose the Ec2 which it shows on final deploy.
+# This is the same Ec2 which you created at Step#1
+# As this Ec2 had Ec2 Code Deploy Agent Installed, AWS Deployed Application on this Ec2
+# Go to Ec2 and Browse Public Address
+
+
+
