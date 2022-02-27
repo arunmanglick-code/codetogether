@@ -53,9 +53,28 @@ Docker Commands Used:
     - docker image ls (to list local images)
     - docker-compose up (To build and run your app with Compose)
     - Browse: http://192.168.1.55:3000/login
+        - Username: admin
+        - Pwd: admin
+        - Set New Username/Pwd  
+            - Username: nessdemo
+            - Pwd: nessdemo   
     - docker-compose down (To stop the running app)
 
 
+Connect to Grafana:
+ - After this command is completed: docker-compose up 
+ - Browse: http://192.168.1.55:3000/login
+    - Username: admin
+    - Pwd: admin
+    - Set New Username/Pwd  
+        - Username: nessdemo
+        - Pwd: nessdemo   
+ - Add DataSource as InfluxDB
+    - URL: http://http://192.168.1.55:8086
+    - Database Name: influx
+    - Username: admin
+    - Pwd: admin
+    
 
 
 
