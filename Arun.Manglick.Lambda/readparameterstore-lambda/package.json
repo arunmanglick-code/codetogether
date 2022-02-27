@@ -1,0 +1,16 @@
+{
+  "name": "aws_sa_lambda_readparameterstore_lab5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ReadParameterStore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "aws-sdk": "^2.859.0",
+    "gm": "^1.23.1"
+  }
+}
