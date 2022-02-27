@@ -1,0 +1,19 @@
+<div>
+  <form class="form-horizontal" (submit)="onSubmit()" [formGroup]="dynamicFormGroup">
+
+    <div *ngFor="let control of controls" class="form-row">
+      <df-control [control]="control" [controlFormGroup]="dynamicFormGroup"></df-control>
+    </div>
+
+    <div class="form-row">
+      <br>
+      <span *ngIf="!dynamicFormGroup.valid && dynamicFormGroup.touched" class="help-block">Please complete form!</span>    
+      <button type="submit" [disabled]="!dynamicFormGroup.valid" class="btn btn-primary">Save</button>
+    </div>
+
+  </form>
+
+  <div *ngIf="payLoad" class="form-row">
+    <strong>Saved the following values</strong><br>{{payLoad}}
+  </div>
+</div>

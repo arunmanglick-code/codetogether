@@ -1,0 +1,47 @@
+<h3>Reactive Forms New</h3>
+<form class="form-horizontal" [formGroup]="reactiveForm" (submit)="submitForm()">
+
+    <div class="form-group">
+        <label>First Name: </label>
+        <input type="text" class="form-control" formControlName="firstname">
+        <span *ngIf="!reactiveForm.get('firstname').valid && reactiveForm.get('firstname').touched" class="help-block">Please enter valid first name!</span>
+    </div>
+    <div formGroupName="address">
+        <div class="form-group">
+            <label>City: </label>
+            <input type="text" class="form-control" formControlName="city">
+            <span *ngIf="!reactiveForm.get('address.city').valid && reactiveForm.get('address.city').touched" class="help-block">Please enter valid city!</span>
+        </div>
+        <div class="form-group">
+            <label>State: </label>
+            <input type="text" class="form-control" formControlName="state">
+        </div>
+    </div>
+    <div formArrayName="hobbies">
+        <h4>Add Hobbies</h4>
+        <button class="btn btn-default" type="button" (click)="onAddHobby()">Add Hobby</button>
+        <div class="form-group" *ngFor="let hobbyControl of reactiveForm.get('hobbies').controls; let i = index">
+            <label>Hobby:  </label>
+            <input type="text" class="form-control" [formControlName]="i">
+        </div>
+    </div>
+
+    <div formGroupName="myHobbies">
+        <h4>List Hobbies</h4>
+        <button class="btn btn-default" type="button" (click)="onListHobbies()">List Hobbies</button>
+        <div class="form-group" *ngFor="let hobby of hobbyList ; let i = index">
+            <label>Hobby:  </label>
+            <div [ngSwitch]="hobby.controlType">
+                <input *ngSwitchCase="'textbox'" [formControlName]="hobby.key" [id]="question.key" [type]="hobby.type">
+                <select *ngSwitchCase="'dropdown'" [id]="hobby.key" [formControlName]="hobby.key">
+                        <option *ngFor="let opt of hobby.options" [value]="opt.key">{{opt.value}}</option>
+                    </select>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <span *ngIf="!reactiveForm.valid && reactiveForm.touched" class="help-block">Please enter valid data!</span>
+        <input [disabled]="reactiveForm.invalid" type="submit" class="btn btn-primary" value="Submit">
+    </div>
+</form>

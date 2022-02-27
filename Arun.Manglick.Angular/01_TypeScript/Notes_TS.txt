@@ -1,0 +1,55 @@
+One Drive Path - https://1drv.ms/f/s!Ao-ceLq5rZm3hTGAc4rNwePHJzLI
+Pen Path - https://codepen.io/manishvbn/pen/mEKvxY
+// --------------------------------------------------------------------------------
+Day 07:
+-------
+Course - 
+    - Variables
+    - Let vs Var
+    - Const
+    - Functions
+    - Overloading
+    - Arrays
+    - Destructuring
+
+tsc -v (check for typescript compiler version)
+npm install --g typescript
+add tsconfig.json
+
+(To run the project)
+ - Open command prompt and type: tsc 1_Hello.ts (This will generate .js file, based on tsconig.json file)
+   Note: tsc -w (Behave like nodemon where it wait for changes to happen and auto compile ts code and generate .js file)
+ - Open another command prompt and type: node 1_Hello.js (This will show output)
+
+
+noEmitOnError - Does not generate js if there is any error in .ts
+noImplicitAny - Does not conisder 'any' as datatype implicitly, unless specified
+
+// Assignment
+Define function Reverse("Ram"), should return ['m','a','r']
+Define function Reverse("Ram", "Nam"), should return ['Nam','Rama']
+// --------------------------------------------------------------------------------
+Day 08:
+-------
+Course - 
+    - Type Guards
+    - Type Assertions
+    - Tuple
+    - Interfaces
+    - Classes
+    - Static vs ReadOnly
+    - Generics
+    - Inheritance
+    - Namespace
+    - Module
+
+npm install --save system (Module Loader for import/export)
+chrome --allow-file-access-from-files (Used to run chrome in priviledge mode)
+Assignment - Learn commonjs module
+
+npm install --save jquery
+npm install --save @types/jquery (Install Type Definiton files. Used to write and understand jquery code e.g. $(document) in .ts file)
+Manually create systemjs.config.js
+Add typeRoots in tsconfig.json
+// --------------------------------------------------------------------------------
+

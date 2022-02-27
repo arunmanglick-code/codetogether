@@ -1,0 +1,5 @@
+<h3>Quote Component = {{aname}}</h3>
+<div>
+    <textarea class="padtop" readonly *ngIf="sAuthor">{{sAuthor.quote}}</textarea>
+    <button (click)=get()>Get</button>
+</div>

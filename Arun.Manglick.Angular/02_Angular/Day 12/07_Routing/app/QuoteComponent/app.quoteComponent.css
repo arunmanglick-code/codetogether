@@ -1,0 +1,9 @@
+textarea {
+    height: 175px;
+    width: 100%;
+    resize: none;
+}
+
+.padtop {
+    padding-top: 5px;
+}

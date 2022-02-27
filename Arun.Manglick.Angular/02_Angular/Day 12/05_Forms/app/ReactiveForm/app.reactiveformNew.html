@@ -1,0 +1,56 @@
+<h3>Reactive Forms New</h3>
+<form class="form-horizontal" [formGroup]="reactiveForm" (submit)="submitForm()">
+
+    <div class="form-group">
+        <label>First Name: </label>
+        <input type="text" class="form-control" formControlName="firstname">
+        <span *ngIf="!reactiveForm.get('firstname').valid && reactiveForm.get('firstname').touched" class="help-block">Please enter valid first name!</span>
+    </div>
+    <div formGroupName="address">
+        <div class="form-group">
+            <label>City: </label>
+            <input type="text" class="form-control" formControlName="city">
+            <span *ngIf="!reactiveForm.get('address.city').valid && reactiveForm.get('address.city').touched" class="help-block">Please enter valid city!</span>
+        </div>
+        <div class="form-group">
+            <label>State: </label>
+            <input type="text" class="form-control" formControlName="state">
+        </div>
+    </div>
+
+    <div formArrayName="hobbies">
+        <div class="form-group">
+            <label>Add Hobbies</label>
+            <button class="btn btn-default" type="button" (click)="onAddHobby()">Add Hobby</button>
+            <div class="form-group" *ngFor="let hobbyControl of reactiveForm.get('hobbies').controls; let i = index">
+                <label>Hobby:  </label>
+                <input type="text" class="form-control" [formControlName]="i">
+            </div>
+        </div>
+    </div>
+    <div formArrayName="items" *ngFor="let item of reactiveForm.get('items').controls; let i = index;">
+        <div class="form-group">
+            <label>Add Items</label>
+            <div [formGroupName]="i">
+                <input formControlName="name" placeholder="Item name">
+                <input formControlName="description" placeholder="Item description">
+                <input formControlName="price" placeholder="Item price">
+            </div>
+        </div>
+    </div>
+
+    <div formGroupName="hobbiesNew">
+        <div class="form-group">
+            <label>List Hobbies</label>
+            <button class="btn btn-default" type="button" (click)="onListHobbies()">List Hobbies</button>
+            <div class="form-group" *ngFor="let hobbyControl of reactiveForm.get('hobbiesNew').controls; let i = index">
+                <input type="text" class="form-control" [formControlName]="i">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <span *ngIf="!reactiveForm.valid && reactiveForm.touched" class="help-block">Please enter valid data!</span>
+        <input [disabled]="reactiveForm.invalid" type="submit" class="btn btn-primary" value="Submit">
+    </div>
+</form>

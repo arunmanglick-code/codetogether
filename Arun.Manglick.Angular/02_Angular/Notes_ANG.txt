@@ -1,0 +1,177 @@
+Day 09:
+----------
+- We'll not be using Angular CLI here
+- We'll use WebPack 
+
+WebPack Configuration:
+----------------------
+- Should have three bundles (Angular(vendor.ts), Polyfill(polyfills.ts) and Application)
+- Use "Web Pack Dev Server"
+- Use Web Pack Loaders
+- Two dependencies
+    - Angular Zone (NgZone) - zone.js 
+    - Need RxJS file  (Used for Observable behaviour in Angular)
+
+- Installations now:
+  - Goto HelloApp folder
+  - npm init (create package.json)
+  - Begin below Installations
+      - Install WebPack           - npm install --save-dev webpack
+      - Install WebPack Devserver - npm install --save-dev webpack-dev-Server
+      - Install Webpack merge     - npm install --save-dev webpack-merge
+      - Install rimraf            - npm install --save-dev rimraf (used for deleting directory)
+      - Install typescript        - npm install --save-dev typescript@2.3.4
+      - Install @types/node       - npm install --save-dev @types/node (contains type definitions for Node.js)
+
+  - Remove explonetial/carrot sign from package.json for typescript (to avoid update to this module)
+  - At Root 
+    - Create tsconfig.json and make settings (So that typescript can be compiled to JS)
+    - Add index.html
+    - Add webpack.config.js (manually)
+    - Add folder 'config' & create three files:
+      - webpack.prod.js,  
+      - webpack.dev.js and 
+      - webpack.common.js
+    - Direct webpack.config.js to use only Dev file for now (module.exports = require('./config/webpack.dev.js');)
+
+  - Install multiple Webpack Loader : (Webpack supports pre-processing files via loaders. This allows you to bundle any static resource not only javascript)
+      - npm install --save-dev angular2-template-loader 
+      - npm install --save-dev awesome-typescript-loader 
+      - npm install --save-dev css-loader 
+      - npm install --save-dev file-loader 
+      - npm install --save-dev html-loader 
+      - npm install --save-dev null-loader 
+      - npm install --save-dev raw-loader 
+      - npm install --save-dev style-loader 
+      - npm install --save-dev to-string-loader
+
+  - Install two Webpack Plugin (These are acutually Bundle Injector - To inject created bundle in html file)
+     -  npm install --save-dev html-webpack-plugin 
+     -  npm install --save-dev extract-text-webpack-plugin  
+
+  - Install Angular - 
+     -  npm install --save zone.js
+     -  npm install --save rxjs
+     -  npm install --save @angular/core
+     -  npm install --save @angular/common
+     -  npm install --save @angular/compiler
+     -  npm install --save @angular/platform-browser  (Used to load angular in browser memory)
+     -  npm install --save @angular/platform-browser-dynamic (ibrary for using Angular in a web browser with JIT compilation)
+     -  npm install --save core-js (Polyfill to make angular application compatible across multiple browsers)
+
+  - So far whatever is installed will be used for Development Server
+
+  - Create app folder and add main.ts file in it
+  - Create vendor.ts under Root HelloApp (Add import statements particular to Angular/bootstrap/jQuery)
+  - Create pollyfill.ts under HelloApp
+  - Add content in webpack.common.js - Here configure: Entry, Loader and Plugins
+  - Add content in webpack.dev.js - Merge common.config settings with dev.config settings (Used by Webpack-dev-server)
+  - Add content in webpack.prod.js -  (Used by Webpack)
+  - Add code in app.module.ts
+  - Add code in app.component.ts
+  - Add content in main.ts
+  - Update index.html with appcomponent tag and browse
+
+  Run the Project:
+  ---------------
+  - Add start command in package.json ("start": "webpack-dev-server --inline -progress --port 3000")
+  - npm start (To run the project)
+  - Browse http://localhost:3000
+  
+----------------------------------------------------
+Today we'll create Deployable Content:
+-------------------------------------
+ - Create Baseapp
+ - Add 'build' under scripts in package.json (Production Mode)
+   "build": "rimraf dist & webpack --config ./config/webpack.prod.js"
+
+ - Type - npm run build
+ - This will auto create a dist folder (This is becomes deployable)
+ - You can copy these content on IIS (for e.g.) to deploy.
+ -----------------------------------------------------------
+ - Install Angular TypeScript Snippets for VS Code (johnpapa)
+ - Use snippets with 'a-'
+
+ Two Way Binding
+ - npm install --save @angular/forms
+ - Update vendor.ts
+ - Update app.module.ts
+
+Augury chrome extension
+ - Install Augury chrome extension (used for inspection)
+ - To avoid this in production add below two line in main.ts
+    import { enableProdMode } from "@angular/core";
+    enableProdMode();
+
+Javascript in Component
+ - Add 'strictnullchecks' = true in tsconfig.json  (make sure you restart your server after changes)
+
+NgEvents:
+  ngOnChanges: Called after a bound input property changes
+  ngOnInit: Called once the component is initialized
+  ngDoCheck: Called during every change detection run
+     ngAfterContentInit: Called after content (ng-content) has been projected into view
+     ngAfterContentChecked: Called everytime the projected content has been checked
+     ngAfterViewInit: Called after the component's view (& child views) has been initialized
+     ngAfterViewChecked: Called everytime the component's view (& child views) has been checked
+  ngOnDestroy: Called once the component is about to be destroyed
+--------------------------
+Day 09 - 
+ - Angular App Formation & Installations
+--------------------------
+Day 10 -
+ - Baseapp
+ - Multiple Components
+ - Binding
+--------------------------
+Day 11 -
+ - Component Interaction (Using @Input & @Output)
+ - Pipes
+ -----------------------------
+ Day 12 -
+ - Services (02_SiblingWithServices)
+ - Observable Services (04_SiblingWithRx)
+ - Forms
+ - Http Calls (Use jsonplaceholder rest apis - https://jsonplaceholder.typicode.com/posts)
+    - Install npm install -save @angular/http
+    - Include an import in vendor.ts & app.module.ts
+ - Routing
+    - Install Routing npm install --save @angular/router
+    - Include an import in vendor.ts & app.module.ts
+    - Add file app.router.ts (To create collection of routes)
+    - Note: Also notice the <router-outlet> tag: this means the main content of the page below the top menu will be placed there
+  - Guards (To guard Route/Child Route)
+  - Resolvers (To load object, before route is activated) 
+
+  - AOT - Ahead of Time Compiler
+     - Benefits
+        - Faster Rendering
+        - Fewer Async Calls to Server
+        - Smaller Angular Framework download size (typically vendor.ts)
+        - Early Template Errors detection
+        - Better Security (becoz of no html download which reduceds possibiltity of HTML Injection)
+      - Steps: 
+        - Download Angular Complier - ngc 
+          - npm install --save-dev @angular/animations        
+          - npm install --save-dev @angular/compiler-cli
+          - npm install --save-dev @angular/platform-server
+        - Update tsconfig.json to 'aot'  (Add 'files' section and 'angularcomplierOptions')
+        - Run Angular Compliler
+          - "node_modules/.bin/ngc" -p tsconfig.json
+              "files": [
+                  "app/app.module.ts",
+                  "app/main.ts"
+              ],
+              "angularCompilerOptions": {
+                  "genDir": "aot",
+                  "skipMetadataEmit": true
+              }
+          - Generate Folders (under app folder)
+        - Update main.ts  
+          - Load AppModule from ngfactory
+        - Update Vendor.ts (remove @angular/platform-browser-dynamic)
+        - Run Angular Compliler(as shown above)
+        - Run - npm run build
+        - Deploy dist folder now.
+ -----------------------------
+ 

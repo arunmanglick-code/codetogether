@@ -1,0 +1,5 @@
+
+<div class="options">
+    <a class="{{isSelected(author) && 'selected' || ''}}" 
+    *ngFor="let author of list" (click)=selectAuthor(author)>{{author.name}}</a>
+</div>

@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "classic",
+        "sourceMap": false,
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "lib": [
+            "es2016",
+            "dom"
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "day08",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01_TypeGuards.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "system": "^2.0.1",
+    "systemjs": "^0.20.18"
+  }
+}

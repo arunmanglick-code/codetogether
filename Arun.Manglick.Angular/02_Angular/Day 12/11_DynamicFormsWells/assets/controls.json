@@ -1,0 +1,48 @@
+[
+    {
+        "mode": "textbox",
+        "key": "firstName",
+        "label": "First name",
+        "value": "Bombasto",
+        "required": true,
+        "order": 1,
+        "type": "text"
+    },
+    {
+        "mode": "textbox",
+        "key": "emailAddress",
+        "label": "Email",
+        "required": true,
+        "order": 2,
+        "type": "email"
+    },
+    {
+        "mode": "dropdown",
+        "key": "designation",
+        "label": "Designation",
+        "required": true,
+        "order": 1,
+        "selectOptions": [
+            {
+                "key": "director",
+                "value": "Director"
+            },
+            {
+                "key": "manager",
+                "value": "Manager"
+            },
+            {
+                "key": "architect",
+                "value": "Architect"
+            },
+            {
+                "key": "developer",
+                "value": "Developer"
+            },
+            {
+                "key": "tester",
+                "value": "Tester"
+            }
+        ]
+    }
+]
