@@ -1,0 +1,14 @@
+{
+  "name": "TagPollerProcess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "TagPollerProcess.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayur Pawar",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.12.0"
+  }
+}

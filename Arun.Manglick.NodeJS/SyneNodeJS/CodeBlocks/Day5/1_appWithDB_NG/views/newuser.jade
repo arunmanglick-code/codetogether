@@ -1,0 +1,5 @@
+h1= title
+form#frmAddUser(name="addUser",method="post",novalidate)
+    input#uName(type="text",placeholder="User Name",name="username",data-ng-model="user.username")
+    input#uEmail(type="email",placeholder="Email Address",name="email",data-ng-model="user.email")
+    button#btnSubmit(type="submit",data-ng-click="SaveUser(user)") Save User

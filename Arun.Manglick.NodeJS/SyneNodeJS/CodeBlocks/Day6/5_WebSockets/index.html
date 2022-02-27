@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var ws;
+
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        function wireEvents() {
+            $('send').addEventListener('click', function () {
+                var msg = $('message');
+                ws.send(msg.value);
+                msg.value = "";
+            });
+
+            $('close').addEventListener('click', function () {
+                ws.close();
+            });
+        }
+
+        function createSpan(text) {
+            var span = document.createElement('span');
+            span.innerHTML = text + "<br/>";
+            return span;
+        }
+
+        window.onload = function () {
+            wireEvents();
+            var con = $('conversation');
+
+            var url = "ws://localhost:3000";
+            ws = new WebSocket(url, 'echo-protocol');
+
+            ws.onopen = function (e) {
+                con.innerHTML = "Client Connected....<br/>";
+            }
+
+            ws.onclose = function (e) {
+                con.innerHTML = "Client Disconnected....<br/>";
+            }
+
+            ws.onmessage = function (e) {
+                con.appendChild(createSpan(e.data.toString()));
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Web Socket Client App</h2>
+    <input type="text" id="message">
+    <input id="send" type="button" value="Send">
+    <input id="close" type="button" value="Close Connection">
+    <br/>
+    <div id="conversation"></div>
+</body>
+
+</html>

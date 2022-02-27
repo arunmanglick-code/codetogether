@@ -1,0 +1,21 @@
+{
+  "name": "awsnodejspoc",
+  "version": "1.0.0",
+  "description": "AWS Node JS POC Code",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "6.2.2"
+  },
+  "author": "Arun & Mayur",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.7.14",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "hbs": "^4.0.1",
+    "mysql": "^2.12.0"
+  }
+}

@@ -1,0 +1,11 @@
+Mocha - Testing Enviornment
+Sinon - Mock, Stub
+Chai - Assertion Library
+
+Unit Test
+	A	Arrange Input
+	A	Act (Call Method, passing Values and get the output)
+	A	Assert
+
+Test Class
+Test Case

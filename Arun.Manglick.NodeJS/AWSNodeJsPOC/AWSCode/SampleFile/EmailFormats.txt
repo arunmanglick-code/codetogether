@@ -1,0 +1,56 @@
+Subject: Tag Registration
+----------------------------
+Hi Arun Manglick
+
+Welcome to Asurion,
+Please register tags by clicking on below link.
+http://custom-env-2.cmt9ppmsrk.us-east-1.elasticbeanstalk.com/tasks
+
+Enrolled MDN: 6464645651
+First Tag: TestTag51
+Second Tag: TestTag52
+Third Tag: TestTag53
+
+Regards,
+TAG Team
+******************************************************************
+Subject: Found Device Notification
+----------------------------
+Hi Arun Manglick
+
+We found your device having Tag name as TestTag51 and will be sending soon.
+
+Regards,
+TAG Team
+******************************************************************
+Subject: Sending Empty Device Envelop
+----------------------------
+Hi Good John
+
+Thank you for your services. 
+Please send found device Tag name TestTag51 back in enclosed envelop.
+
+Regards,
+TAG Team
+******************************************************************
+Subject: DeviceShipmentNotice
+----------------------------
+Hi Arun Manglick
+
+We have received your lost device having Tag name TestTag51.
+We have shipped device to your enroll address with Standered shipment. Thank you for using our service.
+
+Regards,
+TAG Team
+
+******************************************************************
+Subject: Thank You
+----------------------------
+Hi Good John
+
+We have received device having Tag name TestTag51.
+We are very thankful for your honesty and as token of appreciation we are giving you a gift card of $25
+
+Regards,
+TAG Team
+******************************************************************

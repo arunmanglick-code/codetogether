@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%- title%></title>
+    </head>
+    <body>
+        <h1><%- title%></h1>
+        <p>This is express ap using EJS Views</p>
+         <ul>
+            <% for(var i=0; i<JSON.stringify(empList).length; i++) {%>
+           <li>
+                <%= JSON.stringify(empList) %>
+                <%= JSON.stringify(empList)[i].name%>
+            </li>           
+            <% } %>
+        </ul>       
+    </body>
+</html>

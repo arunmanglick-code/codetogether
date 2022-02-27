@@ -1,0 +1,22 @@
+{
+  "name": "5-appwithdb",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@types/monk": "^6.0.0",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "jade": "~1.11.0",
+    "monk": "^3.1.4",
+    "morgan": "~1.7.0",
+    "msnodesqlv8": "^0.2.11",
+    "mssql": "^3.3.0",
+    "save-dev": "0.0.1-security",
+    "serve-favicon": "~2.3.0"
+  }
+}

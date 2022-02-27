@@ -1,0 +1,15 @@
+{
+  "name": "webappwithexpress",
+  "version": "1.0.0",
+  "description": "Web Application using Express FW",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manish",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "underscore": "^1.8.3"
+  }
+}

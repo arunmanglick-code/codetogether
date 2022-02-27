@@ -1,0 +1,63 @@
+1. npm init
+2. npm install express --save
+
+NODEMON - Auto restart server on every change
+1. npm install -g nodemon
+2. nodemon app.js OR node app.js
+
+Express Generator (https://www.sitepoint.com/create-new-express-js-apps-with-express-generator/)
+1. npm install express-generator -g
+2. express --view=jade  <appName>
+3. cd <appName>
+4. npm install
+5. Change start script to use nodemon instead of node in package.json
+6. npm start
+
+Mongo Installation:
+----------------------
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+
+1. Install Mongo DB (mongodb.com)
+2. Open Cmd & Go to c:\Program Files\MongoDB\Server\Version\bin
+3. Type: mongod --dbpath "Data Folder Path"  (C:\Program Files\MongoDB\Server\4.4\data)
+   (This will run MongoDB service - Keep this window as-is) 
+
+4. Install monk - npm install monk --save
+5. Open Cmd (maybe same cmd window) with path to C:\Program Files\MongoDB\Server\4.4\bin
+    - Type mongo (This will run MongoDB Client - Keep this window as-is) 
+    - OR Double-click on mongo.exe.
+
+
+7. Install RoboMongo or RoboT
+8. Create Colletion either thru UI or Cmd
+    - Thru UI: Create 'myusercollection' under local db & add documents
+    - Thru Cmd:
+        - Go to step #6
+        - Type: use localhost
+        - Type: db.myusercollection.insert({"username" : "Arun Kumar","email" : "arunkumar@gep.com"})
+        - Type: db.getCollection('myusercollection').find({})   - To Retrieve Values
+9. Write Code to connect and pull data
+    router.get('/datamg', function (req, res, next) {
+    var monk = require('monk');
+    var db = monk("localhost/local");
+    var collection = db.get("myusercollection");
+
+    collection.find({},{},function (err,results) {
+      res.send(results);
+   });
+  });
+----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+

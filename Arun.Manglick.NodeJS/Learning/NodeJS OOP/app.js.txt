@@ -1,0 +1,23 @@
+var objLiteral_0 = require('./0_ObjectLiteral.js');
+objLiteral_0.addNumber(); // 15
+objLiteral_0.add(10,20); // 30
+// ------------------------------------------------------
+
+var objLiteral_1 = require('./1_ObjectLiteral.js');
+var calc_1 = objLiteral_1.calculatorService1();
+calc_1.add(20,20); // 40
+
+var calc_2 = objLiteral_1.calculatorService2();
+calc_2.add(); // 90
+
+var calc_3 = objLiteral_1.calculatorService3;
+calc_3.add(50,70); // 120
+
+// ------------------------------------------------------
+var objLiteral_2 = require('./2_ObjectLiteral.js');
+var calc = new objLiteral_2.calculatorServiceClass();
+calc.add(20,30); 
+// ------------------------------------------------------
+var objLiteral_3 = require('./3_ObjectLiteral.js');
+var calc = new objLiteral_3.calculatorServiceClass(30,30);
+calc.add(); // 60

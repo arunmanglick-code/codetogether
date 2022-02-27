@@ -1,0 +1,20 @@
+var n1 = 5;
+var n2 = 10;
+
+var addNumber = function () {
+    console.log('Add Results:', n1 + n2);
+};
+
+var add = function (x, y) {
+    console.log('Add Results:', x + y);
+};
+
+var subtract = function (x, y) {
+    console.log('Sub Results:', x - y);
+};
+
+module.exports = {
+    addNumber,
+    add,
+    subtract
+}

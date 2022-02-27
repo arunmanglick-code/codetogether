@@ -1,0 +1,914 @@
+[
+    {
+        "DefaultValue": "Order",
+        "FieldName": "OrderPrefix",
+        "FieldValue": "Order",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "AllowChangeOrder",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "AllowChangeRequest",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowTolerance",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowToleranceEdit",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "AllowToleranceForBlank",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "ItemTotalPercentTolerance",
+        "FieldValue": "5",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "ItemTotalValueTolerance",
+        "FieldValue": "500",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "TotalAmountPercentTolerance",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "TotalAmountValueTolerance",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "TaxPercentTolerance",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "TaxValueTolerance",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "ShippingPercentTolerance",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "ShippingValueTolerance",
+        "FieldValue": "2500",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "ChargesPercentTolerance",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "ChargesValueTolerance",
+        "FieldValue": "2500",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "QuantityPercentTolerance",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "QuantityValueTolerance",
+        "FieldValue": "10",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "UnitPricePercentTolerance",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "UnitPriceValueTolerance",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "3",
+        "FieldName": "DefaultMatchType",
+        "FieldValue": "3",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "1",
+        "FieldName": "AllowAutoCreateOrder",
+        "FieldValue": "1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "AllowAutoSentToPartner",
+        "FieldValue": "true",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "AllowAccounting",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "AllowEditAccounting",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "AllowEditAccountingStatus",
+        "FieldValue":"1,
+     21,
+        23,
+        24",
+    "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "AllowEditAccountingEntityOnApproval",
+        "FieldValue": "7",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowApprovalsInOrder",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "CheckApprovalsForAccounting",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "CheckApprovalsForUOM",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowToleranceOnChangeOrder",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "PaymentTermsValueTolCO",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "ItemDescValueTolCO",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "CategoryValueTolCO",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "NewLineItemAddedTolCO",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "UnitPricePercentTolCO",
+        "FieldValue": "0",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "UnitPriceValueTolCO",
+        "FieldValue": "1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "QuantityPercentTolCO",
+        "FieldValue": "0",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "QuantityValueTolCO",
+        "FieldValue": "1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "ShippingPercentTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "ShippingValueTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "ShippingPercentTolHeaderCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "ShippingValueTolHeaderCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "TaxPercentTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "TaxValueTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "TaxPercentTolHeaderCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "TaxValueTolHeaderCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "ItemTotalPercentTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "ItemTotalValueTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "TotalAmountPercentTolCO",
+        "FieldValue": "0",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "TotalAmountValueTolCO",
+        "FieldValue": "1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "AdditionalChargesPercentTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "AdditionalChargesValueTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "AdditionalChargesPercentTolHeaderCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "AdditionalChargesValueTolHeaderCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "ItemValuePercentTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "ItemValueValueTolCO",
+        "FieldValue": "-1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "30",
+        "FieldName": "BlanketOrderDuration",
+        "FieldValue": "30",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "TRUE",
+        "FieldName": "AllowApprovalsInNonCatalogOrder",
+        "FieldValue": "TRUE",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "TRUE",
+        "FieldName": "AllowApprovalsInCatalogOrder",
+        "FieldValue": "TRUE",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AutoSendCatalogOrderToPartner",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AutoSendNonCatalogOrderToPartner",
+        "FieldValue": "true",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "TRUE",
+        "FieldName": "AllowAutoCloseOrder",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "1",
+        "FieldName": "AutoCloseOrderDays",
+        "FieldValue": "1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "TRUE",
+        "FieldName": "AllowInvoiceOrReceiptForClosedOrder",
+        "FieldValue": "TRUE",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "IsConfirmingOrderRequired",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsMatchingEditable",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "1",
+        "FieldName": "OrderNameFormat",
+        "FieldValue": "1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "TRUE",
+        "FieldName": "AutoPOTransmissionToSupplier",
+        "FieldValue": "TRUE",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "AllowOrderTransactionHistoryStatus",
+        "FieldValue":"25,
+    124",
+    "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "Order for",
+        "FieldName": "OrderPrefixForConfirmingOrder",
+        "FieldValue": "Confirm Order for ",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "IsSendBackPostApproval",
+        "FieldValue": "FALSE",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsPaymentTermsEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsHeaderCommentEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemQtyEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemUnitPriceEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemUOMEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemTaxExemptEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemAdditionalChargesEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemShippingChargesEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemDeliveryDateEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemManuNameEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemManuPartNameEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemContractNumberEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemCommentEditableInChangeRequest",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowSendPONotificationToPrimaryPartner",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowSendPONotificationToPOContact",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "12",
+        "FieldName": "OrderItemPageSize",
+        "FieldValue": "12",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowEditPartnerItemNUmberInChangeOrderAndChangeRequest",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "TRUE",
+        "FieldName": "AllowChangeOrderSendToIntegratedPartner",
+        "FieldValue": "TRUE",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue":"0,
+    1,
+        2,
+        3,
+        4",
+    "FieldName": "AllowSendToPartnerNotification",
+        "FieldValue":"0,
+    1,
+        2,
+        3",
+    "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "MaterialReceivingTolerance",
+        "FieldValue": "0",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "-1",
+        "FieldName": "ServiceReceivingTolerance",
+        "FieldValue": "0",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "Line",
+        "FieldName": "MatchTypeLevel",
+        "FieldValue": "Line",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "2",
+        "FieldName": "MatchTypeForMaterial",
+        "FieldValue": "2",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "1",
+        "FieldName": "MatchTypeForService",
+        "FieldValue": "1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "false",
+        "FieldName": "IsExternalOrderCheck",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "IsOrderingLocationMandatory",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowSendPartnerContactOnSubmitToPartner",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "IsDefaultByOrgEntityEnabled",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "0",
+        "FieldName": "DefaultByOrgEntityId",
+        "FieldValue": "12",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowResentToPartner",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "NotificationDispatchModeText",
+        "FieldValue": "via dispatch mode [Dispatch Mode]",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "NotificationDispatchValueText",
+        "FieldValue": "",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowReceivingToleranceEditable",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "AccessTypeCommentOnPDF",
+        "FieldValue": "4",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "IsUnitPriceMandatoryInOrder",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "IsPeriodbasedonNeedbyDate",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "IsPeriodUpdateConfirmationEnabled",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowManufacturersCodeAndModel",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "ShowStanProcDetails",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "ShowFOBShippingDetails",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue":"Code,
+    Location,
+    TransitType,
+    Carriers,
+    FreightTerms",
+    "FieldName": "VisibleFOBFields",
+        "FieldValue":"Code,
+    Location",
+    "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue":"Code,
+    Location,
+    TransitType,
+    Carriers,
+    FreightTerms",
+    "FieldName": "MandatoryFOBFields",
+        "FieldValue": "Code",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "1",
+        "FieldName": "FOBShippingDetailsDisplayFormat",
+        "FieldValue": "1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "30",
+        "FieldName": "OrderIdealDays",
+        "FieldValue": "30",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "false",
+        "FieldName": "IsAllowBuyerSideSupplierAcknowledge",
+        "FieldValue": "false",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "ConsiderDeltaAmountAsOverallTotal",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "ADVANCEINVOICENOTIFYDAYS",
+        "FieldValue": "",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "IsApprovalBasedonOverallTotal",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "{\"10\": \"headerEntity1\"}",
+        "FieldName": "DEFAULT_HEADER_ENTITIES",
+        "FieldValue": "{\"10\": \"headerEntity1\"}",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "10",
+        "FieldName": "DEFAULT_BILLTO_ENTITY",
+        "FieldValue": "10",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "false",
+        "FieldName": "ALLOW_DEFAULT_NEEDBYDATE",
+        "FieldValue": "false",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "15",
+        "FieldName": "DEFAULT_NEEDBYDATEBYDAYS",
+        "FieldValue": "15",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue":"{\"10\": \"splitEntity1\",
+     \"7\": \"splitEntity3\",
+    \"9\": \"splitEntity2\",
+    \"11\": \"splitEntity4\"}",
+        "FieldName": "LINE_ACC_ENTITIES",
+        "FieldValue":"{\"10\": \"splitEntity1\",
+     \"7\": \"splitEntity2\",
+    \"9\": \"splitEntity3\",
+    \"11\": \"splitEntity4\"}",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue":"{\"id\": 595450000851,
+    \"name\": \"ENERGY & UTILITIES\"}",
+        "FieldName": "DEFAULT_CATEGORY",
+        "FieldValue":"{\"id\": 595450000851,
+    \"name\": \"ENERGY & UTILITIES\"}",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "false",
+        "FieldName": "LIMITACCESSCONTROLENTITY",
+        "FieldValue": "false",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "false",
+        "FieldName": "AllowPromiseDateAndEstimatedDeliveryDate",
+        "FieldValue": "false",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue":"{\"ALLOW\": \"true\",
+    \"INTERVAL\": 45000}",
+        "FieldName": "AUTOSAVE_SETTINGS",
+        "FieldValue":"{\"ALLOW\": \"true\",
+    \"INTERVAL\": 45000}",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "false",
+        "FieldName": "AllowExtrenalCodeCombination",
+        "FieldValue": "false",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "false",
+        "FieldName": "IsNotificationFYIEnabled",
+        "FieldValue": "false",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "0|en-US",
+        "FieldName": "InternalPrintLanguage",
+        "FieldValue": "0|en-US",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "purchaseTypeForEmailDispatchMode",
+        "FieldValue": "",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "false",
+        "FieldName": "IsNotificationBasedOnReceipientLanguage",
+        "FieldValue": "false",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "1",
+        "FieldName": "AllowSendPONotificationToCORequester",
+        "FieldValue": "1",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "7",
+        "FieldName": "BUSINESSUNIT_ENTITY",
+        "FieldValue": "7",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "DocumentStatusesForOutboundToERP",
+        "FieldValue": "",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemUOMEditableInChangeOrder",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsItemUnitPriceEditableInChangeOrder",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "True",
+        "FieldName": "IsAccountingEditableInChangeOrder",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "0",
+        "FieldName": "EnableThirdPartyTaxCalculation",
+        "FieldValue": "0",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "0",
+        "FieldName": "TaxCalculationAPIMode",
+        "FieldValue": "0",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "",
+        "FieldName": "QuestionIdForCustomValidation",
+        "FieldValue": "",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "IsCustomValidationEnable",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "ConsiderDeltaAmountAsOverallLimitTotal",
+        "FieldValue": "False",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "7",
+        "FieldName": "ENTITYTYPE_TAX",
+        "FieldValue": "7",
+        "OwnerTypeInfo": 2
+    },
+    {
+        "DefaultValue": "False",
+        "FieldName": "AllowAsyncMethodsforAutoCreate",
+        "FieldValue": "True",
+        "OwnerTypeInfo": 2
+    }
+]

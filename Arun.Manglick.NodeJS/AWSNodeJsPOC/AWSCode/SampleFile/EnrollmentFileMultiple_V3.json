@@ -1,0 +1,12 @@
+[
+{"MDN":"6464645651",
+"FirstName":"David",
+"LastName":"Scott",
+"Email":"arun.manglick@asurion.com",
+"TagsDetails":[
+{"TagName":"iPhoneTag001","TagDescription":"Attach to Mobile/Any Device","Status":"InActive"},
+{"TagName":"SamsungTag002","TagDescription":"Attach to Mobile/Any Device","Status":"InActive"},
+{"TagName":"NonDeviceTag003","TagDescription":"Attach to Mobile/Any Device","Status":"InActive"}
+]
+}
+]

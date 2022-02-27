@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Single page web app using BootStrap & Jade
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+    script(src='script.js')
+  body
+    div
+      div
+        nav.navbar.navbar-inverse(role='navigation', style='padding-left:130px;')
+          ul.nav.navbar-nav
+            li.active
+              a(href='/')
+                | Home
+                span.sr-only (current)
+            li
+              a(href='/about') About Docker
+            li
+              a(href='/contact') Contact us
+      br
+      .jumbotron
+        p
+          | This is to Docker Demo

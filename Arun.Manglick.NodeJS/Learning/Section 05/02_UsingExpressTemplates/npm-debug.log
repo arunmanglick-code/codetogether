@@ -1,0 +1,80 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'express',
+1 verbose cli   '--save' ]
+2 info using npm@3.10.9
+3 info using node@v7.1.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData express
+8 silly fetchNamedPackageData express
+9 silly mapToRegistry name express
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'express',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'express',
+12 silly mapToRegistry   name: 'express',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/express
+14 verbose request uri https://registry.npmjs.org/express
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 12:22:18 PM
+17 verbose request id 92d4aa7bfb4788cf
+18 verbose etag "A2JMB8NGF4FZ8SY7GPGF65K2P"
+19 http request GET https://registry.npmjs.org/express
+20 info retry will retry, error on last attempt: Error: self signed certificate in certificate chain
+21 info attempt registry request try #2 at 12:22:28 PM
+22 verbose etag "A2JMB8NGF4FZ8SY7GPGF65K2P"
+23 http request GET https://registry.npmjs.org/express
+24 info retry will retry, error on last attempt: Error: self signed certificate in certificate chain
+25 info attempt registry request try #3 at 12:23:28 PM
+26 verbose etag "A2JMB8NGF4FZ8SY7GPGF65K2P"
+27 http request GET https://registry.npmjs.org/express
+28 silly get cb [ 304, undefined ]
+29 verbose etag https://registry.npmjs.org/express from cache
+30 verbose get saving express to C:\Users\cwr.arun.manglick\AppData\Roaming\npm-cache\registry.npmjs.org\express\.cache.json
+31 verbose correctMkdir C:\Users\cwr.arun.manglick\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+32 silly install normalizeTree
+33 silly loadCurrentTree Finishing
+34 silly loadIdealTree Starting
+35 silly install loadIdealTree
+36 silly cloneCurrentTree Starting
+37 silly install cloneCurrentTreeToIdealTree
+38 silly cloneCurrentTree Finishing
+39 silly loadShrinkwrap Starting
+40 silly install loadShrinkwrap
+41 silly loadShrinkwrap Finishing
+42 silly loadAllDepsIntoIdealTree Starting
+43 silly install loadAllDepsIntoIdealTree
+44 silly rollbackFailedOptional Starting
+45 silly rollbackFailedOptional Finishing
+46 silly runTopLevelLifecycles Finishing
+47 silly install printInstalled
+48 verbose stack Error: Refusing to install express as a dependency of itself
+48 verbose stack     at checkSelf (C:\Program Files\nodejs\node_modules\npm\lib\install\validate-args.js:53:14)
+48 verbose stack     at Array.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+48 verbose stack     at LOOP (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+48 verbose stack     at chain (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:20:5)
+48 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install\validate-args.js:16:5
+48 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:52:35
+48 verbose stack     at Array.forEach (native)
+48 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:52:11
+48 verbose stack     at Array.forEach (native)
+48 verbose stack     at asyncMap (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:51:8)
+49 verbose cwd C:\Arun.Manglick\Arun.Manglick.PRJ\Arun.Manglick.NodeJS\Section 05\01_UsingExpress
+50 error Windows_NT 6.1.7601
+51 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "express" "--save"
+52 error node v7.1.0
+53 error npm  v3.10.9
+54 error code ENOSELF
+55 error Refusing to install express as a dependency of itself
+56 error If you need help, you may report this error at:
+56 error     <https://github.com/npm/npm/issues>
+57 verbose exit [ 1, true ]

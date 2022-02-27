@@ -1,0 +1,97 @@
+body {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.mygroup{
+   width:50%;
+}
+.input-group-button{
+   width: 50%;
+   margin: -30px auto 30px;
+}
+.input-group{
+   width: 50%;
+   margin: 20px auto 30px;
+}
+.input-group-addon{
+   width:100%;
+    text-align: left;
+}
+a {
+  color: #00B7FF;
+}
+.span-width {
+   width: 5%;
+   align:right;
+}
+.table td.fit,
+.table th.fit {
+    white-space: nowrap;
+    width: 1%;
+}
+@media only screen and (max-width: 640px) and (orientation: portrait) {
+    body { padding: 10px !important }
+}
+
+/* Small screen */
+@media only screen and (min-device-width: 320px) and (max-device-width: 479px) and (orientation: portrait) {
+
+}
+
+/* iPhone landscape and iPad portrait */
+@media only screen and (max-device-width: 480px) and (orientation: landscape),
+@media only screen and (max-device-width: 640px) and (orientation: portrait)  {
+    body {
+
+       -webkit-text-size-adjust:none;
+    }
+}
+.plainTD { background-color: #bbbbbb !important}
+.labelHeader { font-size: 15px !important}
+.required:after { content:" *"; color: red}
+.validationDisclaimer:before { content:" *"; color: red}
+.table-borderless td,
+.table-borderless th {
+    border: 0;
+}
+.hideTR {
+  display: none;
+}
+/* FOOTER STARTS HERE */
+.footer {clear: both; font-size: 12px;font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; background: #7f7f7f; display: block; width:85%;overflow:hidden;border-radius:5px;-moz-border-rdius:5px;-webkit-border-radius:5px; position:fixed; bottom:0;}
+.footer ul {padding:0 10px;margin:0 !important}
+.footer ul li {list-style-type:none; float:left; margin-right:30px; color:#fff;font-size: 18px}
+.footer ul li.last {clear:both;margin-right:0;display:none;}
+.footer ul li a {text-decoration:none; color:#ffffff; font-size:12px;}
+/* Social Media Links in footer style starts here*/
+.footer ul.fl {float:left;}
+.footer ul.fr {float:right;}
+.footer ul.fr li {line-height: 16px;margin-right:10px;
+font-size: 1em;}
+.footer ul li.nomargin {margin-right:0;}
+.footer ul.fr li a {background: url(../images/socialicon.png) no-repeat;
+width: 16px;
+height: 16px;
+display: block;
+text-indent: -1px;
+text-decoration: none;}
+ul.fr li a.youtube  {
+background-position: 0px -105px;
+width: 43px;
+margin-top: 2px;
+}
+ul.fr li a.youtube:hover {background-position: right -105px;}
+ul.fr li a.in  {
+background-position: 0px -73px;
+}
+ul.fr li a.in:hover {background-position: right -73px;}
+ul.fr li a.twitter {background-position: 0px -34px;}
+ul.fr li a.twitter:hover {background-position: right -34px;}
+ul.fr li a.facebook {background-position: 0px 0px;}
+ul.fr li a.facebook:hover {background-position: right top;}
+
+
+
+/* FOOTER ENDS HERE */

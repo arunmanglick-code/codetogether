@@ -1,0 +1,26 @@
+extends layout
+
+block content
+
+  .menu
+    ul.nav.nav-pills
+      li
+        a(href='/') Home
+      li
+        a(href='/tasks') Register
+      li
+        a(href="/lookup") Lookup
+      li.active
+        a(href="/dax") DAX
+  br
+  form.form-horizontal#loginForm(action='/dax', method='post')
+    .input-group
+      table.table
+        tr.form-group.required
+          td
+            label.control-label Tag Name:
+          td
+            input#firstname.form-control(name='TAG', type='text', ,='', size='13', placeholder='Tag Name')
+    div
+      span &nbsp;
+        button#btnSubmit.btn.btn-success(type='submit') Complete Fulfillment

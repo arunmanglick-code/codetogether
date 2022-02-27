@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title=title
+    body
+        h1=title
+        p This is Jade Page
+        ul
+            each emp in empList
+                li
+                    p=emp.id
+                    p=emp.name
+                    hr

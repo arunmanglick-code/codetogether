@@ -1,0 +1,7 @@
+extends layout
+block content
+    h1= title
+    form#frmAddUser(name="addUser",method="post",action="/newuser")
+        input#uName(type="text",placeholder="User Name",name="username")
+        input#uEmail(type="email",placeholder="Email Address",name="email")
+        button#btnSubmit(type="submit") Save User

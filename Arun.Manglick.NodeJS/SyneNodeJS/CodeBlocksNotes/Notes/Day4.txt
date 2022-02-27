@@ -1,0 +1,9 @@
+1. npm start
+2. mongod --dbpath "Data Folder Path"
+
+Security
+
+	npm install passport --save
+	npm install passport-local --save
+	npm install express-session --save
+	npm install connect-flash --save

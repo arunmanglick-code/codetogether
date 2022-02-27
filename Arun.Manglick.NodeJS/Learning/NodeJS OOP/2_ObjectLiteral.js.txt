@@ -1,0 +1,14 @@
+function calculatorServiceClass() {
+
+   this.add = function (x, y) {
+        console.log('Add Results:', x + y);
+    };
+
+    this.subtract = function (x, y) {
+        console.log('Sub Results:', x - y);
+    };
+}
+
+module.exports = {
+    calculatorServiceClass
+}

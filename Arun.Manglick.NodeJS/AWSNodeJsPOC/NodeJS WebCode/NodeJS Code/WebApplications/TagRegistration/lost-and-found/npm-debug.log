@@ -1,0 +1,68 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'require',
+1 verbose cli   '--save' ]
+2 info using npm@3.10.9
+3 info using node@v7.1.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData require
+8 silly fetchNamedPackageData require
+9 silly mapToRegistry name require
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'require',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'require',
+12 silly mapToRegistry   name: 'require',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/require
+14 verbose request uri https://registry.npmjs.org/require
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 12:08:28 PM
+17 verbose request id b8e9c8f8a76bb4e4
+18 http request GET https://registry.npmjs.org/require
+19 info retry will retry, error on last attempt: Error: self signed certificate in certificate chain
+20 info attempt registry request try #2 at 12:08:39 PM
+21 http request GET https://registry.npmjs.org/require
+22 info retry will retry, error on last attempt: Error: self signed certificate in certificate chain
+23 info attempt registry request try #3 at 12:09:39 PM
+24 http request GET https://registry.npmjs.org/require
+25 silly fetchPackageMetaData Error: self signed certificate in certificate chain
+25 silly fetchPackageMetaData     at TLSSocket.<anonymous> (_tls_wrap.js:1062:38)
+25 silly fetchPackageMetaData     at emitNone (events.js:86:13)
+25 silly fetchPackageMetaData     at TLSSocket.emit (events.js:185:7)
+25 silly fetchPackageMetaData     at TLSSocket._finishInit (_tls_wrap.js:586:8)
+25 silly fetchPackageMetaData     at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:416:38)
+25 silly fetchPackageMetaData  error for require { Error: self signed certificate in certificate chain
+25 silly fetchPackageMetaData     at TLSSocket.<anonymous> (_tls_wrap.js:1062:38)
+25 silly fetchPackageMetaData     at emitNone (events.js:86:13)
+25 silly fetchPackageMetaData     at TLSSocket.emit (events.js:185:7)
+25 silly fetchPackageMetaData     at TLSSocket._finishInit (_tls_wrap.js:586:8)
+25 silly fetchPackageMetaData     at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:416:38) code: 'SELF_SIGNED_CERT_IN_CHAIN' }
+26 silly rollbackFailedOptional Starting
+27 silly rollbackFailedOptional Finishing
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: self signed certificate in certificate chain
+30 verbose stack     at TLSSocket.<anonymous> (_tls_wrap.js:1062:38)
+30 verbose stack     at emitNone (events.js:86:13)
+30 verbose stack     at TLSSocket.emit (events.js:185:7)
+30 verbose stack     at TLSSocket._finishInit (_tls_wrap.js:586:8)
+30 verbose stack     at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:416:38)
+31 verbose cwd C:\Arun.Manglick\Arun.Manglick.PRJ\AWS.NodeJS.Repo\AWSNodeJsPOC\NodeJS Code\WebApplications\TagRegistration\lost-and-found
+32 error Windows_NT 6.1.7601
+33 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "require" "--save"
+34 error node v7.1.0
+35 error npm  v3.10.9
+36 error code SELF_SIGNED_CERT_IN_CHAIN
+37 error self signed certificate in certificate chain
+38 error If you need help, you may report this error at:
+38 error     <https://github.com/npm/npm/issues>
+39 verbose exit [ 1, true ]

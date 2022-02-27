@@ -1,0 +1,100 @@
+extends layout
+
+block content
+
+  .menu
+    ul.nav.nav-pills
+      li
+        a(href='/') Home
+      li.active
+        a(href='/tasks') Register Tag
+      li
+        a(href="/lookup") Report Tag
+      li
+        a(href="/dax") DAX
+  br
+  form.form-horizontal#loginForm(action='/tasks', method='post')
+    .input-group
+      table.table
+        tr.form-group.required
+          td
+            label.control-label MDN:
+          td
+            input#firstname.form-control(name='MDN', type='text', ,='', size='13', placeholder='MDN')
+        tr.form-group.required
+          td
+            label.control-label Tag #1:
+          td
+            input#firstname.form-control(name='TAG1', type='text', ,='', size='13', placeholder='TAG#1')
+        tr.form-group.required
+          td
+            label.control-label Tag #2:
+          td
+            input#firstname.form-control(name='TAG2', type='text', ,='', size='13', placeholder='TAG#2')
+        tr.form-group.required
+          td
+            label.control-label Tag #3:
+          td
+            input#firstname.form-control(name='TAG3', type='text', ,='', size='13', placeholder='TAG#3')
+    div
+    .input-group-button
+        table
+          tr
+            td
+              button#btnReset.btn.btn-primary(type='reset') Reset
+            td
+              button#btnSubmit.btn.btn-success(type='submit') Submit
+     .footer
+          ul.fl
+            li © 2016 Synechron. All Rights Reserved.
+            li.last  
+          ul.fr
+            li.last  
+            li
+              a.facebook(href='https://www.facebook.com/pages/Synechron-Technologies-Pvt-Ltd/231574240199910', title='Facebook', target='_blank')  
+            li
+              a.twitter(href='https://twitter.com/Synechron', title='Twitter', target='_blank')  
+            li
+              a.in(href='http://www.linkedin.com/company/synechron', title='Linkedin', target='_blank')  
+            li.nomargin
+              a.youtube(href='http://www.youtube.com/user/SynechronInc', title='Youtube', target='_blank')   
+  script.
+      $(document).ready(function(){        
+        $("#btnSubmit").removeAttr('disabled'); 
+        $('input[type="text"]').keyup(function (){         
+          if ($("input[name='MDN']").val() && $("input[name='TAG1']").val() 
+              && $("input[name='TAG2']").val() && $("input[name='TAG3']").val())
+          {
+            $("#btnSubmit").removeAttr('disabled');           
+          }
+          else
+          {
+            $("#btnSubmit").attr('disabled', 'disabled');
+          }            
+        });
+      });
+      //- $('#loginForm').validate({
+      //-   rules: {
+      //-       MDN: {
+      //-           minlength: 2,
+      //-           //maxlength: 2,
+      //-           required: true
+      //-       },
+      //-       TAG1: {
+      //-           minlength: 2,
+      //-           //maxlength: 2,
+      //-           required: true
+      //-       }
+      //-   },
+      //-   messages: {
+      //-     MDN: "",
+      //-     TAG1: ""
+      //-   },
+      //-   highlight: function(element) {
+      //-       $('#spanHeader').text('');
+      //-       $(element).closest('.form-group').addClass('has-error');
+      //-   },
+      //-   unhighlight: function(element) {
+      //-       $(element).closest('.form-group').removeClass('has-error');
+      //-   }
+      //- });

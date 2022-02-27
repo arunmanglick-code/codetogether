@@ -1,0 +1,24 @@
+Node JS
+Test Enviornment		-	Mocha
+Assertion Library		-	ChaiJS	(Expect, Should and Assert)
+Spy, Stub & Mock (Assertion)	-	SinonJS
+
+Angular JS
+Test Enviornment		-	Karma
+Assertion Library		-	Jasmine
+Spy, Stub & Mock (Assertion)	-	mgMocks
+
+spies - It offers information about actual Functions, without affecting their behavior
+stubs - It completely replaces the actual function (Ajax, DB)
+mocks - It helps to replace whole objects by comibning both spies and stubs
+
+npm install -g istanbul
+npm install nyc --save-dev
+
+Kitematic
+
+https://hub.docker.com/_/node/
+
+manish_vbn@hotmail.com
+manishvbn@gmail.com (FB, LinkedIn)
+9822025942

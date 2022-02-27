@@ -1,0 +1,54 @@
+doctype html
+block vars
+html
+  head
+    title= title + ' | ' + appname
+    link(rel="stylesheet", href="/stylesheets/main.css")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    link(rel="stylesheet", href="/bootstrap/bootstrap.css")
+    script(src='/javascripts/jquery.js', type="text/javascript")
+    script(src='/javascripts/jquery.validate.min.js', type="text/javascript")
+  body
+    .container
+      .navbar.navbar-default
+        .container
+          .navbar-header
+            a.navbar-brand(href='/')= appname
+            if (title.indexOf('Register') >= 0)
+              img.className#IdName(src="/images/RegisterTag.png" height="45px" width="75px" alt="Image Title")
+            if (title.indexOf('Lookup') >= 0)
+              img.className#IdName(src="/images/FindTag.png" height="45px" width="75px" alt="Image Title")
+
+            if (title.indexOf('DAX') >= 0)
+              img.className#IdName(src="/images/Dax.png" height="45px" width="75px" alt="Image Title")
+
+      if (typeof(result) !== 'undefined')
+        if (result.indexOf('true') >= 0)
+          span#spanHeader(class="label label-success")='Registration Successful !'
+        else
+          span#spanHeader(class="label label-danger")='Registration Failed !!!'
+        br
+      else if (typeof(tagFound) !== 'undefined')
+        if (tagFound.indexOf('true') >= 0)
+          span#spanHeader(class="label label-success")='TAG found ! Please fill your details.'
+        else
+          span#spanHeader(class="label label-danger")='TAG not found !!!'
+        br
+      else if (typeof(fulfilled) !== 'undefined')
+        if (fulfilled.indexOf('true') >= 0)
+          span#spanHeader(class="label label-success")='Congratulations ! Fulfillment process completed.'
+        else
+          span#spanHeader(class="label label-danger")='Please try again later !!!'
+        br
+       else if (typeof(connect) !== 'undefined')
+        if (connect.indexOf('true') >= 0)
+          span#spanHeader(class="label label-success")='Successful API Connection'
+        else
+          span#spanHeader(class="label label-danger")='Error While API Connection!!!'
+        br
+      else
+        span
+
+        br
+      br
+      block content

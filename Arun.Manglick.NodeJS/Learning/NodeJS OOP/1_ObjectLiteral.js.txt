@@ -1,0 +1,50 @@
+function calculatorService1() {
+
+    var add = function (x, y) {
+        console.log('Add Results:', x + y);
+    };
+
+    var subtract = function (x, y) {
+        console.log('Sub Results:', x - y);
+    };
+
+    return {
+        add: add,
+        subtract: subtract
+    };
+}
+// --------------------------------------------------
+function calculatorService2() {
+
+    var x = 50;
+    var y = 40;
+
+    var add = function () {
+        console.log('Add Results:', x + y);
+    };
+
+    var subtract = function () {
+        console.log('Sub Results:', x - y);
+    };
+
+    return {
+        add: add,
+        subtract: subtract
+    };
+}
+
+// --------------------------------------------------
+var calculatorService3 = {
+    add: function (x,y) {
+        console.log('Add Results:', x + y);
+    },
+    subtract: function (x,y) {
+        console.log('Sub Results:', x - y);
+    }
+}
+// --------------------------------------------------
+module.exports = {
+    calculatorService1,
+    calculatorService2,
+    calculatorService3
+}

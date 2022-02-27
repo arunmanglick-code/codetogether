@@ -1,0 +1,20 @@
+// Input:
+// -----------------------
+
+{"MDN":"6464645623",
+"TagsDetails":[
+{"TagName":"TestTag121","Status":"Active"},
+{"TagName":"TestTag12","Status":"Active"},
+{"TagName":"TestTag23","Status":"Active"}
+]}
+
+//Output:
+// ----------------
+
+{
+  "result": true
+}
+
+{
+  "result": false
+}

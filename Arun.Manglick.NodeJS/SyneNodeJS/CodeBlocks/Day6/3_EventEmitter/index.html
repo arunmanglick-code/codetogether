@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h2>Self=this</h2>
+        <script>
+            function Person(params) {
+                this.age = 10;
+                var self = this;
+                this.change = function (params) {
+                    //console.log(this);
+                    self.age+=1;
+                }
+            };
+
+            var p = new Person();
+            setInterval(p.change,1000);
+            setInterval(function () { console.log(p.age); },1000);
+        </script>
+    </body>
+</html>

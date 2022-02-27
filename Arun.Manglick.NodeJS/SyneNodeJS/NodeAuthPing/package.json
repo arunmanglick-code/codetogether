@@ -1,0 +1,35 @@
+{
+    "name": "PingPassportTutorial",
+    "description": "Easy Node Authentication With Ping.",
+    "version": "0.1.5",
+    "keywords": ["passport", "auth", "authn", "authentication", "authz", "authorization", "oauth", "oauth2", "ping"],
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "ejs": "2.3.3",
+        "express": "4.13.3",
+        "mongoose" : "*",
+        "passport": "*",
+        "passport-ping-oauth2": "*",
+        "connect-flash" : "*",     
+        "bcrypt-nodejs" : "*",
+        "morgan": "*",
+        "body-parser": "*",
+        "cookie-parser": "*",
+        "method-override": "*",
+        "express-session": "*"
+    },
+    "engines": {
+        "node": "0.12.7"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/exampleuser/examplerepo"
+    },
+    "keywords": [
+        "passport", "auth", "authn", "authentication", "authz", "authorization", "oauth", "oauth2", "ping"
+    ],
+    "license": "MIT"
+}

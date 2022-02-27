@@ -1,0 +1,17 @@
+1. Install Node (nodejs.org)
+2. Check
+	node -v
+	npm -v
+
+3. Update npm
+	npm install -g npm
+
+4. Editor
+	Visual Studio 2013 + Node Tools for VS (NTVS)
+	Visual Studio Code (https://code.visualstudio.com/)
+	Sublime Text + Node Plugins
+
+5. How tp run .js File - Type node <filename.js> 
+
+   
+

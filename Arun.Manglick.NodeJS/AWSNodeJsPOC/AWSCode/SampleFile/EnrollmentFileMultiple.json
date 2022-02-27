@@ -1,0 +1,94 @@
+[
+    {
+        "MDN": "6464645611",
+        "FirstName": "Arun",
+        "LastName": "Manglick",
+        "Email": "arun.manglick@asurion.com",
+        "TagsDetails": [
+            {
+                "TagName": "TestTag11",
+                "TagDescription": "TestDescription1",
+                "Status": "InActive"
+            },
+            {
+                "TagName": "TestTag12",
+                "TagDescription": "TestDescription2",
+                "Status": "InActive"
+            },
+            {
+                "TagName": "TestTag13",
+                "TagDescription": "TestDescription3",
+                "Status": "InActive"
+            }
+        ]
+    },
+    {
+        "MDN": "6464645621",
+        "FirstName": "Mayur",
+        "LastName": "Pawar",
+        "Email": "cwr.mayur.pawar1@asurion.com",
+        "TagsDetails": [
+            {
+                "TagName": "TestTag21",
+                "TagDescription": "TestDescription1",
+                "Status": "InActive"
+            },
+            {
+                "TagName": "TestTag22",
+                "TagDescription": "TestDescription2",
+                "Status": "InActive"
+            },
+            {
+                "TagName": "TestTag23",
+                "TagDescription": "TestDescription3",
+                "Status": "InActive"
+            }
+        ]
+    },
+    {
+        "MDN": "6464645631",
+        "FirstName": "Prakash",
+        "LastName": "Patil",
+        "Email": "Prakash.Patil@asurion.com",
+        "TagsDetails": [
+            {
+                "TagName": "TestTag31",
+                "TagDescription": "TestDescription1",
+                "Status": "InActive"
+            },
+            {
+                "TagName": "TestTag32",
+                "TagDescription": "TestDescription2",
+                "Status": "InActive"
+            },
+            {
+                "TagName": "TestTag33",
+                "TagDescription": "TestDescription3",
+                "Status": "InActive"
+            }
+        ]
+    },
+    {
+        "MDN": "6464645641",
+        "FirstName": "Vikas",
+        "LastName": "Udaseen",
+        "Email": "Vikas.Udaseen@asurion.com",
+        "TagsDetails": [
+            {
+                "TagName": "TestTag41",
+                "TagDescription": "TestDescription1",
+                "Status": "InActive"
+            },
+            {
+                "TagName": "TestTag42",
+                "TagDescription": "TestDescription2",
+                "Status": "InActive"
+            },
+            {
+                "TagName": "TestTag43",
+                "TagDescription": "TestDescription3",
+                "Status": "InActive"
+            }
+        ]
+    }
+]

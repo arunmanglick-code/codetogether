@@ -1,0 +1,23 @@
+{
+  "name": "appwithdbng",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Manish"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/javascripts",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1"
+  }
+}
