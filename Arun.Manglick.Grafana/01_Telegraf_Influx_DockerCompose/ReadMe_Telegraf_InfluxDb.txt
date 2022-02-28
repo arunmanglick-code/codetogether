@@ -74,7 +74,9 @@ Connect to Grafana:
     - Database Name: influx
     - Username: admin
     - Pwd: admin
+ - Add Dashboard
     
+
 
 
 
