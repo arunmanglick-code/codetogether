@@ -1,8 +1,11 @@
 var AWS = require("aws-sdk");
 var fs = require('fs');
 
-// Source Code: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.03.html
 
+// Source Code: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.03.html
+// Batch Write: https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-table-read-write-batch.html
+// Limit in one Batch: 25 Items
+// How to overcome this limit: https://stackoverflow.com/questions/31065900/how-to-write-more-than-25-items-rows-into-table-for-dynamodb
 
 AWS.config.update({
     region: "ap-south-1"
