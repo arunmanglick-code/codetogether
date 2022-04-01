@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+const port = process.env.PORT || 5000;
 var app = express();
 // -----------------------------------------------
 // view engine setup
@@ -43,4 +44,15 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 // -----------------------------------------------
+// app.set('port', myport);
+// app.listen(port,()=>{
+//   console.log("Express Server Started at port....", myport);
+// });
+// module.exports = app;
+// ------------------------------------
+// ---------------------------------------------
+app.listen(port,()=>{
+  console.log("Express Server Started at port....", port);
+});
+// ---------------------------------------------
 module.exports = app;
