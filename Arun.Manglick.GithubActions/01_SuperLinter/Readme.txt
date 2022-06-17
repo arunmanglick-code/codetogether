@@ -7,6 +7,7 @@ Complete List of Events : https://docs.github.com/en/actions/using-workflows/eve
 -------------------------------------------------------------------------
 
 What is a super Linter?
+https://github.com/github/super-linter
 The Super Linter is a source code repository that is packaged into a Docker container and called by GitHub Actions.
 This repository is a simple combination of various linters, written in bash , to help validate your source code.
 The Super Linter will currently support a lot of languages and more coming in the future.
