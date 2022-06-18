@@ -1,6 +1,6 @@
-// import {MyPerson} from '../1_Functions/3_JSPrototypes1';
+import {MyPerson} from '../1_Functions/3_JSPrototypes1.js';
 
-var MyPerson = require('../1_Functions/3_JSPrototypes1.js');
+// const MyPerson = require('../1_Functions/3_JSPrototypes1.js');
 
 var p1 = new MyPerson("Manish");
 console.log(p1.getName());
