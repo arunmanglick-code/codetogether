@@ -9,8 +9,8 @@ AWS.config.update(
 var ses = new AWS.SES({"accessKeyId":"AKIAIT347QFP7WNQ2HAQ", "secretAccessKey": "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", "region": "us-east-1"});
 
 //Send Mail to registerd ids
-var from = 'arun.manglick@asurion.com';
-var to = ['arun.manglick@asurion.com'];
+var from = 'arun.manglick@xyz.com';
+var to = ['arun.manglick@xyz.com'];
 var FirstName = 'Arun';
 var LastName = 'Manglick';
 var Tag1 = 'TestTag11';
@@ -29,7 +29,7 @@ ses.sendEmail( {
        Body: {
            Text: {
                     Data: `Hi ${FirstName} ${LastName}` + 
-                    '\n\nWelcome to Asurion,'+
+                    '\n\nWelcome to Company'+
                     '\nPlease register tags by clicking on below link.' + 
                     `\n${link}` + 
                     `\n\nFirst Tag: ${Tag1}` + 
