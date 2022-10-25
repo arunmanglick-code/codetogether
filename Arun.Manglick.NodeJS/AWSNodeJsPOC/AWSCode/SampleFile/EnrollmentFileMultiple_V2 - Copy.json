@@ -2,7 +2,7 @@
 {"MDN":"6464645651",
 "FirstName":"Arun",
 "LastName":"Manglick",
-"Email":"arun.manglick@asurion.com",
+"Email":"arun.manglick@dummy.com",
 "TagsDetails":[
 {"TagName":"TestTag51","TagDescription":"TestDescription1","Status":"InActive"},
 {"TagName":"TestTag52","TagDescription":"TestDescription2","Status":"InActive"},
@@ -12,7 +12,7 @@
 {"MDN":"6464645661",
 "FirstName":"Mayur",
 "LastName":"Pawar",
-"Email":"cwr.mayur.pawar1@asurion.com",
+"Email":"cwr.mayur.pawar1@dummy.com",
 "TagsDetails":[
 {"TagName":"TestTag61","TagDescription":"TestDescription1","Status":"InActive"},
 {"TagName":"TestTag62","TagDescription":"TestDescription2","Status":"InActive"},
