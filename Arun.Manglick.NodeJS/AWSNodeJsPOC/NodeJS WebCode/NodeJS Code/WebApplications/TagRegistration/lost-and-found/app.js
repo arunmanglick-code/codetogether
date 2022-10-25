@@ -17,7 +17,7 @@ var favicon = require('serve-favicon'),
   session = require('express-session'),
   errorHandler = require('errorhandler');
 
-app.locals.compname = 'Asurion'
+app.locals.compname = 'Dummy'
 app.locals.appname = 'Lost & Found Tag Utility'
 
 app.set('port', process.env.PORT || 3000);
