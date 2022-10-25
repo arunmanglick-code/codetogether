@@ -3,7 +3,7 @@
         "MDN": "6464645611",
         "FirstName": "Arun",
         "LastName": "Manglick",
-        "Email": "arun.manglick@asurion.com",
+        "Email": "arun.manglick@dummy.com",
         "TagsDetails": [
             {
                 "TagName": "TestTag11",
@@ -49,7 +49,7 @@
         "MDN": "6464645631",
         "FirstName": "Prakash",
         "LastName": "Patil",
-        "Email": "Prakash.Patil@asurion.com",
+        "Email": "Prakash.Patil@dummy.com",
         "TagsDetails": [
             {
                 "TagName": "TestTag31",
@@ -72,7 +72,7 @@
         "MDN": "6464645641",
         "FirstName": "Vikas",
         "LastName": "Udaseen",
-        "Email": "Vikas.Udaseen@asurion.com",
+        "Email": "Vikas.Udaseen@dummy.com",
         "TagsDetails": [
             {
                 "TagName": "TestTag41",
