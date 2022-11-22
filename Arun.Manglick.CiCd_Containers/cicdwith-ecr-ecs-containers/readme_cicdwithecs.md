@@ -19,19 +19,19 @@
 # Prerequisites:
     # Add New User - Assign Two permissions - 'AdministrativeAccess' & 'AWSCodeCommitPowerUsers'
 
-Note: TODO:
-    # CodeCommit Repo Name: simpleApache
-    # CodeBuild Policy: AM_CICDECRECS_CodeDeployPolicy
-    # CodeBuild Role: AM_CICDECRECS_CodeDeployRole
-    # CodeBuild Project: AM_CICDECRECS_CodeBuild    
-    # ECR Name: cicdwith-ecr-ecs-ecrrepository
-    # ECR URI: 791309171132.dkr.ecr.ap-south-1.amazonaws.com/cicdwith-ecr-ecs-ecrrepository
-    # Docker Image Name: 'cicdwith-ecr-ecs-containers_simpleApachecontainer' (Name of your choice)
-    # ECS Cluster Name: ' cicdwith-ecr-ecs-ecs-cluster'
-    # ECS Task Definition Name: 'am-cicd-task-fargate'
-    # ECS Service Name: 'am-cicd-service-fargate'
-    # ECS Task Definition Name: amecswithfargate-ecs-taskdefinition  (amecswithec2-ecs-taskdefinition)
-    # BuildSpec.yml - Image Definition File:  cicdwith-ecr-ecs-containers_imagedefiniton.json
+    # Note: TODO:
+        # CodeCommit Repo Name: simpleApache
+        # CodeBuild Policy: AM_CICDECRECS_CodeDeployPolicy
+        # CodeBuild Role: AM_CICDECRECS_CodeDeployRole
+        # CodeBuild Project: AM_CICDECRECS_CodeBuild    
+        # ECR Name: cicdwith-ecr-ecs-ecrrepository
+        # ECR URI: 791309171132.dkr.ecr.ap-south-1.amazonaws.com/cicdwith-ecr-ecs-ecrrepository
+        # Docker Image Name: 'cicdwith-ecr-ecs-containers_simpleApachecontainer' (Name of your choice)
+        # ECS Cluster Name: ' cicdwith-ecr-ecs-ecs-cluster'
+        # ECS Task Definition Name: 'am-cicd-task-fargate'
+        # ECS Service Name: 'am-cicd-service-fargate'
+        # ECS Task Definition Name: amecswithfargate-ecs-taskdefinition  (amecswithec2-ecs-taskdefinition)
+        # BuildSpec.yml - Image Definition File:  cicdwith-ecr-ecs-containers_imagedefiniton.json
 
 # Steps: 
   # Part A: CodeCommit
