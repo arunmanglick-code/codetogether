@@ -1,13 +1,12 @@
-# cicdwith-ecr-ecs-containers
 # This Repo is to demonstrate - 
     # Automate CICD Process using Code Pipleline Orchestrator (Inclding Code Commit, Code Build, Code Deploy) and 
     # Deploy to ECS Cluster
 
 # This lab uses a 'SimpleHttp' GoLang Appliation 
-# Code Repo Online: https://github.com/gkoenig/go-simplehttp
-# Code Repo Locally Copied: \arun-aws-ecs-ecr-fargate-docker-master-\cicdwith-ecr-ecs-containers\src
-# This 'SimpleHttp' Appliation is written in golang
-  # This Appliation when installed as container starts a webserver on port 8000 and returns back
+    # Code Repo Online: https://github.com/gkoenig/go-simplehttp
+    # Code Repo Locally Copied: \arun-aws-ecs-ecr-fargate-docker-master-\cicdwith-ecr-ecs-containers\src
+    # This 'SimpleHttp' Appliation is written in golang
+    # This Appliation when installed as container starts a webserver on port 8000 and returns back
       # some header information
       # the local ip address of the container
       # the message provided by environment variable called message
@@ -149,18 +148,7 @@ Note: TODO:
             # This will trigger CodePipleline, all three section 'Source, Build & Deploy', showing new build Process
             # Once Deployment is Complete - Follow same step as just above to find new content.
             
-# This is done finally --------------------------------------------
-
-
-  
-  
-
-
-
-
-    
-
-                  
+                 
 # Source Repo: 
     Source : Youtube: https://youtu.be/JzsSjcyN3MI 
     AWS Docs: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
