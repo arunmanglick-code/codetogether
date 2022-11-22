@@ -17,7 +17,10 @@
     # Part C: Code Deploy
 
 # Prerequisites:
-    # Add New User - Assign Two permissions - 'AdministrativeAccess' & 'AWSCodeCommitPowerUsers'
+    # Add New User 
+    # Assign Two permissions - 
+        # 'AdministrativeAccess' &
+        # 'AWSCodeCommitPowerUsers'
 
     # Note: TODO:
         # CodeCommit Repo Name: simpleApache
