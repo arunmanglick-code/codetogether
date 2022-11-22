@@ -36,7 +36,6 @@
         # ECS Task Definition Name: amecswithfargate-ecs-taskdefinition  (amecswithec2-ecs-taskdefinition)
         # BuildSpec.yml - Image Definition File:  cicdwith-ecr-ecs-containers_imagedefiniton.json
 
-# Steps: 
   # Part A: CodeCommit
     # Add New User - Assign Two permissions - 'AdministrativeAccess' & 'AWSCodeCommitPowerUsers'
     # Create Repository 'simpleApache' in Code Commit (Thru Console) 
