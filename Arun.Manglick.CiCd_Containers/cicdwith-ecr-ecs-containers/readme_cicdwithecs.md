@@ -1,13 +1,12 @@
-# cicdwith-ecr-ecs-containers
 # This Repo is to demonstrate - 
     # Automate CICD Process using Code Pipleline Orchestrator (Inclding Code Commit, Code Build, Code Deploy) and 
     # Deploy to ECS Cluster
 
 # This lab uses a 'SimpleHttp' GoLang Appliation 
-# Code Repo Online: https://github.com/gkoenig/go-simplehttp
-# Code Repo Locally Copied: \arun-aws-ecs-ecr-fargate-docker-master-\cicdwith-ecr-ecs-containers\src
-# This 'SimpleHttp' Appliation is written in golang
-  # This Appliation when installed as container starts a webserver on port 8000 and returns back
+    # Code Repo Online: https://github.com/gkoenig/go-simplehttp
+    # Code Repo Locally Copied: \arun-aws-ecs-ecr-fargate-docker-master-\cicdwith-ecr-ecs-containers\src
+    # This 'SimpleHttp' Appliation is written in golang
+    # This Appliation when installed as container starts a webserver on port 8000 and returns back
       # some header information
       # the local ip address of the container
       # the message provided by environment variable called message
@@ -18,23 +17,25 @@
     # Part C: Code Deploy
 
 # Prerequisites:
-    # Add New User - Assign Two permissions - 'AdministrativeAccess' & 'AWSCodeCommitPowerUsers'
+    # Add New User 
+    # Assign Two permissions - 
+        # 'AdministrativeAccess' &
+        # 'AWSCodeCommitPowerUsers'
 
-Note: TODO:
-    # CodeCommit Repo Name: simpleApache
-    # CodeBuild Policy: AM_CICDECRECS_CodeDeployPolicy
-    # CodeBuild Role: AM_CICDECRECS_CodeDeployRole
-    # CodeBuild Project: AM_CICDECRECS_CodeBuild    
-    # ECR Name: cicdwith-ecr-ecs-ecrrepository
-    # ECR URI: 791309171132.dkr.ecr.ap-south-1.amazonaws.com/cicdwith-ecr-ecs-ecrrepository
-    # Docker Image Name: 'cicdwith-ecr-ecs-containers_simpleApachecontainer' (Name of your choice)
-    # ECS Cluster Name: ' cicdwith-ecr-ecs-ecs-cluster'
-    # ECS Task Definition Name: 'am-cicd-task-fargate'
-    # ECS Service Name: 'am-cicd-service-fargate'
-    # ECS Task Definition Name: amecswithfargate-ecs-taskdefinition  (amecswithec2-ecs-taskdefinition)
-    # BuildSpec.yml - Image Definition File:  cicdwith-ecr-ecs-containers_imagedefiniton.json
+    # Note: TODO:
+        # CodeCommit Repo Name: simpleApache
+        # CodeBuild Policy: AM_CICDECRECS_CodeDeployPolicy
+        # CodeBuild Role: AM_CICDECRECS_CodeDeployRole
+        # CodeBuild Project: AM_CICDECRECS_CodeBuild    
+        # ECR Name: cicdwith-ecr-ecs-ecrrepository
+        # ECR URI: 791309171132.dkr.ecr.ap-south-1.amazonaws.com/cicdwith-ecr-ecs-ecrrepository
+        # Docker Image Name: 'cicdwith-ecr-ecs-containers_simpleApachecontainer' (Name of your choice)
+        # ECS Cluster Name: ' cicdwith-ecr-ecs-ecs-cluster'
+        # ECS Task Definition Name: 'am-cicd-task-fargate'
+        # ECS Service Name: 'am-cicd-service-fargate'
+        # ECS Task Definition Name: amecswithfargate-ecs-taskdefinition  (amecswithec2-ecs-taskdefinition)
+        # BuildSpec.yml - Image Definition File:  cicdwith-ecr-ecs-containers_imagedefiniton.json
 
-# Steps: 
   # Part A: CodeCommit
     # Add New User - Assign Two permissions - 'AdministrativeAccess' & 'AWSCodeCommitPowerUsers'
     # Create Repository 'simpleApache' in Code Commit (Thru Console) 
@@ -149,18 +150,7 @@ Note: TODO:
             # This will trigger CodePipleline, all three section 'Source, Build & Deploy', showing new build Process
             # Once Deployment is Complete - Follow same step as just above to find new content.
             
-# This is done finally --------------------------------------------
-
-
-  
-  
-
-
-
-
-    
-
-                  
+                 
 # Source Repo: 
     Source : Youtube: https://youtu.be/JzsSjcyN3MI 
     AWS Docs: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
