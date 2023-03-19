@@ -1,7 +1,6 @@
 Ref: https://docs.docker.com/compose/gettingstarted/
 
 Details about Dockerfile: 
-
   - Build an image starting with the Python 3.7 image.
   - Set the working directory to /code.
   - Set environment variables used by the flask command.
