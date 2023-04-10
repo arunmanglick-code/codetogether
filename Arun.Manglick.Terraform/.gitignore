@@ -2,3 +2,4 @@ node_modules/
 Arun.Manglick.Terraform/03_Modules/modules/.terraform/providers/registry.terraform.io/hashicorp/aws/3.39.0/windows_amd64/terraform-provider-aws_v3.39.0_x5.exe
 Arun.Manglick.Terraform/02_EC2/.terraform/providers/registry.terraform.io/hashicorp/aws/3.39.0/windows_amd64/terraform-provider-aws_v3.39.0_x5.exe
 Arun.Manglick.Terraform/01_App/.terraform/providers/registry.terraform.io/hashicorp/aws/3.36.0/windows_amd64/terraform-provider-aws_v3.36.0_x5.exe
+*.exe
