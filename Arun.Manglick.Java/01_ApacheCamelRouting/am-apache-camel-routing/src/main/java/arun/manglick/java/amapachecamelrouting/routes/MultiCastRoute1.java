@@ -8,12 +8,27 @@ import org.springframework.stereotype.Component;
 public class MultiCastRoute1 extends RouteBuilder {
     @Override
     public void configure() throws Exception {
+        onException(NullPointerException.class)
+//                .log("Received NullPointerException in MultiCastRoute1")
+                .redeliveryDelay(1000)
+                .maximumRedeliveries(3)
+                .log("Retried Processing 3 Times In MultiCastRoute1 Before Raising Exception")
+                .process(exchange -> {
+                    Message message = exchange.getIn();
+                    System.out.println("Process NullPointerException in MultiCastRoute1");
+                    System.out.println("Print Header: " + message.getHeader("channelName"));
+                 }).handled(true);
+
+        onException(Exception.class)
+                .log("Received Generic Exception in MultiCastRoute1");
+
         from("direct://multiCastRoute1")
                 .log("Enter Inside Multicast Child Route 1")
                 .process(exchange -> {
                     Message message = exchange.getIn();
                     System.out.println("Inside MultiCastRoute1 Processor");
                     System.out.println("Print Header: " + message.getHeader("channelName"));
+                    throw new NullPointerException("Exception Raised from MultiCastRoute1");
                 })
                 .end();
     }
