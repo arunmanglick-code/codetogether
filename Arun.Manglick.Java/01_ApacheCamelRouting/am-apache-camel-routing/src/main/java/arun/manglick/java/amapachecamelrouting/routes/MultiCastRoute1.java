@@ -24,6 +24,7 @@ public class MultiCastRoute1 extends RouteBuilder {
 
         from("direct://multiCastRoute1")
                 .log("Enter Inside Multicast Child Route 1")
+                .errorHandler(noErrorHandler())     // This is used when you want exception to be handled in parent route
                 .process(exchange -> {
                     Message message = exchange.getIn();
                     System.out.println("Inside MultiCastRoute1 Processor");
