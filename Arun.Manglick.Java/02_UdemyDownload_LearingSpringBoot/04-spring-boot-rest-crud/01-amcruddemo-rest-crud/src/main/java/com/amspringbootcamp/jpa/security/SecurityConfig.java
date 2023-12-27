@@ -19,7 +19,16 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsManager userDetailsManager(DataSource dataSource){
-        return new JdbcUserDetailsManager(dataSource);
+        JdbcUserDetailsManager theUserDetailsManager = new JdbcUserDetailsManager(dataSource);
+
+        /* Below code is required in case you want to use your custom tables instead of default 'users' and 'authorities'
+        theUserDetailsManager
+                .setUsersByUsernameQuery("select user_id, pw, active from members where user_id=?");
+        theUserDetailsManager
+                .setAuthoritiesByUsernameQuery("select user_id, role from roles where user_id=?");
+        */
+
+        return theUserDetailsManager;
     }
 
 //    @Bean
