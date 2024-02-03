@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>App Health</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .failed {
+            color:red;
+            }
+         .logged {
+            color:green;
+            }
+    </style>
+</head>
+<body>
+    <p th:text="'Login Here User'" class="funny"></p>
+    <div class="logged" th:if="${param.logout}">
+        <b><i>You have been logged out.</i></b>
+        <br>
+    </div>
+
+    <div class="failed" th:if="${param.error}">
+        <i>Sorry! Invalid Username & Password!</i>
+    </div>
+
+    <form action="#" th:action="@{/authenticateTheUser}" method="POST">
+        <p>
+            User name: <input type="text" name="username" />
+        </p>
+        <p>
+            Password: <input type="password" name="password" />
+        </p>
+        <input type="submit" value="Login" />
+    </form>
+</body>
+</html>

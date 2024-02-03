@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Process Onboarding!!</title>
+</head>
+<body>
+    Process Onboarding for Student Completed: <span th:text="${student.firstName} + ' ' +  ${student.lastName}"></span>
+    <br>
+    Student Country: <span th:text="${student.country}"></span>
+    <br>
+    Student Language: <span th:text="${student.favoriteLanguage}"></span>
+    <br>
+    Student Operating System: <span th:text="${student.favoriteOperatingSystems}"></span>
+  </body>
+</html>

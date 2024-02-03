@@ -56,19 +56,55 @@ public class SecurityConfig {
 //        return new InMemoryUserDetailsManager(user1, user2, user3);
 //    }
 
+    // Section 5
+//    @Bean
+//    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+//        http.authorizeHttpRequests(config ->
+//                config
+//                        .requestMatchers(HttpMethod.GET, "/actuator/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.GET, "/mvc/security/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.POST, "/mvc/security/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.GET, "/mvc/student/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.POST, "/mvc/student/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.GET, "/mvc/employee/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.POST, "/mvc/employee/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.POST, "/error/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.GET, "/mvc/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.GET, "/static/*").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.GET, "/amEmployeeRest/employees").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.GET, "/amEmployeeRest/employees/**").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.POST, "/amEmployeeRest/employees").hasRole("MANAGER")
+//                        .requestMatchers(HttpMethod.PUT, "/amEmployeeRest/employees").hasRole("MANAGER")
+//                        .requestMatchers(HttpMethod.DELETE, "/amEmployeeRest/employees/**").hasRole("ADMIN")
+//                        .requestMatchers(HttpMethod.GET, "/amEmployeeRestSpringJPA/employees").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.GET, "/amEmployeeRestSpringJPA/employees/**").hasRole("EMPLOYEE")
+//                        .requestMatchers(HttpMethod.POST, "/amEmployeeRestSpringJPA/employees").hasRole("MANAGER")
+//                        .requestMatchers(HttpMethod.PUT, "/amEmployeeRestSpringJPA/employees").hasRole("MANAGER")
+//                        .requestMatchers(HttpMethod.DELETE, "/amEmployeeRestSpringJPA/employees/**").hasRole("ADMIN"));
+//
+//        // use HTTP Basic authentication
+//        http.httpBasic(Customizer.withDefaults());
+//        http.csrf(csrf -> csrf.disable());
+//        return http.build();
+//    }
+
+    // Section 8
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(config ->
                 config
-                        .requestMatchers(HttpMethod.GET, "/amEmployeeRest/employees").hasRole("EMPLOYEE")
-                        .requestMatchers(HttpMethod.GET, "/amEmployeeRest/employees/**").hasRole("EMPLOYEE")
-                        .requestMatchers(HttpMethod.POST, "/amEmployeeRest/employees").hasRole("MANAGER")
-                        .requestMatchers(HttpMethod.PUT, "/amEmployeeRest/employees").hasRole("MANAGER")
-                        .requestMatchers(HttpMethod.DELETE, "/amEmployeeRest/employees/**").hasRole("ADMIN"));
-
-        // use HTTP Basic authentication
-        http.httpBasic(Customizer.withDefaults());
-        http.csrf(csrf -> csrf.disable());
+                        .requestMatchers(HttpMethod.GET, "/static/*").hasRole("EMPLOYEE")
+                        .requestMatchers(HttpMethod.GET, "/mvc/employee/*").hasRole("EMPLOYEE")
+                        .anyRequest().authenticated()
+                )
+                .formLogin(form ->
+                        form
+                                .loginPage("/login")
+                                .loginProcessingUrl("/authenticateTheUser")
+                                .permitAll()
+                )
+                .logout(logout -> logout.permitAll())
+                .exceptionHandling(config -> config.accessDeniedPage("/access-denied"));
         return http.build();
     }
 }

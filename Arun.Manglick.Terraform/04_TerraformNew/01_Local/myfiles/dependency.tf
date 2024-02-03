@@ -4,13 +4,13 @@ resource "local_file" "pet" {
 }
 
 resource "local_file" "petGraph" {
-  filename = "/root/petsGraph.txt"
-  content = "My favorite pet is ${random_pet.my-pet.id}"
+  filename   = "/root/petsGraph.txt"
+  content    = "My favorite pet is ${random_pet.my-pet.id}"
   depends_on = [random_pet.my-pet]
 }
 
 resource "random_pet" "my-pet" {
-  prefix = "Mr."
+  prefix    = "Mr."
   separator = "."
-  length = "1"
+  length    = "1"
 }

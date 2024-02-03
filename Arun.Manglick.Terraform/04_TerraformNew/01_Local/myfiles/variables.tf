@@ -1,6 +1,6 @@
 variable "filename" {
   default = "/root/petsVars.txt"
-  type = string
+  type    = string
 }
 
 variable "separator" {
@@ -8,14 +8,14 @@ variable "separator" {
 }
 
 variable "length" {
-  default ="1"
+  default = "1"
 }
 
 variable "content" {
-  type = map
+  type = map(any)
   default = {
     "statement1" = "We love more pets!"
     "statement2" = "We love animals!"
-    }
+  }
   description = "the path of local"
 }
