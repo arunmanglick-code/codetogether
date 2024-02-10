@@ -16,13 +16,6 @@ public class JpaApplication {
         SpringApplication.run(JpaApplication.class, args);
     }
 
-//    @Bean
-//    public CommandLineRunner commandLineRunner(String[] args) {
-//        return runner -> {
-//            System.out.println("AM Welcome to JPA");
-//        };
-//    }
-
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO objStudentDao) {
         return runner -> {
