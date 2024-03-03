@@ -1,0 +1,82 @@
+# Arun Manglick CMS OpenAPI
+openapi: 3.0.0
+info:
+  title: Arun Manglick Customer OpenAPI
+  version: 2024-03
+externalDocs:
+  description: This is for Customer OpenAPI
+  url: https://localhost:8080
+servers:
+  - url: https://localhost:8080
+tags:
+  - name: Customer
+    description: Customer API
+paths:
+  /customer:
+    summary: Create Customer
+    post:
+      tags:
+        - Customer
+      summary: Create Customer
+      operationId: createCustomer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Customer"
+      responses:
+        200:
+          description: OK Customer Created
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/CustomerFullData'
+        400:
+          description: Client Side Error
+  /customer/{customerId}:
+    summary: Get Customer
+    get:
+      tags:
+        - Customer
+      summary: Get Customer
+      operationId: getCustomer
+      parameters:
+        - name: customerId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        200:
+          description: OK Customer Found
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/CustomerFullData'
+        400:
+          description: Customer NOT FOUND
+
+
+components:
+  schemas:
+    Customer:
+      type: object
+      properties:
+        firstName:
+          type: string
+          description: First name of the customer
+        lastName:
+          type: string
+          description: Last name of the customer
+    CustomerFullData:
+      type: object
+      properties:
+        customerId:
+          type: integer
+          description: The ID of the customer
+          format: int64
+        customer:
+          $ref: "#/components/schemas/Customer"
+      description: Full data of the customer

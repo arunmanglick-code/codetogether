@@ -1,6 +1,11 @@
 package com.amspringbootcamp.jpa.entity;
-
 import jakarta.persistence.*;
+
+// Annotate class as Entity and Map To DB Table
+// Define Fields and Annotate them with DB Column Name
+// Create Constructor
+// Generate Getter/Setter Methods
+// Generate toString Method
 
 @Entity
 @Table(name = "student")

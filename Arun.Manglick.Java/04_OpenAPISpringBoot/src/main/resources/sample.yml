@@ -1,0 +1,33 @@
+# Arun Manglick CMS OpenAPI
+openapi: 3.0.0
+info:
+  title: Arun Manglick CMS OpenAPI
+  version: 2024-03
+externalDocs:
+  description: This is more info about Weather OpenAPI
+  url: https://dummyjson.com
+servers:
+  - url: https://dummyjson.com
+  - url: https://dummyjson.com/{id}
+    variables:
+      id:
+        enum:
+          - "1"
+          - "2"
+        default: "1"
+tags:
+  - name: Product
+    description: Product API
+
+paths:
+  /products:
+    summary: Details about Products
+    get:
+      tags:
+        - Product
+      summary: Get Products Detail Summary
+      responses:
+        200:
+          description: Read Products List
+        400:
+          description: Client Side Error

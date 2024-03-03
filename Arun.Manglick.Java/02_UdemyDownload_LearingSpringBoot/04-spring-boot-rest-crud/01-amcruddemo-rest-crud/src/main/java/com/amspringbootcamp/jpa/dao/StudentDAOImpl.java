@@ -1,6 +1,4 @@
 package com.amspringbootcamp.jpa.dao;
-
-
 import com.amspringbootcamp.jpa.entity.Student;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
@@ -9,6 +7,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
+// Define field for Entity Manager
+// Inject Entity Manager using Constructor Injection
+// Implement Interface Methods
 
 @Repository
 public class StudentDAOImpl implements StudentDAO{
@@ -22,41 +24,45 @@ public class StudentDAOImpl implements StudentDAO{
         this.entityManager = entityManager;
     }
 
+    // --------------------------------------------------------------
     // Implement SaveStudent Method
     @Override
     @Transactional
     public void saveStudent(Student objStudent) {
         entityManager.persist(objStudent);
     }
-
     @Override
     public Student findStudentById(Integer id) {
         return entityManager.find(Student.class, id);
     }
 
+    // --------------------------------------------------------------
     @Override
     @Transactional
     public List<Student> getAllStudents(String query) {
         TypedQuery<Student> theQuery = entityManager.createQuery(query, Student.class);
         return theQuery.getResultList();
     }
-
     @Override
     public List<Student> getAllStudentsbyLastName(String query, String theLastName) {
         TypedQuery<Student> theQuery = entityManager.createQuery(query + "=:theData", Student.class);
         theQuery.setParameter("theData", theLastName);
         return theQuery.getResultList();
     }
-    @Override
-    public int UpdateAllStudents(String query){
-        int rowsUpdated  = entityManager.createQuery(query).executeUpdate();
-        return rowsUpdated;
-    }
+
+    // --------------------------------------------------------------
     @Override
     @Transactional
     public void updateStudent(Student objStudent) {
         entityManager.merge(objStudent);
     }
+    @Override
+    public int UpdateAllStudents(String query){
+        int rowsUpdated  = entityManager.createQuery(query).executeUpdate();
+        return rowsUpdated;
+    }
+
+    // --------------------------------------------------------------
     @Override
     @Transactional
     public void deleteStudent(Integer id) {
@@ -73,5 +79,4 @@ public class StudentDAOImpl implements StudentDAO{
         int rowsDeleted  = entityManager.createQuery("Delete from Student").executeUpdate();
         return rowsDeleted;
     }
-
 }

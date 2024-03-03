@@ -23,6 +23,7 @@ public class JpaApplication {
 //        };
 //    }
 
+    // Executes after the beans have been loaded
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO objStudentDao) {
         return runner -> {
