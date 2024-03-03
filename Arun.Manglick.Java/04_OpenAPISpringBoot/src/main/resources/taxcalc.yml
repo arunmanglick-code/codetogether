@@ -1,0 +1,728 @@
+---
+openapi: 3.0.0
+info:
+  title: Calculate Taxes
+  version: 2023-07
+paths:
+  /#{config_url}:
+    post:
+      parameters:
+        - in: path
+          name: config_url
+          description: >
+            The tax_calculation url defined using the Shopify cart_line
+          schema:
+            type: string
+          required: true
+        - in: header
+          name: X-Shopify-Shop-Domain
+          description: >
+            The permanent domain of the merchant's shop. Can be used to identify which shop is initiating the tax calculation.
+          schema:
+            type: string
+          required: true
+        - in: header
+          name: X-Shopify-Request-Id
+          description: >
+            The unique request ID used to track specific requests for troubleshooting purposes.
+          schema:
+            type: string
+          required: true
+        - in: header
+          name: X-Shopify-Hmac-SHA256
+          description: >
+            Token that is generated using HMAC algorithm with a SHA-256 hash of the request body encrypted with the secret of the app.
+          schema:
+            type: string
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/request_body"
+            example:
+              idempotent_key: bbf8e3a2485c1a07c5c964f59e651eb0
+              request:
+                id: b1626615b389d34d21602cf8f81a930f
+                datetime_created_utc: 2022-12-13T05:43:12.000Z
+                tax_included: false
+              cart:
+                buyer_identity:
+                  customer:
+                    id: 5939357024299
+                  tax_exempt: false
+                billing_address:
+                  address1: 123 Sweet Street
+                  address2: Suite B
+                  city: Montreal
+                  province: Quebec
+                  province_code: QC
+                  country: Canada
+                  country_code: CA
+                  zip: H2Z0B3
+                delivery_groups:
+                  - id: 56H1FGg6d16DFSD16gfdg
+                    selected_delivery_option:
+                      subtotal_amount:
+                        amount: "5.50"
+                        currency_code: CAD
+                      total_amount:
+                        amount: "5.00"
+                        currency_code: CAD
+                      delivery_method_type: SHIPPING
+                    origin_address:
+                      address1: 123 Sweet Street
+                      address2:
+                      city: Toronto
+                      province: Ontario
+                      province_code: "ON"
+                      country: Canada
+                      country_code: CA
+                      zip: M1W1T3
+                    delivery_address:
+                      address1: 123 Sweet Street
+                      address2: Suite B
+                      city: Montreal
+                      province: Quebec
+                      province_code: QC
+                      country: Canada
+                      country_code: CA
+                      zip: H2Z0B3
+                    cart_lines:
+                      - id: gid://shopify/LineItem/8BLFxjEHP5PkA1kNsb6iRKX9
+                        merchandise:
+                          id: gid://shopify/ProductVariant/087g7G07tg0GT00gNh89hgAX
+                          type: PRODUCT_VARIANT
+                          sku: FF0000
+                          product:
+                            id: gid://shopify/Product/6LLFxjEHP5PbA4kNsb6i06CD
+                            handle: wooden-bowl
+                            is_gift_card: false
+                            metafields:
+                              - namespace: vertex
+                                key: DIMENSIONS
+                                type: list.dimension
+                                value: '"[{\"value\":3.0,\"unit\":\"m\"},{\"value\":4.0,\"unit\":\"mm\"},{\"value\":20.0,\"unit\":\"mm\"}]"'
+                              - namespace: vertex
+                                key: PRODUCT_CODE
+                                type: single_line_text_field
+                                value: PO123
+                          requires_shipping: true
+                          weight: 4.6
+                          weight_unit: POUNDS
+                          tax_exempt: false
+                          metafields:
+                            - namespace: vertex
+                              key: PRODUCT_CODE
+                              type: single_line_text_field
+                              value: PV123
+                        quantity: 2
+                        cost:
+                          amount_per_quantity:
+                            amount: "26.00"
+                            currency_code: CAD
+                          subtotal_amount:
+                            amount: "52.00"
+                            currency_code: CAD
+                          total_amount:
+                            amount: "52.00"
+                            currency_code: CAD
+                  - id: 8734yhtfhjeb4387GHygRD5
+                    selected_delivery_option:
+                      subtotal_amount:
+                        amount: "0.00"
+                        currency_code: CAD
+                      total_amount:
+                        amount: "0.00"
+                        currency_code: CAD
+                      delivery_method_type: "NONE"
+                    origin_address:
+                      address1: 123 Sweet Street
+                      address2:
+                      city: Toronto
+                      province: Ontario
+                      province_code: "ON"
+                      country: Canada
+                      country_code: CA
+                      zip: M1W 1T3
+                    delivery_address:
+                      address1: 123 Sweet Street
+                      address2: Suite B
+                      city: Montreal
+                      province: Quebec
+                      province_code: QC
+                      country: Canada
+                      country_code: CA
+                      zip: H2Z 0B3
+                    cart_lines:
+                      - id: gid://shopify/LineItem/0GTRxjEHP5PkA1kNsb0iPKX7
+                        merchandise:
+                          title: Custom Product Thing
+                          type: CUSTOM_PRODUCT
+                          is_gift_card: false
+                          requires_shipping: false
+                          tax_exempt: false
+                        quantity: 1
+                        cost:
+                          amount_per_quantity:
+                            amount: "20.00"
+                            currency_code: CAD
+                          subtotal_amount:
+                            amount: "20.00"
+                            currency_code: CAD
+                          total_amount:
+                            amount: "20.00"
+                            currency_code: CAD
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/response"
+              example:
+                idempotent_key: bbf8e3a2485c1a07c5c964f59e651eb0
+                currency: CAD
+                delivery_group_taxes:
+                  - id: 56H1FGg6d16DFSD16gfdg
+                    tax_lines:
+                      - line_id: 5487357024222
+                        tax_id: 897956
+                        calculated_tax: "0.25"
+                        calculated_tax_refundable: "0.25"
+                        amount_exempt: "0.00"
+                        amount_taxable: "5.00"
+                        amount_non_taxable: "0.00"
+                      - line_id: 5487357024222
+                        tax_id: 65484
+                        calculated_tax: "0.5"
+                        calculated_tax_refundable: "0.5"
+                        amount_exempt: "0.00"
+                        amount_taxable: "5.00"
+                        amount_non_taxable: "0.00"
+                      - line_id: gid://shopify/LineItem/8BLFxjEHP5PkA1kNsb6iRKX9
+                        tax_id: 897956
+                        calculated_tax: "2.6"
+                        calculated_tax_refundable: "2.6"
+                        amount_exempt: "0.00"
+                        amount_taxable: "52.00"
+                        amount_non_taxable: "0.00"
+                      - line_id: gid://shopify/LineItem/8BLFxjEHP5PkA1kNsb6iRKX9
+                        tax_id: 65484
+                        calculated_tax: "5.19"
+                        calculated_tax_refundable: "5.19"
+                        amount_exempt: "0.00"
+                        amount_taxable: "52.00"
+                        amount_non_taxable: "0.00"
+                  - id: 8734yhtfhjeb4387GHygRD5
+                    tax_lines:
+                      - line_id: gid://shopify/LineItem/0GTRxjEHP5PkA1kNsb0iPKX7
+                        tax_id: 897956
+                        calculated_tax: "1.00"
+                        calculated_tax_refundable: "1.00"
+                        amount_exempt: "20.00"
+                        amount_taxable: "0.00"
+                        amount_non_taxable: "0.00"
+                      - line_id: gid://shopify/LineItem/0GTRxjEHP5PkA1kNsb0iPKX7
+                        tax_id: 65484
+                        calculated_tax: "2.00"
+                        calculated_tax_refundable: "2.00"
+                        amount_exempt: "20.00"
+                        amount_taxable: "0.00"
+                        amount_non_taxable: "0.00"
+                taxes:
+                  - id: 897956
+                    title: Canada GST
+                    rate:
+                      type: SALES_TAX
+                      structure: STANDARD
+                      amount: "0.05"
+                    source:
+                      tax_registration:
+                        code: 14375638567
+                        registration_number: CA478364587645908
+                      tax_authority:
+                        code: CA
+                      tax_jurisdiction:
+                        name: Canada
+                        type: COUNTRY
+                      reporting_code: GST
+                  - id: 65484
+                    title: Quebec QST
+                    rate:
+                      type: SALES_TAX
+                      structure: STANDARD
+                      amount: "0.09975"
+                    source:
+                      tax_registration:
+                        code: 2435345665
+                        registration_number: QC98743967
+                      tax_authority:
+                        code: QC
+                      tax_jurisdiction:
+                        name: Quebec
+                        type: PROVINCE
+                        reporting_code: "QST123"
+                      reporting_code: QST
+components:
+  schemas:
+    request_body:
+      type: object
+      properties:
+        idempotent_key:
+          type: string
+          description: >
+            Unique identifier for the tax calculation attempt.
+            It can be assumed that requests with a given ID are
+            identical to previously received requests with the same ID
+          example: bbf8e3a2485c1a07c5c964f59e651eb0
+        request:
+          $ref: "#/components/schemas/request"
+        cart:
+          $ref: "#/components/schemas/cart"
+      required:
+        - idempotent_key
+        - request
+        - cart
+    request:
+      type: object
+      properties:
+        datetime_created_utc:
+          type: string
+          format: ISO_8601
+          example: 2023-02-21T14:38:12.000Z
+        tax_included:
+          type: boolean
+          example: false
+    cart:
+      type: object
+      properties:
+        buyer_identity:
+          $ref: "#/components/schemas/buyer_identity"
+        billing_address:
+          $ref: "#/components/schemas/mailing_address"
+        delivery_groups:
+          items:
+            $ref: "#/components/schemas/cart_delivery_group"
+      required:
+        - delivery_groups
+    cart_delivery_group:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 56H1FGg6d16DFSD16gfdg
+        selected_delivery_method:
+          $ref: "#/components/schemas/cart_delivery_option"
+        origin_address:
+          $ref: "#/components/schemas/mailing_address"
+        delivery_address:
+          $ref: "#/components/schemas/mailing_address"
+        cart_lines:
+          items:
+            $ref: "#/components/schemas/cart_line"
+      required:
+        - id
+        - selected_delivery_method
+        - mailing_address
+        - cart_lines
+    cart_delivery_option:
+      type: object
+      properties:
+        subtotal_amount:
+          $ref: "#/components/schemas/money"
+        total_amount:
+          $ref: "#/components/schemas/money"
+        delivery_method_type:
+          $ref: "#/components/schemas/delivery_method"
+      required:
+        - subtotal_amount
+        - total_amount
+        - delivery_method_type
+    cart_line:
+      type: object
+      properties:
+        id:
+          type: string
+          example: gid://shopify/LineItem/8BLFxjEHP5PkA1kNsb6iRKX9
+        merchandise:
+          oneOf:
+            - $ref: "#/components/schemas/custom_product"
+            - $ref: "#/components/schemas/product_variant"
+        quantity:
+          type: integer
+          minimum: 1
+          example: 5
+        cost:
+          $ref: "#/components/schemas/cart_line_cost"
+      required:
+        - id
+        - merchandise
+        - quantity
+        - cost
+    cart_line_cost:
+      type: object
+      properties:
+        amount_per_quantity:
+          $ref: "#/components/schemas/money"
+        subtotal_amount:
+          $ref: "#/components/schemas/money"
+        total_amount:
+          $ref: "#/components/schemas/money"
+      required:
+        - amount_per_quantity
+        - subtotal_amount
+        - total_amount
+    custom_product:
+      type: object
+      properties:
+        title:
+          type: string
+          example: "Wooden Bowl (Custom)"
+        type:
+          $ref: "#/components/schemas/merchandise_type"
+        is_gift_card:
+          type: boolean
+          example: false
+        requires_shipping:
+          type: boolean
+          example: true
+        weight:
+          type: number
+          minimum: 0
+          example: 12.5
+        weight_unit:
+          $ref: "#/components/schemas/weight_unit"
+        tax_exempt:
+          type: boolean
+          example: false
+      required:
+        - is_gift_card
+        - tax_exempt
+    product_variant:
+      type: object
+      properties:
+        id:
+          type: string
+          example: gid://Shopify/ProductVariant/1
+        type:
+          $ref: "#/components/schemas/merchandise_type"
+        sku:
+          type: string
+          example: XYZ12345
+        product:
+          $ref: "#/components/schemas/product"
+        requires_shipping:
+          type: boolean
+          example: true
+        weight:
+          type: number
+          example: 12.5
+        weight_unit:
+          $ref: "#/components/schemas/weight_unit"
+        tax_exempt:
+          type: boolean
+          example: false
+        metafields:
+          type: array
+          items:
+            $ref: "#/components/schemas/metafield"
+      required:
+        - id
+        - product
+        - metafields
+        - tax_exempt
+        - requires_shipping
+    product:
+      type: object
+      properties:
+        id:
+          type: string
+          example: gid://Shopify/Product/2
+        handle:
+          type: string
+          example: crazy-pants
+        is_gift_card:
+          type: boolean
+          example: false
+        metafields:
+          type: array
+          items:
+            $ref: "#/components/schemas/metafield"
+      required:
+        - id
+        - is_gift_card
+        - handle
+        - metafields
+    metafield:
+      type: object
+      properties:
+        namespace:
+          type: string
+          example: vertex
+        key:
+          type: string
+          example: tax_code
+        type:
+          type: string
+          enum: [boolean, color, date, date_time, dimension, json, money, multi_line_text_field, single_line_text_field, rich_text_field, rating, number_decimal, number_integer, url, volume, weight, collection_reference, file_reference, metaobject_reference, mixed_reference, page_reference, product_reference, variant_reference, list.collection_reference, list.color, list.date, list.date_time, list.dimension, list.file_reference, list.metaobject_reference, list.mixed_reference, list.number_integer, list.number_decimal, list.page_reference, list.product_reference, list.rating, list.single_line_text_field, list.url, list.variant_reference, list.volume, list.weight]
+        value:
+          anyOf:
+            - type: string
+            - type: number
+            - type: boolean
+      required:
+        - key
+        - namespace
+        - type
+    weight_unit:
+      type: string
+      enum: [GRAMS, KILOGRAMS, OUNCES, POUNDS]
+      example: GRAMS
+    buyer_identity:
+      type: object
+      properties:
+        customer:
+          $ref: "#/components/schemas/customer"
+        purchasing_company:
+          $ref: "#/components/schemas/purchasing_company"
+        tax_exempt:
+          type: boolean
+      required:
+        - tax_exempt
+    customer:
+      type: object
+      properties:
+        id:
+          type: string
+          example: gid://Shopify/Customer/1234
+      required:
+        - id
+    purchasing_company:
+      type: object
+      properties:
+        company:
+          type: object
+          properties:
+            id:
+              type: string
+              example: gid://Shopify/Company/1
+            vat_number:
+              type: string
+              example: ATU99999999
+          required:
+            - id
+      required:
+        - company
+    mailing_address:
+      properties:
+        address1:
+          type: string
+          example: 620 King St W
+        address2:
+          type: string
+          example: Unit 5
+        city:
+          type: string
+          example: Toronto
+        province:
+          type: string
+          example: Ontario
+        province_code:
+          type: string
+          minLength: 2
+          maxLength: 3
+          example: "ON"
+        country:
+          type: string
+          example: Canada
+        country_code:
+          type: string
+          minLength: 2
+          maxLength: 3
+          example: CA
+        zip:
+          type: string
+          example: M5V1M7
+      required:
+        - country_code
+        - country
+    money:
+      type: object
+      properties:
+        amount:
+          $ref: "#/components/schemas/decimal"
+        currency_code:
+          type: string
+          minLength: 3
+          maxLength: 3
+          example: USD
+    response:
+      type: object
+      properties:
+        idempotent_key:
+          type: string
+          example: bbf8e3a2485c1a07c5c964f59e651eb0
+        currency:
+          type: string
+          example: USD
+        delivery_group_taxes:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                example: 56H1FGg6d16DFSD16gfdg
+              tax_lines:
+                type: array
+                items:
+                  $ref: "#/components/schemas/tax_line"
+            required:
+              - id
+              - tax_lines
+        taxes:
+          type: array
+          items:
+            $ref: "#/components/schemas/tax"
+        errors:
+          type: array
+          items:
+            $ref: "#/components/schemas/error"
+      required:
+        - id
+        - currency
+    error:
+      type: object
+      properties:
+        code:
+          type: string
+          enum: [MALFORMED_ADDRESS, BAD_DATA, MALFORMED_PAYLOAD]
+          example: MALFORMED_ADDRESS
+        message:
+          type: string
+          example: Address is not real
+    tax_line:
+      type: object
+      properties:
+        line_id:
+          type: string
+          example: 5487357024222
+        tax_id:
+          type: string
+          example: 897956
+        calculated_tax:
+          $ref: "#/components/schemas/decimal"
+        calculated_tax_refundable:
+          $ref: "#/components/schemas/decimal"
+        amount_exempt:
+          $ref: "#/components/schemas/decimal"
+        amount_taxable:
+          $ref: "#/components/schemas/decimal"
+        amount_non_taxable:
+          $ref: "#/components/schemas/decimal"
+      required:
+        - line_id
+        - tax_id
+        - calculated_tax
+        - calculated_tax_refundable
+        - amount_exempt
+        - amount_taxable
+        - amount_non_taxable
+    tax:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 897956
+        title:
+          type: string
+          example: Canada GST
+        rate:
+          $ref: "#/components/schemas/tax_rate"
+        source:
+          $ref: "#/components/schemas/tax_line_source"
+      required:
+        - id
+        - title
+        - rate
+        - source
+    decimal:
+      type: string
+      pattern: '^\d+(\.\d+)?$'
+      minLength: 1
+      example: "12.5"
+    tax_rate:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [USE_TAX, SALES_TAX, EXCISE_TAX, FEE, VAT, UNKNOWN]
+        structure:
+          type: string
+          enum: [STANDARD, FLAT, QUANTITY]
+        amount:
+          $ref: "#/components/schemas/decimal"
+      required:
+        - type
+        - structure
+        - amount
+    tax_line_source:
+      type: object
+      properties:
+        tax_registration:
+          type: object
+          properties:
+            code:
+              type: string
+              example: US-NY
+            registration_number:
+              type: string
+              example: "1234"
+          required:
+            - code
+            - registration_number
+        tax_authority:
+          type: object
+          properties:
+            code:
+              type: string
+              example: US-NY
+          required:
+            - code
+        tax_jurisdiction:
+          $ref: "#/components/schemas/tax_jurisdiction"
+        reporting_code:
+          type: string
+          example: "12345"
+      required:
+        - tax_registration
+        - tax_authority
+        - tax_jurisdiction
+    delivery_method:
+      type: string
+      enum: [LOCAL, NONE, PICKUP_POINT, RETAIL, SHIPPING, SHIPPING_AND_HANDLING]
+      example: SHIPPING
+    merchandise_type:
+      type: string
+      enum: [PRODUCT_VARIANT, CUSTOM_PRODUCT]
+      example: PRODUCT_VARIANT
+    tax_jurisdiction:
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/tax_jurisdiction_type"
+        name:
+          type: string
+          example: "New York City"
+        reporting_code:
+          type: string
+          example: "12345"
+      required:
+        - type
+        - name
+    tax_jurisdiction_type:
+      type: string
+      enum: [APO, BOROUGH, CITY, COUNTRY, COUNTY, DISTRICT, FPO, LOCAL_IMPROVEMENT_DISTRICT, PARISH, PROVINCE, SPECIAL_PURPOSE_DISTRICT, STATE, TERRIROTY, TOWNSHIP, TRANSIT_DISTRICT, TRADE_BLOCK]
+      example: CITY
