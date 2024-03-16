@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: Arun Manglick CMS OpenAPI
+  version: 2024-03
+externalDocs:
+  description: This is more info about Weather
+  url: https://dummyjson.com
+servers:
+  - url: https://dummyjson.com
+  - url: https://dummyjson.com/{id}
+    variables:
+      port:
+        enum:
+          - "1"
+          - "2"
+        default: "1"
+tags:
+  - name: "Product"
+    description: Sample Product API
+paths:
+  /products:
+    summary: Product Summary
+    get:
+      tags:
+        - product
+      responses:
+        200:
+          description: Success
+        400:
+          description: Failure
+  

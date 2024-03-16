@@ -5,9 +5,9 @@ info:
   version: 2024-03
 externalDocs:
   description: This is for Customer OpenAPI
-  url: https://localhost:8080
+  url: http://localhost:8080
 servers:
-  - url: https://localhost:8080
+  - url: http://localhost:8080
 tags:
   - name: Customer
     description: Customer API
