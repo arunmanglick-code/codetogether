@@ -14,10 +14,11 @@
     <h3>List of Employees!!</h3>
     <table class="table table-bordered table-stripped">
         <thead class="table-dark">
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Update/Delete</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Update</th>
+            <th>Delete</th>
         </thead>
         <tbody>
         <tr th:each="objEmployee : ${employees}">
@@ -29,11 +30,15 @@
                    class="btn btn-info btn-sm">
                     Update
                 </a>
-                <a th:href="@{/mvc/employee/deleteEmployee(employeeId=${objEmployee.id})}"
-                   class="btn btn-info btn-sm">
-                    Delete
-                </a>
-
+<!--                <a th:href="@{/mvc/employee/deleteEmployee(employeeId=${objEmployee.id})}"-->
+<!--                   class="btn btn-info btn-sm">-->
+<!--                    Delete-->
+<!--                </a>-->
+            </td>
+            <td>
+                <form action="#" th:action="@{/mvc/employee/deleteEmployee(employeeId=${objEmployee.id})}" method="POST">
+                    <input type="submit" value="Delete" class="btn btn-info btn-sm" />
+                </form>
             </td>
         </tr>
         </tbody>

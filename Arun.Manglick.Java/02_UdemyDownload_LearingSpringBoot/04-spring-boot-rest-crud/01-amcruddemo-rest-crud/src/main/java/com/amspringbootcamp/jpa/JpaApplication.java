@@ -1,19 +1,28 @@
 package com.amspringbootcamp.jpa;
 
 import com.amspringbootcamp.jpa.dao.StudentDAO;
+import com.amspringbootcamp.jpa.entity.Employee;
 import com.amspringbootcamp.jpa.entity.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @SpringBootApplication
 public class JpaApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(JpaApplication.class, args);
+    }
+
+    // Added to implement Cache behavior
+    @Bean
+    public Map<String, List<Employee>> accountMap() {
+        return new HashMap<>();
     }
 
 //    @Bean
