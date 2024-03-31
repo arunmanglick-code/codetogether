@@ -1,21 +1,7 @@
-package com.amspringbootcamp.jpa.entity;
-import jakarta.persistence.*;
-
-import java.io.Serializable;
-
-// Annotate class as Entity and Map To DB Table
-// Define Fields and Annotate them with DB Column Name
-// Create Constructor
-// Generate Getter/Setter Methods
-// Generate toString Method
+package com.am.hazelcast.demo.entity;
 
 
-@Entity
-@Table(name = "Employee")
 public class Employee {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
@@ -60,22 +46,20 @@ public class Employee {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
-
-    public Employee(String firstName, String lastName, String email) {
+    public Employee(int id, String firstName, String lastName, String email) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
-    public Employee() {
+    @Override
+    public String toString() {
+        return "HEmployee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

@@ -3,6 +3,10 @@ package com.amspringbootcamp.jpa;
 import com.amspringbootcamp.jpa.dao.StudentDAO;
 import com.amspringbootcamp.jpa.entity.Employee;
 import com.amspringbootcamp.jpa.entity.Student;
+import com.hazelcast.config.Config;
+import com.hazelcast.config.ManagementCenterConfig;
+import com.hazelcast.core.Hazelcast;
+import com.hazelcast.core.HazelcastInstance;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,6 +28,23 @@ public class JpaApplication {
     public Map<String, List<Employee>> accountMap() {
         return new HashMap<>();
     }
+//
+//    @Bean
+//    public Config hazelCastConfig() {
+//        Config amConfig=new Config();
+//        ManagementCenterConfig mConfig = new ManagementCenterConfig();
+//        mConfig.setConsoleEnabled(true);
+//        return  amConfig;
+//    }
+//    @Bean
+//    public Map<String, List<Employee>> accountMap(HazelcastInstance hazelcastInstance) {
+//        return hazelcastInstance.getMap("accountMap");
+//    }
+//
+//    @Bean
+//    public HazelcastInstance hazelcastInstance(Config hazelCastConfig) {
+//        return Hazelcast.newHazelcastInstance(hazelCastConfig);
+//    }
 
 //    @Bean
 //    public CommandLineRunner commandLineRunner(String[] args) {

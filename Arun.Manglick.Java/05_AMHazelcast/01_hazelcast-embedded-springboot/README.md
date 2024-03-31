@@ -11,7 +11,10 @@ How to:
         - Defines ConcurrentMap
         - Add and Get Method to Cache (ConcurrentMap)
     - HazelResponse
-    - hazelcast.yaml - Hazelcast configuration (hazelcast.yaml) is placed in the src/main/resources/ directory.
+    - hazelcast.yaml - Hazelcast configuration (hazelcast.yaml) is placed in the src/main/resources/ directory
+      - Define Cluster Name:
+        - hazelcast:
+          cluster-name: am-hazelcast-cluster
 
  - Open Command Prompt
     - Build Package: mvn package
@@ -22,10 +25,10 @@ How to:
 
  - Check Hazelcast Cluster:
     - After both application instances are initialized, you should see that the Hazelcast cluster is formed:
-        Members {size:2, ver:2} [
-            Member [192.168.1.64]:5701 - 520aec3f-58a6-4fcb-a3c7-498dcf37d8ff
-            Member [192.168.1.64]:5702 - 5c03e467-d457-4847-b49a-745a335db557 this
-        ]
+          Members {size:2, ver:2} [
+              Member [192.168.1.72]:5701 - f36eca4a-935f-488e-9839-fa232bfd7a64
+              Member [192.168.1.72]:5702 - 89004f20-e2bc-4f45-9dda-04c71f73f2c4 this
+          ]
 
   - Testing:
        - Go to Postman
@@ -44,3 +47,18 @@ How to:
                 Output: {
                             "value": "amhazelcast"
                         }
+
+  - Hazelcast Management Center
+    - Download (V5.3.3) https://hazelcast.com/get-started/download/
+    - Unzip
+    - Command Prompt: hazelcast-management-center-5.3.3\bin\start.bat
+      - Output: Hazelcast Management Center successfully started at http://localhost:8080/
+    - Browse: http://localhost:8080/
+      - It'll take you to: http://localhost:8080/cluster-connections
+      - Press Add Cluster
+        - ClusterName: Same as defined in hazelcast.yaml (which is 'am-hazelcast-cluster')
+        - Member Addresses: Seperate addresses with commas: 127.0.0.1:5701, 127.0.0.1:5702, ...
+          - For this example: 192.168.1.72:5701, 192.168.1.72:5702
+      - Check Cluster-> Members (You'll find two members here)
+      - Check Storage-> Maps (You'll find items added in Hazelcast ConcurrentMap)
+      - 
