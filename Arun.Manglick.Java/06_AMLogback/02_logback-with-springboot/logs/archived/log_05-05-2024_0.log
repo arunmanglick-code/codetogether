@@ -1,0 +1,15 @@
+05-05-2024 10:23:58.080 [main] INFO  com.am.logback.Application.logStarting - Starting Application using Java 20.0.1 on PF2M40EB with PID 33340 (C:\Arun.Manglick\Arun.Manglick.PRJ\codetogether\Arun.Manglick.Java\06_AMLogback\02_logback-with-springboot\target\classes started by Arun.Manglick in C:\Arun.Manglick\Arun.Manglick.PRJ\codetogether\Arun.Manglick.Java\06_AMLogback\02_logback-with-springboot)
+05-05-2024 10:23:58.085 [main] INFO  com.am.logback.Application.logStartupProfileInfo - The following 1 profile is active: "dev"
+05-05-2024 10:23:58.970 [main] INFO  com.am.logback.Application.logStarted - Started Application in 1.868 seconds (JVM running for 2.545)
+05-05-2024 10:23:58.978 [main] INFO  com.am.logback.Application.main - AM Logback Example log from Application
+05-05-2024 10:27:21.704 [main] INFO  com.am.logback.Application.logStarting - Starting Application using Java 20.0.1 on PF2M40EB with PID 30312 (C:\Arun.Manglick\Arun.Manglick.PRJ\codetogether\Arun.Manglick.Java\06_AMLogback\02_logback-with-springboot\target\classes started by Arun.Manglick in C:\Arun.Manglick\Arun.Manglick.PRJ\codetogether\Arun.Manglick.Java\06_AMLogback\02_logback-with-springboot)
+05-05-2024 10:27:21.707 [main] INFO  com.am.logback.Application.logStartupProfileInfo - The following 1 profile is active: "dev"
+05-05-2024 10:27:22.138 [main] INFO  com.am.logback.Application.logStarted - Started Application in 0.855 seconds (JVM running for 1.206)
+05-05-2024 10:27:22.143 [main] INFO  com.am.logback.Application.main - AM Logback Example log from Application
+05-05-2024 10:27:30.743 [main] INFO  com.am.logback.Application.logStarting - Starting Application using Java 20.0.1 on PF2M40EB with PID 19316 (C:\Arun.Manglick\Arun.Manglick.PRJ\codetogether\Arun.Manglick.Java\06_AMLogback\02_logback-with-springboot\target\classes started by Arun.Manglick in C:\Arun.Manglick\Arun.Manglick.PRJ\codetogether\Arun.Manglick.Java\06_AMLogback\02_logback-with-springboot)
+05-05-2024 10:27:30.747 [main] INFO  com.am.logback.Application.logStartupProfileInfo - The following 1 profile is active: "dev"
+05-05-2024 10:27:31.478 [main] INFO  com.am.logback.Application.logStarted - Started Application in 1.316 seconds (JVM running for 1.611)
+05-05-2024 10:27:31.483 [main] INFO  com.am.logback.Application.main - AM Logback Example log from Application
+05-05-2024 10:27:37.778 [main] INFO  com.am.logback.Application.logStarting - Starting Application using Java 20.0.1 on PF2M40EB with PID 37744 (C:\Arun.Manglick\Arun.Manglick.PRJ\codetogether\Arun.Manglick.Java\06_AMLogback\02_logback-with-springboot\target\classes started by Arun.Manglick in C:\Arun.Manglick\Arun.Manglick.PRJ\codetogether\Arun.Manglick.Java\06_AMLogback\02_logback-with-springboot)
+05-05-2024 10:27:37.783 [main] INFO  com.am.logback.Application.logStartupProfileInfo - The following 1 profile is active: "dev"
+

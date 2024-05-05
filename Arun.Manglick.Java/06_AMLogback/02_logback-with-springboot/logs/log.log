@@ -1,0 +1,2 @@
+05-05-2024 10:32:25.975 [main] INFO  com.am.logback.Application.logStarted - Started Application in 1.607 seconds (JVM running for 2.127)
+05-05-2024 10:32:25.987 [main] INFO  com.am.logback.Application.main - AM Logback Example log from Application
