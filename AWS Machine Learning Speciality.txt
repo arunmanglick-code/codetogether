@@ -1,12 +1,3 @@
-RecordIO Course Udemy: ArunManglikAWSNew
-Course PDF Download: C:\Arun.Manglick\Arun.Manglick.EDU\VIPL\AWS ML Speciality\Udemy Learning PDF
-Course Material : https://www.sundog-education.com/aws-certified-machine-learning-course-materials/
-Exam:
-	- AWS Skill Builder Free Test - https://skillbuilder.aws/exam-prep/machine-learning-specialty
-	- More Exam Prep - https://skillbuilder.aws/exam-prep/machine-learning-specialty
-	- WhizLabs Free Test - https://www.whizlabs.com/learn/course/aws-certified-machine-learning-specialty/281/quiz/15001/ft/
-	
---------------------------------------------------------------------------------------------------------
 Domain 1: Data Engineering (20%)
 	1.1 Create data repositories for machine learning. 
 	1.2 Identify and implement a data-ingestion solution. 
