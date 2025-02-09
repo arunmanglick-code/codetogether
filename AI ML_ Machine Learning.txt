@@ -1,0 +1,13 @@
+Section: 1: Welcome to the course!
+-----------------------------------
+ML UseCases:
+ - FB Face Recognition
+ - Kinect Sports - Sensing your Moves  (Uses ML Algorithm - Random Forest)
+ - Virtual Reality - Sensing your head moves and Eye Movement
+ - iPhone - Speech to Text
+ - Robo Dogs (Uses ML Algorithm - Reinforcement Learning)
+ - Amazon, Netflix, Audible
+ - Medicare
+ - Space - To Identify Areas in Maps
+ - Facebook Ads ()
+ 
