@@ -1,0 +1,2105 @@
+RecordIO Course Udemy: ArunManglikAWSNew
+Course PDF Download: C:\Arun.Manglick\Arun.Manglick.EDU\VIPL\AWS ML Speciality\Udemy Learning PDF
+Course Material : https://www.sundog-education.com/aws-certified-machine-learning-course-materials/
+Exam:
+	- AWS Skill Builder Free Test - https://skillbuilder.aws/exam-prep/machine-learning-specialty
+	- More Exam Prep - https://skillbuilder.aws/exam-prep/machine-learning-specialty
+	- WhizLabs Free Test - https://www.whizlabs.com/learn/course/aws-certified-machine-learning-specialty/281/quiz/15001/ft/
+	
+--------------------------------------------------------------------------------------------------------
+Domain 1: Data Engineering (20%)
+	1.1 Create data repositories for machine learning. 
+	1.2 Identify and implement a data-ingestion solution. 
+	1.3 Identify and implement a data-transformation solution. 
+		
+Domain 2: Exploratory Data Analysis (24%)
+	2.1 Sanitize and prepare data for modeling. 
+	2.2 Perform feature engineering. 
+	2.3 Analyze and visualize data for machine learning. 
+	
+Domain 3: Modeling (36%)
+	3.1 Frame business problems as machine learning problems. 
+	3.2 Select the appropriate model(s) for a given machine learning problem. 
+	3.3 Train machine learning models. 
+	3.4 Perform hyperparameter optimization. 
+	3.5 Evaluate machine learning models. 
+
+Domain 4: Machine Learning Implementation and Operations (20%)
+	4.1 Build machine learning solutions for performance, availability, scalability, resiliency, and fault tolerance. 
+	4.2 Recommend and implement the appropriate machine learning services and features for a given problem. 
+	4.3 Apply basic AWS security practices to machine learning solutions. 
+	4.4 Deploy and operationalize machine learning solutions. 
+-----------------------------------------------------------------------------------
+Summary
+	- TensorFlow: A powerful, flexible framework for machine learning tasks.
+	- Keras: A simpler, high-level API for building deep learning models.
+	- Together: They provide a powerful combination for building and deploying scalable machine learning models.
+
+TensorFlow
+	- TensorFlow is an open-source 'Machine Learning Framework' developed by Google. 
+	- It provides a comprehensive ecosystem for building 'Machine Learning Models', from research to production deployment.
+	- Use Cases: Image recognition, NLP, time-series forecasting, reinforcement learning, and more.
+	
+Keras
+	- Keras is an open-source high-level 'Deep Learning API' built on top of TensorFlow. 
+	- It simplifies the process of building and training neural networks.
+	- Use Cases:
+		- Quick prototyping of deep learning models.
+		- Beginners learning about neural networks.
+	
+Using Them Together
+	Keras is now included as part of the TensorFlow library (called tf.keras). 
+	Developers often use Keras for model development and TensorFlow for training, optimization, and deployment.
+
+-----------------------------------------------------------------------------------
+
+Exam:
+	- Four Domains:
+		1) Data Engineering (20%)
+			- Storage - D3, DynamoDB
+			- Transform - Glue, Glue ETL
+			- Streaming - Kinessis, Kinessis Video Streams
+			- Workflows - Data Pipelines,AWS Batch, Step Functions
+		
+		2). Data Analysis (24%)
+			- Data Science - scikit_learn, Data Distribution, Trends & Seasonality
+			- Analysis - Athena, Quicksight, EMR, Apache Spark
+			- Feature Engineering - Imputation Methods, Outliers, Binning, Log Transforms, One-hot encoding, Scaling & Normalization
+		
+		3). Modeling (36%)
+			- Deep Learning 
+				- MLP, CNN, RNN
+				- Tuning Neural Networks & Regularization Techniques
+			- Sage Maker
+				- Architecture
+				- Built in Algorithm
+					- Linear Learner
+					- XGBoost 
+					- DeepAR
+					- Blazing Text
+					- Object2Vec
+					- Object Detection
+					- Image Classification
+					- Semantic Segmentation
+					- Random Cut Forest 
+					- Neural Topic Model 
+					- LDA 
+					- KNN
+					- K-Means Clustering
+					- Factorization Machines
+					- IP Insigts
+					- Reinforcement Learning
+				- Automatic Model Tuning
+				- SageMaker/Spark Integration
+			- High Level AI Services
+				- Comprehend
+				- Translate
+				- Polly
+				- Transcribe
+				- Lex
+				- Recognition
+				- Personalize/Forecast/Textract
+				- DeepLens 
+			- Evaluation & Tuning
+				- Confusion Matrix
+				- RMSE
+				- Precision & Recall
+				- F1 Score
+				- ROC/AUC
+				
+		4). Machine Learning Implementation and Operations (20%)
+			- Build ML Solutions for Performance, Availability, Scalability, Resiliency and Fault Tolerance
+			- Recommend & Implement appropriate ML Services for a given problem
+			- Apply AWS security practices to ML Solutions
+			- Deploy and Operationalize ML Solutions
+			- SageMaker Operations
+				- Using Containers
+				- Security with SageMaker
+				- Choosing Instance Types 
+				- A/B Testing 
+				- Tensorflow Integration
+				- SageMaker Neo and GreenGrass 
+				- SageMaker Pipes 
+				- Elastic Inference
+				- Inference Pipelines			
+			
+--------------------------------------------------------------------------- 
+Udemy Course: (11H,232M) = (15H) (Everyday 30Mins)- Start 11.28 - 12.28)
+						   Total Done : (9H,40M) (As of 12.15)
+							- Expected: 9H (In 18 Days)
+							- Status: Ahead 
+						  --------------------------------------------
+	1). Introduction (1-4) (10M) - Done
+	2). Data Engineering (5-40) (2H,13M)(PDF Page: 04) - Don1). Introduction (1-4) (10M) - Done
+	3). Exploratory Data Anlaysis (41-60) (2H,34M)(PDF Page: 84) - Done
+	4). Modeling Part1: General DL and ML (61-74) (1H,36M) (PDF Page: 200) (Deep Learnign thru CNN, RNN) - Done
+	5). Modeling Part2: Amazon SageMaker (75-108) (3H,4M) (PDF Page: 279) - Done 
+	6). Modeling Part3: High Level ML Services (109-121) (1H,14M) (PDF Page: 454) - Done 
+	7). Modeling Part4: Labs (122-125)(0H,28M)(PDF Page: 504) - Done 
+	8). Machine Learning Implementation and Operations (126-138(1H,10M) (Output Layer: Provides PDF Page: 508)
+	9). Generative AI: Transformers, GPT, Foundation Models (139-154) (1H,52M) (PDF Page: 546)
+	10) Wrapping Up (155-164) (0H,32M)
+	--------------------------------------------------------------------------------------------
+	1). Introduction 										
+	2). Data Engineering - S3, Kinessis,Glue(GDC, GETL,PySpark, GDB),Athena, AWS Data Pipeline,AWS Batch,AWS DMS,AWS Step Functions,AWS DataSync,MQTT						
+	3). Exploratory Data Anlaysis - Python, Data Distributions,Amazon Athena,  Amazon Quicksight, EMR & Hadoop, Feature Engineering (Imputing Missing Data, Handling Unbalanced Data,Handling Outliers)
+	
+	4). Modeling Part1: General DL and ML - Deep Learning,Activation Functions,CNN,RNN,NLP, Tuning Neural Networks, Neural Network Regularization Techniques (Regularization[ prevent overfitting],Dropout,Early Stopping,Grief with Gradients,L1 and L2 Regularization) ,Confusion Matrix,Ensemble Learning - Bagging & Boosting, ROC, AUC
+	
+	5). Modeling Part2: Amazon SageMaker -SM Training & Deployment, SM Built-In Algorithms, Factorization Machines in SM, IP Insights in SM, Reinforcement Learning in SM, Automatic Model Tuning with SageMaker (hyperparameter),Apache Spark,SageMaker Studio, Debugger, SM Autopilot / AutoMLModel, SM Data Wrangler, SM Canvas
+	
+	6). Modeling Part3: High Level ML Services - Comprehend,Translate,Transcribe,Polly,Recognition,Forecast, Lex,Personalize,Textract,DeepRacer,Lookout,Monitron,TorchServe, AWS Neuron, AWS Panaroma,Deep Composer, Fraud Detection, AWS DeepComposer,Amazon Fraud Detector,Amazon CodeGuru,Amazon Connect,Amazon Kendra and Amazon Augemented,Amazon Augmented AI
+	
+	7). Modeling Part4: Labs - Lab1: Tuning CNN Part1, Lab2: Tuning CNN Part2,Lab3: Tuning CNNPart3		
+	
+	8). Machine Learning Implementation and Operations - SageMaker Inner Details and Production Variants - SageMaker and Docker Containers,  SageMaker On the Edge: SageMaker Neo and IoT Greengrass,SageMaker Security: Encryption at Rest and In Transit,SageMaker Security: VPC's, IAM, Logging, and Monitoring,SageMaker Resource Management,	SageMaker Serverless Inference and Inference Recommender,MLOps with SageMaker, Kubernetes, SageMaker Projects, and SageMaker Pipelines,Lab: Tuning, Deploying, and Predicting with Tensorflow on SageMaker - Part 1,Lab: Tuning, Deploying, and Predicting with Tensorflow on SageMaker - Part 2,Lab: Tuning, Deploying, and Predicting with Tensorflow on SageMaker - Part 3	
+	
+	9). Generative AI: Transformers, GPT, Foundation Models - 
+	Udemy:Transformer Architecture, From Transformers to GPT,Generative AI in Non-AWS and AWS,Amazon SageMaker Jumpstart with Generative AI,Amazon Bedrock - Building Generative AI with Amazon Bedrock, Amazon Q Developer (formerly CodeWhisperer),AWS HealhScribe
+	LinkedIn: How Gen-AI Works,Most Well-Known Type of Gen-AI Models (Natural Language Models,Text to image applications,VAE and Anomaly Detection),Gen-AI Futuristic Usages
+
+	--------------------------------------------------------------------------------------------
+	
+	2). Data Engineering (5-40) (2H,13M)(PDF Page: 04) - Done
+		- S3
+			- S3 is a backbone for many AWS ML Servides (E.g. SageMaker)
+			- Helps in Creating Data Lake - Infinite Size, Centralized Architecture, Object Storage Supporting any file format 
+				(CSV, JSON, Parquet, ORC, Avro, Protobuf)
+			- Amazon S3 Data Partitioning
+				- Supports Pattern for speeding up range queries (ex: AWS Athena)
+				- Data partitioning will be handled by some tools we use (e.g. AWS Glue)
+				
+				- Ques#4: A machine learning (ML) specialist has more than 1 TB of objects that are stored in an Amazon S3 bucket. The objects are named with a subpath under a common S3 path. The ML specialist wants to group the objects for batch loading into an Amazon EMR cluster for processing.
+				Which solution will meet these requirements with the LEAST amount of effort?
+				Anss: Use recursive partitioning in AWS Glue 
+				
+		- Kinessis
+			- ML on Kinessis Data Streams 
+				- RANDOM_CUT_FOREST - SQL function used for anomaly detection on numeric columns in a stream
+				- HOTSPOTS - locate and return information your data (e.g. Overheated Servers in a data center)
+			- Kinesis Summary – Machine Learning
+				- Kinesis Data Stream: create real-time machine learning applications
+				- Kinesis Data Firehose: ingest massive data near-real time 
+				- Kinesis Data Analytics: real-time ETL / ML algorithms on streams
+				- Kinesis Video Stream: real-time video stream to create ML applications
+				
+		- Glue Data Catalog (GDC) & Glue Crawlers & Glue ETL, Glue DataBrew(GDB)
+			- Glue:
+				- AWS Glue is a serverless data integration service that makes it easy to discover, prepare, and combine data for analytics, machine learning, and application development. 
+				- It is designed to work with semi-structured and unstructured data, making it ideal for organizing and transforming CSV files within a data lake. 
+			
+			- GDC:
+				- Metadata repository for all your tables			
+				- Integrates with Athena or Redshift Spectrum
+			- GC:
+				- Glue Crawlers can help build the Glue Data Catalog
+				- Crawlers work for: S3, Amazon Redshift, Amazon RDS
+				- Crawlers go through your data to infer schemas and partitions
+				- Works JSON, Parquet, CSV, relational store
+				- Glue crawler will extract partitions based on how your S3 data is organized
+				
+				- Ques#17: A company is setting up a system to manage all of the datasets that it stores in Amazon S3. The company wants to automate running transformation jobs on the data and maintaining a catalog of the metadata about the datasets.
+				Which solution will meet these requirements with the LEAST operational overhead?
+				- Anss: Create an AWS Glue crawler to populate an AWS Glue Data Catalog. Then, create an AWS Glue extract, transform, and load (ETL) job and set up a schedule for data transformation jobs.
+				- Expl: 
+					- AWS Glue is a fully managed, serverless data integration service that you can use to create ETL jobs. 
+					- Data Catalog is a data catalog that contains metadata from the AWS Glue ETL jobs. 
+					- You can use an AWS Glue crawler to infer the schema of the data. Then, the crawler can populate the data in the Data Catalog. 
+					- Additionally, you can schedule transformation jobs within AWS Glue. 
+					- You do not need to manage the infrastructure when you use AWS Glue. 
+					- Additionally, you can use features within AWS Glue to meet the requirements. 
+					- Therefore, a solution that uses AWS Glue requires the least amount of operational overhead.
+				
+			- GETL
+				- Transform data, Clean Data, Enrich Data (before doing analysis)
+					- Generate ETL code in Python or Scala, you can modify the code
+					- Can provide your own Spark or PySpark scripts
+					- Do not worry about configuring or managing the resources
+					- Target can be S3, JDBC (RDS, Redshift), or in Glue Data Catalog
+				- Transformations Types
+					- Bundled Transformations
+					- Machine Learning Transformations - 
+						- FindMatches ML: identify duplicate or matching records in your dataset, even when the records do not have a common unique identifier and no fields match exactly.
+					- Format conversions: CSV, JSON, Avro, Parquet, ORC, XML
+					- Apache Spark transformations (example: K-Means)
+					
+				- Ques#10: A machine learning (ML) specialist is setting up an ML pipeline. The objective is to enable the ETL part of the pipeline to activate ML training jobs in Amazon SageMaker. Specifically, the ML specialist intends to use batch jobs for ETL. The solution must integrate with SageMaker without the use of additional services.
+				Which solution will meet these requirements?
+				Anss: Use AWS Glue for the ETL 
+				Expln: AWS Glue integrates directly with SageMaker. With AWS Glue, completed ETL jobs can start ML jobs in SageMaker.
+				
+				
+					
+			- GDB	
+				- Allows you to clean and normalize data without writing any code
+				- Reduces ML and analytics data preparation time by up to 80%
+				- Data sources include S3, Redshift, Aurora, Glue Data Catalog…
+				- +250 ready-made transformations to automate tasks (e.g. Filtering anomalies, data conversion, correct invalid values)
+				
+		- Athena 
+		- AWS Data Stores for ML
+			- S3, DynamoDB, Redshift, RDS, Aurora, OpenSearch (previously ElasticSearch)
+		
+		- AWS Data Pipeline
+			- Source: RDS, DynamoDB 
+			- Destinations include S3, RDS,DynamoDB, Redshift and EMR
+			- Retries and notifies on failures
+			- Data sources may be on-premises
+			- 
+		
+		- AWS Batch
+			- Run batch jobs as Docker images
+			- No need to manage clusters, fully serverless 
+			- You just pay for the underlying EC2 instances
+			- Schedule Batch Jobs using CloudWatch Events
+			- Orchestrate Batch Jobs using AWS Step Functions
+			
+		- AWS DMS 
+			- Quickly and securely migrate databases to AWS, resilient, self healing
+			- Supports Homogeneous & Heterogeneous migrations
+			- Continuous Data Replication using CDC
+			- No data transformation (Glue ETL does 
+			- DMS Vs Glue
+				- DMS does not transform data, Glue ETL does transform
+				- DMS needs Glue to transform data.
+		- AWS Step Functions
+			- Use to design workflows
+			- Easy visualizations
+			- Advanced Error Handling and Retry mechanism outside the code
+			- Max execution time of a State Machine is 1 year
+		- AWS Data Engineering Pipelines
+			- Check page 78-81
+		- AWS DataSync
+			- For data migrations from on-premises to AWS storage services
+			- A DataSync Agent is deployed as a VM and connects to your
+			- OnPrem Storare -> OnPrem DataSycn Agent -> Internet -> AWS DataSync -> S3/EFS/Fsx
+		- MQTT
+			- Standard messaging protocol
+			- The AWS IoT Device SDK can connect via MQTT to transfer sensors data to your ML model
+		
+
+	3). Exploratory Data Anlaysis (41-60) (2H,34M)(PDF Page: 84) - Done
+		- Data Analysis Intro
+			- Focus: Find Missing Data, Identify Outliers, Transform/Encode Data in format ML Algo/Model understand, 
+			- Focus: Cover tools like scikit_learn, Athena, MapReduce, Apache Spark - To study data insights
+			- Focus: Cover Data Science Basics - Data Distributions, Trans, Seasonality
+			- Focus: Lab: Build Search Enginer for Wikipedia on EMR which requires pre-processing of data
+			
+		- Python in DS and ML
+			- Pandas - Python library for slicing and dicing your data
+			- Matplotlib - 
+				- Python library used for creating static, interactive, and animated data visualizations. 
+				- Provides a wide variety of tools for generating graphs, charts, and plots
+				- E.g. Plot Types - Line plots, Bar charts, Scatter plots, Histograms, Pie charts, Heatmaps etc
+			- scikit_learn - Python library for machine learning models
+			- Jupyter notebooks
+				- Runs in Web-browser and communicates with server run by python environment (e.g. Anaconda)
+				- Open-source, interactive web application that allow users to create and share documents that combine live code, equations, visualizations, and narrative text. 
+				- Widely used in data science, machine learning, and scientific computing for its flexibility and ability to integrate code with explanatory documentation.
+				- Install
+					- Using pip: pip install notebook
+					- Using anaconda: conda install -c conda-forge notebook
+				- Launch Notebook: jupyter notebook (This command opens the Jupyter interface in your default web browser)
+				- Create a New Notebook: From the dashboard, select New > Python 3 (or your desired kernel).
+				- Add and Execute Cells: Write code or Markdown in a cell and press Shift + Enter to execute.
+			- Perfect Example: Section 43
+				- Use Pandas Lib to read data & explore data-> Clean up missing values -> Normalize Data (preprocessing.StandardScaler)
+				  -> Setup Actual MLP model (Sequential, scikit_learn) using Keras
+		- Major Types of Data
+			- Numerical
+				- Numerical Data: some sort of quantitative measurement (e.g. Heights of people, stock prices, etc)
+				- Discrete Data: often counts of some event
+				- Continuous Data: infinite number of possible values (e.g. How much rain fell on a given day?)
+			- Categorical
+			- Ordinal - Mix of numerical and categorical
+		- Data Distributions
+			- normal distribution
+			- Probability Mass Function
+			- Poisson Distribution
+			- Binomial Distribution - Used for binary classifications of discrete events, such as flipping a coin.
+			- Bernoulli Distribution
+			- Time Series Analysis
+				- Trends
+				- Seasonality
+				- Noise
+		- Amazon Athena
+			- Serverless interactive queries of S3 data
+			- Interactive query service for S3 (SQL)
+			- Supports many data formats (CSV,JSON,ORC,Parquet, Avro)
+			- Examples:
+				- Ad-hoc queries of web logs
+				- Querying staging data before loading to Redshift
+				- Analyze CloudTrail / CloudFront / VPC / ELB etc logs in S3
+				- Integration with Jupyter, Zeppelin,RStudio notebooks
+				- Integration with QuickSight
+				- Integration via ODBC / JDBC with other visualization tools
+			- Athena+Glue: S3 -> Glue -> Athena -> Quicksight			
+		- Amazon Quicksight
+			- Business analytics and visualizations in the cloud
+			- Serverless
+			- QuickSight Data Sources
+				- Redshift
+				- Aurora / RDS
+				- Athena
+				- EC2-hosted databases
+				- Files (S3 or on-premises)
+				- Excel,CSV, TSV
+				- Common or extended log format
+				- AWS IoT Analytics
+				- Data preparation allows limited ETL
+		- EMR & Hadoop 
+			- EMR:
+				- Managed Hadoop framework on EC2 instances
+				- Includes Spark, HBase, Presto, Flink, Hive & more
+				- EMR Notebooks
+				- EMR Cluster
+					- Master Node (manages the cluster) - Single EC2 instance
+					- Core Node - Hosts HDFS data and runs tasks
+					- Task Node - Runs tasks, does not host data
+			- Apache Spark on EMR
+				- In Hadoop Framework, MapReduce is almost obsolete and instead Apache Spark has taken place
+				- Spark Components
+					- Spark Streaming
+					- Spark SQL
+					- MLLib
+					- GraphX
+					- Spark Core 	
+				- Ques: A large news website needs to produce personalized recommendations for articles to its readers, by training a machine learning model on a daily basis using historical click data. The influx of this data is fairly constant, except during major elections when traffic to the site spikes considerably. Which system would provide the most cost-effective and simplest solution?
+				- Ans: Publish click data into Amazon S3 using Kinesis Firehose, and process the data nightly using Apache Spark and MLLib using spot instances in an EMR cluster. Publish the model's results to DynamoDB for producing recommendations in real-time.
+				- Expl: The use of spot instances in response to anticipated surges in usage is the most cost-effective approach for scaling up an EMR cluster. Kinesis streams is over-engineering because we do not have a real-time streaming requirement.
+
+
+					
+			- EMR Notebooks
+				- Notebooks backed up to S3
+				- Provision clusters from the notebook!
+				- Hosted inside a VPC
+				- Accessed only via AWS console
+		- Feature Engineering
+			- Applying your knowledge of the data – and the model you’re using - to create better features to train your model with.
+			- It's like:
+				Which features should I use? (e.g. To find out Salary, Age, Experience, City is useful and not BirthDate)
+				Do I need to transform these features in some way?
+				How do I handle missing data?
+				Should I create new features from the existing ones?
+			- “Applied machine learning is basically feature engineering” – Andrew Ng
+			- Too many features can be a problem – leads to sparse data
+				- Every feature is a new dimension
+				- Much of feature engineering is selecting the features most relevant to the problem at hand
+			- Unsupervised dimensionality reduction techniques can also be employed to distill many features into fewer features
+				- PCA
+				- K-Means
+			- Imputing Missing Data: 
+				- Mean Replacement (Column Level) - Not very accurate
+				- Dropping (Row Level) - Not a best approach
+				- Machine Learning - This approach is better than replacement or dropping
+					- KNN: 
+						- Find K “nearest” (most similar) rows and average their values
+						- KNN imputation maintains the sample's structure and can accurately predict missing values based on similarity to nearest neighbors. 
+						- It's well-suited for datasets with complex relationships.
+						
+					- Deep Learning - Build a machine learning model to impute data for your machine learning model! Deep learning is better suited to the imputation of categorical data
+					
+					- Regression - Find linear or non-linear relationships between the missing feature and other features
+								 - Most advanced technique: MICE (Multiple Imputation by Chained Equations)
+									- MICE finds relationships between features and is one of the most advanced imputation methods available.
+									- Using machine learning techniques such as KNN and deep learning are also good approaches
+				
+				- Ques: You are developing a machine learning model to predict house sale prices based on features of a house. 10% of the houses in your training data are missing the number of square feet in the home. Your training data set is not very large. Which technique would allow you to train your model while achieving the highest accuracy?
+				- Anss:Impute the missing square footage values using kNN
+									
+				- Just Get More Data 
+					- What’s better than imputing data? Getting more real data!
+			- Handling Unbalanced Data
+				- What is unbalanced data?
+					- Large discrepancy between positive and negative cases
+				- Methods to solve:
+					- Oversampling - Duplicate samples from the minority class					- 
+					- Undersampling - Instead of creating more positive samples, remove negative ones
+					- SMOTE (Synthetic Minority Over-sampling Technique)
+						- Artificially generate new samples of the minority class using nearest neighbors
+						- Generally better than just oversampling 
+					- Adjusting thresholds
+						- When making predictions about a classification (fraud / not fraud), you have some sort of threshold of probability at which point you’ll flag something as the positive case (fraud)
+						- Now If you have too many false positives, one way to fix that is to simply increase that threshold.
+						
+					- Ques#15: A company is building a fraud-detection model. Currently, the company does not have a sufficient amount of information because of a low number of fraud cases.
+							Which method will improve the accuracy of the model?	
+					- Anss: Oversampling by using Synthetic Minority Oversampling Technique (SMOTE)
+					- Expl: SMOTE is a method of oversampling that creates synthetic samples for the minority class. If you have a dataset that is not fully populated, you can use SMOTE to add new information by adding synthetic data points to the minority class. SMOTE adds more diversity to the dataset. Therefore, this method helps to reduce overfitting and enhances the model's accuracy.
+						
+			- Handling Outliers
+				- Variance (𝜎2) is simply the average of the squared differences from the mean
+				- Standard Deviation 𝜎 is just the square root of the variance
+					- This is usually used as a way to identify outliers. 
+					- Data points that lie more than one standard deviation from the mean can be considered unusual
+				- Thus to handle outliers - Sometimes it’s appropriate to remove outliers from your training data
+				- Method: Random Cut Forest algorithm
+				
+			- Other Feature Engineering TEchniques
+				- Binning - Bucket observations together based on ranges of values.(e.g. 20s, 30s etc)
+				  Ques: As part of a healthcare analytics project, you are tasked with developing a neural network model to predict medical expenses based on several patient attributes, including blood pressure. The blood pressure measurements are recorded with two decimal places of precision but need to be transformed into a more compact form of discrete categories for model input. Additionally, the distribution of blood pressure values across the patient population is highly skewed, with a significant emphasis required on ensuring that both extremely low and extremely high blood pressure measurements influence the model's predictions more than average values. Which preprocessing technique would effectively manage the precision and distribution concerns of the blood pressure data, enhancing the model's ability to accurately estimate medical expenses?
+				  Anss: Apply quantile binning to convert continuous blood pressure readings into a fixed number of categories
+				  Expl: This technique is particularly suited for the task as it not only categorizes the blood pressure readings into a smaller number of discrete bins but also ensures that each bin has an equal number of observations. This method effectively addresses the skewness in the blood pressure distribution by placing more emphasis on extreme values, which are distributed into bins with equal representation. This approach is ideal for neural network inputs where the goal is to capture the significant impact of outlier values on medical expense predictions.
+				  
+				- Transforming - Applying some function to a feature to make it better suited for training
+				- Encoding - Transforming data into some new representation required by the model
+				- Scaling / Normalization - Some models prefer feature data to be normally distributed around 0 (most neural nets)
+				- Shuffling - Many algorithms benefit from shuffling their training data 
+				
+			- SageMaker Ground Truth
+				- Sometimes you don’t have training data at all, and it needs to be generated by humans first
+				- Ground Truth manages humans who will label your data for training purposes
+				- Ways to generate training labels
+					- Ground Truth Plus - team of AWS Experts” manages the workflow and team of labelers
+					- Rekognition - AWS service for image recognition
+					- Comprehend - AWS service for text analysis and topic modeling
+					- Any pre-trained model or unsupervised technique that may be helpful
+					
+				- Ques: Your company wishes to monitor social media, and perform sentiment analysis on Tweets to classify them as positive or negative sentiment. You are able to obtain a data set of past Tweets about your company to use as training data for a machine learning system, but they are not classified as positive or negative. How would you build such a system?
+				- Anss: Use SageMaker Ground Truth to label past Tweets as positive or negative, and use those labels to train a neural network on SageMaker.
+				- Expl: A machine learning system needs labeled data to train itself with; there's no getting around that. Only the Ground Truth answer produces the positive or negative labels we need, by using humans to create that training data initially. Another solution would be to use natural language processing through a service such as Amazon Comprehend.
+					
+			- Lab: Preparing Data for TFIDF on Spark and EMR
+				- TF-IDF: Term Frequency and Inverse Document Frequency
+					- Important data for search – figures out what terms are most relevant for a document
+					- Term Frequency -  measures how often a word occurs in a document
+					- Document Frequency - measures how often a word occurs in an entire set of documents, i.e., all of Wikipedia
+				- Thus a measure of the relevancy of a word to a document might be: 
+					: Term Frequency / Document Frequency or 
+					: Term Frequency * Inverse Document Frequency
+				
+	4). Modeling Part1: General DL and ML (61-74) (1H,36M) (PDF Page: 200)
+		- Deep Learning
+			- Deep Learning is a subset of ML that focuses on using ANN with many layers to model and solve complex patterns and problems. 
+			- It mimics the way the human brain processes data and makes decisions.
+			
+			- Use Cases - 
+				- Computer Vision - Image recognition, Medical Imaging (e.g., detecting tumors).
+				- NLP - Language translation, chatbots, sentiment analysis, text generation.
+				- Speech Recognition - Voice assistants like Siri, Alexa, and Google Assistant.
+				- Reinforcement Learning - Robotics, autonomous vehicles, and gaming (e.g., AlphaGo).
+				- Healthcare - Drug discovery, personalized treatment recommendations.
+				
+			- Popular Deep Learning Frameworks
+				- TensorFlow: Developed by Google, highly scalable for research and production.
+				- PyTorch: Developed by Facebook, known for its ease of use and flexibility.
+				- Keras: A high-level API for building neural networks, often used with TensorFlow.
+				- MXNet: Known for scalability and distributed training.
+				
+			- How Deep Learning Works
+				 - Data is fed into the input layer of a neural network.
+				 - It passes through several hidden layers, where:
+					- Each layer extracts higher-level features ( like edges, textures, shapes, etc.) from the data.
+					- Non-linear functions and weights adjust the data to capture patterns.
+				 - The output layer produces the final result, such as a classification, prediction, or decision.
+				 
+				 - Example:Image Classification
+					 - Goal: Classify whether an image is of a cat or a dog.
+						- Step#1: Input: Raw pixel data from an image.
+						- Step#2: Hidden Layers: Extract features like edges, textures, shapes, etc.
+						- Step#3: Output: A probability score (e.g., 0.8 = cat, 0.2 = dog).										
+							
+			- Types of Neural Networks
+				- Feedforward Neural Network
+				- Convolutional Neural Networks (CNN) - Image classification (is there a stop sign in this image?)
+				- Recurrent Neural Networks (RNNs) - Deals with sequences in time (predict stock prices, understand words in a sentence, translation, etc) - LSTM, GRU
+				
+			Deep Learning on EC2 / EMR
+				- EMR supports Apache MXNet and GPU instance types
+				- Appropriate instance types for d eep learning:
+					- P3: 8 Tesla V100 GPU’s
+					- P2: 16 K80 GPU’s
+					- G3: 4 M60 GPU’s (all Nvidia chips)
+					- G5g: AWS Graviton 2 processors / Nvidia T4G Tensor Core GPU’s
+					- P4d – A100 “UltraClusters” for supercomputing
+				- Deep Learning AMI’s
+					- Trn1 instances (Powered by Trainum)
+					- Trn1n instances
+					- Inf2 instances
+		
+		- Activation Functions		
+			- Define the output (Step#3) of a node / neuron given its input signals
+			- Types:
+				- Linear - Can’t handle multiple classification - So not of use in DL 
+				- Binary - Can’t handle multiple classification – it’s binary 
+				- Non-Linear - 
+					- Defn:
+						- These can create complex mappings between inputs and outputs
+						- Allow backpropagation (because they have a useful derivative)
+						- Allow for multiple layers
+					- Types:
+						- Sigmoid / Logistic / TanH
+						- Rectified Linear Unit (ReLU) - 
+							- Easyto compute. But, when inputs are zero or negative, we have a linear function - Leading to The “Dying ReLU problem”
+							- Ques: A data science team at an energy analytics company is leveraging a neural network to enhance the precision of their predictive model, which forecasts electricity consumption based on diverse environmental and user interaction variables. Initially, the model was underperforming, prompting the team to increase its complexity by adding more layers in an attempt to capture intricate patterns within the data. However, post-modification, the team observes that the model's training accuracy struggles to converge, indicating a deterioration in learning efficiency. What is the most probable reason for this observed behavior in the neural network's performance?
+							- Anss: Switch to ReLU activation functions in Amazon SageMaker's built-in TensorFlow framework to mitigate the 'vanishing gradient problem'.
+							- Expl: ReLU helps maintain the strength of gradients over many layers, unlike sigmoid or tanh functions, which can squash gradients excessively. To implement this, when defining your model in SageMaker using TensorFlow, specify ReLU as the activation function for each layer where it's applicable. This is particularly beneficial in deep networks, where the depth can cause gradients to diminish as they are propagated back through the layers.
+							
+							
+							
+						- Leaky ReLU - Solves “dying ReLU” by introducing a negative slope below 0
+						- Parametric ReLU (PReLU)
+						- Other ReLU variants
+							- Exponential Linear Unit (ELU)
+							- Swish
+							- Maxout
+						- Softmax 
+							- Used on the final output layer of a multi-class classification problem
+							- Basically converts outputs to probabilities of each classification
+							- Can’t produce more than one label for something (sigmoid can)
+							- Ques: You are building a deep learning model that learns to classify pictures of plants into their species. What would be an appropriate activation function at the output layer?
+							- Ans: Softmax converts outputs from your neural network to probabilities of a given classification.
+							
+			- Choosing an activation function
+				 - For multiple classification, use softmax on the output layer
+				 - RNN’s do well with Tanh
+				 - For everything else
+					- Start with ReLU
+					- If you need to do better, try Leaky ReLU
+					- Last resort: PReLU, Maxout
+					- Swish for really deep networks
+							
+		- CNN - Convolutional Neural Networks
+			- A CNN is a powerful neural network architecture tailored for visual and spatial data analysis. 
+			- Its ability to automatically extract hierarchical features makes it ideal for applications in image recognition, object detection, and beyond.
+			
+			- CNN, a deep learning algorithm specifically designed for processing and analyzing data with a grid-like structure, such as images. 
+			- CNNs are widely used in tasks like image recognition, object detection, and even natural language processing.
+			
+			- Use Cases:
+				- Computer Vision: Image recognition (e.g., Google Photos). Object detection (e.g., autonomous vehicles, surveillance systems).
+				- Healthcare: Medical imaging analysis (e.g., tumor detection in X-rays or MRIs).
+				- Natural Language Processing (NLP): Text classification and sentiment analysis using 1D CNNs.
+				- Video Analysis: Action recognition, video surveillance, and frame-based processing.
+			
+			- Structure of a CNN
+				- Input Layer: Accepts raw input data, such as an image represented as pixel values.				
+				- Convolutional Layer: Applies filters to extract features from the image. Produces Feature Maps that represent the detected patterns.				
+				- Activation Function: Introduces non-linearity (commonly ReLU) to help the model learn complex patterns.				
+				- Pooling Layer: Down-samples the feature maps (e.g., max pooling selects the maximum value in a region).			
+				- Fully Connected Layer: Flattens the data and connects neurons to make predictions or classifications.					
+				- Output Layer: Provides the final prediction, such as class probabilities.
+				
+			- How CNN Works	
+				- Example : Imagine a task: Identify whether an image is of a cat or a dog.
+					- Input Image: The Input Layer takes the image as input (e.g., 224x224 RGB image with three channels).
+					- Feature Extraction: Convolutional layers detect features like edges, corners, or textures.
+					- Next Steps: These features are passed through activation and pooling layers.
+					- Classification: Fully connected layers aggregate the extracted features and assign probabilities for each class (e.g., 0.8 = cat, 0.2 = dog).
+					
+			- Popular CNN Architectures
+				- LeNet: Early CNN used for digit recognition.
+				- AlexNet: Revolutionized deep learning by winning the 2012 ImageNet competition.
+				- VGGNet: Known for its simplicity and depth.
+				- ResNet: Introduced skip connections for very deep networks.
+				- Inception (GoogLeNet): Used multiple-sized filters in parallel.	
+			
+		- RNN - Recurrent Neural Networks
+			- Is a type of neural network specifically designed for sequential or time-series data. 
+			- Unlike traditional feedforward neural networks, RNNs can retain information from previous steps, making them suitable for tasks involving context 
+			- While they have limitations, as state from earlier time steps get diluted over time.
+				- Thus advanced variants like LSTMs and GRUs, along with mechanisms like attention, have made them indispensable in many AI applications.
+					LSTM Cell - Long Short-Term Memory Cell - Maintains separate short-term and long-term states
+						- Quiz: You are developing a deep learning model to complete the words in an unfinished sentence. What might be an appropriate model type to start with?
+						- Ans: LSTM is a specific type of RNN that solves the problem of items losing their weight over time. In NLP applications, words in a sentence may be significant regardless of their position.
+					GRU Cell - Gated Recurrent Unit - Simplified LSTM Cell that performs about as well
+			
+			- Use Cases:
+				- Natural Language Processing (NLP) - Language modeling, sentiment analysis, machine translation, and text generation.
+				- Time-Series Forecasting - Stock price prediction, weather forecasting, and energy usage prediction.
+				- Speech Recognition: Converting spoken words into text.
+				- Video Analysis: Activity recognition in videos or generating captions for video content.		
+				
+			- Variants of RNN
+				- To address the limitations of standard RNNs, several improved architectures have been developed:
+				- Long Short-Term Memory (LSTM):
+				- Gated Recurrent Unit (GRU):
+				- Bidirectional RNN:
+				- Attention Mechanism
+				
+			RNN topologies
+				• Sequence to sequence- i.e., predict stock prices based on series of historical data
+				• Sequence to vector -  i.e., words in a sentence to sentiment
+				• Vector to sequence -  i.e., create captions from an image 
+				• Encoder -> Decoder -  Sequence -> vector -> sequence • i.e., machine translation
+				
+			How RNN Works
+				- An RNN processes one input at a time in a sequence, maintaining a hidden state that carries information from previous inputs. 
+					- Input: Sequential data is fed into the RNN one time step at a time (e.g., a sentence processed word by word).
+					- Hidden State: At each time step, the RNN updates its hidden state using the current input and the previous hidden state.
+					- Output: The output at each step is computed based on the hidden state.
+					- Backpropagation Through Time (BPTT): Gradients are computed across all time steps during training, adjusting weights to minimize loss.
+
+			- Example: Sentiment Analysis
+				- Classify a movie review as positive or negative:
+					- Input: A sequence of words in the review.
+					- Hidden States: Store the context of the words processed so far.
+					- Output: Final prediction (positive or negative sentiment)
+			
+		- RNN vs. CNN
+			-------------------	------------------------------------------------------------------
+			Feature				| CNN							|	RNN								
+			-------------------	-------------------------------------------------------------------
+			Input Type			| Grid-like (e.g., images)		|	Sequential (e.g., time series)	
+			Primary Use Case	| Images, spatial data			|	Text, time-series, speech		
+			Memory Mechanism	| No (independent inputs)		|	Yes (hidden states)				
+			Direction			| Parallel processing			|	Sequential processing			
+			-------------------	-------------------------------------------------------------------
+			
+		- Natural Language Processing
+			- Transformer
+				 - Adopts mechanism of “self-attention”
+					• Weighs significance of each part of the input data
+					• Processes sequential data (like words, like an RNN), but processes entire input all at once.
+					• The attention mechanism provides context, so no need to process one word at a time.
+				- BERT: Bi-directional Encoder Representations from Transformers
+				- GPT: Generative Pre-trained Transformer
+			- Transfer Learning
+			
+		- Tuning Neural Networks	
+			- Learning Rate
+				- Neural networks are trained by gradient descent (or similar means)
+				- We start at some random point, and sample different solutions
+				- How far apart these samples are is the 'learning rate'
+					- Too high a learning rate means you might overshoot the optimal solution!
+					- Too small a learning rate will take too long to find the optimal solution
+					- Learning rate is an example of a hyperparameter
+				
+			- Batch Size
+				- How many training samples are used within each batch of each epoch
+				- Somewhat counter-intuitively:
+					- Smaller batch sizes can work their way out of “local minima” more easily
+					- Batch sizes that are too large can end up getting stuck in the wrong solution
+					- Random shuffling at each epoch can make this look like very inconsistent results from run to run
+				- Ques: Your deep neural network seems to converge on different solutions with different accuracy each time you train it. What's a likely explanation?
+				- Anss: The Batch Size is too large
+				
+				- Ques:A global online retailer has recently increased the batch size in the training process of their deep neural network, which powers their product recommendation engine. Following this adjustment, the team observed a significant decline in the accuracy of product recommendations. What is the most likely reason for this reduction in model performance?
+				- Anss: The increased batch size caused the optimization algorithm to converge to suboptimal local minima
+				- Expl: Increasing the batch size can lead to smoother updates and potentially less noisy gradients, which might sound beneficial but can actually cause the optimization process to miss narrower paths that could lead to better minima. This option correctly identifies a nuanced aspect of how batch size affects the training process, especially in complex loss landscapes common in deep learning
+					
+		
+		- Neural Network Regularization Techniques
+			- Ques:After training a deep neural network over 100 epochs, it achieved high accuracy on your training data, but lower accuracy on your test data, suggesting the resulting model is overfitting. What are TWO techniques that may help resolve this problem?
+			- Anss: Use dropout regularization,Use early stopping
+			
+			- Ques: An AI practitioner is refining a deep neural network for a complex image classification task. After several epochs, the model has reached a 99% accuracy rate on the training dataset. However, the accuracy on the test dataset stands at 90%, while expert human analysts are known to achieve 98% accuracy on similar tasks. Based on this information, which solutions could be applied? (SELECT TWO)
+			- Anss: Increase dropout rate and Reduce network size.
+			- Expl: Increasing dropout rates helps prevent overfitting by randomly deactivating neurons during training, forcing the network to generalize better.
+					Reducing network size can mitigate overfitting by simplifying the model's capacity to memorize training data.
+		
+			- Regularization - Techniques are intended to prevent overfitting.
+				- Preventing overfitting
+					- Models that are good at making predictions on the data they were trained on, but not on new data it hasn’t seen before
+					- Overfitted models have learned patterns in the training data that don’t generalize to the real world
+					
+			- Dropout
+				- Dropout regularization forces the learning to be spread out amongst the artificial neurons, further preventing overfitting.
+				- Dropout randomly deactivates a subset of neurons during training, which helps in preventing the network from becoming too dependent on any single neuron and thus reduces overfitting.
+				- Dropout layers force the network to spread out its learning throughout the network, and can prevent overfitting resulting from learning concentrating in one spot
+				
+				- Ques: Our neural network's accuracy on its training data is increasing beyond the accuracy on test or validation data. What might be a valid thing to try to prevent this overfitting?
+				- Ans: Use Dropout - Dropout layers force the network to spread out its learning throughout the network, and can prevent overfitting resulting from learning concentrating in one spot
+				
+			- Early Stopping
+				- Early stopping is a simple technique for preventing neural networks from training too far, and learning patterns in the training data that can't be generalized
+				- Early stopping halts training when performance on a validation set stops improving, preventing overfitting by not allowing the model to learn noise in the training data.
+				
+			- Grief with Gradients - Skipped 
+				- The Vanishing Gradient Problem
+				- Fixing the Vanishing Gradient Problem
+				- Gradient Checking
+			- L1 and L2 Regularization - Skipped 
+				- Preventing overfitting in ML in general
+				- A regularization term is added as weights are learned
+				- L1 term is the sum of the weights
+					- Performs feature selection – entire features go to 0
+					- Computationally inefficient
+				- L2 term is the sum of the square of the weights
+					- All features remain considered, just weighted
+					- Computationally efficient
+					
+		- Confusion Matrix 
+			- Sometimes accuracy doesn’t tell the whole story
+				- A test for a rare disease can be 99.9% accurate by just guessing “no” all the time
+				- We need to understand true positives and true negative, as well as false positives and false negatives.
+				- A confusion matrix shows this - Binary confusion matrix
+				
+									| Actual YES			| Actual No
+					----------------| ----------------------| -------------
+					Predicted YES	| TRUE POSITIVES		| FALSE POSITIVES
+					----------------| ----------------------| -------------
+					Predicted NO	| FALSE NEGATIVES		| TRUE NEGATIVE
+					
+			- Ques: A system designed to classify financial transactions into fraudulent and non-fraudulent transactions results in the confusion matrix below. What is the recall and precision  of this model?
+										| Actual POSITIVES| Actual NEGATIVES
+					-------------------	| ----------------| -------------
+					Predicted POSITIVES	| 90			  | 45
+					-------------------	| ----------------| -------------
+					Predicted NEGATIVES	| 10			  | 20
+				
+			- Anss:  Recall is defined as    (true positives / (true positives + false negatives). This works out to 90/(90+10) in this example, 90%. 
+					 Precision is defined as (true positives / (true postives + false positives).  This works out to 90/(90+45) in this example, 66.67% 
+					
+		- Precision, Recall, F1, AUC 
+			- Recall:
+				- Recall is defined as true positives / (true positives + false negatives).
+				- Recall is an important metric in situations where classifications are highly imbalanced, and the positive case is rare. Accuracy tends to be misleading in these cases.
+				
+				- Ques: You're implementing a machine learning model for fraud detection, where most of your training data does not indicate fraud. The cost of a incorrectly identifying an actual fraudulent transaction is much higher than the cost of incorrectly identifying a non-fraudulent transaction. Which metric should you focus on for your model?
+				- Recall is appropriate when you care most about false negatives, which in this case is incorrectly identifying fraudulent transactions as non-fraudulent.
+			
+			- Precision:
+				- The precision metric is the ratio of true positives to the sum of true positives and false positives. 
+				- Accordingly, it is the most relevant metric when the goal is to minimize false positives.
+				
+				- Ques#5: A company is building a website that offers a variety of comedy content for adults and children. The company intends to automate the process of ingesting the content and tagging the content as safe for viewing by children as the positive class. The company's top priority is to avoid showing inappropriate content to children.
+				What is the MOST relevant metric for the company to use to evaluate the machine learning (ML) model for this task?
+				- Anss: Precision
+				
+			- F1:
+				F1 is given by (2 x Precision x Recall) / (Precision + Recall)
+				
+		- ROC Curve (Page 271)
+			- Receiver Operating Characteristic Curve
+			- Plot of true positive rate (recall) vs. false positive rate at various threshold settings
+			- Points above the diagonal represent good classification (better than random)
+			- Ideal curve would just be a point in the upper-left corner
+			- The more it’s “bent” toward the upper-left,the better
+		
+		- AUC
+			- The area under the ROC curve is… wait for it..
+			- Area Under the Curve (AUC)
+			
+		- P-R Curve
+			- Precision / Recall curve
+			- Good = higher area under curve
+				
+					
+		- Ensemble Learning - Bagging & Boosting
+			- Common example: random forest
+				- Decision trees are prone to overfitting 
+				- So, make lots of decision trees and let them all vote on the result
+			- Bagging
+				- Generate N new training sets by random sampling with replacement
+				- Each resampled model can be trained in parallel
+				- But bagging avoids overfitting
+				- Bagging is easier to parallelize
+				
+			- Boosting
+				- Observations are weighted
+				- Some will take part in new training sets more often 
+				- Training is sequential; each classifier takes into account the previous one’s success.
+				- XGBoost is the latest hotness
+				- Boosting generally yields better accuracy
+	
+	5). Modeling Part2: Amazon SageMaker (75-108) (3H,4M) (PDF Page: 279)
+		- About SageMaker (SM)
+			- SageMaker is built to handle the entire machine learning workflow.
+				- Fetch, clean, and prepare data
+				- Train and evaluate a model
+				- Deploy model, evaluate results in production	
+				
+			- SageMaker Training & Deployment - 
+				- Check Diagram Page 282 				
+				- Data prep on SageMaker
+					- Data usually comes from S3 - Ideal format varies with algorithm – often it is RecordIO / Protobuf
+					- Can also ingest from Athena, EMR, Redsift, and Amazon Keyspaces DB
+				
+				- (A)SageMaker Processing
+					- Processing jobs Copy data from S3 
+						-> Spinup processing container (SM built-in or user provided) 
+							-> Output processed data to S3
+					
+				- (B)Training on SageMaker
+					- Create a training job
+						- URL of S3 bucket with training data
+						- ML compute resources
+						- URL of S3 bucket for output
+						- ECR path to training code
+					- Training options
+						- SageMaker’s Built-in training algorithms
+						- Spark MLLib
+						- Custom Python Tensorflow / MXNet code
+						- PyTorch, Scikit-Learn, RLEstimator
+						- XGBoost, Hugging Face, Chainer
+						- Your own Docker image
+						- Algorithm purchased from AWS marketplace
+				
+				- (C)Deploying Trained Models
+					- Save your trained model to S3
+					- Can deploy two ways:
+						- Persistent endpoint for making individual predictions on demand
+						- SageMaker Batch Transform to get predictions for an entire dataset
+					- Lots of cool options
+						- Inference Pipelines for more complex processing
+						- SageMaker Neo for deploying to edge devices
+						- Elastic Inference for accelerating deep learning models
+						- Automatic scaling (increase # of endpoints as needed)
+						- Shadow Testing evaluates new models against currently deployed model to catch errors				
+			
+			- SageMaker’s Built-In Algorithms
+				- Linear Learner
+					- Can handle both regression (numeric) predictions and classification predictions
+					- What training input does it expect?
+						- RecordIO-wrapped protobuf - Float32 data only!
+						- CSV - First column assumed to be the label
+					- How is it used?
+						- Preprocessing
+							- Training data must be normalized and shuffled 
+						- Training
+							- Uses stochastic gradient descent
+							- Choose an optimization algorithm (Adam, AdaGrad, SGD, etc)
+						- Validation
+							- Most optimal model is selected
+					- Ques: A real estate company wants to create a machine learning (ML) model to predict housing prices based on a historical dataset. The dataset contains 32 features.
+						Which algorithm will meet these requirements?
+						Anss: Linear regression
+						Epln: You can use linear regression to forecast sales, predict delivery times, or predict a numerical value. With Amazon SageMaker, you can model linear regression with the Amazon SageMaker linear learner algorithm.
+						
+					- Ques: While training a regression model with SageMaker's Linear Learner to predict individual incomes based on age and years in school, the training data encompasses various distinct groups. To ensure optimal outcomes from the model, which TWO pre-processing steps should be undertaken? (SELECT TWO)
+					- Anss1: Normalize the feature data to have a mean of zero and unit standard deviation.
+					- Anss2: Shuffle the input data.
+					- Expl1:Given that the feature set includes variables (age and years in school) that likely span different ranges and scales, normalizing these features to have a mean of zero and a standard deviation of one is crucial. This step ensures that the model treats both features equally without biasing towards one due to its scale, which is particularly important for gradient descent optimization used in training the Linear Learner model.
+					- Expl2: Shuffling the input data is vital to prevent the model from learning any unintentional patterns from the order in which the data is presented. This is especially important when the data encompasses several distinct groups, as it ensures a diverse mix of data points across batches, leading to a more generalized model.
+					
+							
+				- XGBoost
+					- eXtreme Gradient Boosting
+					- Can be used for classification
+					- And also for regression (regression trees)
+					- XGBoost is weird, since it’s not made for SageMaker. It’s just open source	
+					- Use sagemaker_pyspark and XGBoostSageMakerEstimator to use Spark to pre-process, train, and host your model using Spark on SageMaker
+					- Note:  XGBoost actually requires LibSVM or CSV input, not RecordIO.
+					
+					- Ques: You are training an XGBoost model on SageMaker with millions of rows of training data, and you wish to use Apache Spark to pre-process this data at scale. What is the simplest architecture that achieves this?
+					- Anss:Use sagemaker_pyspark and XGBoostSageMakerEstimator to use Spark to pre-process, train, and host your model using Spark on SageMaker.
+					- Expl: The SageMakerEstimator classes allow tight integration between Spark and SageMaker for several models including XGBoost, and offers the simplest solution. You can't deploy SageMaker to an EMR cluster, and XGBoost actually requires LibSVM or CSV input, not RecordIO.
+					
+					- Ques: When employing Amazon SageMaker and XGBoost for the classification of a vast number of videos into genres, based on attributes of each video, the attribute data necessitates cleaning and conversion into LibSVM format before model training.
+					Identify two feasible methods for data pre-processing. (SELECT TWO)
+					- Anss1: Utilize PySpark alongside the XGBoostSageMakerEstimator to facilitate data preparation via Spark, subsequently transferring control to SageMaker for the training phase.
+					- Anss2: Apply Spark on Amazon EMR for data pre-processing and save the refined results in an Amazon S3 bucket, ensuring SageMaker's access for training.
+					- Expl1: The integration of PySpark with SageMaker, particularly using the XGBoostSageMakerEstimator, effectively harnesses the distributed processing capabilities of Apache Spark for data preparation. This approach not only allows for the parallel processing of large datasets but also seamlessly transitions to SageMaker for model training, making it a viable solution for handling massive video attribute data.
+					- Expl2: Using Spark on Amazon EMR for data pre-processing leverages its distributed data processing feature, efficiently preparing the video attribute data. Storing the processed data in an S3 bucket facilitates easy access by SageMaker for subsequent training tasks, aligning with the requirements for efficient handling and transformation of large-scale data.
+					
+					
+					
+				- Seq2Seq
+					- Input is a sequence of tokens, output is a sequence of tokens
+					- The seq2seq algorithm decodes and encodes sequences of tokens, such as words. The seq2seq algorithm is appropriate for article summarization.
+					- Machine Translation
+					- Text summarization
+					- Speech to text (e.g. Take words/sentence and output in another language)
+					- Implemented with RNN’s and CNN’s with attention
+					- What training input does it expect?
+						- RecordIO-Protobuf
+						- Tokens must be integers (this is unusual, since most algorithms want floating point data.)
+						
+					- Ques#3: A company has been summarizing insights from customer reviews for years. A machine learning (ML) specialist must use ML to automate this task. The ML specialist grouped the reviews by product. The company wants to use the output of the ML specialist's initial model to prioritize the order of products and features to change.
+					Which algorithm should the ML specialist use to train the model?
+					- Anss: The SageMaker seq2seq algorithm is a supervised learning algorithm that transforms a sequence of elements into another sequence. The seq2seq algorithm works well for summarizing the text in the reviews. This algorithm is commonly used for text summarization.
+					
+					- Ques#12: A digital newspaper owns a large collection of articles and human-written summaries that are associated with these articles. The summaries are used as headers for each article that is posted online. The newspaper editors want a solution that produces summaries automatically. A machine learning (ML) specialist needs to automate the process of summary generation.
+					Which solution will meet this requirement?
+					- Anss: Apply a seq2seq recurrent neural network (RNN)
+					- Expl: The seq2seq algorithm decodes and encodes sequences of tokens, such as words. The seq2seq algorithm is appropriate for article summarization.
+					
+				- DeepAR
+					- Used for forecasting one-dimensional time series data
+					- Uses RNN’s
+					- Allows you to train the same model over several related time series
+					- Finds frequencies and seasonality
+					- What training input does it expect?
+						- JSON lines format - Gzip or Parquet
+						- Each record must contain:
+							- Start: the starting time stamp
+							- Target: the time series values
+					 - DeepAR: How is it used?
+						- Always include entire time series for training, testing, and inference
+						- Use entire dataset as training set, remove last time points for testing. Evaluate on withheld values.
+						- Don’t use very large values for prediction length (> 400)
+						- Train on many time series and not just one when possible
+									
+				- BlazingText (Word2vec)
+					- Text classification
+						- Predict labels for a sentence
+						- Useful in web searches, information retrieval
+						- Supervised
+					- Word2vec
+						- Creates a vector representation of words
+						- Semantically similar words are represented by vectors close to each other
+						- This is called a word embedding
+					- What training input does it expect?
+						- For supervised mode (text classification):
+							- One sentence per line
+							- First “word” in the sentence is the string __label__ followed by the label
+						- Also, “augmented manifest text format”
+						- Word2vec just wants a text file with one training sentence per line.
+					- How is it used?
+						- Word2vec has multiple modes
+							- Cbow (Continuous Bag of Words)
+							- Skip-gram
+							- Batch skip-gram - Distributed computation over many CPU nodes				
+				
+				- Object2VeC 
+					- It is basically word2vec, generalized to handle things other than words, such as sentences and paragraphs
+					- Compute nearest neighbors of objects
+					- Visualize clusters
+					- Genre prediction
+					- What training input does it expect?
+						- Data must be tokenized into integers
+						- Training data consists of pairs of tokens and/or sequences of tokens
+							- Sentence – sentence
+							- Labels-sequence (genre to description?)
+							- Customer-customer
+							- Product-product
+							- User-item
+					- How is it used?
+						- Process data into JSON Lines and shuffle it
+						- Train with two input channels, two encoders, and a comparator
+						- Encoder choices:
+							- Average-pooled embeddings
+							- CNN’s
+							- Bidirectional LSTM
+						- Comparator is followed by a feed-forward neural network
+						
+					- Ques#9: An insurance company needs to automate claim compliance reviews because human reviews are expensive and error-prone. The company has a large set of claims and a compliance label for each. Each claim consists of a few sentences in English, many of which contain complex related information. 
+					The company wants to use Amazon SageMaker built-in algorithms to design a machine learning (ML) supervised model. The ML model must be trained to read each claim and predict if the claim is compliant or not. The solution must extract features from the claims to be used as inputs for the downstream supervised task.
+					Which solution will meet these requirements?
+					- Anss: Apply SageMaker Object2Vec to claims in the training set. Send derived feature space as inputs for the downstream supervised task.
+					- Expln: SageMaker Object2Vec generalizes the Word2Vec embedding technique for words to more complex objects, such as sentences and paragraphs. The supervised learning task is at the level of whole claims, for which there are labels. However, no labels are available at the word level. Therefore, you need to use Object2Vec instead of Word2Vec.
+
+					
+				- Object Detection 
+					- Identify all objects in an image with bounding boxes
+						- Detects and classifies objects with a single deep neural network
+						- Classes are accompanied by confidence scores
+						- Can train from scratch, or use pretrained models based on ImageNet
+					- How is it used?
+						- Two variants: MXNet and Tensorflow
+						- Takes an image as input, outputs all instances of objects in the image with categories and confidence scores
+						- MXNet
+							- Uses a CNN with the Single Shot multibox Detector (SSD) algorithm
+						Tensorflow
+							- Uses ResNet, EfficientNet, MobileNet models from the TensorFlow Model Garden
+					- What training input does it expect?
+						- MXNet: RecordIO or image format (jpg or png)
+							- RecordIO format is specifically optimized for high throughput and efficient data serialization. 
+							- It is ideal for large-scale image datasets in MXNet, reducing read times and enhancing overall training efficiency.
+						- With image format, supply a JSON file for annotation data for each image	
+					
+					- Ques:A manufacturing company wants to deploy a solution that can identify the size of packages as they are passed down manufacturing lines in its factories. When a package is identified, the manufacturing 	line will route the package down one of five separate secondary lines for quality assurance and shipping. 
+					The company needs to train and deploy a machine learning (ML) model to accomplish these goals. The company has created and made available thousands of hours of training videos that can be analyzed anywhere and at any time. Many of the factories are in remote areas around the world where internet connectivity is not always guaranteed.
+					Which solution will meet these requirements?
+					- Anss: Train the model in Amazon SageMaker by using the SageMaker Object Detection algorithm. Deploy the model to an AWS IoT Greengrass core that hosts AWS Lambda as the decision engine.
+					- Epln: The Object Detection algorithm is appropriate for training the recognition. AWS IoT Greengrass that uses Lambda will run within the factory to solve any connectivity issues.
+
+				- Image Classification
+					- Assign one or more labels to an image
+					- Doesn’t tell you where objects are,just what objects are in the image
+					- How is it used?
+						- Separate algorithms fpr MXNet and Tensorflow
+							- MXNet: Full training mode, Transfer learning mode
+							- Tensorflow: Uses various Tensorflow Hub models (MobileNet, Inception, ResNet,EfficientNet)
+						
+				- Semantic Segmentation - 
+					- Pixel-level object classification
+						- Different from image classification – that assigns labels to whole images
+						- Different from object detection – that assigns labels to bounding boxes
+						- Useful for self-driving vehicles, medical imaging diagnostics, robot sensing
+						- Produces a segmentation mask
+					- What training input does it expect?
+						- JPG Images and PNG annotations
+						- For both training and validation
+						- Label maps to describe annotations
+						- Augmented manifest image format supported for Pipe mode.
+						- JPG images accepted for inference
+					- How is it used?
+						- Built on MXNet Gluon and Gluon CV
+						- Choice of 3 algorithms:
+							- Fully-Convolutional Network (FCN)
+							- Pyramid Scene Parsing (PSP)
+							- DeepLabV3
+							
+					- Ques: Which SageMaker algorithm would be best suited for assigning pixels in an image to specific object classifications?
+					- Anss: Semantic Segmentation gives you a map of pixels to objects, and not just a list of objects in the image.
+					
+					- Ques: You are developing a computer vision system that can classify every pixel in an image based on its image type, such as people, buildings, roadways, signs, and vehicles. Which SageMaker algorithm would provide you with the best starting point for this problem?
+					- Anss: Semantic Segmentation
+					- Expl: Semantic Segmentation produces segmentation masks that identify classifications for each individual pixel in an image. It uses MXNet and the ResNet architecture to do this.
+							
+				- Random Cut Forest - 
+					- What’s it for?
+						- Anomaly detection
+						- Unsupervised
+						- Detect unexpected spikes in time series data
+						- Breaks in periodicity
+						- Unclassifiable data points
+						- Assigns an anomaly score to each data point
+						- Based on an algorithm developed by Amazon that they seem to be very proud of!
+					- What training input does it expect?
+						- RecordIO-protobuf or CSV
+						- Can use File or Pipe mode on either
+					- How is it used?
+						- Creates a forest of trees where each tree is a  partition of the training data; 
+						- Then looks at expected change in complexity of the tree as a result of adding a point into it
+						- Data is sampled randomly
+						- Then trained
+						- RCF shows up in Kinesis Analytics as well; it can work on streaming data too.
+										
+				- Neural Topic Model (NTM)
+					- Organize documents into topics 
+					- Classify or summarize documents based on topics
+					- Unsupervised - Algorithm is “Neural Variational Inference”
+					- What training input does it expect?
+						- Four data channels
+						- “train” is required,  “validation”, “test”, and “auxiliary” optional
+						- recordIO-protobuf or CSV
+						- Words must be tokenized into integer
+					- How is it used?
+						- You define how many topics you want
+						- These topics are a latent representation based on top ranking words
+						- One of two topic modeling algorithms in SageMaker – you can try them both!
+											
+				- LDA - Latent Dirichlet Allocation - Skip 
+					- Another topic modeling algorithm
+					- Unsupervised
+					- Can be used for things other than words
+					- LDA supports Pipe mode specifically with RecordIO format, making this approach not only feasible but recommended for large-scale topic categorization tasks.
+					
+					- Ques: Which SageMaker algorithm would be best suited for identifying topics in text documents in an unsupervised setting?
+					- Anss: LDA 
+				
+				- KNN - K-Nearest Neighbour 
+					- What’s it for?
+						- K-Nearest-Neighbors
+						- Simple classification or regression algorithm
+							- Classification - Find the K closest points to a sample point and return the most frequent label
+							- Regression - Find the K closest points to a sample point and return the average value
+					- What training input does it expect?
+						- Trained channel contains your data
+						- Test channel emits accuracy or MSE
+						- recordIO-protobuf or CSV training - First column is label
+						- File or pipe mode on either
+					How is it used?
+						- Data is first sampled
+						- SageMaker includes a dimensionality reduction stage
+						- Build an index for looking up neighbors
+						- Serialize the model
+						- Query the model for a given K
+					- Ques#14: A company has 1,000 sentences with sentiments categorized as positive, neutral, or negative. 
+							Which algorithm should a machine learning (ML) specialist select for training a baseline sentiment model?
+					- Anss: Amazon SageMaker k-nearest neighbors (k-NN)
+					- Expl: The SageMaker k-NN algorithm is an index-based algorithm that is used for classification and regression. The scenario asks you to categorize sentences into sentiments, which requires a classification method. Additionally, k-NN can handle multi-class scenarios, which is required to categorize sentiments as positive, neutral, or negative.
+					
+					- Ques#: A machine learning (ML) specialist is optimizing a solution to define whether online payment transactions are fraudulent. The historical data of manually classified transactions includes the following data:
+						customer name (string)
+						customer type (integer)
+						transaction amount (float)
+						customer tenure (integer)
+					transaction type (string) with values "normal" or "abnormal"
+					Which action should the ML specialist take to meet the requirements?
+					Ans: Drop the customer name as it's not relevant to the classification model. You can convert transaction type ( categorical (string) information into a numerical format by using a data conversation technique, such as label encoding.
+					
+				- K-Means Clustering 
+					- Unsupervised clustering
+					- Divide data into K groups, where members of a group are as similar as possible to each other
+					- Important Hyperparameters
+						- K!: Elbow Method:
+						- Mini_batch_size
+						- Extra_center_factor
+						- Init_method
+					- What training input does it expect?
+						- Trained channel, optional test
+						- recordIO-protobuf or CSV 						
+						- File or pipe mode on either
+					- How is it used?
+						- Every observation mapped to n-dimensional space (n = number of features)
+						- Works to optimize the center of K clusters
+					
+				- PCA - Principal Component Analysis
+					- What’s it for?
+						- Used for Dimensionality reduction
+						- Project higher-dimensional data (lots of features) into lower-dimensional (like a 2D plot) while minimizing loss of information
+						- The reduced dimensions are called components
+						- Unsupervised
+					- What training input does it expect?
+						- recordIO-protobuf or CSV
+						- File or Pipe on either
+					- How is it used?
+						- Covariance matrix is created, then singular value decomposition (SVD)
+						- Two modes
+							- Regular - For sparse data and moderate number of observations and features
+							- Randomized - For large number of observations and features
+					- Ques: A data scientist at a healthcare analytics company is facing challenges in developing a predictive model for patient outcomes using a dataset with hundreds of features, many of which are correlated. The high dimensionality and resulting sparsity of the data are hindering the model's ability to converge effectively. What preprocessing strategy should be employed to mitigate the "curse of dimensionality" and enhance the model's convergence on meaningful predictions?
+					- Anss: Apply Principal Component Analysis (PCA) to reduce the dataset's dimensionality
+					- Expl: PCA streamlines data, preserving critical variance, ideal for dense, correlated features, without significantly losing important information. It reduces dimensionality by transforming the original features into a smaller set of new variables (principal components) that retain most of the original data's variance.
+							
+										
+				- Factorization Machines - Skip 
+				- IP Insigts 
+					- What’s it for?
+						- Unsupervised learning of IP address usage patterns
+						- Identifies suspicious behavior from IP addresses
+					- What training input does it expect?
+						- User names, account ID’s can be fed in directly; no need to pre-process
+						- Training channel, optional validation (computes AUC score)
+						- CSV only - Entity, IP
+					- How is it used?
+						- Uses a neural network to learn latent vector representations of entities and IP addresses.
+						- Entities are hashed and embedded
+						- Need sufficiently large hash size
+						- Automatically generates negative samples during training by randomly pairing entities and IP’s
+									
+				- Reinforcement Learning 
+					- Reinforcement learning analyzes and optimizes the behavior of an agent based on the feedback from the environment.  
+					- Machines try different scenarios to discover which actions yield the greatest reward.
+					- Trial-and-error and delayed reward distinguishes reinforcement learning from other techniques.
+					- Q-Learning
+						- A specific implementation of reinforcement learning
+					- Reinforcement Learning in SageMaker
+						- Uses a deep learning framework with Tensorflow and MXNet
+						- Supports Intel Coach and Ray Rl lib toolkits.
+						- Custom, open-source, or commercial environments supported.
+							- MATLAB, Simulink
+							- EnergyPlus, RoboSchool, PyBullet
+							- Amazon Sumerian, AWS RoboMaker
+				
+				- Automatic Model Tuning with SageMaker
+					- Hyperparameter tuning
+						- How do you know the best values of learning rate, batch size, depth, etc?
+						- Often you have to experiment. However problem blows up quickly when you have many different hyperparameters; 
+						  and you need to try every  combination of every possible value somehow, train a model, and evaluate it every time
+						
+						- Ques:A Hyperparameter tuning job in SageMaker is using more time and resources than you are willing to spend. What might be one way to make it more efficient?
+						- Ans: Limit your hyperparameter ranges as much as possbile. Restricting the search space can help a lot.
+						
+						- Ques: Your automatic hyperparameter tuning job in SageMaker is consuming more resources than you would like, and coming at a high cost. What are TWO techniques that might reduce this cost?
+						- Anss: Use less concurrency while tuning and Use logarithmic scales on your parameter ranges. Since the tuning process learns from each incremental step, too much concurrency can actually hinder that learning. Logarithmic ranges tend to find optimal values more quickly than linear ranges.
+						
+						- Ques#16: A machine learning (ML) specialist is training a model by using a supervised learning algorithm. The ML specialist split the dataset to use 80% of the data for training and 20% of the data for testing. While evaluating the model, the ML specialist discovers that the model is 97% accurate for the training dataset and 75% accurate for the test dataset. 
+						Which action should the ML specialist take?
+						Anss: Change the hyperparameters to reduce overfitting of the model. Retrain the model
+						Expl: The model is likely overfitting. The model should be retrained and retested before deployment. If the datasets are not randomized, overfitting might occur again.
+						  
+					- Automatic Model Tuning
+						- Define the hyperparameters you care about and the ranges you want to try, and the metrics you are optimizing for
+						- SageMaker spins up a “HyperParameter Tuning Job” that trains as many combinations as you’ll allow
+						- Finally The set of hyperparameters producing the best results can then be deployed as a model
+						- Best Practices
+							- Don’t optimize too many hyperparameters at once 
+							- Limit your ranges to as small a range as possible
+							- Use logarithmic scales when appropriate
+							- Don’t run too many training jobs concurrently
+							- Make sure training jobs running on multiple instances report the correct objective metric in the end
+							
+				- Apache Spark
+					- Spark is integrated with SageMaker
+						- Allows you to combine preprocessing big data in Spark with training and inference in SageMaker
+						- Pre-process data as normal with Spark - Generate DataFrames
+						- Use sagemaker-spark library
+						- SageMakerEstimator - KMeans, PCA, XGBoost
+						- SageMakerModel
+						- Notebooks can use the SparkMagic (PySpark) kernel
+						- Connect notebook to a remote EMR cluster running Spark (or use Zeppelin)
+						- Works with Spark Pipelines as well					
+					
+				- SageMaker Studio, Debugger, AutoPilot, Model Monitor
+					- Ques: Where does the training code used by SageMaker come from?
+					- Anss: Docker Image Registered with ECR 
+					- Expl:Whether it's your own code, a built-in algorithm from SageMaker, or a model you've purchased in the marketplace - all training code deployed to SageMaker training instances come from ECR.
+					
+					- SageMaker Studio
+						- Visual IDE for machine learning!
+						- Integrates many of the features
+						- SageMaker AutoPilot
+							- SageMaker Notebooks
+							- SageMaker Experiments
+							- SageMaker Debugger
+							- Automatic Model Tuning 
+						- SageMaker Model Monitor 
+					
+					- SageMaker Notebooks
+						- Create and share Jupyter notebooks with SageMaker Studio
+						- Switch between hardware configurations (no infrastructure to manage)
+					
+					- SageMaker Experiments
+						- Organize, capture, compare, and search your ML jobs
+						- SageMaker Experiments is a feature of SageMaker that you can use to organize, track, compare, and evaluate ML experiments. 
+						- SageMaker Experiments is able to capture artifacts, parameters, and metrics. 
+						- SageMaker Experiments can quickly revisit the origins of a model when you are troubleshooting issues in production or auditing your models for compliance verifications. 
+						
+						- Ques#7: A machine learning (ML) specialist wants to create a data preparation job that uses a PySpark script to prepare data for training and testing. The script includes complex window aggregation operations. The ML specialist needs to evaluate the effects of the number of features and the sample count on model performance.
+						Which approach should the ML specialist use to determine the ideal data transformations for the model?
+						Asns: Add an Amazon SageMaker Experiments tracker to the script to capture parameters. Run the script as a SageMaker processing job.
+						Anss:  SageMaker Experiments is a feature of SageMaker that you can use to organize, track, compare, and evaluate ML experiments. SageMaker Experiments is able to capture artifacts, parameters, and metrics. SageMaker Experiments can quickly revisit the origins of a model when you are troubleshooting issues in production or auditing your models for compliance verifications. Additionally, SageMaker processing jobs support PySpark, which is required in this scenario.
+						
+					
+					- SageMaker Debugger
+						- A feature of SageMaker that profiles and debugs training jobs to improve the performance of ML models on compute resource utilization and model predictions
+						- Saves internal model state at periodical intervals
+						- SageMaker Studio Debugger dashboards
+						- Auto-generated training reports
+						- Built-in rules
+						- Supported Frameworks & Algorithms:
+							- Tensorflow
+							- PyTorch
+							- MXNet
+							- XGBoost
+							- SageMaker generic estimator (for use with custom training containers)
+						- Debugger API’s available in GitHub
+						
+					- SageMaker Autopilot / AutoML
+						- Basics 
+							- Automates:
+								- Algorithm selection
+								- Data preprocessing
+								- Model tuning
+								- All infrastructure
+							- It does all the trial & error for you
+							- More broadly this is called AutoML
+						- Workflow
+							- Load data from S3 for training
+							- Select your target column for prediction
+							- Automatic model creation
+							- Model notebook is available for visibility & control
+							- Model leaderboard
+								- Ranked list of recommended models
+								- You can pick one
+							- Deploy & monitor the model, refine via notebook if needed
+						- More..
+							- Problem types:
+								- Binary classification
+								- Multiclass classification
+								- Regression
+								- Algorithm Types:
+								- Linear Learner
+								- XGBoost
+								- Deep Learning (MLP’s)
+								- Ensemble mode
+							- Data must be tabular CSV or Parquet
+						- Autopilot Training Modes
+							- HPO (Hyperparameter optimization) - Selects algorithms most relevant to your dataset
+								- In Amazon SageMaker's Hyperparameter Optimization (HPO),
+										- 'max_jobs' controls the total number of training jobs to be executed, and 
+										- 'max_parallel_jobs' dictates how many of those can run in parallel. 
+										- Properly tuning these parameters, as suggested in the "Best Practices for HyperParameter Tuning" section, is crucial. 
+										- It allows for an efficient exploration of the hyperparameter space while managing resource utilization and keeping costs in check. This balance ensures that the HPO process is both thorough in searching for the best hyperparameters and economical in terms of computational resources and time, aligning with the guidelines for effective machine learning model optimization.
+							- Ensembling - Trains several base models using AutoGluon library
+							- Auto
+							
+						- Autopilot Explainability
+							- Integrates with SageMaker Clarify
+							- Transparency on how models arrive at predictions
+						
+					- SageMaker Model Monitor
+						- Get alerts on quality deviations on your deployed models (via CloudWatch)
+						- Visualize data drift
+						- Detect anomalies & outliers
+						- Detect new features
+						- No code needed
+						- Data is stored in S3 and secured
+						- Monitoring jobs are scheduled via a Monitoring Schedule
+						- Metrics are emitted to CloudWatch
+						- Integrates with Tensorboard, QuickSight, Tableau	
+						- Monitoring Types:
+							- Drift in data quality
+							- Drift in model quality (accuracy, etc)
+							- Bias drift
+							- Feature attribution drift
+						- Integrates with SageMaker Clarify
+							- SageMaker Clarify detects potential bias i.e., imbalances across different groups / ages / income brackets
+							- SageMaker Clarify also helps explain model behavior
+
+					- SageMaker: More Features
+						- SageMaker JumpStart
+						- SageMaker Data Wrangler
+						- SageMaker Feature Store
+						- SageMaker Edge Manager
+						- Asynchronous Inference endpoints
+						
+					SageMaker ML Lineage Tracking
+						- Creates & stores your ML workflow (MLOps)
+						- Keep a running history of your models
+						- Tracking for auditing and compliance
+						- Automatically or manually-created tracking entities
+						- Integrates with AWS Resource Access Manager for cross-account lineage
+						- Sample SageMaker-created lineage graph	
+
+				- SageMaker Data Wrangler 
+					- Visual interface (in SageMaker Studio) to prepare data for machine learning
+					- Import data
+					- Visualize data
+					- Transform data (300+ transformations to choose from)
+					- Or integrate your own custom xforms with pandas, PySpark, PySpark SQL
+					- “Quick Model” to train your model with your data and measure its results
+					
+				- SageMaker Canvas
+					- No-code machine learning for business analysts (No need to write code)
+					- Upload csv data (csv only for now), select a column to predict, build it, and make predictions
+					- Can also join datasets
+					- Classification or regression
+					- Automatic data cleaning - Missing values, Outliers, Duplicates
+					- Share models & datasets with SageMaker Studio		
+					- Ques#18: A company operates a fleet of vehicles. A business analyst wants to improve maintenance plans for the vehicles. The business analyst has very little experience with machine learning (ML). The business analyst has gathered a dataset with 500,000 measurements of various vehicle sensors during normal operations and during failures. The sensor data is stored as a set event in a time series. In the dataset, 98% of the samples represent normal operations and 2% of the samples represent failures.
+					Which action should the business analyst take to generate accurate maintenance predictions?
+					- Anss: Use Amazon SageMaker Canvas to prepare the data and train a custom model.
+					- Expl: SageMaker Canvas is a service that you can use to create ML models without having to write code. You can use SageMaker Canvas to build a custom model trained with your data. SageMaker Canvas can perform no-code data preparation, feature engineering, algorithm selection, training and tuning, inference, continuous model monitoring, and other tasks. SageMaker Canvas can generate models that are accurate, even when datasets are highly imbalanced. Because this scenario requires time series forecasting to generate predictions, SageMaker Canvas is a suitable option to build the custom model.
+
+						
+				
+		
+	6). Modeling Part3: High Level ML Services (109-121) (1H,14M) (PDF Page: 454)
+		 - Summary:
+			- Build your own Alexa: Transcribe -> Lex -> Polly
+			- Make a universal translator : Transcribe -> Translate -> Polly
+			- Build a Jeff Bezos detector : DeepLens -> Rekognition
+			- Are people on the phone happy : Transcribe -> Comprehend
+					
+		- Comprehend
+			- Amazon Comprehend uses NLP to extract insights about the content of documents. 
+			- It develops insights by recognizing the entities, key phrases, language, sentiments, and other common elements in a document.
+			- Natural Language Processing and Text Analytics
+			- Input social media, emails, web pages, documents, transcripts, medical records (Comprehend Medical)
+			- Extract key phrases, entities, sentiment, language, syntax, topics, and document classifications  
+			- Extracts data, topics and document classifications with confidence scores.
+			- Events detection
+			- PII Identification & Redaction
+			- Targeted sentiment
+			
+		- Translate
+			- Uses deep learning techniques to produce more accurate and fluent translation
+			- Supports real-time and batch translations
+			
+		- Transcribe (Audio/Speech to Text)
+			- Amazon Transcribe is an automatic speech recognition service that uses machine learning models to convert audio to text
+			- Speech to text - Input in FLAC, MP3, MP4, or WAV, in a specified language
+			- Speaker Identificiation
+			- Channel Identification - i.e., two callers could be transcribed separately
+			- Automatic Language Identification
+			- Custom Vocabularies 
+			- Use Cases
+				- Call Analytics
+				- Subtitling (Closed Caption)
+				
+			- Ques1: A machine learning (ML) specialist has a large number of voice recordings that are stored in Amazon S3. The voice recordings are in English and need to be grouped by their conversation topics.
+			  What should the ML specialist do to meet this requirement with the LEAST amount of effort?
+			 - Anss: Run separate Amazon Transcribe jobs on the voice recordings. Run an Amazon Comprehend topic detection job on the Amazon Transcribe output.
+			 - Expl: This solution is the way to process and group these audio files with the least amount of effort.
+				
+		- Polly
+			- Neural Text-To-Speech, many voices & languages	
+			- Lexicons - Customize pronunciation of specific words & phrases
+			- SSML (Speech Synthesis Markup Language)
+				- Alternative to plain text
+				- Gives control over emphasis, pronunciation, breathing, whispering, speech rate, pitch, pauses
+			- Speech Marks
+				- Can encode when sentence / word starts and ends in the audio stream
+				- Useful for lip-synching animation
+			- Ques:How may you customize the pronunciation of specific acronyms in Amazon Polly on new text it hasn't seen before?
+			- Anss: Lexicon - Lexicons allow you to map specific words and phrases to a specific pronunciation.
+-					
+		- Recognition
+			- Use Cases
+				- Computer vision
+				- Object and scene detection
+				- Can use your own face collection
+				- Image moderation
+				- Facial analysis
+				- Celebrity recognition
+				- Face comparison
+				- Text in image
+				- Video analysis
+				- Objects / people / celebrities marked on timeline
+				- People Pathing
+				- Image and video libraries
+			- Nitty Gritty
+				- Images come from S3, or provide image bytes as part of request
+				- Video must come from Kinesis Video Streams
+				- Can use with Lambda to trigger image analysis upon upload
+		
+		- Forecast	
+			- Fully-managed service to deliver highly accurate forecasts with ML
+			- AutoML chooses best model for your time series data - (ARIMA, DeepAR, ETS, NPTS, CNN-QR, Prophet)
+			- Works with any time series - Price, promotions, economic
+			- Forecast algorithms
+				- CNN-QR
+					- Convolutional Neural Network – Quantile Regression
+					- Best for large datasets with hundreds of time series
+					- Accepts related historical time series data & metadata
+				- DeepAR+
+					- Recurrent Neural Network
+					- Best for large datasets
+					- Accepts related forward-looking time series & metadata
+				- Prophet
+					- Additive model with non-linear trends and seasonality
+				- NPTS
+					- Non-Parametric Time Series
+					- Good for sparse data. Has variants for seasonal / climatological forecasts
+				- ARIMA
+					- Autoregressive Integrated Moving Average
+					- Commonly used for simple datasets (<100 time series)
+				- ETS
+					- Exponential Smoothing
+					- Commonly used for simple datasets (<100 time series)
+			- Ques: You wish to predict inventory demand over time using Amazon Forecast. Which model would you select for this application?
+			- Anss: AutoML - Trick question! Forecast chooses the best algorithm automatically, using AutoML techniques. You don't have to specify it at all.
+			
+		- Lex
+			- Billed as the inner workings of Alexa
+			- Natural-language chatbot engine
+			- A Bot is built around Intents
+				- Utterances invoke intents (“I want to order a pizza”)
+				- Lambda functions are invoked to fulfill the intent
+				- Slots specify extra information needed by the intent (e.g. Pizza size, toppings, crust type, when to deliver, etc.)
+			- Can deploy to AWS Mobile SDK, Facebook Messenger, Slack, and Twilio		
+			
+		- Personalize (More in Exam)
+			- Fully-managed recommender engine (Same one Amazon uses)
+			- API access
+				- Feed in data (purchases, ratings, impressions, cart adds, catalog, user demographics etc.) via S3 or API integration
+				- You provide an explicit schema in Avro format
+				- Javascript or SDK
+				- GetRecommendations - Recommended products, content, etc. (Similar items)
+			- Real-time or batch recommendations
+			- Ques:Even though you are constantly feeding it new data, you're finding that your recommendations from Amazon Personalize are becoming less relevant over time. How might you address the issue?
+			- Anss:Manually do a full retrain at least weekly.A full retrain (passing trainingMode=full) is recommended at least once a week.
+		
+		- Textract,DeepRacer,Lookout,Monitron
+			- Amazon Textract - OCR with forms, fields, tables support
+			- AWS DeepRacer - Reinforcement learning powered 1/18- scale race car
+			- Amazon Lookout
+				- Equipment, metrics, vision
+				- Detects abnormalities from sensor data automatically to detect equipment issues
+				- Monitors metrics from S3, RDS, Redshift, 3rd party SaaS apps
+				- Vision uses computer vision to detect defects in silicon wafers, circuit boards, etc.
+			- Amazon Monitron
+				- End to end system for monitoring industrial equipment & predictive maintenance
+
+		- TorchServe, AWS Neuron, AWS Panaroma
+			- TorchServe
+				- Model serving framework for PyTorch
+				- Part of the PyTorch open source project from Facebook (Meta?)
+			- AWS Neuron
+				- SDK for ML inference specifically on AWS Inferentia chips
+				- EC2 Inf1 instance type
+				- Integrated with SageMaker or whatever else you want (deep learning AMI’s,containers, Tensorflow, PyTorch, MXNet)
+			- AWS Panorama
+				- Computer Vision at the edge
+				- Brings computer vision to your existing IP camera
+				- Used to add computer vision to an on-premises camera network
+				
+				- Ques#6: A city government wants to track cars in many parking lots across the city. The parking lots are all equipped with video cameras that stream video over an isolated camera network by using real-time streaming protocol (RTSP). Because of government regulations, no access to the internet is allowed from the camera network. The city wants to use machine learning (ML) to identify license plates to automate the parking payment process. The city also wants to integrate license plate information with its line of business application.
+				Which solution will meet these requirements with the LEAST operational overhead?
+				Anss: Connect an AWS Panorama Appliance to the camera network to process the STSP video streams. Train an Amazon SageMaker computer vision model to identify license plate information.
+				Anss: You can use AWS Panorama to add computer vision to an on-premises camera network. You can use SageMaker to manage ML training jobs and provision training resources with minimal operational overhead. An AWS Panorama Appliance integrates with existing camera networks and can read license plate information. You can also deploy applications and models that are trained with SageMaker to AWS Panorama Appliance. Then, the appliance can identify license plate information locally without the need to connect to the internet.
+			
+		- Deep Composer, Fraud Detection, Code Guru and Contact Lens 
+			- AWS DeepComposer
+				- AI-powered keyboard
+				- Composes a melody into an entire song
+				- For educational purposes
+			
+			- Amazon Fraud Detector
+				- Upload your own historical fraud data
+				- Builds custom models from a template you choose
+				- Exposes an API for your online application
+							
+			- Amazon CodeGuru
+				- Automated code reviews!
+				- Finds lines of code that hurt performance
+				- Resource leaks, race conditions
+				- Fix security vulnerabilities
+				- Offers specific recommendations
+				- Powered by ML
+				- Supports Java and Python
+				
+			- Amazon Connect
+				- For customer support call centers
+				- Ingests audio data from recorded calls
+				- Allows search on calls / chats
+				- Sentiment analysis
+				- Find “utterances” that correlate with successful calls
+				- Categorize calls automatically
+				- Measure talk speed and interruptions
+				- Theme detection: discovers emerging issues
+											
+		- Amazon Kendra and Amazon Augemented 
+			- Amazon Kendra (Kind of Alexa)
+				- Enterprise search with natural language 
+				- For example, “Where is the IT support desk?” “How do I connect to my VPN?”
+				- Combines data from file systems, SharePoint, intranet, sharing services (JDBC, S3) into one searchable repository
+		
+		- Amazon Augmented AI (A2I)
+			- Human review of ML predictions
+			- Builds workflows for reviewing low-confidence predictions
+			- Access the Mechanical Turk workforce or vendors
+			- Integrated into Amazon Textract and Rekognition
+			- Integrates with SageMaker
+			- Very similar to Ground Truth
+	
+		
+	7). Modeling Part4: Labs (122-125)(0H,28M)(PDF Page: 504)
+		 - Summary of Part3:
+			- Build your own Alexa: Transcribe -> Lex -> Polly
+			- Make a universal translator : Transcribe -> Translate -> Polly
+			- Build a Jeff Bezos detector : DeepLens -> Rekognition
+			- Are people on the phone happy : Transcribe -> Comprehend
+		
+		- Lab1: Tuning CNN Part1
+			- Create Ec2 Instance - AMI: Deep Learning GPU TensorFlow 2.11.0 (ubuntu 20.04)
+			- Connect Ec2 Terminal thru Putty and Setup Tunnel
+			- Launch Notebook: Type jupyter notebook (This command opens the Jupyter interface in your default web browser)
+			- Upload the notebook from course material: Keras-CNN-Tuning.ipynb (\VIPL\AWS ML Speciality\AWSMachineLearning)
+			
+		- Lab2: Tuning CNNPart2
+			- #01 Import required libraries - tensorflow, keras 
+			- #02 Load raw datset 
+			- #03 Shape data from 1D to 3D (Images)
+			- #04 Convert Train and Test Labels to be categorical in 'One-Hot' format
+			- #05 Sanity Check - Print out one of the image as label 
+			- #06 Apply CNN Method: Input Layer, Convolutional Layer,  Activation Function, Pooling Layer,Fully Connected Layer
+			- #07 Apply model.summary() to check applied layers
+			- #08 Use Adam Optimizer (default learning rate Adam is 0.001)
+			- #09 Train the model - Use Batches of 32 
+			- #10 To prevent overlifting, apply some sort of Regularization (Using Dropout Layers technique in Deep Learning)
+			- #11 Compile model with two drop out layers 
+			- #12 Again Train the model - Use Batches of 32 - Accuracy increased to 99.2%
+			
+		- Lab3: Tuning CNNPart3
+			- #14 Again Complile and Train the model (This time batch size 1000) - Accuracy increased to 99.6%
+			- #19 Again Complile by increasing Adam learning rate to 0.01
+			- #20 Again Train the model - Use Batches of 32
+			- Now Close the Notebook, Stop Ec2 Instance
+	
+	8). Machine Learning Implementation and Operations (126-138(1H,10M) (Output Layer: Provides PDF Page: 508)
+		 - Section Intro 
+		 
+		 - SageMaker Inner Details and Production Variants - SageMaker and Docker Containers
+			- Pre-built deep learning
+			- Pre-built scikit-learn and Spark ML
+			- Pre-built Tensorflow, MXNet, Chainer, PyTorch
+				- Distributed training via Horovod or Parameter Servers
+			- Inner Details
+				- All models in SageMaker are hosted in Docker containers
+				- This allows you to use any script or algorithm within SageMaker, regardless of runtime or language
+				- Library for making containers compatible with SageMaker: RUN pip install sagemaker-containers in your Dockerfile
+				- Structure of a training container
+					/opt/ml
+					├── input
+					│ ├── config
+					│ │ ├── hyperparameters.json
+					│ │ └── resourceConfig.json
+					│ └── data
+					│ └── <channel_name>
+					│ └── <input data>
+					├── model
+					│
+					├── code
+					│ └── <script files>
+					│
+					└── output
+					└── failure
+					└── model
+						└── <model files>
+						
+				- Structure of your Docker image
+					- WORKDIR
+						- nginx.conf
+						- predictor.py
+						- serve/
+						- train/
+						- wsgi.py
+						
+				- Assembling it all in a Dockerfile
+					FROM tensorflow/tensorflow:2.0.0a0
+					RUN pip3 install sagemaker-training	(In 2023 sagemaker-containers is replaced with sagemaker-training)				
+					
+					# Copies the training code inside the container
+					COPY train.py /opt/ml/code/train.py					
+					
+					# Defines train.py as script entrypoint
+					ENV SAGEMAKER_PROGRAM train.py
+					
+				- Environment variables
+					- SAGEMAKER_PROGRAM - Run a script inside /opt/ml/code
+					- SAGEMAKER_TRAINING_MODULE
+					- SAGEMAKER_SERVICE_MODULE
+					- SM_MODEL_DIR
+					- SM_CHANNELS / SM_CHANNEL_*
+					- SM_HPS / SM_HP_*
+					- SM_USER_ARGS
+					- …and many more
+								
+			- Production Variants
+				- You can test out multiple models on live traffic using Production Variants
+					- 'VariantWeight' tell SageMaker how to distribute traffic among them
+					- So, you could roll out a new iteration of your model at say 10% variant weight
+					- Once you’re confident in its performance, ramp it up to 100%
+				- This lets you do A/B tests, and to validate performance in realworld settings
+					- Offline validation isn’t always useful
+				- Shadow Variants
+				- Deployment Guardrails
+				
+				- Ques19: A machine learning (ML) specialist is building a new recommendation engine. The ML specialist wants to test multiple models by using live data in a beta environment where customers will interact with the model. Based on these interactions, the ML specialist will compare models by using A/B testing. The ML specialist then will select and deploy the best model.
+				What is the MOST operationally efficient way to test the multiple model variants?
+				- Anss: Use Amazon SageMaker to deploy different versions of the model behind a single endpoint. Route a percentage of traffic to each version of the model. Select the best performing model. Reroute 100% of traffic to that model.
+				- Expl: SageMaker supports the deployment of multiple models, known as production variants, to a single SageMaker endpoint. You configure the production variants so that a small portion of the live traffic goes to the model that you want to validate. You can collect statistics about model effectiveness and change weightings with simple calls to the SageMaker service.
+				
+				- Ques20: A machine learning (ML) specialist is retraining a new version of a model that is already in production. The model is deployed as an endpoint in Amazon SageMaker. When the retraining is complete, the ML specialist will test the new version of the model before removing the existing production model. The ML specialist's objective is to test the new model at the same time that the existing model is handling the majority of the requests. The deployment must result in minimum disruption to the users of the endpoint.
+				Which deployment will meet these requirements with the LEAST operational overhead?
+				- Anss: Update the endpoint configuration of the existing endpoint to include the new model as a ProductionVariant API call. Set the InitialVariantWeight for the new model to be a small percentage of the original ProductionVariant VariantWeight.
+				- Anss: This solution minimizes operational overhead and has no impact on the users of the endpoint.
+			
+		 - SageMaker On the Edge: SageMaker Neo and IoT Greengrass]
+			- Summary: SM trains models, Neo optimizes and compiles for edge devices, and Greengrass allows local execution on edge, reducing network latency.
+			
+			- SageMaker Neo
+				- Neo optimizes and compiles for edge devices
+				- Train once, run anywhere - Edge devices - ARM, Intel, Nvidia processors
+				- Optimizes code for specific devices - Tensorflow, MXNet, PyTorch, ONNX, XGBoost, DarkNet, Keras
+				- Consists of a compiler and a runtime
+			
+			- Neo + AWS IoT Greengrass
+				- Neo-compiled models can be deployed to an HTTPS endpoint
+					- Hosted on C5, M5, M4, P3, or P2 instances
+					- Must be same instance type used for compilation
+				- OR! You can deploy to IoT Greengrass
+					- This is how you get the model to an actual edge device
+					- Inference at the edge with local data, using model trained in the cloud
+					- Uses Lambda inference applications
+					- Greengrass allows local execution on edge, reducing network latency.
+					
+			- Ques: You want to deploy your trained semantic segmentation model from SageMaker to an embedded ARM device in a car. Which services might you use to accomplish this?
+			- Anss: SageMaker Neo and IoT Greengrass - Neo can compile your model to an ARM processor, and GreenGrass can get it to the device you want.
+			
+			- Ques: You are developing an autonomous vehicle that must classify images of street signs with extremely low latency, processing thousands of images per second. What AWS-based architecture would best meet this need?
+			- Anss: Develop your classifier with TensorFlow, and compile it for an NVIDIA Jetson edge device using SageMaker Neo, and run it on the edge with IoT GreenGrass.
+			- Expl: SageMaker Neo is designed for compiling models using TensorFlow and other frameworks to edge devices such as Nvidia Jetson. The low latency requirement requires an edge solution, where the classification is being done within the vehicle itself and not over the air. 
+			
+			
+		 - SageMaker Security: Encryption at Rest and In Transit
+			- General AWS Security - IAM,MFA,SSL/TLS,Encryption
+			- Protecting Data at Rest in SageMaker - Use KMS, Encrypted S3 Buckets for training data and hosting models
+			- Protecting Data in Transit in SageMaker
+				- All traffic supports TLS / SSL 
+				- IAM roles are assigned to SageMaker to give it permissions to access resources
+			
+		 - SageMaker Security: VPC's, IAM, Logging, and Monitoring
+			- Training jobs run in a Virtual Private Cloud (VPC)
+			- Use a private VPC for even more security
+			- Notebooks are Internet-enabled by default
+			- Training and Inference Containers are also Internet-enabled by default
+			- SageMaker + IAM
+				-User permissions for:
+					- CreateTrainingJob
+					- CreateModel
+					- CreateEndpointConfig
+					- CreateTransformJob
+					- CreateHyperParameterTuningJob
+					- CreateNotebookInstance
+					- UpdateNotebookInstance
+				- Predefined policies:
+					- AmazonSageMakerReadOnly
+					- AmazonSageMakerFullAccess
+					- AdministratorAccess
+					- DataScientist
+			- SageMaker Logging and Monitoring
+				- CloudWatch can log, monitor and alarm
+				- CloudTrail records actions from users, roles, and services within SageMaker
+				
+			- Ques#13: A machine learning (ML) specialist is setting up an ML environment that multiple data scientists will access. The ML specialist is deploying one Amazon SageMaker notebook instance for each data scientist. The ML specialist must ensure that each data scientist has access to only their personal notebook instance.
+			What should the ML specialist do to meet this requirement?
+			- Anss:Attach an IAM policy to the IAM users of the data scientists to grant access to only their personal notebook instance. 
+			
+		 - SageMaker Resource Management: 
+			- Choosing Instance Types
+				- In general, algorithms that rely on deep learning will benefit from GPU instances (P3, g4dn) for training
+				- Can use EC2 Spot instances for training		 
+			- Automatic Scaling
+				- You set up a scaling policy to define target metrics, min/max capacity, cooldown periods
+				- Dynamically adjusts number of instances for a production variant
+			- Availability Zones
+				- SageMaker automatically attempts to distribute instances across availability zones
+				- But you need more than one instance for this to work!
+				- Deploy multiple instances for each production endpoint
+				- Configure VPC’s with at least two subnets, each in a different AZ
+			- Ques: Where does SageMaker's automatic scaling get the data it needs to determine how many endpoints you need?
+			- Anss: CloudWatch is a repository of performance metrics associated with your endpoints, which SageMaker can use to determine if you have the right amount of them.
+				
+		 
+		 - SageMaker Serverless Inference and Inference Recommender
+			- Elastic Inference
+				- Accelerates deep learning inference
+				- EI accelerators may be added alongside a CPU instance
+				- EI accelerators may also be applied to notebooks
+				- Works with Tensorflow, PyTorch, and MXNet pre-built containers
+				- Works with custom containers built with EIenabled Tensorflow, PyTorch, or MXNet
+				- Works with Image Classification and Object Detection built-in algorithms
+				- Ques:Your SageMaker inference is based on a Tensorflow or MXNet network. You want it to be fast, but don't want to pay for P2 or P3 inference nodes. What's a good solution?
+				- Anss: Use Elastic Inference - EI accelerators can be attached to CPU inference instances to accelerate deep learning inference at a fraction of the cost of using a GPU inference node.
+				
+			- Serverless Inference
+				- Introduced for 2022
+				- Specify your container, memory requirement, concurrency requirements
+				- Underlying capacity is automatically provisioned and scaled
+				- Good for infrequent or unpredictable traffic; will scale down to zero when there are no requests.
+				- Charged based on usage
+				- Monitor via CloudWatch - ModelSetupTime, Invocations, MemoryUtilization				
+				
+		 - SageMaker Inference Pipelines
+			- Linear sequence of 2-15 containers 
+			- Any combination of pre-trained built-in algorithms or your own algorithms in Docker containers
+			- Combine pre-processing, predictions, post-processing
+			- Spark ML and scikit-learn containers OK
+			- Spark ML can be run with Glue or EMR
+			- Serialized into MLeap format
+			- Can handle both real-time inference and batch transforms
+		 
+		 - MLOps with SageMaker, Kubernetes, SageMaker Projects, and SageMaker Pipelines
+			- MLOps with SageMaker, Kubernetes
+				- Integrates SageMaker with Kubernetes-based ML infrastructure
+				- Amazon SageMaker Operators for Kubernetes
+				- Components for Kubeflow Pipelines
+				- Enables hybrid ML workflows (on-prem + cloud)
+				- Enables integration of existing ML platforms built on Kubernetes/ Kubeflow
+			- SageMaker Projects
+				- SageMaker Studio’s native MLOps solution with CI/CD
+					- Build images
+					- Prep data, feature engineering
+					- Train models
+					- Evaluate models
+					- Deploy models
+					- Monitor & update models
+				- Uses code repositories for building & deploying ML solutions
+				- Uses SageMaker Pipelines defining steps
+			
+		 - Lab: Tuning, Deploying, and Predicting with Tensorflow on SageMaker - Part 1
+			- Go to AWS Sage Maker
+			- Create Notebook Instance
+			- Upload two notebooks from course material: 
+				- mnist-train-cnn.py (\VIPL\AWS ML Speciality\AWSMachineLearning)
+				- keras-mnist-sagemaker.py (\VIPL\AWS ML Speciality\AWSMachineLearning) (Training & Deploying our Keras CNN on SageMaker)
+			
+		 - Lab: Tuning, Deploying, and Predicting with Tensorflow on SageMaker - Part 2
+			- Select Notebook: keras-mnist-sagemaker.py
+			- #1 Import SageMaker
+			- #2 Save MNIST dataset to disk
+			- #3 Upload MNIST data to S3
+			- #4 Test our CNN Script (mnist-train-cnn.py) ((\VIPL\AWS ML Speciality\AWSMachineLearning) locally on the notebook instance 
+			- #5 Apply TensorFlow (1 Epoch)
+			- #6 Train the Model 
+			- #7 Redo Step #5 with 10 Epochs 
+			- #8 ReTrain the Model 
+			- Go to AWS SageMaker-> Training -> Training Jobs to find the training job 
+		 
+		 - Lab: Tuning, Deploying, and Predicting with Tensorflow on SageMaker - Part 3
+			- #09 Deply the Model
+			- #10 Make predictions with the deployed model 
+			- #11 Cleanup the deployment endpoint 
+			- Next - Find the best Hyperparameter with Automatic Model Tuning 
+			- #12 Test our CNN Script (mnist-train-cnn.py) ((\VIPL\AWS ML Speciality\AWSMachineLearning)
+			- #13 Apply HyperParameter Tuner 
+			- #14 Train the model
+			- Go to AWS SageMaker-> Training -> Training Jobs to find the training job (HyperParameter tuning jobs)
+			- #15 Deploy the Best Model
+			- #16 Make predictions with the best deployed model 
+			- #17 Cleanup the deployment endpoint 
+			
+			
+	 
+	 9). Generative AI: Transformers, GPT, Foundation Models (139-154) (1H,52M) (PDF Page: 546)
+		- GPT: Generative Pre-trained Transformer
+		- GPT Vs ChatGPT
+			- Think of ChatGPT as a focused implementation of GPT model designed for chatting, while GPT is a versatile tool for many kinds of text-related work
+				- GPT is the foundational model capable of performing a wide range of text-based tasks.
+				- ChatGPT is a specialized application of GPT tailored for engaging in conversations and providing user-friendly interactive experiences
+				
+			- GPT 
+				- Refers to a family of models developed by OpenAI. 
+				- These are LLMs designed to generate human-like text and perform various natural language processing (NLP) tasks.
+				- Purpose:
+					- General-purpose text generation
+					- Used in diverse applications like summarization, translation, question-answering, and content creation
+				- User Interface: Typically used via APIs or integrated into applications.
+			
+			- ChatGPT
+				- ChatGPT is a conversational AI product based on the GPT architecture. 
+				- It is specifically optimized and fine-tuned to handle interactive, conversational scenarios.
+				- Purpose:
+					- Engage in dynamic, human-like conversations.
+					- Act as a chatbot for customer support, virtual assistants, or user education.
+					- Answer questions and provide explanations interactively.
+				- User Interface: Deployed as a chat-based tool accessible via websites, applications, or messaging platforms.
+		----------------------------------------------------------------------------------------------------------------------------		
+			
+		- Linked Learning Vertex:
+			- https://www.linkedin.com/learning/what-is-generative-ai/what-s-new?autoSkip=true&dApp=64324403&focused=true&leis=AICC&resume=false&u=26888146
+			- Gen-AI is a subset of AI that focuses on creating new content (text, images, audio, videos, or code)based on patterns and data it has been trained on
+			- Unlike traditional AI models that classify or predict, generative AI models produce entirely new.
+			- Examples:
+				- ChatGPT: Generates human-like conversations.
+				- DALL·E: Produces images based on text descriptions.
+				- GANs: Create hyper-realistic synthetic images for movies, games, or advertisements.
+				
+			- How Gen-AI Works
+				- In Simple words: 
+					- Gen-AI models (LLMs) are trained on vast amount of data and can generate human-like text, images or sounds by predicting next based on existing data/patterns they have been trained on.
+					
+				- First Understand with a Car Example:
+					- Car Engines (Porsche, BMW etc) are manufactured by machine experts (Similarly Gen-AI Models are created by AI/Machine Learning/Mathematics experts)
+					- Car Manufactures - 
+						- Go to Car Engine Showroom, Pick a already made model (Similarly AI Engineer will pick already build AI-Model from Github Repositories)
+						- Then they go to Chasis Manufacturer who can host the Car Engine and Run the Engine 
+							- (These chasis are called as AI Notebooks. Their purpose is to hold and run the Gen-AI model code)
+							- (Example Notebooks - like Google Collab, Jupyter Notebooks which can run the AI Model)
+					- Car Designers (Content Creation)
+						- Now as we have Car Engine and Car Chasis, multiple car designs can be created.
+						- Similarly - 
+							- So now that we have our generative AI model and our Notebook, we are ready to create our own content. 
+								- If we're a beginner, we can use a paid service like Midjourney or Lensa. 
+								- If we are more experienced, we can use a notebook and pick from available models. 
+									Example: Avatar Generation Model/Notebook - Upload only 10 pictures of yourself, the model suggests a variety of different avatars of yourself. 
+			
+			- Most Well-Known Type of Gen-AI Models				
+				A). Natural Language Models
+					- Most of the hype around text-based generative AI is using a model called GPT. 
+					- GPT stands for 'Generative Pre-trained Transformer' - It's a language model developed by 'OpenAI', a research organization focused on developing and promoting friendly AI. 
+					- Natural language generation is perhaps the most well-known application of generative AI so far with ChatGPT in the headlines. 
+					- Since OpenAI made ChatGPT available to the public on November 30th in 2022, it reached 1 million user in less than a week, I said in less than a week. 
+					
+					- Usage by few industry applications. 
+						- GitHub - 
+							- GitHub Copilot is a generative AI service provided by GitHub to its users. 
+							- The service uses the OpenAI codex to suggest the code and entire functions in real time, right from the code editor. 
+							- It allows the users to search less for outside solutions and it also helps them type less with smarter code completion. 
+						- Microsoft
+							- Microsoft's Bing - which implemented ChatGPT into its search functionality, enabling it to reach concise information in a shorter amount of time. 
+							
+				B). Text to image applications
+					- There are three main text to image generation services. Midjourney, DALL-E, and Stable Diffusion. 
+						- Midjourney - Would be macOS, Closed API and Art-centric approach to the image generation process. 
+						- DALL-E  - Would be Windows, Open API 
+						- Stable Diffusion - Would be Linux, Open source
+						
+				C). VAE and Anomaly Detection
+					- Variational Autoencoders, referred as VAE	- This is one of the main models that we use in this space
+					- Aanomaly detection is performed by training model on a normal datset, and then using trained model to identify deviation from normal data. 
+					- Supports wide range of situations, like 
+						- finding fraud in financial transactions, 
+						- spotting flaws in manufacturing or 
+						- finding security breaches in a network. 
+					- Examples, 
+						- Uber has used VAE for anomaly detection in their financial transactions to detect fraud. 
+						- Google has also used VAE to detect network intrusions using anomaly detection
+						- Healthcare uses VAE to detect anomalies in medical imaging such as CT scans and MRI, like Children's National Hospital in Washington DC
+						
+			- Gen-AI Futuristic Usages
+				- Gaming/Film/Marketing Sectors - Will use Gen-AI models in computer graphics, animation to create more realistic characters,3D modeling. 
+				- Chatbots Sectors - Improve natural language understanding in virtual assistants and chatbots, capable of handling complex/nuanced conversations. 
+				- Energy sector -  Optimize energy consumption and production, such as predicting demand, and managing renewable energy sources
+				- Transportation sector - Will use Gen-AI models to optimize traffic flow and to predict maintenance needs for vehicles.
+				
+				In short, generative AI will be used 
+					- To automate repetitive tasks and improve efficiency in a wide variety of industries. 
+					- To create more and realistic, and accurate simulations in fields such as architecture, urban planning, and engineering. 
+					- To create new materials and products in fields, such as manufacturing and textile design. 
+					- To improve natural language generation in the fields of content creation such as news articles, books, and even movie scripts. 
+					- To improve self-driving cars by generating realistic virtual scenarios for testing and training
+					- To improve and excel in audio to asset generation where you can speak, and then have the AI generate an asset.
+					- To improve crop yield and precision agriculture
+					
+			- Productivity enhancements LLMs through APIs and real-time interactions
+				- As we know, GPT refers to a family of models developed by OpenAI. 
+				- These are LLMs designed to generate human-like text and perform various natural language processing (NLP) tasks.
+				- These LLMs has evolved significantly since it first became mainstream.
+				- LLMs have moved from from standalone LLMs like ChatGPT, to the dynamic world of LLM APIs.
+				- Development of LLM APIs, has unlocked a new realm of accessibility and integration.
+				- Since GPT made API access available to their main engine, they allow developers to integrate the power of GPT models into their own applications, their own products, their own service.
+				- For example, Stripe customer support uses GPT APIs that are fine tuned with the in-depth information about Stripe. 
+				- Other renowned companies that use GPT, API are Zapier, Jasper, Duolingo, and Shopify. 
+				
+		- Udemy: Transformers and Generative AI - Large language models, transformers, GPT, and AWS support	
+			- Transformer Architecture	
+				- Applications of Transformers
+					- Chat!
+					- Question answering
+					- Text classification i.e., sentiment analysis
+					- Named entity recognition
+					- Summarization
+					- Translation
+					- Code generation
+					- Text generation - i.e., automated customer service
+				
+			- From Transformers to GPT - Generative Pre-Trained Transformers - 
+				
+			
+			- Generative AI in Non-AWS and AWS
+				- What is Foundation Model:
+					- FMs are giant pre-trained models which we are fine tuning for specific tasks or application
+					
+				- Non-AWS: Pre-trained transformer models
+					- GPT-n (OpenAI, Microsoft)
+					- DALL-E (OpenAI, Microsoft)
+					- BERT (Google)
+					- LLaMa (Meta)
+					- Segment Anything (Meta)
+					
+				- AWS: AWS Foundation Models
+					- Jurassic-2 (AI21labs)
+						- Multilingual LLMs for text generation
+						- Spanish, French, German, Portuguese, Italian,Dutch
+					- Claude (Anthropic)
+						- LLM’s for conversations
+						- Question answering
+						- Workflow automation
+					- Stable Diffusion (stability.ai)
+						- Image, art, logo, design generation
+					- Amazon Titan
+						- Text summarization
+						- Text generation
+						- Q&A
+						- Embeddings - Personalization & Search
+						
+				- Amazon SageMaker Jumpstart with Generative AI
+					- SageMaker Studio has a “JumpStart” feature - Lets you quickly open notebook with a given model loaded up and ready to go
+					- Current foundation models
+						- Hugging Face models (text generation) - Falcon, Flan, BloomZ, GPT-J 
+						- Stabile Diffusion (image generation)
+						- Amazon Alexa (encoder/decoder multilingual LLM)
+					- Lab: Lecture 150
+					
+				- Amazon Bedrock - Building Generative AI with Amazon Bedrock
+					- Provides easiest way to build/scale Gen-AI applications with FMs (Foundation Models)
+					- An API for Gen-AI Foundation Models
+						- Serverless
+						- Fine-tuning API
+							- Provide labeled examples in S3
+							- As few as 20
+							- Your data is only used in your copy of the FM
+							- Your data is encrypted and does not leave your VPC
+						- Integrates with SageMaker
+					- Bedrock API Endpoints
+						- bedrock: Manage, Deploy, Train Models
+						- bedrock-runtime: Perform inference (execute prompts, generate embeddings) against these models 
+						- bedrock-agent: Manage, Deploy, Train LLM agents and knowledge bases 
+						- bedrock-agent-runtime: Perform inference against agents and knowledge bases 
+					- Lab: Lecture 52
+						
+				- Amazon Q Developer (formerly CodeWhisperer)
+					- An “AI coding companion” - Java, JavaScript, Python, TypeScript, C#
+					- Real-time code suggestions
+					- Security scans - Analyzes code for vulnerabilities
+					- Reference tracker - Flags suggestions that are similar to open source code
+					- Security - All content transmitted with TLS, Encrypted in transit, Encrypted at rest
+					- Amazon CodeWhisperer: Supported IDE’s
+						- Visual Studio Code
+						- JetBrains - IntelliJ, PyCharm, Clion, GoLand, WebStorm, PhpStorm, RubyMine, DataGrip
+						- JupyterLab
+						- SageMaker Studio
+						- AWS Lambda console
+						- AWS Cloud9
+					- 
+						
+				- AWS HealhScribe
+					- Transcribes recordings of medical consultations (With speaker roles identified)
+					- Generates Clinical Notes
+					- Hippa Compliant 
+					- Patient recordings and notes stored in Cloud (unless you put them there)
+				
+		
+	10). Wrapping Up (155-164) (0H,32M)
+		- Take Free Exam - https://explore.skillbuilder.aws/learn/course/external/view/elearning/12469/aws-certified-machine-learning-specialty-practice-question-set-mls-c01-english?ml=sec&sec=prep
+		- SageMaker develoment guide - https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html
+		- Exam guide - https://aws.amazon.com/certification/certified-ai-practitioner/?gclid=Cj0KCQiA4L67BhDUARIsADWrl7H6WQRjwUsbms1hzHrI2sllssVhSoNOHo0BeTk4PzEV8F6veqp4JcwaAkKGEALw_wcB&trk=76a09922-9ba6-48ef-8745-876a0e43d2d2&sc_channel=ps&ef_id=Cj0KCQiA4L67BhDUARIsADWrl7H6WQRjwUsbms1hzHrI2sllssVhSoNOHo0BeTk4PzEV8F6veqp4JcwaAkKGEALw_wcB:G:s&s_kwcid=AL!4422!3!709243719038!p!!g!!aws%20machine%20learning%20training!21582272861!166844408380
+		- 
+------------------------------------------------
+20 Exam Test 
+
+
+#11: A real estate company wants to create a machine learning (ML) model to predict housing prices based on a historical dataset. The dataset contains 32 features.
+Which algorithm will meet these requirements?
+Anss: Linear regression
+Epln: You can use linear regression to forecast sales, predict delivery times, or predict a numerical value. With Amazon SageMaker, you can model linear regression with the Amazon SageMaker linear learner algorithm.
+
+------------
+Udemy Free 15 Questions:
+Ques#1: Considering that a company uses the built-in PCA algorithm in Amazon SageMaker and stores its training data on Amazon S3, it has observed significant expenses linked to the use of Amazon Elastic Block Store (EBS) volumes with their SageMaker training instances.
+Which parameter setting should they adjust in the AlgorithmSpecification to effectively reduce these EBS costs?
+Ans: Set TrainingInputMode to Pipe
+Expl: Using Pipe mode streams data directly from S3 to the algorithm, reducing the need to use and store data on EBS volumes, hence lowering costs associated with EBS. This mode is ideal for large datasets.
+
+Ques#2: A data engineering team is developing a multi-tier application that requires multiple AWS Lambda instances to directly access a common data source simultaneously, without intermediary services. They need a file system that can automatically scale and support high levels of data throughput and concurrent connections. Which options could the team consider to ensure optimal performance and scalability in this scenario? (SELECT TWO)
+Anss: Amazon EFS & Amazon FSx
+Expl: EFS is designed for elastic scalability and supports multiple concurrent Lambda connections. It excels in environments where shared, simultaneous file access is needed across different services.
+FSx supports high-performance computing with high data throughput and concurrent access, ideal for intensive data workloads. Implementation involves setting up an FSx file system and integrating it with AWS Lambda.
+
+Ques#3: A leading news portal seeks to deliver personalized article recommendations by daily training a machine learning model using historical clickstream data. The volume of incoming data is consistent but experiences substantial spikes during major elections, leading to increased site traffic. Which architecture would ensure the most cost-effective and reliable framework for accommodating these conditions?
+Anss: Capture clickstream data using Amazon Kinesis Data Firehose to Amazon S3. Process the data with Amazon SageMaker for model training using Managed Spot Training. Publish results to Amazon DynamoDB for instant recommendation serving.
+Expl: This choice efficiently manages high-volume data ingestion (Kinesis Firehose to S3), cost-effective processing and model training (SageMaker with Spot Training), and real-time recommendation serving (DynamoDB), aligning with requirements for scalability and cost efficiency.
+
+Ques#4: A data science team at your company is planning to utilize Amazon SageMaker to train an XGBoost model to predict customer churn. The dataset comprises millions of rows, necessitating significant pre-processing to ensure model accuracy. To handle this task efficiently, the team has decided to leverage Apache Spark due to its capability for large-scale data processing. As the lead architect, you are tasked with designing a solution that integrates Apache Spark for data pre-processing while optimizing for simplicity and scalability.
+What is the simplest architecture that allows the team to pre-process the data at scale using Apache Spark before training the model with XGBoost on SageMaker?
+Anss: Use SageMaker Spark to preprocess data, train with XGBoostSageMakerEstimator, and host on SageMaker for inference.
+Expl: The SageMaker Spark library facilitates the execution of Spark jobs as part of the machine learning pipeline within SageMaker, without the user needing to set up and manage an EMR cluster or deal with the intricacies of Spark cluster configuration and scaling.
+
+Ques#5: A healthcare company is planning to develop a machine learning model to predict patient readmission rates based on historical patient data. The data science team needs to create a data repository that integrates various types of patient data such as demographics, previous medical history, medication records, and lab test results.
+Which strategy should the data engineering team use to identify and organize the primary data sources effectively, ensuring the data is accessible and formatted suitably for training the machine learning model?
+Anss: Store data in a centralized data lake
+Expl: Centralized data lakes support diverse data formats and large volumes, essential for aggregating disparate health records. This architecture simplifies data management, enhances accessibility for analysis, and is scalable. Implementation involves setting up storage in AWS S3, structuring data by date and patient, and using metadata tagging to objects.
+
+Ques#6: A system designed to classify financial transactions into fraudulent and non-fraudulent transactions results in the confusion matrix below. What is the recall of this model? 
+Anss: 90%
+Expl: Recall is defined as true positives / (true positives + false negatives). This works out to 90/(90+10) in this example, or 90%. 66.67% is the precision (true positives / (true postives + false positives.) Recall is an important metric in situations where classifications are highly imbalanced, and the positive case is rare. Accuracy tends to be misleading in these cases.
+
+Ques#7: A data science team at your organization is tasked with creating a machine learning model to forecast the sale prices of houses using characteristics such as the home's square footage. However, approximately 10% of the entries in the modest-sized training dataset are missing the square footage attribute. Given the importance of model accuracy in your application, which approach should the team employ to handle missing values in the training data effectively?
+Anss: Employ k-nearest neighbors (KNN) imputation to fill missing square footage.
+Expl: KNN imputation maintains the sample's structure and can accurately predict missing values based on similarity to nearest neighbors. It's well-suited for datasets with complex relationships.
+
+Ques#8: A data analyst is tasked with performing exploratory data analysis on a dataset of tweets to understand user sentiment towards various topics. The goal is to label tweets accurately for further sentiment analysis. Which AWS service or feature should the analyst use to efficiently categorize and label the dataset, ensuring a solid foundation for subsequent detailed analysis?
+Anss: Employ Amazon SageMaker Ground Truth to annotate historical tweets with positive or negative sentiments, utilizing the labeled data to train a sentiment analysis model on SageMaker.
+Expl: Ground Truth is specifically designed for data labeling, providing a direct path to creating accurately labeled datasets for training machine learning models, like sentiment analysis, in SageMaker.
+
+Ques#9: A data scientist is training a deep learning model for image classification using a convolutional neural network (CNN). The model performs exceptionally well on the training data but significantly underperforms on new, unseen images. To minimize overfitting and improve the model's generalization to new data, which TWO of the following approaches should the data scientist take? (Select TWO)
+Anss: Use early stopping & Use dropout regularization
+Expl: Early stopping halts training when performance on a validation set stops improving, preventing overfitting by not allowing the model to learn noise in the training data.
+Dropout randomly deactivates a subset of neurons during training, which helps in preventing the network from becoming too dependent on any single neuron and thus reduces overfitting.
+
+Ques#10: In Amazon Elastic File System (EFS), when monitoring performance metrics indicates that the IOPS usage is nearing 100%, which of the following actions should be taken to effectively manage the file system's performance?
+Anss: Increase the provisioned throughput of the EFS file system if it is in the provisioned mode.
+Expl: 1. For Bursting Throughput Mode: If `PercentIOLimit` is approaching 100%, increasing the total storage size will automatically raise the baseline performance and burstable IOPS capacity. This option leverages the natural scaling feature of Bursting Throughput mode.
+2. For Provisioned Throughput Mode: Alternatively, if the file system is already in Provisioned Throughput mode or if a more immediate and predictable performance enhancement is needed, manually adjust the `ProvisionedThroughput` setting. This direct intervention ensures performance does not degrade as the `PercentIOLimit` approaches its maximum.
+
+Ques#11: A data engineering team is tasked with optimizing the storage of large-scale satellite imagery data, which will be used to train an Amazon SageMaker MXNet image classification algorithm.
+Which data format should they use to ensure optimal training performance?
+Anss: RecordIO
+Expl: RecordIO format is specifically optimized for high throughput and efficient data serialization. It is ideal for large-scale image datasets in MXNet, reducing read times and enhancing overall training efficiency.
+
+Ques#12: A financial services firm is leveraging Amazon SageMaker to develop machine learning models that predict market trends. Due to the sensitive nature of their data, the firm's policy prohibits direct internet access from their virtual private cloud (VPC) to ensure the security of their data. They require the ability to use SageMaker notebook instances for model development without exposing these instances to the internet. What approach should the firm take to securely utilize SageMaker notebooks within their VPC in compliance with their security policy?
+Anss: Disable internet access for SageMaker, establish VPC endpoints, update security groups, and access SageMaker notebooks through PrivateLink.
+Expl: This configuration secures SageMaker notebooks by disabling direct internet access and employing VPC endpoints, ensuring all traffic between your laptop and the SageMaker notebook stays within the AWS network. AWS PrivateLink facilitates private connectivity to SageMaker, bypassing the public internet and enhancing security.
+
+Ques#13: An autonomous vehicle technology company is seeking an AWS solution capable of classifying street sign images with minimal latency, handling thousands of images each second. Which AWS services would most effectively fulfill this requirement?
+Anss: Amazon SageMaker, Neo, Greengrass
+Expl: SageMaker trains models, Neo optimizes and compiles for edge devices, and Greengrass allows local execution on edge, reducing network latency.
+
+Ques#14: In an effort to optimize a machine learning model on Amazon SageMaker, you find that the automatic hyperparameter tuning job is excessively resource-intensive and costly. Which TWO of the following strategies could effectively reduce these costs? (Select TWO)
+Anss: Use logarithmic scales on your parameter ranges & Decrease the number of concurrent hyperparameter tuning jobs
+Expl: Reducing concurrency minimizes resource usage and costs, allowing for more focused and potentially insightful individual job analyses without overwhelming your compute resources.
+
+Ques#15: As a data scientist involved in the development of a self-driving car system, your task is to implement a computer vision solution capable of categorizing every pixel in images captured by the car's cameras. The categories include identifying objects like people, buildings, roads, signs, and vehicles.
+How would you implement a computer vision solution capable of classifying every pixel in images captured by the car's cameras?
+Anss: Fine-tune the SageMaker built-in semantic segmentation algorithm using a pre-trained ResNet50 backbone
+Expl: The SageMaker semantic segmentation algorithm is designed for pixel-level classification, which directly addresses the requirement. Using a pre-trained ResNet50 backbone can leverage transfer learning to improve performance. The SageMaker semantic segmentation algorithm provides a choice of three built-in algorithms - Fully-Convolutional Network (FCN), Pyramid Scene Parsing (PSP), and DeepLabV3 - each with a choice of ResNet50 or ResNet101 backbones. These algorithms and backbones can be used to train custom pixel-level classification models. 
+
+
+
+
+	
+			
+			
+			
+			
+
