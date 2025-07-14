@@ -1,0 +1,38 @@
+Course Git Repo: https://github.com/academind/react-complete-guide-course-resources/tree/main
+
+Basic Kick-start:
+	React can be added to an existing project via a script tag, 
+    but the recommended way to start a new React project is by using Create React App, a command-line tool that sets up a modern web development environment with no configuration.
+	
+	npx create-react-app my-app
+	cd my-app
+	npm start
+	It'll automatically start the browser
+
+What is useState used for in React? (Used in Tabs.js)
+useState is React Hook that allows you to add state to a functional component. 
+It returns an array with two values: the current state and a function to update it. 
+The Hook takes an initial state value as an argument and returns an updated state value whenever the setter function is called.
+
+
+    "Course Git Repo: https://github.com/academind/react-complete-guide-course-resources/tree/main",
+    "To run downloaded code, use command 'npm run dev' as the code is created using 'vite",
+    
+    "To hands-on online, just type in browser 'react.new' - It'll open codesandbox.io with basic react project",
+    "To hands-in locally, use the command to create basic react project",
+   		"npx create-react-app my-app",
+   	 	"cd my-app",
+   	 	"npm start",
+    "ORRRRRRRRRRR...." ,
+    	"npm create vite",
+		"Choose Project Name: vite-project",
+		"Select Framework: React",
+		"Select Variant: JavaScript",
+		"cd vite-project",
+		"npm install",
+		"npm run dev",
+		"Then browse: http://127.0.0.1:5173/"
+
+Learning:
+ - Using Multiple Components - Lecture 579 (Arrange.js)
+ - Passing attributes and using by 'props' - Lecture 582 (PropsDynamic.js)~

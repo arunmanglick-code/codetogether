@@ -30,7 +30,7 @@ public class JpaApplication {
         };
     }
 
-    private Integer createStudent(StudentDAO objStudentDao) {
+    public Integer createStudent(StudentDAO objStudentDao) {
         // Create Student Object
         // Save Student Object
         // Display Id of Saved Student Object
@@ -44,14 +44,14 @@ public class JpaApplication {
         return studentId;
     }
 
-    private void readStudent(Integer id, StudentDAO objStudentDAO){
+    public void readStudent(Integer id, StudentDAO objStudentDAO){
         System.out.println("Read Student having Id:" + id);
         Student objStudent = objStudentDAO.findStudentById(id);
 
         if(objStudent != null)
             System.out.println("Found Student Details: " + objStudent);
     }
-    private void queryStudents(StudentDAO objStudentDao) {
+    public void queryStudents(StudentDAO objStudentDao) {
         String query1 = "FROM Student";
         String query2 = "FROM Student where firstName = 'Arun'";
         String query3 = "FROM Student where firstName = 'Arun' OR lastName = 'Manglick'";

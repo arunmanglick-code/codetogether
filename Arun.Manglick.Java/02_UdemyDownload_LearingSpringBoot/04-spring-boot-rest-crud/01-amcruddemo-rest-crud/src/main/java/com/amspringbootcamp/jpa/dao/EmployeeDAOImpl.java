@@ -50,4 +50,23 @@ public class EmployeeDAOImpl implements EmployeeDAO{
             }
         }
     }
+
+    //add a new method to verify the employee
+    @Override
+    public Employee verifyEmployee(String email, String password) {
+        TypedQuery<Employee> theQuery = entityManager.createQuery("FROM Employee WHERE email = :email AND password = :password", Employee.class);
+        theQuery.setParameter("email", email);
+        theQuery.setParameter("password", password);
+
+        //verify email using regex
+        if(!email.matches("^(.+)@(.+)$")) {
+            return null;
+        }
+
+        List<Employee> employees = theQuery.getResultList();
+        if(employees.size() == 0) {
+            return null;
+        }
+        return employees.get(0);
+    }
 }
