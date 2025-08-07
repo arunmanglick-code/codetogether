@@ -33,13 +33,14 @@ Opik integrates with CrewAI to log traces for all CrewAI activity.
 36) Copy paste the key and you are all set
 
 # Next is using opik in your code
-4). Check 02_AIAgent_Opik.ipynb 
+4) Check 02_AIAgent_Opik.ipynb 
     # Import opik and its CrewAI integration
     import opik
     from opik.integrations.crewai import track_crewai
     track_crewai(project_name="arunmanglick-crewai-integration-demo")
 41) Now once you run your overall code, you can go to opik here and find traces your your project
 42) https://www.comet.com/opik/arun-manglick/home
+
 
 
 
