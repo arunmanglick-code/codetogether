@@ -16,3 +16,16 @@ Open your terminal or command prompt and run: pip install crewai
 
 # What is Ollama
 Ollama is a powerful platform that lets you run LLMs locally on your machine—no cloud dependency required. It’s designed for developers who want fast, private, and customizable access to models like LLaMA, Mistral, Gemma, Phi-4, and more.
+
+# What is CrewAI
+CrewAI is designed to build and orchestrate multi-agent AI systems—where multiple autonomous agents collaborate to complete complex tasks efficiently.
+CrewAI is a lean, lightning-fast open-source Python framework built entirely from scratch—completely independent of LangChain or other agent frameworks. 
+It empowers developers with both high-level simplicity and precise low-level control, ideal for creating autonomous AI agents tailored to any scenario.
+
+https://www.crewai.com/
+https://github.com/crewAIInc/crewAI
+
+CrewAI offers:
+    Modular agent design for squad-based workflows
+    Integration with tools like LangChain, Semantic Kernel, and AutoGen
+    Support for MCP protocols and SSE transport for real-time tool discovery

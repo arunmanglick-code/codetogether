@@ -17,7 +17,7 @@ http://localhost:8080/sse
 ![alt text](image-1.png)
 
 # Run the Agent
-Once MCP Server is running, execute the agent code
+Once MCP Server is running, execute the agent codein python notebook
 
 # Using OpenAPI instead of Local LLM using Olama
 For this you are required to get an API key for OpenAI
