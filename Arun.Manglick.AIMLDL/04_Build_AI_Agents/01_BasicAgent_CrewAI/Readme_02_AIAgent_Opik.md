@@ -14,7 +14,7 @@ Opik integrates with CrewAI to log traces for all CrewAI activity.
 2) Get your Opik server running in minutes.
     21) Comet.com Cloud (Easiest & Recommended)
     22) Create your free Comet account - https://www.comet.com/signup?from=llm&utm_source=opik&utm_medium=github&utm_content=install_create_link&utm_campaign=opik
-    23) Login using gmail (or anything else)
+    23) Login using gmail (or anything else) (Used arunmanglickawsnew)
     24) After Login, you'll find your opik api key here - https://www.comet.com/account-settings/apiKeys
 
 # Next is install and configuring opik

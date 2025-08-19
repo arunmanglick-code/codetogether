@@ -16,24 +16,3 @@ Open your terminal or command prompt and run: pip install crewai
 
 # What is Ollama
 Ollama is a powerful platform that lets you run LLMs locally on your machine—no cloud dependency required. It’s designed for developers who want fast, private, and customizable access to models like LLaMA, Mistral, Gemma, Phi-4, and more.
-
-# What is opik
-https://github.com/comet-ml/opik
-Open-source LLM evaluation platform
-Opik helps you evaluate and optimize LLM systems that run better, faster, and cheaper. 
-Opik provides comprehensive tracing, evaluations, dashboards, and powerful features like Opik Agent Optimizer and Opik Guardrails to improve and secure your LLM powered applications in production.
-
-# opik integration with crew ai
-Opik has integrations with numerous frameworks - https://www.comet.com/docs/opik/tracing/integrations/overview?from=llm
-Here framework used is crewAI - https://www.comet.com/docs/opik/tracing/integrations/crewai'
-Opik integrates with CrewAI to log traces for all CrewAI activity.
-
-# File Strucutre
-01_AIAgent.ipynb - 
-    - This script contains code to Creating Agents, Defining Tasks, Orchestrating a Crew.
-    - This agent script is using Local LLM Setup
-
-02_AIAgent_Opik.ipynb - 
-    - This script has 100% copy of #1
-    - Addition is inclusion of 'opik' 
-    - Opik allows you to monitor the agent's thought process, tool usage, and task execution in real-time

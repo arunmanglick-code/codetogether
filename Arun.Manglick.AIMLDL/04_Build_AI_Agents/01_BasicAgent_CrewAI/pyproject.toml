@@ -1,0 +1,6 @@
+[project]
+name = "arunmanglick-agent-project"
+version = "0.1.0"
+dependencies = [
+    "linkup-sdk>=0.2.8",
+]
