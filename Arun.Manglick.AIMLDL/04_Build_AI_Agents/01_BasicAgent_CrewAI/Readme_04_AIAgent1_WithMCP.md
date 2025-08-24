@@ -8,7 +8,7 @@ Moved the code which usse Linkupclient to search the data in this file.
 
 # How to run the MCP Server
 Go to command prompt: python <folderpaht/filename.py>
-python mcp_server.py
+python mcp_server_websearch.py
 
 ![alt text](image.png)
 

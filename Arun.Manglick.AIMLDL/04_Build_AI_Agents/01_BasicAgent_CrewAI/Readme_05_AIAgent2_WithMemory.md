@@ -31,10 +31,16 @@ https://arxiv.org/abs/2501.13956
 It’s built on top of Graphiti, Zep’s open-source graph engine, and is tightly integrated into Zep’s context engineering platform.
 So here we are building Graphiti MCP Server which give agents persistent memory.
 
+# Create Zep Account to use it
+    Browse - https://www.getzep.com/
+    Signup - Login using gmail (or anything else) (Used arunmanglickawsnew)  
 
 # Graphiti (Zep’s open-source graph engine) MCP Server
+Graphiti is a framework for building and querying temporally-aware knowledge graphs, specifically tailored for AI agents operating in dynamic environments
 The Graphiti MCP Server is a powerful open-source framework that enables AI agents to interact with temporally-aware knowledge graphs using MCP
 It’s designed to give agents persistent memory, semantic reasoning, and collaborative intelligence across sessions—making it ideal for orchestrating multi-agent systems like CrewAI, Claude Desktop, or Cursor IDE.
+
+Graphiti powers the core of Zep, a turn-key context engineering platform for AI Agents. Zep offers agent memory, Graph RAG for dynamic data, and context retrieval and assembly.
 
 https://github.com/gifflet/graphiti-mcp-server
 https://help.getzep.com/graphiti/getting-started/mcp-server
@@ -44,3 +50,5 @@ Features:
     2. Exposes Graphiti’s capabilities via MCP, a standardized protocol for agent communication
     3. Supports persistent memory, semantic search, and structured reasoning
 
+# How to build Graphiti MCP Server
+Read from here - 04_Build_AI_Agents\01_BasicAgent_CrewAI\Readme_05_GraphitiMCPServer.md

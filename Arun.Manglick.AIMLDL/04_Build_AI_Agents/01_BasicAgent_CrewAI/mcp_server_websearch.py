@@ -13,7 +13,7 @@ load_dotenv()
 # Change the transport to "websocket" to use a different
 # communication protocol that is often more compatible
 # with nested environments.
-mcp = FastMCP('linkup-server', port=8080)
+mcp = FastMCP('linkup-server', port=8070)
 client = LinkupClient()
 
 @mcp.tool()
