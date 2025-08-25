@@ -1,130 +1,137 @@
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import os
-import re
-
-def scrape_product_data(url):
-    """
-    Scrapes product data from a given URL.
-    NOTE: The selectors used here are examples for an Amazon product page
-          and will likely need to be updated for other pages or websites.
-    """
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-    }
-
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Raise an exception for bad status codes
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching URL {url}: {e}")
-        return None
-
-    soup = BeautifulSoup(response.content, 'html.parser')
-
-    # === 1. MS CoPilot - Extract Product Image URL ===
-    image_url = "Not found"
-    scripts = soup.find_all("script")
-    print(f"Found {len(scripts)} script tags.")
-
-    for script in scripts:
-        print(f"Script content (first 1000 chars): {script.string[:1000] if script.string else 'No content'}")
-        if script.string and "ImageBlockATF" in script.string:
-            match = re.search(r'"hiRes"\s*:\s*"([^"]+\.jpg)"', script.string)
-            if match:
-                image_url = match.group(1)
-                print(f"Found image URL: {image_url}")
-                break
-
-    
-
-    # === 2. Extract Dimensions from Product Details ===
-    height = width = length = "Not found"
-    detail_section = soup.find(id="productDetails_techSpec_section_1") or soup.find(id="prodDetails")
-    if detail_section:
-        rows = detail_section.find_all("tr")
-        for row in rows:
-            header = row.find("th")
-            value = row.find("td")
-            if header and value:
-                label = header.get_text(strip=True).lower()
-                val = value.get_text(strip=True)
-                if "height" in label:
-                    height = val
-                elif "width" in label:
-                    width = val
-                elif "length" in label or "depth" in label:
-                    length = val
-    
-    # === Output ===
-    print("✅ Scraped Product Details:")
-    print(f"Image URL: {image_url}")
-    print(f"Height: {height}")
-    print(f"Width: {width}")
-    print(f"Length: {length}")
-
-    # -----------------------
-
-    # --- These selectors need to be adapted for the specific product page ---
-    # Example for Product Image URL
-    # image_element = soup.select_one('img#landingImage')
-    # image_url = image_element['src'] if image_element else 'Not Found'
-
-    # # Example for Product Dimensions (often found in a details table)
-    # dimensions_element = None
-    # # Amazon often has dimensions in a table or a list
-    # # We will search for text containing "Product Dimensions" or similar
-    # product_details_tables = soup.find_all('table', id=re.compile(r'productDetails'))
-    
-    # height, width, length = 'Not Found', 'Not Found', 'Not Found'
-
-    # print('product_details_tables:', len(product_details_tables))
-
-    # for table in product_details_tables:
-    #     rows = table.find_all('tr')
-    #     for row in rows:
-    #         header = row.find('th')
-    #         if header and 'Product Dimensions' in header.get_text():
-    #             dimensions_text = row.find('td').get_text(strip=True)
-    #             # This regex will need to be adjusted based on the format of the dimensions
-    #             dims = re.findall(r'(\d+\.?\d*)', dimensions_text)
-    #             if len(dims) >= 3:
-    #                 length, width, height = dims[0], dims[1], dims[2]
-    #             break
-    #     if length != 'Not Found':
-    #         break
-
-    # --- End of adaptable selectors ---
-
-    product_data = {
-        'image_url': image_url,
-        'height_cm': height,
-        'width_cm': width,
-        'length_cm': length,
-        'product_url': url
-    }
-
-    return product_data
-
-if __name__ == '__main__':
-    # --- List of product URLs to scrape ---
-    product_urls = [
-        # Replace these with the URLs of the products you want to scrape
-        'https://www.amazon.com/dp/B0862269YP'
-    ]
-
-    scraped_data = []
-    print("Starting product scraping...")
-    for url in product_urls:
-        data = scrape_product_data(url)
-        if data:
-            scraped_data.append(data)
-            print(f"Successfully scraped: {url}")
-        else:
-            print(f"Failed to scrape: {url}")
-
-    # Convert the scraped data into a DataFrame for easier analysis
-    df = pd.DataFrame(scraped_data)
-    print("Scraping complete. Here's the data collected:")
-    print(df)
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "463ab6e0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import requests\n",
+    "from bs4 import BeautifulSoup\n",
+    "import pandas as pd\n",
+    "import os\n",
+    "import re"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "1c6bad26",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def scrape_product_data(url):\n",
+    "    \"\"\"\n",
+    "    Scrapes product data from a given URL.\n",
+    "    NOTE: The selectors used here are examples for an Amazon product page\n",
+    "          and will likely need to be updated for other pages or websites.\n",
+    "    \"\"\"\n",
+    "    headers = {\n",
+    "        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'\n",
+    "    }\n",
+    "\n",
+    "    try:\n",
+    "        response = requests.get(url, headers=headers)\n",
+    "        response.raise_for_status()  # Raise an exception for bad status codes\n",
+    "    except requests.exceptions.RequestException as e:\n",
+    "        print(f\"Error fetching URL {url}: {e}\")\n",
+    "        return None\n",
+    "\n",
+    "    soup = BeautifulSoup(response.content, 'html.parser')\n",
+    "\n",
+    "    # --- These selectors need to be adapted for the specific product page ---\n",
+    "    # Example for Product Image URL\n",
+    "    image_element = soup.select_one('img#landingImage')\n",
+    "    image_url = image_element['src'] if image_element else 'Not Found'\n",
+    "\n",
+    "    # Example for Product Dimensions (often found in a details table)\n",
+    "    dimensions_element = None\n",
+    "    # Amazon often has dimensions in a table or a list\n",
+    "    # We will search for text containing \"Product Dimensions\" or similar\n",
+    "    product_details_tables = soup.find_all('table', id=re.compile(r'productDetails'))\n",
+    "    \n",
+    "    height, width, length = 'Not Found', 'Not Found', 'Not Found'\n",
+    "\n",
+    "    for table in product_details_tables:\n",
+    "        rows = table.find_all('tr')\n",
+    "        for row in rows:\n",
+    "            header = row.find('th')\n",
+    "            if header and 'Product Dimensions' in header.get_text():\n",
+    "                dimensions_text = row.find('td').get_text(strip=True)\n",
+    "                # This regex will need to be adjusted based on the format of the dimensions\n",
+    "                dims = re.findall(r'(\\d+\\.?\\d*)', dimensions_text)\n",
+    "                if len(dims) >= 3:\n",
+    "                    length, width, height = dims[0], dims[1], dims[2]\n",
+    "                break\n",
+    "        if length != 'Not Found':\n",
+    "            break\n",
+    "\n",
+    "    # --- End of adaptable selectors ---\n",
+    "\n",
+    "    product_data = {\n",
+    "        'image_url': image_url,\n",
+    "        'height_cm': height,\n",
+    "        'width_cm': width,\n",
+    "        'length_cm': length,\n",
+    "        'product_url': url\n",
+    "    }\n",
+    "\n",
+    "    return product_data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "3aeedefc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def download_image(url, folder_path, file_name):\n",
+    "    \"\"\"Downloads an image from a URL and saves it to a specified folder.\"\"\"\n",
+    "    if url == 'Not Found':\n",
+    "        print(f\"Image URL not found for {file_name}. Skipping download.\")\n",
+    "        return\n",
+    "\n",
+    "    if not os.path.exists(folder_path):\n",
+    "        os.makedirs(folder_path)\n",
+    "\n",
+    "    try:\n",
+    "        response = requests.get(url, stream=True)\n",
+    "        response.raise_for_status()\n",
+    "\n",
+    "        # Create a valid filename\n",
+    "        valid_file_name = \"\".join(x for x in file_name if x.isalnum() or x in \"._-\") + \".jpg\"\n",
+    "        file_path = os.path.join(folder_path, valid_file_name)\n",
+    "\n",
+    "        with open(file_path, 'wb') as file:\n",
+    "            for chunk in response.iter_content(chunk_size=8192):\n",
+    "                file.write(chunk)\n",
+    "        print(f\"Successfully downloaded {file_path}\")\n",
+    "    except requests.exceptions.RequestException as e:\n",
+    "        print(f\"Error downloading image from {url}: {e}\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
