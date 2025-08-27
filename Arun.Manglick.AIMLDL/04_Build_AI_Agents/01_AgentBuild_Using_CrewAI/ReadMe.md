@@ -13,7 +13,7 @@
 
 ## 2. About the Project
 
-This suite demonstrates building, orchestrating, and extending AI agents using CrewAI, with local and cloud LLMs, web search tools, and persistent memory. It covers agent creation, task assignment, tool integration, and memory augmentation.
+This suite demonstrates building, orchestrating, and extending AI agents using CrewAI, with local and cloud LLMs, web search tools, and persistent memory. It covers agent creation, task assignment, tool integration, and memory augmentation. Agent are powered by OpenAI or Local Ollama instance running the llama3.2 model
 
 ## 3. Required Installation
 
@@ -99,6 +99,40 @@ For detailed step-by-step instructions, see the individual notebook files and th
 
 
 ## 7. Concepts in Depth
+
+### Ollama (llama3.2 Model)
+Ollama is a platform that allows you to run large language models (LLMs) locally on your machine, providing privacy, speed, and flexibility without relying on cloud services. The `llama3.2` model is a state-of-the-art open-source LLM from Meta, known for its strong performance in natural language understanding and generation tasks. Running `llama3.2` with Ollama enables you to:
+- Avoid sending data to external servers, ensuring privacy
+- Achieve low-latency responses for interactive applications
+- Experiment with and fine-tune models locally
+
+**How to use:**
+- Download and install Ollama from https://ollama.com/download
+- Pull the model: `ollama pull llama3.2`
+- Start the model: `ollama run llama3.2`
+- The local server will be available at http://localhost:11434/
+
+**Links:**
+- https://ollama.com/
+- https://llama.meta.com/
+
+### OpenAI
+OpenAI provides powerful cloud-based LLMs such as GPT-3, GPT-3.5, and GPT-4, which are accessible via API. These models are widely used for a variety of natural language processing tasks, including text generation, summarization, translation, and more. In this project, OpenAI models can be used as an alternative to local LLMs for agent reasoning and task completion.
+
+**Key Features:**
+- Access to state-of-the-art language models via API
+- High accuracy and broad general knowledge
+- Scalable and easy to integrate into applications
+
+**How to use:**
+- Sign up at https://platform.openai.com/
+- Obtain an API key from your account settings
+- Set the API key in your environment (e.g., `OPENAI_API_KEY` in `.env`)
+- Use the API in your code to interact with OpenAI models
+
+**Links:**
+- https://platform.openai.com/
+- https://openai.com/research
 
 ### Opik
 Opik is an open-source LLM evaluation and observability platform. It provides tracing, dashboards, and guardrails for LLM-powered applications. Opik integrates with frameworks like CrewAI to log traces for all agent activity, making it easier to debug, optimize, and monitor agent workflows. It offers features such as Opik Agent Optimizer and Opik Guardrails to improve and secure LLM applications in production. Opik can be used with Comet Cloud or self-hosted, and supports a wide range of integrations for tracing and evaluation.
