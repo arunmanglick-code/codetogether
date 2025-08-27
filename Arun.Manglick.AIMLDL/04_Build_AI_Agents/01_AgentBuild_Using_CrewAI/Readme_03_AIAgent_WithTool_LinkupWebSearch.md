@@ -3,6 +3,7 @@ https://docs.crewai.com/en/tools/search-research/linkupsearchtool
 
 1) The LinkupSearchTool provides a seamless way to integrate Linkup’s contextual information retrieval capabilities into your CrewAI agents. 
 2) By leveraging this tool, agents can access relevant and up-to-date information to enhance their decision-making and task execution.
+3) The LinkupSearchTool provides the ability to query the Linkup API for contextual information and retrieve structured results. This tool is ideal for enriching workflows with up-to-date and reliable information from Linkup, allowing agents to access relevant data during their tasks.
 
 # What is Linkup (AI search engine)
 https://www.linkup.so/
