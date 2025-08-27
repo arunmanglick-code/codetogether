@@ -16,6 +16,21 @@ load_dotenv()
 mcp = FastMCP('linkup-server', port=8070)
 client = LinkupClient()
 
+# Note: No LINKUP_API_KEY is passed here. (It was used in 03_AIAgent1_WithTool_LinkupWebSearch.ipynb)
+# Then why this LinkupClient is Different
+    # The FastMCP (Multi-Core Processing) server is used.
+    # In this specific architecture, the LinkupClient is operating within a tightly-coupled, internal environment.
+    # In such a setup, the authentication gets handled by the core server or a pre-configured service, allowing the client to operate
+    # without an explicit API key in the tool's code itself. It’s a design choice to simplify local or containerized deployments.
+
+# In contrast, in (03_AIAgent1_WithTool_LinkupWebSearch.ipynb)  BaseTool class is designed to be a self-contained unit. 
+    # It's a common practice for such tools to require a key to authenticate with the external service for every request.
+    # This ensures security, tracks usage, and enforces any rate limits tied to your account.
+
+# In short, the need for a key is determined by the architectural context.
+# Your 03_AIAgent1_WithTool_LinkupWebSearch.ipynb  code is a direct, authenticated API client,
+# Whereas this MCP example is a part of a larger, internally authenticated system.
+
 @mcp.tool()
 def web_search(query: str = "") -> str:
     """Search the web for the given query."""

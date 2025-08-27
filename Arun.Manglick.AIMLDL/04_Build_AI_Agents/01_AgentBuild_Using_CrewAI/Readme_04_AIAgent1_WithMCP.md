@@ -2,12 +2,21 @@
 This code is more towards using MCP Server
 Here instead of using Linkup Search Tool local (03_AIAgent_WithTool_LinkupWebSearch.ipynb), it's exposed as MCP Server
 
+# What is an MCP Server?
+An MCP server is designed to act as a bridge between a large language model (LLM) and external systems or tools. Think of it like a universal adapter for AI. 
+It allows an LLM, which might be running on a different machine or a different platform, to securely and reliably access functions and data that are outside of its own context.
+Note: Here we are using FastMCP to create the MCP Server 
+
+# What is FastMCP
+FastMCP is a Python framework that simplifies the creation of MCP (Model Context Protocol) servers.
+FastMCP framework handles all the complex networking and protocol details behind the scenes, allowing you to focus on simply defining what your tool does.
+
 #  MCP Server
 Created mcp_server.py
 Moved the code which usse Linkupclient to search the data in this file.
 
 # How to run the MCP Server
-Go to command prompt: python <folderpaht/filename.py>
+Go to command prompt: python <folderpath/filename.py>
 python mcp_server_websearch.py
 
 ![alt text](image.png)
@@ -29,10 +38,5 @@ Here's how to get your key:
     3. Create a New Key: On the API keys page, click the "+ Create new secret key" button. Give your key a descriptive name.
     4. Copy the Key: A new key will be generated and displayed only once. Make sure to copy it immediately and save it in a secure location, such as in your project's .env file as OPENAI_API_KEY="your_secret_key_here".
 
-# What is FastMCP
-FastMCP is a Python framework that simplifies the creation of MCP (Model Context Protocol) servers.
-FastMCP framework handles all the complex networking and protocol details behind the scenes, allowing you to focus on simply defining what your tool does.
 
-# What is an MCP Server?
-An MCP server is designed to act as a bridge between a large language model (LLM) and external systems or tools. Think of it like a universal adapter for AI. 
-It allows an LLM, which might be running on a different machine or a different platform, to securely and reliably access functions and data that are outside of its own context.
+
