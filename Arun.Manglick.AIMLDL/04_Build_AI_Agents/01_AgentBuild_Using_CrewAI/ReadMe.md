@@ -205,3 +205,11 @@ Neo4j is a leading graph database platform, used here as the backend for Graphit
 
 **Links:**
 - https://neo4j.com/
+
+### CrewAI
+CrewAI is a lightweight, open-source Python framework purpose-built for orchestrating AI agents that collaborate to solve complex tasks. 
+Here implemented a FastMCP (Model Context Protocol) backbone that standardized how agents share context and knowledge. 
+Each agent publishes its findings to shared knowledge graphs built on Neo4J, creating a persistent memory layer.
+
+**Links:**
+- https://www.crewai.com/
