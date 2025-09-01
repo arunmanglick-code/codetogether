@@ -213,3 +213,6 @@ Each agent publishes its findings to shared knowledge graphs built on Neo4J, cre
 
 **Links:**
 - https://www.crewai.com/
+
+### Further Extension
+This case study can be applied to Customer Onboarding Platform. Three specialized agents: a Research Agent for gathering customer context, an Analysis Agent for risk assessment, and a Communication Agent for personalized outreach.
