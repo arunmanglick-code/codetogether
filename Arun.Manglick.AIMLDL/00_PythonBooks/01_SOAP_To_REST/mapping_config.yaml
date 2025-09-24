@@ -1,0 +1,55 @@
+
+json_root_element: "GetUserDetailsRequest"
+
+global_settings:
+  strip_namespaces: true
+  attribute_prefix: "@"
+  text_content_key: "#text"
+  handle_multiple_as_list: true
+
+fields:
+  - soap_path: "UserID"
+    json_name: "userId"
+    type: "integer"
+    required: true
+    default: 0 # if missing and not required, it defaults to 0
+  - soap_path: "UserName"
+    json_name: "userName"
+    default: "Guest User"
+
+  - soap_path: "EmailAddresses/Email"
+    json_name: "contactEmails"
+    is_list: true
+    children:
+      - soap_path: "@type"
+        json_name: "type"
+      - soap_path: "#text"
+        json_name: "address"
+        required: true # Each email address must have a value
+
+  - soap_path: "Address"
+    json_name: "physicalAddress"
+    attributes:
+      - soap_attr: "street"
+        json_name: "streetName"
+      - soap_attr: "city"
+        json_name: "cityName"
+      - soap_attr: "zip"
+        json_name: "zipCode"
+        type: "integer" # Assuming zip is always a number
+
+  - soap_path: "Roles/Role"
+    json_name: "assignedRoles"
+    is_list: true
+    children:
+      - soap_path: "@id"
+        json_name: "roleIdentifier"
+      - soap_path: "#text"
+        json_name: "roleDescription"
+        default: "N/A" # If role description is missing
+
+exclude_paths:
+  - "GetUserDetailsRequest/Description"
+  - "GetUserDetailsRequest/EmptyTag" # Exclude an empty tag
+  - "Header/TrackingID" # Exclude a specific element within the Header
+    

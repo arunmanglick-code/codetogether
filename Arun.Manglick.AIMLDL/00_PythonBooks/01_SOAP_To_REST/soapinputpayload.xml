@@ -1,0 +1,31 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:web="http://www.example.com/webservice">
+    <soapenv:Header>
+        <web:TrackingID>ABC123XYZ</web:TrackingID>
+        <web:SessionID>SESS456</web:SessionID>
+    </soapenv:Header>
+    <soapenv:Body>
+        <web:GetUserDetailsRequest>
+            <web:UserID>12345</web:UserID>
+            <web:UserName>John Doe</web:UserName>
+            <web:EmailAddresses>
+                <web:Email type="primary">john.doe@example.com</web:Email>
+                <web:Email type="secondary">j.doe@work.com</web:Email>
+                <web:Email type="tertiary" />
+                <!-- Empty email -->
+            </web:EmailAddresses>
+            <web:Address street="Main St"
+                         city="Anytown"
+                         zip="12345" />
+            <web:Roles>
+                <web:Role id="admin">Administrator</web:Role>
+                <web:Role id="user">Standard User</web:Role>
+                <web:Role id="guest" />
+                <!-- Role with no description -->
+            </web:Roles>
+            <web:EmptyTag />
+            <web:Description>This is a <b>description</b> with some <i>html</i> entities.</web:Description>
+            <web:LastLogin>2023-10-27T10:00:00Z</web:LastLogin>
+        </web:GetUserDetailsRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
