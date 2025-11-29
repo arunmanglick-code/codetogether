@@ -35,7 +35,7 @@
     3. **Augmentation**: Skipped here (e.g., rotation, flipping)
   - Applied: Resizing and Normalization
 - **Output**
-  - Jupyter Notebook generates resized and normalized images (saved as `.py` files)
+  - Jupyter Notebook generates resized and normalized images (saved as `.npy` files)
   - Stored at: `\ProductToPaperWrap\preprocessed_raw_images`
 - **Execution Output**
   ```
