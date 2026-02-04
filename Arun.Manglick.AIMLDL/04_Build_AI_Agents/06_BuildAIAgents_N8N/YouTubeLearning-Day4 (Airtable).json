@@ -1,0 +1,173 @@
+{
+  "name": "YouTubeLearning-Day4 (Airtable)",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "2e87f2ba-5fef-46af-a8a4-a1bc4d997c3c",
+      "name": "When chat message received",
+      "webhookId": "ed933306-5883-44d1-83c1-c10ddcf544ee",
+      "notesInFlow": true,
+      "notes": "This is Aru Manglick's Chat Node that will enable asking questions about AI"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "applsYzi4eKzEF14D",
+          "mode": "list",
+          "cachedResultName": "n8nBase",
+          "cachedResultUrl": "https://airtable.com/applsYzi4eKzEF14D"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbljdJG0Hf6QXL41V",
+          "mode": "list",
+          "cachedResultName": "Myn8nTable",
+          "cachedResultUrl": "https://airtable.com/applsYzi4eKzEF14D/tbljdJG0Hf6QXL41V"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Status": "Done",
+            "Name": "={{ $json.chatInput }}",
+            "Notes": "TestNotes"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Notes",
+              "displayName": "Notes",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Assignee",
+              "displayName": "Assignee",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Todo",
+                  "value": "Todo"
+                },
+                {
+                  "name": "In progress",
+                  "value": "In progress"
+                },
+                {
+                  "name": "Done",
+                  "value": "Done"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Attachments",
+              "displayName": "Attachments",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Attachment Summary",
+              "displayName": "Attachment Summary",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "7099993e-2cfc-4bc1-99d6-23338572b200",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "E9Eh6xQbVUsJSINr",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "6ac6196f-962d-48d6-a85c-441720f14d88",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "20a93f9eb424cc0209c51bb85381f20199c0c98bba9cb2d40e27cec7f03577be"
+  },
+  "id": "Qz3Dprv8tQpcP98t",
+  "tags": []
+}

@@ -1,0 +1,183 @@
+{
+  "name": "YouTubeLearning-Day15Part2B_RAG",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -528,
+        -48
+      ],
+      "id": "284d1e71-451c-46cf-b7a2-4be9e18d92ae",
+      "name": "When chat message received",
+      "webhookId": "d75302e6-af23-46ba-9efd-448c4d9374cf"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        -256,
+        -48
+      ],
+      "id": "0114b582-ed56-41c9-b727-40ac09ab27cb",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        -384,
+        176
+      ],
+      "id": "dd18f2a9-f9d0-4ad1-9216-a890183cb719",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "XQLZvdiBH0QsB2PU",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -176,
+        176
+      ],
+      "id": "712f5114-ca1d-449d-a8f3-8bea3b608b2e",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "Retrieve Data from Pinecone Vector Store",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "n8nragpineconeindex",
+          "mode": "list",
+          "cachedResultName": "n8nragpineconeindex"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        -48,
+        176
+      ],
+      "id": "84f60ed6-fc78-4f91-9c2e-17895ee8dce2",
+      "name": "Pinecone Vector Store",
+      "credentials": {
+        "pineconeApi": {
+          "id": "MqgeisU2rXqjwmVm",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        32,
+        384
+      ],
+      "id": "18bd0e96-5c98-4fe5-9f61-6edf852530c5",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "XQLZvdiBH0QsB2PU",
+          "name": "OpenAi account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "9be416d3-221e-4e71-8b0c-ff960b0c4ce8",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "20a93f9eb424cc0209c51bb85381f20199c0c98bba9cb2d40e27cec7f03577be"
+  },
+  "id": "KihCI9MHFrnZr5DQ",
+  "tags": []
+}

@@ -1,0 +1,136 @@
+{
+  "name": "YouTubeLearning-Day12 (XML Based Prompt)",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -528,
+        -64
+      ],
+      "id": "a900a685-b3e6-4ebc-bbff-2efebd1dcf3c",
+      "name": "When chat message received",
+      "webhookId": "2182c534-32bb-47a1-926f-a503d99fd98a"
+    },
+    {
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<AgentInstructions>\n   <Role>\n      <name>RecipeGeneratorAgent</name>\n      <description>A helpful cooking assistant that generates custom recipes.</description>\n   </Role>\n   <Goal>\n      <Primary>Provide a complete recipe including ingredients and step-by-step instructions based on the user's requested dish.</Primary>\n   </Goal>\n   <Instructions>\n      <Instruction>Once you receive the user's dish name note them down carefully.</Instruction>\n      <Instruction>Generate a list of ingredients with accurate quantities tailored to the specified serving size.</Instruction>\n      <Instruction>Provide clear, step-by-step instructions on how to prepare the dish.</Instruction>\n      <Instruction>Where applicable, include cooking times, tips, or variations to enhance the recipe.</Instruction>\n   </Instructions>\n</AgentInstructions>"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        -320,
+        -64
+      ],
+      "id": "05d9fc65-10b4-4c3e-baf1-6928f745bb69",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        -464,
+        144
+      ],
+      "id": "e62916b9-f187-4140-9377-2e3d00acf690",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "XQLZvdiBH0QsB2PU",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -160,
+        144
+      ],
+      "id": "06c489df-91a3-4127-b7c0-5d6a01bdf698",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\t\t\t\t\t\t  \"output\": {\n\t\t\t\t\t\t\t\t\"state\": \"complete\",\n\t\t\t\t\t\t\t\t\"recipe\": {\n\t\t\t\t\t\t\t\t  \"title\": \"Thin Crust Pizza\",\n\t\t\t\t\t\t\t\t  \"ingredients\": [\n\t\t\t\t\t\t\t\t\t\"1 1/2 cups all-purpose flour\",\n\t\t\t\t\t\t\t\t\t\"1 teaspoon instant yeast\",\n\t\t\t\t\t\t\t\t\t\"1/2 teaspoon sugar\",\n\t\t\t\t\t\t\t\t\t\"1/2 teaspoon salt\",\n\t\t\t\t\t\t\t\t\t\"1/2 cup warm water (around 110°F/45°C)\",\n\t\t\t\t\t\t\t\t\t\"1 tablespoon olive oil\",\n\t\t\t\t\t\t\t\t\t\"1/4 cup pizza sauce\",\n\t\t\t\t\t\t\t\t\t\"1 cup shredded mozzarella cheese\",\n\t\t\t\t\t\t\t\t\t\"Toppings of choice (e.g., pepperoni, sliced bell peppers, mushrooms, olives, onions)\"\n\t\t\t\t\t\t\t\t  ],\n\t\t\t\t\t\t\t\t  \"instructions\": [\n\t\t\t\t\t\t\t\t\t\"In a large mixing bowl, combine the flour, instant yeast, sugar, and salt.\",\n\t\t\t\t\t\t\t\t\t\"Gradually add the warm water and olive oil to the dry ingredients, stirring until the dough begins to come together.\",\n\t\t\t\t\t\t\t\t\t\"Knead the dough on a floured surface for about 5-7 minutes until smooth and elastic.\",\n\t\t\t\t\t\t\t\t\t\"Place the dough in a lightly oiled bowl, cover with a damp cloth or plastic wrap, and let it rise in a warm place for about 1 hour or until doubled in size.\",\n\t\t\t\t\t\t\t\t\t\"Preheat your oven to 475°F (245°C). If you have a pizza stone, place it in the oven to heat up.\",\n\t\t\t\t\t\t\t\t\t\"Punch down the risen dough and roll it out very thin on a lightly floured surface to your desired pizza size.\",\n\t\t\t\t\t\t\t\t\t\"Transfer the rolled dough onto a baking sheet or pizza peel if using a stone.\",\n\t\t\t\t\t\t\t\t\t\"Spread the pizza sauce evenly over the dough, leaving a small border around the edges.\",\n\t\t\t\t\t\t\t\t\t\"Sprinkle the shredded mozzarella cheese over the sauce.\",\n\t\t\t\t\t\t\t\t\t\"Add your desired toppings evenly on top of the cheese.\",\n\t\t\t\t\t\t\t\t\t\"Bake in the preheated oven for 10-12 minutes until the crust is crisp and the cheese is melted and bubbly.\",\n\t\t\t\t\t\t\t\t\t\"Remove from the oven, let cool slightly, slice, and serve.\"\n\t\t\t\t\t\t\t\t  ],\n\t\t\t\t\t\t\t\t  \"notes\": {\n\t\t\t\t\t\t\t\t\t\"tips\": \"For an extra crispy crust, pre-bake the rolled dough for 3-4 minutes before adding toppings.\",\n\t\t\t\t\t\t\t\t\t\"variations\": \"Try using whole wheat flour for a healthier option or add fresh basil and garlic for enhanced flavor.\"\n\t\t\t\t\t\t\t\t  }\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t  }\n\t\t\t\t\t\t\t}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -64,
+        240
+      ],
+      "id": "ae41a9da-46e5-4f8f-8eae-36e8550a445f",
+      "name": "Structured Output Parser1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        []
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "916aa943-b5ff-4909-bb6c-496685727987",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "20a93f9eb424cc0209c51bb85381f20199c0c98bba9cb2d40e27cec7f03577be"
+  },
+  "id": "Tu6fZwuateBWoUDy",
+  "tags": []
+}

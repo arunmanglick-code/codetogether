@@ -1,0 +1,193 @@
+{
+  "name": "YouTubeLearning-Day6 (Data Transformation)",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAllPeople",
+        "limit": 10
+      },
+      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+      "typeVersion": 1,
+      "position": [
+        -608,
+        -144
+      ],
+      "id": "7988e228-8c19-4612-a1be-8b2eb011464a",
+      "name": "Customer Datastore (n8n training)"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        -144
+      ],
+      "id": "c9064997-66c2-4c6d-8198-1eed06954dbb",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "006fb7e0-ce38-4231-99c7-ea40dcdab315",
+              "leftValue": "={{ $json.country }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -432,
+        -144
+      ],
+      "id": "2f009823-fa4a-470c-b416-96be8002399b",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9a6dbb95-19a8-4b38-8e41-b62c51af85bf",
+              "name": "First Name",
+              "value": "={{ $json.name }}",
+              "type": "string"
+            },
+            {
+              "id": "44016532-f1f3-4b1e-8c8b-f1b77b49a124",
+              "name": "Email",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "40a08893-7518-4c87-b3de-255ff91709d0",
+              "name": "Country",
+              "value": "={{ $json.country }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -160,
+        -192
+      ],
+      "id": "3e462705-77c6-49ee-9b47-202e85a3a122",
+      "name": "Country Exists"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9a6dbb95-19a8-4b38-8e41-b62c51af85bf",
+              "name": "First Name",
+              "value": "={{ $json.name }}",
+              "type": "string"
+            },
+            {
+              "id": "44016532-f1f3-4b1e-8c8b-f1b77b49a124",
+              "name": "Email",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "40a08893-7518-4c87-b3de-255ff91709d0",
+              "name": "Country",
+              "value": "={{ $json.country }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -160,
+        -16
+      ],
+      "id": "f8a14cfb-f4f8-46a9-aa93-65d20c722984",
+      "name": "Country Doesn't Exists"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Customer Datastore (n8n training)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Customer Datastore (n8n training)": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Country Exists",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Country Doesn't Exists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Country Exists": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "eb51bad3-bbcd-46fd-bbae-5a626aea3dfb",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "20a93f9eb424cc0209c51bb85381f20199c0c98bba9cb2d40e27cec7f03577be"
+  },
+  "id": "sUFBzLOrw3VwFSDt",
+  "tags": []
+}
