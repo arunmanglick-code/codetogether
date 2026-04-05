@@ -33,3 +33,33 @@ You can also use **handoffs** to create guided workflows between agents. Transit
 | **Security Agent** | Checks for vulnerabilities, unsafe dependencies, compliance issues. |
 | **Planner Agent** | Breaks down requirements into tasks, designs architecture. |
 | **Implementation Agent** | Generates boilerplate code, scaffolds frameworks. |
+
+## Relevance of having Workflow in Custom Agent and Specs
+
+They serve **different purposes** and operate at **different levels**:
+
+### Agent Workflow ([am-code-reviewer.agent.md](.am-code-reviewer.agent.md))
+- Defines the **end-to-end interaction flow** between the agent and the developer
+- Controls **when to prompt**, **what actions to take**, and **in what order** (review → save file → push to Confluence → apply fixes)
+- Governs **agent behavior** — tools to use, how to communicate, when to wait for input
+- Think of it as the **orchestration layer**
+
+### Spec Workflow ([codereview-ticket.md](.codereview-ticket.md))
+- Defines the **data format and content structure** for review tickets
+- Specifies **what a ticket looks like** (Title, Description, Severity, Resolution Steps, Acceptance Criteria)
+- Controls **output shape** — naming patterns, Confluence page layout, table columns
+- Think of it as the **schema/template layer**
+
+### Why both?
+
+| Concern | Agent | Spec |
+|---|---|---|
+| **What** to do step-by-step | ✅ | |
+| **How** to format output | | ✅ |
+| **When** to prompt the user | ✅ | |
+| **What** fields each ticket has | | ✅ |
+| **Where** to save/publish | Both reference it | Holds the config values |
+
+The agent says *"after the review, ask to push to Confluence"*. The spec says *"the Confluence page must have a summary table with these columns and this title pattern"*. The agent references the spec (`Use the codereview-ticket spec to structure all feedback`) to know the output format.
+
+**In short:** The agent owns the *workflow*. The spec owns the *data contract*. The overlap in the spec's `workflow` section is somewhat redundant — it could be trimmed to just the format/config concerns, since the agent file is the authoritative source for interaction flow.
