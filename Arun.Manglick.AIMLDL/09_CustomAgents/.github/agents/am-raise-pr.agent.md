@@ -37,5 +37,3 @@ Return a summary of the PR created:
 |---|---|---| 
 | {title} | {url} | {issue description} | 
 Include the total count of PRs created.
-
-
