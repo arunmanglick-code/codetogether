@@ -12,7 +12,7 @@ This project uses a multi-agent architecture for Java Spring Boot code reviews w
 |------|------|----------------|
 | `am-code-reviewer.agent.md` | Standalone — reviews, publishes, tickets, fixes all in one | Yes |
 | `am-code-review-orchestrator.agent.md` | Orchestrator — reviews and delegates to subagents | Yes |
-| `am-doc-publisher.agent.md` | Subagent — creates Confluence pages | Yes |
+| `am-doc-publisher.agent.md` | Subagent — creates Confluence pages | No (subagent only) |
 | `am-ticket-creator.agent.md` | Subagent — creates JIRA tickets in CCMMER3 | No (subagent only) |
 | `am-raise-pr.agent.md` | Subagent — creates GitHub pull requests via MCP | No (subagent only) |
 
@@ -69,7 +69,7 @@ The connection works through three mechanisms in the YAML frontmatter and the ma
 1. Frontmatter agents Declaration (The Wiring)
 In am-code-review-orchestrator.agent.md:
 
-This tells VS Code Copilot that this agent is allowed to invoke the two named agents as subagents. It also requires the agent tool in the tools list, which is present:
+This tells VS Code Copilot that this agent is allowed to invoke the three named agents as subagents. It also requires the agent tool in the tools list, which is present:
 
 The agent tool is what gives the orchestrator the ability to call runSubagent to delegate work.
 
@@ -78,10 +78,11 @@ Lines 36-51 of the orchestrator define a review context object — a structured 
 
 am-doc-publisher.agent.md says: "You receive a review context object from the orchestrator (am-code-review-orchestrator)" and uses it to build a Confluence page.
 am-ticket-creator.agent.md says: "You receive a review context object from the orchestrator (am-code-review-orchestrator)" and uses it to create JIRA Stories.
+am-raise.pr.agent.md receives the review context (file path, findings, proposed changes) and uses it to create a GitHub pull request.
 This shared schema is the implicit contract between the orchestrator and its subagents.
 
 3. Sequential Workflow with User Gating (The Control Flow)
-The orchestrator's Workflow section (steps 5-6) defines when delegation happens:
+The orchestrator's Workflow section (steps 5-7) defines when delegation happens:
 
 Step	Prompt to User	If Yes → Delegate To
 5	"Publish to Confluence?"	am-doc-publisher

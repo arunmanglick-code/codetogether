@@ -40,6 +40,16 @@ Here's where the Atlassian MCP extension is configured:
 
 This enables the Atlassian extension's JIRA integration in VS Code.
 
+## Agent-to-MCP Mapping
+
+| Agent | MCP Server(s) Used | Purpose |
+|---|---|---|
+| `am-code-reviewer` (Standalone) | Atlassian MCP | Confluence pages + JIRA tickets directly |
+| `am-code-review-orchestrator` | None (delegates) | Delegates MCP work to subagents |
+| `am-doc-publisher` (Subagent) | Atlassian MCP | Creates Confluence pages |
+| `am-ticket-creator` (Subagent) | Atlassian MCP | Creates JIRA Story tickets |
+| `am-raise.pr` (Subagent) | GitHub MCP | Creates branches, pushes files, opens PRs |
+
 ## Summary
 
 | Config | Location |
