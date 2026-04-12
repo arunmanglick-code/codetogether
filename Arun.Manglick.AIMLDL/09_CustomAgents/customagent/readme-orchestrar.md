@@ -11,8 +11,8 @@ This project uses a multi-agent architecture for Java Spring Boot code reviews w
 | File | Role | User-invocable |
 |------|------|----------------|
 | `am-code-reviewer.agent.md` | Standalone — reviews, publishes, tickets, fixes all in one | Yes |
-| `am-code-only-reviewer.agent.md` | Orchestrator — reviews and delegates to subagents | Yes |
-| `am-doc-publisher.agent.md` | Subagent — creates Confluence pages | No (subagent only) |
+| `am-code-review-orchestrator.agent.md` | Orchestrator — reviews and delegates to subagents | Yes |
+| `am-doc-publisher.agent.md` | Subagent — creates Confluence pages | Yes |
 | `am-ticket-creator.agent.md` | Subagent — creates JIRA tickets in CCMMER3 | No (subagent only) |
 | `am-raise-pr.agent.md` | Subagent — creates GitHub pull requests via MCP | No (subagent only) |
 
@@ -44,7 +44,7 @@ This project uses a multi-agent architecture for Java Spring Boot code reviews w
 
 ```
 ┌──────────────────────────────────────────────────┐
-│  am-code-only-reviewer (Orchestrator)            │
+│  am-code-review-orchestrator (Orchestrator)      │
 │  Tools: read, edit, search, execute, agent, todo │
 │  Does: review + file save + apply fixes          │
 │  Delegates: Confluence → am-doc-publisher        │
@@ -63,11 +63,11 @@ This project uses a multi-agent architecture for Java Spring Boot code reviews w
 ```
 ## Orchestration - Behind the Scene
 
-How am-code-only-reviewer Orchestrates Two Subagents
+How am-code-review-orchestrator Orchestrates Three Subagents
 The connection works through three mechanisms in the YAML frontmatter and the markdown body:
 
 1. Frontmatter agents Declaration (The Wiring)
-In am-code-only-reviewer.agent.md:
+In am-code-review-orchestrator.agent.md:
 
 This tells VS Code Copilot that this agent is allowed to invoke the two named agents as subagents. It also requires the agent tool in the tools list, which is present:
 
@@ -76,8 +76,8 @@ The agent tool is what gives the orchestrator the ability to call runSubagent to
 2. Shared Context Object (The Data Contract)
 Lines 36-51 of the orchestrator define a review context object — a structured data payload containing fileName, tickets[], reviewDate, etc. Both subagents are designed to consume this same context:
 
-am-doc-publisher.agent.md says: "You receive a review context object from the orchestrator" and uses it to build a Confluence page.
-am-ticket-creator.agent.md says: "You receive a review context object from the orchestrator" and uses it to create JIRA Stories.
+am-doc-publisher.agent.md says: "You receive a review context object from the orchestrator (am-code-review-orchestrator)" and uses it to build a Confluence page.
+am-ticket-creator.agent.md says: "You receive a review context object from the orchestrator (am-code-review-orchestrator)" and uses it to create JIRA Stories.
 This shared schema is the implicit contract between the orchestrator and its subagents.
 
 3. Sequential Workflow with User Gating (The Control Flow)

@@ -1,6 +1,7 @@
 package com.spring.customagent.dao;
 
 import com.spring.customagent.entity.Student;
+import jakarta.annotation.Nonnull;
 
 import java.util.List;
 
@@ -8,11 +9,13 @@ public interface StudentDAO {
 
     List<Student> getAllStudents();
 
-    List<Student> getStudentByName(String firstname);
+    Student getStudentById(@Nonnull Long id);
 
-    Student addStudent(Student student);
+    List<Student> getStudentsByFirstname(@Nonnull String firstname);
 
-    Student updateStudent(Student student);
+    Student addStudent(@Nonnull Student student);
 
-    void deleteStudent(Long id);
+    Student updateStudent(@Nonnull Student student);
+
+    void deleteStudent(@Nonnull Long id);
 }
