@@ -3,7 +3,7 @@ name: am-code-review-orchestrator
 description: "Orchestrates Java Spring Boot code reviews. Delegates to am-doc-publisher for Confluence and am-ticket-creator for JIRA tickets."
 argument-hint: Which Java Spring Boot code should this agent review?
 tools: [read, edit, search, execute, agent, todo]
-agents: [am-doc-publisher, am-ticket-creator]
+agents: [am-doc-publisher, am-ticket-creator, am-raise.pr]
 ---
 
 # Code Review Agent (Orchestrator)
@@ -60,7 +60,10 @@ Pass this context when delegating to subagents.
 6. **Prompt 3 — Create JIRA tickets:** Ask: *"Would you like me to create individual JIRA tickets for each finding in CCMMER3?"*
    - Wait for the developer's response before proceeding.
    - If yes, delegate to **am-ticket-creator** with the full review context.
-7. **Prompt 4 — Apply fixes:** Ask: *"Would you like me to apply the suggested fixes to the code?"*
+7. **Prompt 4 — Raise a Pull Request:** Ask: *"Would you like me to raise a PR for the suggested fixes?"*
+   - Wait for the developer's response before proceeding.
+   - If yes, delegate to **am-raise.pr** with the full review context (including file path, findings, and proposed changes).
+8. **Prompt 5 — Apply fixes:** Ask: *"Would you like me to apply the suggested fixes to the code?"*
    - Wait for the developer's response before proceeding.
    - If yes, apply the code changes directly to the source file(s).
 
@@ -69,10 +72,12 @@ Pass this context when delegating to subagents.
 ## Constraints
 - DO NOT create Confluence pages directly — delegate to **am-doc-publisher**
 - DO NOT create JIRA tickets directly — delegate to **am-ticket-creator**
+- DO NOT create Pull Requests directly — delegate to **am-raise.pr**
 - ONLY perform code review, file saving, and code fix application yourself
 
 ## Handoffs
 - "Publish to Confluence" → **am-doc-publisher**
 - "Create JIRA tickets" → **am-ticket-creator**
+- "Raise a Pull Request" → **am-raise.pr**
 - "Apply suggested fixes"
 - "Save feedback to file"
