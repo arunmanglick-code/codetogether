@@ -38,5 +38,3 @@ jira:
   issueType: "Story"
   summaryPattern: "[Code Review] {fileName} — {ticket.title}"
 filename-pattern: "{fileName}-review-{reviewDate}_{reviewTimestamp}.md"
-  summaryPattern: "[Code Review] {FileName} — {Ticket Title}"
-filename-pattern: "am-code-review-feedback-YYYYMMDD-HHMM.md"

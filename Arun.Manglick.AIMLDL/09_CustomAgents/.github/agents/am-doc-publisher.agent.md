@@ -2,6 +2,7 @@
 name: am-doc-publisher
 description: "Use when publishing code review results to Confluence. Creates formatted Confluence pages with summary tables and detailed findings from review context."
 tools: ["com.atlassian/atlassian-mcp-server/*"]
+skills: ["doc_publisher_skill"]
 user-invocable: false
 ---
 
@@ -20,11 +21,11 @@ You receive a **review context object** from the orchestrator (am-code-review-or
 ## Confluence Configuration
 - **Cloud ID**: `2c372697-c4a1-4192-9fa0-5cd146f9d535`
 - **Space ID**: `3493233287` (Arun Manglick personal space)
-- **Page Title Pattern**: `{fileName}-review-{reviewDate}_{reviewTimestamp}`
+- **Page Title**: MUST be built using the "Build Page Title" skill from `doc_publisher_skill`. NEVER hardcode or invent a title format.
 
 ## Approach
 1. Receive the review context from am-code-review-orchestrator (fileName, tickets, date, etc.).
-2. Build the Confluence page title using the naming pattern.
+2. Build the Confluence page title using the pattern defined in the `doc_publisher_skill` skill.
 3. Convert the review content into valid **Atlassian Document Format (ADF)** JSON.
 4. Structure the page as:
    - **Header**: File name, review date, reviewer info
