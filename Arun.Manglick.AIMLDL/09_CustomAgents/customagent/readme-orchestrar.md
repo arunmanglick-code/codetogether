@@ -57,5 +57,38 @@ This project uses a multi-agent architecture for Java Spring Boot code reviews w
    │→ Confluence     │   │→ JIRA tickets    │
    └─────────────────┘   └──────────────────┘
 ```
+## Orchestration - Behind the Scene
 
+How am-code-only-reviewer Orchestrates Two Subagents
+The connection works through three mechanisms in the YAML frontmatter and the markdown body:
 
+1. Frontmatter agents Declaration (The Wiring)
+In am-code-only-reviewer.agent.md:
+
+This tells VS Code Copilot that this agent is allowed to invoke the two named agents as subagents. It also requires the agent tool in the tools list, which is present:
+
+The agent tool is what gives the orchestrator the ability to call runSubagent to delegate work.
+
+2. Shared Context Object (The Data Contract)
+Lines 36-51 of the orchestrator define a review context object — a structured data payload containing fileName, tickets[], reviewDate, etc. Both subagents are designed to consume this same context:
+
+am-doc-publisher.agent.md says: "You receive a review context object from the orchestrator" and uses it to build a Confluence page.
+am-ticket-creator.agent.md says: "You receive a review context object from the orchestrator" and uses it to create JIRA Stories.
+This shared schema is the implicit contract between the orchestrator and its subagents.
+
+3. Sequential Workflow with User Gating (The Control Flow)
+The orchestrator's Workflow section (steps 5-6) defines when delegation happens:
+
+Step	Prompt to User	If Yes → Delegate To
+5	"Publish to Confluence?"	am-doc-publisher
+6	"Create JIRA tickets?"	am-ticket-creator
+Each delegation is gated by user approval — the orchestrator asks permission, waits for confirmation, and only then calls the subagent with the review context.
+
+4. Separation of Concerns (The Boundaries)
+The Constraints section enforces strict boundaries:
+
+Orchestrator: Does code review, saves files, applies fixes. Explicitly told "DO NOT create Confluence pages directly" and "DO NOT create JIRA tickets directly".
+am-doc-publisher: Only publishes to Confluence. Has tools: ["com.atlassian/atlassian-mcp-server/*"] — restricted to Atlassian MCP tools only.
+am-ticket-creator: Only creates JIRA tickets. Same Atlassian-only tool restriction. Also has user-invocable: false, meaning it can only be called by the orchestrator, not directly by the user.
+Visual Flow
+The key insight: the agents: frontmatter property is the declaration, the agent tool is the capability, and the shared review context object is the protocol that ties them together.

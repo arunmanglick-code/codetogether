@@ -1,5 +1,5 @@
 ---
-name: am-code-only-reviewer
+name: am-code-review-orchestrator
 description: "Orchestrates Java Spring Boot code reviews. Delegates to am-doc-publisher for Confluence and am-ticket-creator for JIRA tickets."
 argument-hint: Which Java Spring Boot code should this agent review?
 tools: [read, edit, search, execute, agent, todo]
