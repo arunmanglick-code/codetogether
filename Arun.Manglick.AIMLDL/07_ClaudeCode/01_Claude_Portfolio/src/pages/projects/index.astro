@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '@/layouts/PageLayout.astro';
+import CategoryFilter from '@/components/projects/CategoryFilter.astro';
+import ProjectGrid from '@/components/projects/ProjectGrid.astro';
+
+const categories = (await getCollection('categories')).sort(
+  (a, b) => a.data.displayOrder - b.data.displayOrder
+);
+
+const projects = (await getCollection('projects')).sort((a, b) => {
+  if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
+  return new Date(b.data.dateAdded).getTime() - new Date(a.data.dateAdded).getTime();
+});
+
+const categoryList = categories.map((c) => ({
+  title: c.data.title,
+  slug: c.id,
+  icon: c.data.icon,
+  color: c.data.color,
+}));
+
+const projectList = projects.map((p) => ({
+  title: p.data.title,
+  slug: p.id,
+  category: p.data.category,
+  description: p.data.description,
+  technologies: p.data.technologies,
+  githubUrl: p.data.githubUrl,
+  featured: p.data.featured,
+}));
+---
+
+<PageLayout title="Projects — Arun Manglick">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-2">All Projects</h1>
+    <p class="text-slate-600 dark:text-slate-400 mb-8">
+      Exploring {projects.length} projects across {categories.length} categories
+    </p>
+
+    <CategoryFilter categories={categoryList} />
+    <ProjectGrid projects={projectList} />
+  </div>
+</PageLayout>

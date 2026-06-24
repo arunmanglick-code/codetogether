@@ -1,0 +1,19 @@
+---
+import { SITE } from '../../utils/constants';
+---
+
+<footer class="border-t border-[var(--color-border)]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[var(--color-text-secondary)]">
+      <p>&copy; 2025 {SITE.author}</p>
+      <a
+        href={SITE.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-[var(--color-text)] transition-colors"
+      >
+        GitHub
+      </a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,42 @@
+---
+import TechStack from './TechStack.astro';
+
+interface Props {
+  title: string;
+  slug: string;
+  category: string;
+  description: string;
+  technologies: string[];
+  githubUrl: string;
+  featured: boolean;
+}
+
+const { title, slug, category, description, technologies, githubUrl, featured } = Astro.props;
+---
+
+<a href={`/project/${slug}/`} class="bg-[var(--color-bg-secondary)] rounded-lg border border-[var(--color-border)] p-6 hover:shadow-lg transition-shadow duration-200 flex flex-col h-full relative group">
+  {featured && (
+    <span class="absolute top-3 right-3 bg-primary-500 text-white text-xs px-2 py-0.5 rounded-full">
+      Featured
+    </span>
+  )}
+  <h3 class="text-lg font-semibold mb-2">{title}</h3>
+  <p class="text-sm text-[var(--color-text-secondary)] line-clamp-2 mb-4">{description}</p>
+  <div class="mt-auto pt-4 flex items-end justify-between gap-2">
+    <TechStack technologies={technologies} limit={4} />
+    <a
+      href={githubUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="shrink-0 text-[var(--color-text-secondary)] hover:text-primary-500 transition-colors"
+      aria-label={`View ${title} on GitHub`}
+      onclick="event.stopPropagation();"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        <polyline points="15 3 21 3 21 9" />
+        <line x1="10" y1="14" x2="21" y2="3" />
+      </svg>
+    </a>
+  </div>
+</a>

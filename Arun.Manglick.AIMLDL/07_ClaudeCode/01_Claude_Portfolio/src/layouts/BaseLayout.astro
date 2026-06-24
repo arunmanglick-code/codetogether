@@ -1,0 +1,32 @@
+---
+import '@fontsource/inter';
+import '../styles/global.css';
+import { SITE } from '../utils/constants';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = SITE.description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.author} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <title>{title}</title>
+  </head>
+  <body class="bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen flex flex-col">
+    <slot />
+  </body>
+</html>

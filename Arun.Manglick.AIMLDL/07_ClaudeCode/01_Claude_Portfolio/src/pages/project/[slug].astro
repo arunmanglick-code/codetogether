@@ -1,0 +1,153 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '@/layouts/PageLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+
+  return projects.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const categories = await getCollection('categories');
+const category = categories.find((c) => c.id === entry.data.category);
+
+const allProjects = await getCollection('projects');
+const relatedProjects = allProjects
+  .filter((p) => p.data.category === entry.data.category && p.id !== entry.id)
+  .slice(0, 3);
+---
+
+<PageLayout title={`${entry.data.title} — Arun Manglick`}>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-8">
+      <a href="/" class="hover:text-primary-500 transition-colors">Home</a>
+      <span>/</span>
+      <a href="/projects" class="hover:text-primary-500 transition-colors">Projects</a>
+      <span>/</span>
+      {category && (
+        <>
+          <a
+            href={`/categories/${category.id}`}
+            class="hover:text-primary-500 transition-colors"
+          >
+            {category.data.title}
+          </a>
+          <span>/</span>
+        </>
+      )}
+      <span class="text-slate-700 dark:text-slate-200">{entry.data.title}</span>
+    </nav>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">{entry.data.title}</h1>
+
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        {category && (
+          <span
+            class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium"
+            style={`background-color: ${category.data.color}20; color: ${category.data.color};`}
+          >
+            {category.data.icon} {category.data.title}
+          </span>
+        )}
+
+        <span
+          class:list={[
+            'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium',
+            entry.data.status === 'active' && 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
+            entry.data.status === 'learning' && 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400',
+            entry.data.status === 'archived' && 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400',
+          ]}
+        >
+          {entry.data.status}
+        </span>
+      </div>
+
+      <p class="text-lg text-slate-600 dark:text-slate-400">{entry.data.description}</p>
+    </div>
+
+    <!-- Technologies -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      {entry.data.technologies.map((tech) => (
+        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
+          {tech}
+        </span>
+      ))}
+    </div>
+
+    <!-- Content -->
+    <div class="prose prose-slate dark:prose-invert max-w-none mb-12">
+      <Content />
+    </div>
+
+    <!-- Highlights -->
+    {entry.data.highlights && entry.data.highlights.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold mb-4">Highlights</h2>
+        <ul class="space-y-2">
+          {entry.data.highlights.map((highlight) => (
+            <li class="flex items-start gap-2">
+              <svg
+                class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span class="text-slate-700 dark:text-slate-300">{highlight}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <!-- GitHub Link -->
+    {entry.data.githubUrl && (
+      <a
+        href={entry.data.githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-primary-500 text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors font-medium mb-12"
+      >
+        View on GitHub
+        <span>&rarr;</span>
+      </a>
+    )}
+
+    <!-- Related Projects -->
+    {relatedProjects.length > 0 && (
+      <div class="border-t border-slate-200 dark:border-slate-700 pt-12">
+        <h2 class="text-2xl font-bold mb-6">Related Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {relatedProjects.map((related) => (
+            <a
+              href={`/project/${related.id}`}
+              class="block p-6 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary-300 dark:hover:border-primary-600 transition-colors"
+            >
+              <h3 class="font-semibold mb-2 text-slate-900 dark:text-white">
+                {related.data.title}
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
+                {related.data.description}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</PageLayout>

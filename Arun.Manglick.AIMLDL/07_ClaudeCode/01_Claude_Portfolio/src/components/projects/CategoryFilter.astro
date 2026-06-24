@@ -1,0 +1,41 @@
+---
+interface Props {
+  categories: {
+    title: string;
+    slug: string;
+    icon: string;
+    color: string;
+  }[];
+  activeSlug?: string;
+}
+
+const { categories, activeSlug } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2 mb-8">
+  <a
+    href="/projects/"
+    class:list={[
+      'rounded-full px-4 py-2 text-sm transition-colors',
+      !activeSlug
+        ? 'bg-primary-500 text-white'
+        : 'bg-[var(--color-bg-secondary)] text-[var(--color-text)] hover:bg-primary-500/10 border border-[var(--color-border)]',
+    ]}
+  >
+    All
+  </a>
+  {categories.map((cat) => (
+    <a
+      href={`/categories/${cat.slug}/`}
+      class:list={[
+        'rounded-full px-4 py-2 text-sm transition-colors',
+        activeSlug === cat.slug
+          ? 'bg-primary-500 text-white'
+          : 'bg-[var(--color-bg-secondary)] text-[var(--color-text)] hover:bg-primary-500/10 border border-[var(--color-border)]',
+      ]}
+    >
+      <span>{cat.icon}</span>
+      <span>{cat.title}</span>
+    </a>
+  ))}
+</div>

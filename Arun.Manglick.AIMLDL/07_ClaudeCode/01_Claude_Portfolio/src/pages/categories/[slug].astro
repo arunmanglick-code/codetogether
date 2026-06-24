@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '@/layouts/PageLayout.astro';
+import CategoryFilter from '@/components/projects/CategoryFilter.astro';
+import ProjectGrid from '@/components/projects/ProjectGrid.astro';
+
+export async function getStaticPaths() {
+  const categories = await getCollection('categories');
+  const projects = await getCollection('projects');
+
+  return categories.map((category) => ({
+    params: { slug: category.id },
+    props: {
+      category,
+      projects: projects.filter((p) => p.data.category === category.id),
+    },
+  }));
+}
+
+const { category, projects } = Astro.props;
+
+const allCategories = (await getCollection('categories')).sort(
+  (a, b) => a.data.displayOrder - b.data.displayOrder
+);
+
+const categoryList = allCategories.map((c) => ({
+  title: c.data.title,
+  slug: c.id,
+  icon: c.data.icon,
+  color: c.data.color,
+}));
+
+const projectList = projects.map((p) => ({
+  title: p.data.title,
+  slug: p.id,
+  category: p.data.category,
+  description: p.data.description,
+  technologies: p.data.technologies,
+  githubUrl: p.data.githubUrl,
+  featured: p.data.featured,
+}));
+---
+
+<PageLayout title={`${category.data.title} — Projects`}>
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-2">{category.data.title}</h1>
+    <p class="text-slate-600 dark:text-slate-400 mb-8">
+      {category.data.description}
+    </p>
+
+    <CategoryFilter categories={categoryList} activeSlug={category.id} />
+
+    {projectList.length > 0 ? (
+      <ProjectGrid projects={projectList} />
+    ) : (
+      <div class="text-center py-16">
+        <p class="text-slate-500 dark:text-slate-400 text-lg">
+          No projects in this category yet.
+        </p>
+      </div>
+    )}
+  </div>
+</PageLayout>

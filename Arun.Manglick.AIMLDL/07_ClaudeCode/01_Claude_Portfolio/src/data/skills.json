@@ -1,0 +1,28 @@
+{
+  "domains": [
+    {
+      "name": "AI / ML",
+      "skills": ["Python", "CrewAI", "LangGraph", "LangChain", "Jupyter", "SageMaker", "Transformers", "Neo4j"]
+    },
+    {
+      "name": "Backend",
+      "skills": ["Java", "Spring Boot", "Node.js", "Express", "REST APIs", "Apache Camel", "Maven"]
+    },
+    {
+      "name": "Frontend",
+      "skills": ["React", "Angular", "TypeScript", "Astro", "Vite", "HTML/CSS", "Tailwind CSS"]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "skills": ["AWS Lambda", "Terraform", "Docker", "Nginx", "GitHub Actions", "ECS", "Fargate", "S3", "DynamoDB"]
+    },
+    {
+      "name": "Observability",
+      "skills": ["Datadog", "Grafana", "Telegraf", "InfluxDB", "Prometheus"]
+    },
+    {
+      "name": "Testing",
+      "skills": ["Cypress", "REST Assured", "JUnit", "NUnit"]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+---
+interface Props {
+  technologies: string[];
+  limit?: number;
+}
+
+const { technologies, limit = 4 } = Astro.props;
+const visible = technologies.slice(0, limit);
+const remaining = technologies.length - limit;
+---
+
+<div class="flex flex-wrap gap-1.5">
+  {visible.map((tech) => (
+    <span class="bg-[var(--color-bg)] text-xs px-2 py-0.5 rounded border border-[var(--color-border)]">
+      {tech}
+    </span>
+  ))}
+  {remaining > 0 && (
+    <span class="bg-[var(--color-bg)] text-xs px-2 py-0.5 rounded border border-[var(--color-border)] text-[var(--color-text-secondary)]">
+      +{remaining} more
+    </span>
+  )}
+</div>

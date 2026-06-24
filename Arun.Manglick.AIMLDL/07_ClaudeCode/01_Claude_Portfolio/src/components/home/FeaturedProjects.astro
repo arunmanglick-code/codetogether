@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectGrid from '../projects/ProjectGrid.astro';
+
+const allProjects = await getCollection('projects');
+const featuredProjects = allProjects
+  .filter((p) => p.data.featured === true)
+  .slice(0, 6)
+  .map((p) => ({
+    title: p.data.title,
+    slug: p.id,
+    category: p.data.category,
+    description: p.data.description,
+    technologies: p.data.technologies,
+    githubUrl: p.data.githubUrl,
+    featured: p.data.featured,
+  }));
+---
+
+<section class="py-16">
+  <h2 class="text-3xl font-bold mb-2">Featured Projects</h2>
+  <p class="text-[var(--color-text-secondary)] mb-8">Highlights from my recent work</p>
+  <ProjectGrid projects={featuredProjects} />
+  <div class="mt-8 text-center">
+    <a href="/projects/" class="text-primary-500 hover:text-primary-600 font-medium transition-colors">
+      View All Projects &rarr;
+    </a>
+  </div>
+</section>
