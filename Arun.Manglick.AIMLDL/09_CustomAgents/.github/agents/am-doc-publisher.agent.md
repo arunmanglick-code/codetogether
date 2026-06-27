@@ -3,7 +3,7 @@ name: am-doc-publisher
 description: "Use when publishing code review results to Confluence. Creates formatted Confluence pages with summary tables and detailed findings from review context."
 tools: ["com.atlassian/atlassian-mcp-server/*"]
 skills: ["doc_publisher_skill"]
-user-invocable: false
+user-invocable: true
 ---
 
 # Documentation Publisher Agent

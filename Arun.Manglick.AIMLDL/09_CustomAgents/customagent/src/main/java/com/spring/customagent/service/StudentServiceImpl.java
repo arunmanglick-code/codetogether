@@ -20,7 +20,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> getStudentByName(String firstname) {
-        return studentDAO.getStudentByName(firstname);
+        return studentDAO.getStudentsByFirstname(firstname);
     }
 
     @Override

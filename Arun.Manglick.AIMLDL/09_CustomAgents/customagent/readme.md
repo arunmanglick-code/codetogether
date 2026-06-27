@@ -63,3 +63,110 @@ They serve **different purposes** and operate at **different levels**:
 The agent says *"after the review, ask to push to Confluence"*. The spec says *"the Confluence page must have a summary table with these columns and this title pattern"*. The agent references the spec (`Use the codereview-ticket spec to structure all feedback`) to know the output format.
 
 **In short:** The agent owns the *workflow*. The spec owns the *data contract*. The overlap in the spec's `workflow` section is somewhat redundant — it could be trimmed to just the format/config concerns, since the agent file is the authoritative source for interaction flow.
+
+---
+
+## Project File Structure
+
+```
+09_CustomAgents/
+├── .github/
+│   ├── agents/
+│   │   ├── am-code-review-orchestrator.agent.md
+│   │   ├── am-code-reviewer.agent.md
+│   │   ├── am-doc-publisher.agent.md
+│   │   ├── am-raise-pr.agent.md
+│   │   └── am-ticket-creator.agent.md
+│   ├── skills/
+│   │   └── doc_publisher_skill/
+│   │       └── SKILL.md
+│   └── specs/
+│       └── codereview-ticket.md
+├── .vscode/
+│   └── settings.json
+└── customagent/
+    ├── .gitattributes
+    ├── .gitignore
+    ├── .mvn/
+    │   └── wrapper/
+    ├── copilot-instructions.md
+    ├── HELP.md
+    ├── linkedin-post.md
+    ├── mvnw
+    ├── mvnw.cmd
+    ├── pom.xml
+    ├── readme.md
+    ├── readme_mcp.md
+    ├── readme-orchestrar.md
+    ├── review-feedback/
+    │   ├── CodeReview-review-2026-04-06_100000.md
+    │   ├── StudentDAO-review-2026-04-06_110000.md
+    │   ├── StudentDAOImpl-review-2026-04-05.md
+    │   ├── StudentDAOImpl-review-2026-04-05_081506.md
+    │   ├── StudentDAOImpl-review-2026-04-05_120000.md
+    │   ├── StudentDAOImpl-review-2026-04-05_130000.md
+    │   ├── StudentDAOImpl-review-2026-04-05_160000.md
+    │   ├── StudentDAOImpl-review-2026-04-05_170000.md
+    │   ├── StudentDAOImpl-review-2026-04-12_100000.md
+    │   ├── StudentRepository-review-2026-04-08_100000.md
+    │   ├── StudentServiceImpl-review-2026-04-05_150000.md
+    │   └── StudentServiceImpl-review-2026-04-06_100000.md
+    └── src/
+        ├── main/
+        │   ├── java/
+        │   │   └── com/spring/customagent/
+        │   │       ├── CustomagentApplication.java
+        │   │       ├── controller/
+        │   │       │   ├── CustomagentController.java
+        │   │       │   ├── StudentController.java
+        │   │       │   └── TestInstructionsController.java
+        │   │       ├── dao/
+        │   │       │   ├── StudentDAO.java
+        │   │       │   └── StudentDAOImpl.java
+        │   │       ├── entity/
+        │   │       │   └── Student.java
+        │   │       ├── repository/
+        │   │       │   └── StudentRepository.java
+        │   │       └── service/
+        │   │           ├── StudentService.java
+        │   │           └── StudentServiceImpl.java
+        │   └── resources/
+        │       ├── application.properties
+        │       ├── static/
+        │       └── templates/
+        └── test/
+            └── java/
+                └── com/spring/customagent/
+                    └── CustomagentApplicationTests.java
+```
+
+### Source Directory Details
+
+#### `src/main/java/com/spring/customagent/`
+
+| Package | File | Description |
+|---|---|---|
+| *(root)* | `CustomagentApplication.java` | Spring Boot main class — entry point with `@SpringBootApplication` |
+| **controller** | `CustomagentController.java` | Base REST controller for general endpoints |
+| | `StudentController.java` | REST controller exposing Student CRUD endpoints (`/student/*`) |
+| | `TestInstructionsController.java` | Controller for testing custom agent instructions |
+| **dao** | `StudentDAO.java` | DAO interface defining data access operations for `Student` |
+| | `StudentDAOImpl.java` | DAO implementation using JPA `EntityManager` directly |
+| **entity** | `Student.java` | JPA entity mapped to the `student` table (id, firstname, lastname, email, age, status) |
+| **repository** | `StudentRepository.java` | Spring Data JPA repository interface for `Student` |
+| **service** | `StudentService.java` | Service interface defining business operations for `Student` |
+| | `StudentServiceImpl.java` | Service implementation delegating to `StudentDAO` |
+
+#### `src/main/resources/`
+
+| File / Folder | Description |
+|---|---|
+| `application.properties` | Spring Boot configuration (datasource, JPA, server settings) |
+| `static/` | Static web assets (CSS, JS, images) — empty by default |
+| `templates/` | Thymeleaf or other template files — empty by default |
+
+#### `src/test/java/com/spring/customagent/`
+
+| File | Description |
+|---|---|
+| `CustomagentApplicationTests.java` | Spring Boot context load test |

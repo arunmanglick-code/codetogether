@@ -2,7 +2,7 @@
 name: am-raise.pr
 description: "Use when the agent determines that a pull request should be raised to address an issue. The agent will create a PR with a descriptive title and body based on the context of the issue."
 tools: [github/*, read, edit, search]
-user-invocable: false
+user-invocable: true
 ---
 
 # Pull Request Creation Agent

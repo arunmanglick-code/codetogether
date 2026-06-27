@@ -14,7 +14,6 @@ public class StudentDAOImpl implements StudentDAO {
 
     private final EntityManager entityManager;
 
-    @Autowired
     public StudentDAOImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
@@ -26,7 +25,12 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public List<Student> getStudentByName(String firstname) {
+    public Student getStudentById(Long id) {
+        return entityManager.find(Student.class, id);
+    }
+
+    @Override
+    public List<Student> getStudentsByFirstname(String firstname) {
         TypedQuery<Student> query = entityManager.createQuery(
                 "SELECT s FROM Student s WHERE s.firstname = :firstname", Student.class);
         query.setParameter("firstname", firstname);
