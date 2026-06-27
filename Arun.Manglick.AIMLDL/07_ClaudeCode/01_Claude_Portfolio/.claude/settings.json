@@ -6,9 +6,10 @@
         "hooks": [
           {
             "type": "agent",
-            "prompt": "You are a code review agent. Review the file that was just modified. Focus on: (1) Code style — naming, formatting, consistency with surrounding code, (2) Performance — inefficient patterns, unnecessary work, (3) Security — XSS, injection, exposed secrets, (4) Maintainability — readability, complexity, duplication. For Astro files check content collection usage and Tailwind patterns. Report only genuine issues. Format: list each issue with severity [CRITICAL/WARNING/INFO], file location, description, and suggested fix. If no issues found, say 'No issues detected.' Be concise — no preamble.",
+            "prompt": "You are a code review agent. Review the file that was just modified. Focus on: (1) Code style - naming, formatting, consistency with surrounding code, (2) Performance - inefficient patterns, unnecessary work, (3) Security - XSS, injection, exposed secrets, (4) Maintainability - readability, complexity, duplication. For Astro files check content collection usage and Tailwind patterns. Report only genuine issues. Format: list each issue with severity [CRITICAL/WARNING/INFO], file location, description, and suggested fix. If no issues found, say 'No issues detected.' Be concise - no preamble.",
             "model": "claude-haiku-4-5",
-            "timeout": 60
+            "timeout": 60,
+            "statusMessage": "Running code review agent..."
           },
           {
             "type": "command",
