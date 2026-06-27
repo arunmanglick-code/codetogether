@@ -16,3 +16,28 @@ ngrok
     Works with Nginx by forwarding traffic to your local port (e.g., ngrok http 8080).
     Requires setting the --host-header flag correctly so Nginx routes requests to the right virtual host.
 
+# How to install ngrok 
+ - Ref: https://www.youtube.com/watch?v=aFwrNSfthxU
+ - Go to ngrok.com and create account
+ - Downlaod ngrok https://dashboard.ngrok.com/get-started/setup/windows 
+ - Unzip (preferably in C:\ngrok)
+ - Add this path to Env Variable (Path)
+ - Get your ngrok token from here - https://dashboard.ngrok.com/get-started/your-authtoken
+ - Go to command prompt 
+ - Type ngrok config add-authtoken $YOUR_AUTHTOKEN (use the ngrok token here)
+
+ # Your app docker image in docker hdesktop
+ ![Alt text](utils/images/dockerdesktop.png)
+
+ # How to run the app
+ - cd C:\Arun.Manglick\Arun.Manglick.PRJ\codetogether\Arun.Manglick.AIMLDL\07_ClaudeCode\01_Claude_Portfolio>
+ - npm run dev
+ ![alt text](utils/images/npmrundev.png)
+ Then Browse http://localhost:4321/
+
+ # How to run the in ngrok
+ - Command Prompt (Any location and need not neceesary to be prject path)
+ - Type ngrok http 4321 (This will give you a public url like  https://obscure-lanky-splashy.ngrok-free.dev)
+ ![alt text](utils/images/ngrok%20forwarding.png)
+
+

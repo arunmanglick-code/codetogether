@@ -264,3 +264,6 @@ Phase 2 introduces a backend API and switches Astro to SSR mode:
 - Nginx reverse proxy for API and Astro
 - `docker-compose.yml` for multi-service orchestration
 - Live GitHub data (READMEs, commit dates) with caching
+
+## Phase 1 Output
+![alt text](phase1-output.png)
