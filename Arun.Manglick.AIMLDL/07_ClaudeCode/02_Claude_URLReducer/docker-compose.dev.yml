@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./backend:/app
+    environment:
+      DATABASE_URL: postgresql+asyncpg://urlreducer:${POSTGRES_PASSWORD:-urlreducer}@db:5432/urlreducer
+      BASE_URL: ${BASE_URL:-http://localhost:8000}
+      CORS_ORIGINS: '["http://localhost:5173"]'
+    command: >
+      sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+
+  temporal-worker:
+    volumes:
+      - ./backend:/app
+    command: python -m app.temporal.worker
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    command: npm run dev -- --host 0.0.0.0
