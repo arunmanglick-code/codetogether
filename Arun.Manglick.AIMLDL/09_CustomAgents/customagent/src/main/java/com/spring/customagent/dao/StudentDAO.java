@@ -9,6 +9,8 @@ public interface StudentDAO {
 
     List<Student> getAllStudents();
 
+    List<Student> getAllStudents(int page, int size);
+
     Student getStudentById(@Nonnull Long id);
 
     List<Student> getStudentsByFirstname(@Nonnull String firstname);

@@ -19,6 +19,16 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public List<Student> getAllStudents(int page, int size) {
+        return studentDAO.getAllStudents(page, size);
+    }
+
+    @Override
+    public Student getStudentById(Long id) {
+        return studentDAO.getStudentById(id);
+    }
+
+    @Override
     public List<Student> getStudentByName(String firstname) {
         return studentDAO.getStudentsByFirstname(firstname);
     }

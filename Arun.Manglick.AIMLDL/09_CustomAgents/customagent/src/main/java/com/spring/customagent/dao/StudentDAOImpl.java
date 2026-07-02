@@ -25,6 +25,14 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
+    public List<Student> getAllStudents(int page, int size) {
+        TypedQuery<Student> query = entityManager.createQuery("SELECT s FROM Student s", Student.class);
+        query.setFirstResult(page * size);
+        query.setMaxResults(size);
+        return query.getResultList();
+    }
+
+    @Override
     public Student getStudentById(Long id) {
         return entityManager.find(Student.class, id);
     }
