@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p interviews)",
+      "Bash(ls interviews/)"
+    ]
+  }
+}
