@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer style={styles.footer}>
-      <p>URL Reducer &mdash; Built with FastAPI + React</p>
+      <p>LinkForge &mdash; Crafting cleaner links, faster</p>
     </footer>
   );
 }

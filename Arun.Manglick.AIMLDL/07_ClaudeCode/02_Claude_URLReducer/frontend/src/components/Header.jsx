@@ -5,7 +5,7 @@ function Header() {
     <header style={styles.header}>
       <div style={styles.container}>
         <Link to="/" style={styles.logo}>
-          URL Reducer
+          LinkForge
         </Link>
         <nav>
           <Link to="/" style={styles.navLink}>
