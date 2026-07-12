@@ -16,6 +16,55 @@ ngrok
     Works with Nginx by forwarding traffic to your local port (e.g., ngrok http 8080).
     Requires setting the --host-header flag correctly so Nginx routes requests to the right virtual host.
 
+Docker Desktop  
+    Required to build and run the containerized version of this portfolio.
+    Packages the Astro static build and Nginx server into a portable container image.
+
+# How to install Docker Desktop
+ - Download from https://www.docker.com/products/docker-desktop/
+ - Run the installer and follow the setup wizard (enable WSL 2 backend on Windows when prompted)
+ - Start Docker Desktop and verify installation:
+   ```
+   docker --version
+   ```
+ - Ensure Docker Desktop is running before executing any docker commands below
+
+# How Docker is utilized in this project
+
+This project uses a **multi-stage Dockerfile** (`docker/Dockerfile`) to produce a lean production image:
+
+**Stage 1 – Builder (node:22-alpine)**
+ - Installs Node.js dependencies (`npm ci`)
+ - Runs `npm run build` to compile the Astro site into static files under `/app/dist`
+
+**Stage 2 – Production (nginx:1.27-alpine)**
+ - Copies the compiled static files from the builder stage into `/usr/share/nginx/html`
+ - Copies `docker/nginx.conf` to configure Nginx with:
+   - Security headers (X-Frame-Options, X-Content-Type-Options, XSS-Protection)
+   - Gzip compression for CSS, JS, JSON, SVG, and other assets
+   - Long-lived cache headers for static assets (1 year for `/_assets/`, 30 days for images/fonts)
+   - SPA-friendly routing with `try_files`
+   - Custom 404 page
+ - Exposes port 80 and starts Nginx in the foreground
+
+**Build and run the Docker image:**
+ ```
+ # Build the image
+ docker build -t claude-portfolio .
+
+ # Run the container (maps host port 8080 to container port 80)
+ docker run -d -p 8080:80 --name portfolio claude-portfolio
+
+ # Browse the site
+ http://localhost:8080
+ ```
+
+**Stop and remove the container:**
+ ```
+ docker stop portfolio
+ docker rm portfolio
+ ```
+
 # How to install ngrok 
  - Ref: https://www.youtube.com/watch?v=aFwrNSfthxU
  - Go to ngrok.com and create account
@@ -35,7 +84,7 @@ ngrok
  ![alt text](utils/images/npmrundev.png)
  Then Browse http://localhost:4321/
 
- # How to run the in ngrok
+ # How to setup secure tunner using ngrok
  - Command Prompt (Any location and need not neceesary to be prject path)
  - Type ngrok http 4321 (This will give you a public url like  https://obscure-lanky-splashy.ngrok-free.dev)
  ![alt text](utils/images/ngrok%20forwarding.png)
