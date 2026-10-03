@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.smith.langchain.com)",
+      "Bash(curl -s -H \"x-api-key: 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\" \"https://api.smith.langchain.com/api/v1/sessions?name=ArunManglickLanggraph/AITravelGenie\")",
+      "Bash(curl -s -H \"x-api-key: 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\" \"https://api.smith.langchain.com/api/v1/runs?session_id=e13b4c79-fc68-42e6-9693-caa5ff189e1d&limit=50\")",
+      "Bash(python3 -c ' *)",
+      "Read(//tmp/**)",
+      "Bash(cat /tmp/langsmith_runs.json)",
+      "Bash(curl -s -H \"x-api-key: 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\" \"https://api.smith.langchain.com/api/v1/runs/query\" -X POST -H \"Content-Type: application/json\" -d '{\"session_id\":\"e13b4c79-fc68-42e6-9693-caa5ff189e1d\",\"limit\":50}')"
+    ]
+  }
+}

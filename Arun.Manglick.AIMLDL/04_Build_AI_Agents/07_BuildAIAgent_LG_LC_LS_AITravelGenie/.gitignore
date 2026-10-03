@@ -1,0 +1,46 @@
+# Secrets & credentials
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+secrets.yaml
+secrets.yml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Package managers
+uv.lock
+node_modules/
+package-lock.json
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Misc
+*.log
+.pytest_cache/
+.claude/

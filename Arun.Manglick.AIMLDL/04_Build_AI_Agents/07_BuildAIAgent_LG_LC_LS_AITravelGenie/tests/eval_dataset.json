@@ -1,0 +1,104 @@
+{
+  "dataset_name": "ai-travel-genie-eval",
+  "description": "Evaluation dataset for AI Travel Genie — 7 diverse trip planning scenarios",
+  "scenarios": [
+    {
+      "id": "bali-beach",
+      "input": "Plan a 5-day beach vacation in Bali for 2 people, budget $3000, departing from New York. Dates: 2025-03-15 to 2025-03-20. Preferences: beach, culture.",
+      "expected": {
+        "destination": "Bali",
+        "days": 5,
+        "budget_usd": 3000,
+        "travelers": 2,
+        "origin": "New York",
+        "num_flight_options": 3,
+        "num_hotel_options": 3,
+        "required_agent_outputs": ["destination_research", "flight_options", "hotel_options", "itinerary", "budget_summary"]
+      }
+    },
+    {
+      "id": "maldives-luxury",
+      "input": "Plan a 7-day luxury beach vacation in the Maldives for 2 people, budget $8000, departing from Los Angeles. Dates: 2025-07-01 to 2025-07-08. Preferences: snorkeling, spa, luxury.",
+      "expected": {
+        "destination": "Maldives",
+        "days": 7,
+        "budget_usd": 8000,
+        "travelers": 2,
+        "origin": "Los Angeles",
+        "num_flight_options": 3,
+        "num_hotel_options": 3,
+        "required_agent_outputs": ["destination_research", "flight_options", "hotel_options", "itinerary", "budget_summary"]
+      }
+    },
+    {
+      "id": "paris-culture",
+      "input": "Plan a 5-day cultural trip to Paris for 1 person, budget $4000, departing from Chicago. Dates: 2025-09-10 to 2025-09-15. Preferences: museums, food, history.",
+      "expected": {
+        "destination": "Paris",
+        "days": 5,
+        "budget_usd": 4000,
+        "travelers": 1,
+        "origin": "Chicago",
+        "num_flight_options": 3,
+        "num_hotel_options": 3,
+        "required_agent_outputs": ["destination_research", "flight_options", "hotel_options", "itinerary", "budget_summary"]
+      }
+    },
+    {
+      "id": "tokyo-food",
+      "input": "Plan a 10-day food adventure in Tokyo for 3 people, budget $6000, departing from San Francisco. Dates: 2025-04-01 to 2025-04-11. Preferences: food, adventure, culture.",
+      "expected": {
+        "destination": "Tokyo",
+        "days": 10,
+        "budget_usd": 6000,
+        "travelers": 3,
+        "origin": "San Francisco",
+        "num_flight_options": 3,
+        "num_hotel_options": 3,
+        "required_agent_outputs": ["destination_research", "flight_options", "hotel_options", "itinerary", "budget_summary"]
+      }
+    },
+    {
+      "id": "santorini-romantic",
+      "input": "Plan a 7-day romantic getaway to Santorini for 2 people, budget $5000, departing from Miami. Dates: 2025-06-10 to 2025-06-17. Preferences: romantic, food, sunsets.",
+      "expected": {
+        "destination": "Santorini",
+        "days": 7,
+        "budget_usd": 5000,
+        "travelers": 2,
+        "origin": "Miami",
+        "num_flight_options": 3,
+        "num_hotel_options": 3,
+        "required_agent_outputs": ["destination_research", "flight_options", "hotel_options", "itinerary", "budget_summary"]
+      }
+    },
+    {
+      "id": "cancun-family",
+      "input": "Plan a 6-day family vacation in Cancun for 4 people, budget $4500, departing from Dallas. Dates: 2025-12-20 to 2025-12-26. Preferences: beach, family, adventure.",
+      "expected": {
+        "destination": "Cancun",
+        "days": 6,
+        "budget_usd": 4500,
+        "travelers": 4,
+        "origin": "Dallas",
+        "num_flight_options": 3,
+        "num_hotel_options": 3,
+        "required_agent_outputs": ["destination_research", "flight_options", "hotel_options", "itinerary", "budget_summary"]
+      }
+    },
+    {
+      "id": "dubai-luxury",
+      "input": "Plan a 5-day luxury shopping trip to Dubai for 2 people, budget $10000, departing from London. Dates: 2025-11-01 to 2025-11-06. Preferences: luxury, shopping, fine dining.",
+      "expected": {
+        "destination": "Dubai",
+        "days": 5,
+        "budget_usd": 10000,
+        "travelers": 2,
+        "origin": "London",
+        "num_flight_options": 3,
+        "num_hotel_options": 3,
+        "required_agent_outputs": ["destination_research", "flight_options", "hotel_options", "itinerary", "budget_summary"]
+      }
+    }
+  ]
+}

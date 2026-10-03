@@ -1,0 +1,69 @@
+%% AI Travel Genie - LangGraph multi-agent design
+flowchart LR
+    user([Traveler]) --> ui["Jupyter widgets / Gradio UI"]
+    ui --> entry["Graph entrypoint<br/>thread_id + request"]
+
+    subgraph coreGraph["LangGraph TravelPlanState"]
+        direction TB
+        intent["Intent Parser<br/>TravelRequest extraction"] --> supervisor["Supervisor Router<br/>conditional edges"]
+
+        supervisor --> destination["Destination Research Agent"]
+        supervisor --> flights["Flight Search Agent"]
+        supervisor --> hotels["Hotel & Accommodation Agent"]
+        supervisor --> activities["Activity & Itinerary Agent"]
+        supervisor --> budget["Budget & Currency Agent"]
+
+        destination --> aggregate["Result Aggregator"]
+        flights --> aggregate
+        hotels --> aggregate
+        activities --> aggregate
+        budget --> aggregate
+
+        aggregate --> review{"Human Review<br/>approval gate"}
+        review -->|revise| supervisor
+        review -->|approved| complete(["Complete travel plan"])
+    end
+
+    entry --> intent
+    complete --> ui
+
+    subgraph tools["Tool integrations"]
+        web["Web search<br/>destination info"]
+        flightTools["Airport codes<br/>flight search"]
+        hotelTools["Hotel search<br/>reviews"]
+        activityTools["Activities<br/>weather forecast"]
+        moneyTools["Currency conversion<br/>budget calculation"]
+    end
+
+    destination -.-> web
+    flights -.-> flightTools
+    hotels -.-> hotelTools
+    activities -.-> activityTools
+    budget -.-> moneyTools
+
+    subgraph platform["Cross-cutting platform services"]
+        memory["MemorySaver checkpointing<br/>multi-turn thread state"]
+        stream["Graph streaming<br/>partial agent updates"]
+        tracing["LangSmith tracing<br/>metadata, datasets, evaluations"]
+        errors["Error boundaries<br/>timeouts and fallbacks"]
+    end
+
+    coreGraph -.-> memory
+    coreGraph -.-> stream
+    coreGraph -.-> tracing
+    coreGraph -.-> errors
+
+    classDef control fill:#17324d,stroke:#0b1f33,color:#ffffff
+    classDef specialist fill:#e7f0f7,stroke:#3d6b8c,color:#102a43
+    classDef tool fill:#fff4d6,stroke:#b7791f,color:#4a2c00
+    classDef platform fill:#e8f5ee,stroke:#37815c,color:#173b27
+    classDef io fill:#f5e9f7,stroke:#8b5a9b,color:#32153b
+    class intent,supervisor,aggregate,review control
+    class destination,flights,hotels,activities,budget specialist
+    class web,flightTools,hotelTools,activityTools,moneyTools tool
+    class memory,stream,tracing,errors platform
+    class user,ui,entry,complete io
+
+    %% Selective re-planning: supervisor invalidates only affected downstream sections.
+    %% Destination changes: destination -> flights -> hotels -> activities -> budget.
+    %% Preference changes: activities -> budget; hotel requests: hotels -> budget.

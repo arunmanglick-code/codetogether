@@ -1,0 +1,1368 @@
+<title>AI Travel CoPilot Post</title>
+
+<style>
+  /* Direction: editorial tech-blog feel — dark blueprint aesthetic
+     evoking architectural diagrams and flight-path maps, with a
+     monospace data layer under clean sans-serif prose. */
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+  :root {
+    --bg: #070b14;
+    --surface: rgba(18, 28, 45, 0.84);
+    --text: #edf4ff;
+    --text-muted: #9eacc0;
+    --accent: #62e6d5;
+    --accent-glow: rgba(98, 230, 213, 0.12);
+    --node-bg: #17263b;
+    --node-border: #38516e;
+    --edge: #6e8eae;
+    --tag-bg: #14283a;
+    --tag-text: #8ee9dc;
+    --divider: rgba(126, 157, 190, 0.25);
+    --tool-bg: #332918;
+    --tool-border: #bd8a3b;
+    --tool-text: #f5c977;
+    --harness-bg: rgba(98, 230, 213, 0.06);
+    --harness-border: rgba(98, 230, 213, 0.24);
+    --harness-label: rgba(98, 230, 213, 0.72);
+    --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+    color-scheme: dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E1117;
+      --surface: #161B22;
+      --text: #E6E6E6;
+      --text-muted: #8B949E;
+      --accent: #58A6FF;
+      --accent-glow: rgba(88, 166, 255, 0.1);
+      --node-bg: #1C2333;
+      --node-border: #30425A;
+      --edge: #4A6A8A;
+      --tag-bg: #172038;
+      --tag-text: #79B8FF;
+      --divider: #21262D;
+      --tool-bg: #2a2210;
+      --tool-border: #8a7030;
+      --tool-text: #d4b854;
+      --harness-bg: rgba(88, 166, 255, 0.06);
+      --harness-border: rgba(88, 166, 255, 0.2);
+      --harness-label: rgba(88, 166, 255, 0.6);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1117;
+    --surface: #161B22;
+    --text: #E6E6E6;
+    --text-muted: #8B949E;
+    --accent: #58A6FF;
+    --accent-glow: rgba(88, 166, 255, 0.1);
+    --node-bg: #1C2333;
+    --node-border: #30425A;
+    --edge: #4A6A8A;
+    --tag-bg: #172038;
+    --tag-text: #79B8FF;
+    --divider: #21262D;
+    --tool-bg: #2a2210;
+    --tool-border: #8a7030;
+    --tool-text: #d4b854;
+    --harness-bg: rgba(88, 166, 255, 0.06);
+    --harness-border: rgba(88, 166, 255, 0.2);
+    --harness-label: rgba(88, 166, 255, 0.6);
+    color-scheme: dark;
+  }
+
+  body {
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+    padding-inline: 20px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 12% 8%, rgba(37, 160, 177, 0.22), transparent 32%),
+      radial-gradient(circle at 92% 18%, rgba(255, 153, 91, 0.16), transparent 27%),
+      radial-gradient(circle at 52% 100%, rgba(52, 83, 173, 0.2), transparent 38%),
+      linear-gradient(135deg, #070b14 0%, #0b1322 48%, #111625 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.3;
+    background-image:
+      linear-gradient(rgba(128, 171, 202, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(128, 171, 202, 0.08) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, black, transparent 88%);
+  }
+
+  /* --- LinkedIn header --- */
+  .li-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-block: 28px 20px;
+  }
+  .li-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #8844dd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .li-meta { line-height: 1.35; }
+  .li-name {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .li-title {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* --- Post body --- */
+  .post-body h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  .post-body h2 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  .hook {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    line-height: 1.55;
+  }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 32px;
+    margin-bottom: 8px;
+  }
+  .tax-section-label {
+    display: inline-block;
+    color: var(--tool-text);
+    background: rgba(189, 138, 59, 0.14);
+    border-left: 3px solid var(--tool-border);
+    border-radius: 0 5px 5px 0;
+    padding: 6px 10px;
+  }
+  .yellow-highlight {
+    background: transparent;
+    color: #f6d84a;
+    font-weight: 700;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .yellow-highlight-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-underline-offset: 3px;
+  }
+
+  .post-body p {
+    margin-block: 0 14px;
+  }
+
+  .separator {
+    border: none;
+    border-top: 1px solid var(--divider);
+    margin-block: 28px;
+  }
+
+  /* --- Orchestration diagram --- */
+  .diagram-wrap {
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 28px 20px 24px;
+    margin-block: 20px 24px;
+    overflow-x: auto;
+  }
+  .diagram-wrap svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  .diagram-caption {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 14px;
+    letter-spacing: 0.03em;
+  }
+
+  /* --- Tag pills --- */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-block: 14px 18px;
+  }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    white-space: nowrap;
+  }
+
+  /* --- Stack table --- */
+  .stack-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-block: 12px 20px;
+  }
+  .stack-table th {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--text-muted);
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--divider);
+  }
+  .stack-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--divider);
+    vertical-align: top;
+  }
+  .stack-table td:first-child {
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  .stack-table td:nth-child(2) {
+    font-weight: 500;
+  }
+
+  /* --- Callout box --- */
+  .callout {
+    border-left: 3px solid var(--accent);
+    padding: 16px 18px;
+    background: var(--accent-glow);
+    border-radius: 0 8px 8px 0;
+    margin-block: 16px 20px;
+    font-size: 14.5px;
+  }
+  .callout strong {
+    color: var(--accent);
+  }
+
+  /* --- Bullet list --- */
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin-block: 10px 18px;
+  }
+  .check-list li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 8px;
+    font-size: 14.5px;
+  }
+  .check-list li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 14px;
+  }
+
+  /* --- Hashtags footer --- */
+  .hashtags {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+    line-height: 2;
+    margin-top: 24px;
+    word-spacing: 2px;
+  }
+
+  /* --- Engagement bar --- */
+  .engagement {
+    display: flex;
+    gap: 28px;
+    padding-block: 16px;
+    margin-top: 20px;
+    border-top: 1px solid var(--divider);
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .engagement span { cursor: default; }
+
+  /* --- Copy button --- */
+  .copy-wrap {
+    text-align: right;
+    margin-top: 12px;
+  }
+  .copy-btn {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--divider);
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .copy-btn:hover, .copy-btn:focus-visible {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    outline: none;
+  }
+
+  /* --- Observability stats --- */
+  .obs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-block: 16px 20px;
+  }
+  .obs-stat {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .obs-stat .num {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+  .obs-stat .label {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-family: var(--font-mono);
+    letter-spacing: 0.03em;
+  }
+  .obs-breakdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-block: 12px 18px;
+  }
+  .obs-col {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .obs-col h4 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+  .obs-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .obs-col li {
+    font-size: 13px;
+    padding: 3px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--divider);
+  }
+  .obs-col li:last-child { border-bottom: none; }
+  .obs-col li span:last-child {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  /* --- Tax orchestration flow --- */
+  .tax-flow {
+    background: var(--surface);
+    border: 1px solid var(--divider);
+    border-radius: 10px;
+    padding: 18px;
+    margin-block: 20px 24px;
+  }
+  .tax-flow-title {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .tax-flow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: stretch;
+  }
+  .tax-agent-flow {
+    display: grid;
+    gap: 12px;
+  }
+  .tax-flow-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .tax-flow-node {
+    background: var(--node-bg);
+    border: 1px solid var(--node-border);
+    border-radius: 7px;
+    padding: 11px 14px;
+    text-align: center;
+    min-width: 150px;
+  }
+  .tax-flow-node strong {
+    display: block;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .tax-flow-node span {
+    display: block;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    margin-top: 4px;
+  }
+  .tax-flow-node.supervisor {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent-glow), 0 0 22px rgba(98, 230, 213, 0.1);
+  }
+  .tax-flow-node.decision { border-color: var(--tool-border); }
+  .tax-flow-arrow {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 18px;
+    line-height: 1;
+  }
+  .tax-flow-down {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 18px;
+    line-height: 0.7;
+    text-align: center;
+  }
+  .tax-agent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .tax-agent-node {
+    background: rgba(51, 41, 24, 0.72);
+    border: 1px dashed var(--tool-border);
+    border-radius: 7px;
+    padding: 10px 8px;
+    text-align: center;
+  }
+  .tax-agent-node strong {
+    display: block;
+    color: var(--tool-text);
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  .tax-agent-node span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 10px;
+    line-height: 1.35;
+    margin-top: 4px;
+  }
+  .tax-flow-branches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .tax-flow-branch {
+    border: 1px solid var(--divider);
+    border-radius: 7px;
+    padding: 9px;
+    text-align: center;
+    font-size: 11px;
+  }
+  .tax-flow-branch.approve { color: var(--accent); }
+  .tax-flow-branch.review {
+    color: var(--tool-text);
+    border-style: dashed;
+    border-color: var(--tool-border);
+  }
+  .tax-flow-loop {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-align: center;
+  }
+  .tax-step {
+    position: relative;
+    background: var(--node-bg);
+    border: 1px solid var(--node-border);
+    border-radius: 7px;
+    padding: 12px 10px;
+    min-height: 112px;
+  }
+  .tax-step:not(:last-child)::after {
+    content: '>'; 
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    z-index: 1;
+  }
+  .tax-step-number {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+  }
+  .tax-step strong {
+    display: block;
+    font-size: 13px;
+    line-height: 1.3;
+    margin: 6px 0;
+  }
+  .tax-step span:last-child {
+    display: block;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .tax-step.service { border-color: var(--tool-border); }
+  .tax-step.review { border-color: var(--accent); border-style: dashed; }
+  .tax-flow-lane {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--divider);
+  }
+  .tax-lane-label {
+    width: 100%;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .tax-lane-chip {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    border-radius: 4px;
+    padding: 4px 7px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+  }
+
+  @media (max-width: 500px) {
+    .obs-grid { grid-template-columns: repeat(2, 1fr); }
+    .obs-breakdown { grid-template-columns: 1fr; }
+    .post-body h2 { font-size: 22px; }
+    .diagram-wrap { padding: 18px 12px 16px; }
+    .stack-table { font-size: 13px; }
+    .stack-table td:first-child { white-space: normal; }
+    .tax-flow { padding: 14px; }
+    .tax-flow-grid { grid-template-columns: 1fr; }
+    .tax-step { min-height: auto; }
+    .tax-flow-row { flex-direction: column; }
+    .tax-flow-arrow { transform: rotate(90deg); }
+    .tax-flow-node { width: 100%; min-width: 0; }
+    .tax-agent-grid { grid-template-columns: 1fr; }
+    .tax-flow-branches { grid-template-columns: 1fr; }
+    .tax-step:not(:last-child)::after {
+      content: 'v';
+      right: auto;
+      top: auto;
+      bottom: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+</style>
+
+<!-- LinkedIn profile header -->
+<div class="li-header">
+  <div class="li-avatar">A</div>
+  <div class="li-meta">
+    <div class="li-name">Arun Manglick</div>
+    <div class="li-title">Building with AI Agents &middot; LangChain &middot; LangGraph &middot; LangSmith</div>
+  </div>
+</div>
+
+<article class="post-body">
+
+<h2>AI Travel CoPilot <em>(A <strong>graph-native, multi-agent supervisor architecture</strong> under real mutation pressure)</em></h2>
+
+<p class="hook"><strong>The intent is not to build another AI assistant that adapts to your preferences, responds to changing travel requirements, and then calls it a "trip plan."</strong></p>
+
+<p>Though I call it <strong>AI Travel CoPilot</strong>, travel is merely the proving ground. The end goal is to use this as a proof of concept for a <strong>multi-agent supervisor architecture</strong> that can seamlessly orchestrate a real <mark class="yellow-highlight"><a class="yellow-highlight-link" href="#tax-calculation-section">"tax calculation workflow"</a></mark>, handling complex dependencies while ensuring accuracy, traceability, and controlled execution.</p>
+
+<p>The real objective was to architect a <strong>multi-agent supervisor system</strong> and push a <strong>stateful graph orchestration model</strong> through nine consecutive user modifications, where every agent knows exactly when to wake up, when to remain idle, and when to seek human approval before proceeding.</p>
+
+<p>This effort culminates in a <strong>state-driven orchestration model</strong> capable of coordinating specialist agents through conditional graph edges, selectively re-executing only invalidated subgraphs, checkpointing the entire conversation state, and enforcing structured human-in-the-loop approval gates, all within a single observable execution trace.</p>
+
+<p>After building agents with <strong>CrewAI, Oracle AI Studio, Copilot, n8n</strong>, and several other platforms, I wanted to evaluate the Lang ecosystem as a <strong>vertically integrated agentic architecture</strong>. <strong>LangChain</strong> provides the agent primitives (tool nodes, output parsers, and ReAct loops), <strong>LangGraph</strong> delivers the <strong>graph-native orchestration layer</strong> with typed state, conditional routing, subgraph composition, interrupt gates, and persistent checkpointing, while <strong>LangSmith</strong> provides <strong>real-time observability and evaluation</strong> across every agent handoff, tool invocation, and state transition.</p>
+
+<p>The result is a <strong>state-driven, fully traceable multi-agent system</strong> where the graph itself becomes the orchestrator.</p>
+
+<hr class="separator">
+
+<div class="section-label">// Agentic Orchestration Patterns</div>
+
+<div class="tags">
+  <span class="tag">Supervisor Architecture</span>
+  <span class="tag">Stateful Graph Orchestration</span>
+  <span class="tag">Sub-Graph Composition</span>
+  <span class="tag">ReAct Agent Loops</span>
+  <span class="tag">Conditional Edge Routing</span>
+  <span class="tag">Typed State Reducers</span>
+  <span class="tag">Human-in-the-Loop Gates</span>
+  <span class="tag">Graph Checkpointing</span>
+  <span class="tag">Selective Re-Execution</span>
+  <span class="tag">Parallel Agent Fan-Out</span>
+  <span class="tag">Error Boundaries</span>
+  <span class="tag">Real-Time Trace Observability</span>
+  <span class="tag">@traceable Evaluation</span>
+</div>
+
+<hr class="separator">
+
+<div class="section-label">// The Multi-Agent Graph Architecture</div>
+
+<p>At the core sits a <strong>Supervisor Router</strong>&mdash;the central orchestration node in a LangGraph <code>StateGraph</code>. It doesn't generate text. It reads the typed <code>TravelPlanState</code>, evaluates which state slices are <code>None</code> or invalidated, and dispatches work to five specialist agents through <strong>conditional edges</strong>&mdash;a <strong>state-driven routing table</strong>, not prompt engineering:</p>
+
+<!-- Orchestration diagram -->
+<div class="diagram-wrap">
+  <svg viewBox="0 0 700 720" width="700" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="var(--edge)"/>
+      </marker>
+    </defs>
+
+    <!-- ===== AI HARNESS WRAPPER (behind everything) ===== -->
+    <rect x="6" y="106" width="688" height="490" rx="10" fill="var(--harness-bg)" stroke="var(--harness-border)" stroke-width="1.5" stroke-dasharray="8 4"/>
+    <!-- Harness label — top-right corner -->
+    <rect x="474" y="96" width="216" height="20" rx="4" fill="var(--bg)"/>
+    <text x="582" y="110" text-anchor="middle" fill="var(--harness-label)" font-family="var(--font-mono)" font-size="10" font-weight="600" letter-spacing="0.06em">AI HARNESS — Claude (ChatAnthropic)</text>
+    <!-- Harness sublabel — bottom-left inside -->
+    <text x="20" y="588" fill="var(--harness-label)" font-family="var(--font-mono)" font-size="8" letter-spacing="0.04em">langchain-anthropic · claude-sonnet-4-6 · powers all agent reasoning &amp; routing</text>
+
+    <!-- ===== FLOW EDGES ===== -->
+    <!-- User -> UI -> Entry -->
+    <line x1="350" y1="30" x2="350" y2="56" stroke="var(--edge)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+    <line x1="350" y1="90" x2="350" y2="116" stroke="var(--edge)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+    <!-- Intent Parser -> Supervisor -->
+    <line x1="350" y1="150" x2="350" y2="176" stroke="var(--edge)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+    <!-- Supervisor fan-out to 5 agents -->
+    <line x1="245" y1="214" x2="82" y2="260" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+    <line x1="290" y1="214" x2="216" y2="260" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+    <line x1="350" y1="214" x2="350" y2="260" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+    <line x1="410" y1="214" x2="484" y2="260" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+    <line x1="455" y1="214" x2="618" y2="260" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+
+    <!-- Agent -> Tool dotted connections -->
+    <line x1="82" y1="314" x2="82" y2="340" stroke="var(--edge)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrowhead)"/>
+    <line x1="216" y1="314" x2="216" y2="340" stroke="var(--edge)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrowhead)"/>
+    <line x1="350" y1="314" x2="350" y2="340" stroke="var(--edge)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrowhead)"/>
+    <line x1="484" y1="314" x2="484" y2="340" stroke="var(--edge)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrowhead)"/>
+    <line x1="618" y1="314" x2="618" y2="340" stroke="var(--edge)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrowhead)"/>
+
+    <!-- Fan-in from agents to Aggregator -->
+    <line x1="82" y1="314" x2="290" y2="420" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+    <line x1="216" y1="314" x2="310" y2="420" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+    <line x1="350" y1="314" x2="350" y2="420" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+    <line x1="484" y1="314" x2="390" y2="420" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+    <line x1="618" y1="314" x2="410" y2="420" stroke="var(--edge)" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+
+    <!-- Aggregator -> Human Review -->
+    <line x1="350" y1="456" x2="350" y2="482" stroke="var(--edge)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+    <!-- Human Review -> Complete -->
+    <line x1="400" y1="520" x2="460" y2="548" stroke="var(--edge)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+    <!-- Human Review -> Revise loop back to Supervisor -->
+    <path d="M 300 520 L 220 548 Q 155 570 155 520 L 155 195 Q 155 182 220 188" stroke="var(--edge)" stroke-width="1.2" fill="none" stroke-dasharray="6 4" marker-end="url(#arrowhead)"/>
+
+    <!-- Core graph -> Platform services dotted -->
+    <line x1="250" y1="580" x2="114" y2="630" stroke="var(--edge)" stroke-width="1" stroke-dasharray="4 3"/>
+    <line x1="310" y1="580" x2="278" y2="630" stroke="var(--edge)" stroke-width="1" stroke-dasharray="4 3"/>
+    <line x1="390" y1="580" x2="422" y2="630" stroke="var(--edge)" stroke-width="1" stroke-dasharray="4 3"/>
+    <line x1="450" y1="580" x2="572" y2="630" stroke="var(--edge)" stroke-width="1" stroke-dasharray="4 3"/>
+
+    <!-- ===== USER ENTRY ===== -->
+    <!-- User -->
+    <rect x="305" y="8" width="90" height="24" rx="12" fill="var(--accent)" opacity="0.9"/>
+    <text x="350" y="24" text-anchor="middle" fill="#fff" font-family="var(--font-mono)" font-size="10" font-weight="500">Traveler</text>
+
+    <!-- UI layer -->
+    <rect x="260" y="58" width="180" height="30" rx="6" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="350" y="77" text-anchor="middle" fill="var(--text)" font-family="var(--font-body)" font-size="11" font-weight="600">Jupyter widgets / Gradio UI</text>
+
+    <!-- ===== CORE GRAPH ===== -->
+    <!-- Intent Parser -->
+    <rect x="265" y="118" width="170" height="32" rx="6" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="350" y="139" text-anchor="middle" fill="var(--text)" font-family="var(--font-body)" font-size="11" font-weight="600">Intent Parser</text>
+
+    <!-- Supervisor -->
+    <rect x="250" y="178" width="200" height="36" rx="6" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1.5"/>
+    <text x="350" y="200" text-anchor="middle" fill="var(--accent)" font-family="var(--font-body)" font-size="12" font-weight="700">Supervisor Router</text>
+
+    <!-- ===== 5 SPECIALIST AGENTS ===== -->
+    <!-- Destination -->
+    <rect x="20" y="262" width="124" height="52" rx="6" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="82" y="283" text-anchor="middle" fill="var(--text)" font-family="var(--font-body)" font-size="11" font-weight="600">Destination</text>
+    <text x="82" y="300" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="8">Research Agent</text>
+
+    <!-- Flights -->
+    <rect x="156" y="262" width="120" height="52" rx="6" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="216" y="283" text-anchor="middle" fill="var(--text)" font-family="var(--font-body)" font-size="11" font-weight="600">Flights</text>
+    <text x="216" y="300" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="8">Search Agent</text>
+
+    <!-- Hotels -->
+    <rect x="288" y="262" width="124" height="52" rx="6" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="350" y="283" text-anchor="middle" fill="var(--text)" font-family="var(--font-body)" font-size="11" font-weight="600">Hotels</text>
+    <text x="350" y="300" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="8">Accommodation Agent</text>
+
+    <!-- Activities -->
+    <rect x="424" y="262" width="120" height="52" rx="6" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="484" y="283" text-anchor="middle" fill="var(--text)" font-family="var(--font-body)" font-size="11" font-weight="600">Itinerary</text>
+    <text x="484" y="300" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="8">Activity Agent</text>
+
+    <!-- Budget -->
+    <rect x="556" y="262" width="124" height="52" rx="6" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="618" y="283" text-anchor="middle" fill="var(--text)" font-family="var(--font-body)" font-size="11" font-weight="600">Budget</text>
+    <text x="618" y="300" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="8">Currency Agent</text>
+
+    <!-- ===== TOOL INTEGRATIONS (below each agent) ===== -->
+    <!-- Destination tools -->
+    <rect x="16" y="344" width="132" height="46" rx="5" fill="var(--tool-bg)" stroke="var(--tool-border)" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="82" y="362" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">Tavily Search</text>
+    <text x="82" y="378" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">DuckDuckGo</text>
+
+    <!-- Flight tools -->
+    <rect x="152" y="344" width="128" height="46" rx="5" fill="var(--tool-bg)" stroke="var(--tool-border)" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="216" y="362" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">search_flights</text>
+    <text x="216" y="378" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">get_airport_code</text>
+
+    <!-- Hotel tools -->
+    <rect x="286" y="344" width="128" height="46" rx="5" fill="var(--tool-bg)" stroke="var(--tool-border)" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="350" y="362" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">search_hotels</text>
+    <text x="350" y="378" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">get_hotel_reviews</text>
+
+    <!-- Activity tools -->
+    <rect x="420" y="344" width="128" height="46" rx="5" fill="var(--tool-bg)" stroke="var(--tool-border)" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="484" y="362" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">search_activities</text>
+    <text x="484" y="378" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">OpenWeatherMap</text>
+
+    <!-- Budget tools -->
+    <rect x="554" y="344" width="128" height="46" rx="5" fill="var(--tool-bg)" stroke="var(--tool-border)" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="618" y="362" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">convert_currency</text>
+    <text x="618" y="378" text-anchor="middle" fill="var(--tool-text)" font-family="var(--font-mono)" font-size="9" font-weight="500">calculate_budget</text>
+
+    <!-- Tool integrations label -->
+    <text x="350" y="408" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="9" letter-spacing="0.08em" text-transform="uppercase">TOOL INTEGRATIONS</text>
+
+    <!-- ===== AGGREGATOR & REVIEW ===== -->
+    <!-- Aggregator -->
+    <rect x="275" y="422" width="150" height="34" rx="6" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="350" y="444" text-anchor="middle" fill="var(--text)" font-family="var(--font-body)" font-size="11" font-weight="600">Result Aggregator</text>
+
+    <!-- Human Review -->
+    <rect x="275" y="484" width="150" height="36" rx="6" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text x="350" y="507" text-anchor="middle" fill="var(--accent)" font-family="var(--font-body)" font-size="11" font-weight="700">Human Review</text>
+
+    <!-- Complete -->
+    <rect x="450" y="548" width="90" height="26" rx="13" fill="var(--accent)" opacity="0.85"/>
+    <text x="495" y="565" text-anchor="middle" fill="#fff" font-family="var(--font-mono)" font-size="10" font-weight="500">COMPLETE</text>
+
+    <!-- Revise label -->
+    <text x="192" y="562" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="9" font-style="italic">revise loop</text>
+
+    <!-- ===== PLATFORM SERVICES BAR ===== -->
+    <rect x="30" y="632" width="640" height="72" rx="8" fill="var(--surface)" stroke="var(--divider)" stroke-width="1" stroke-dasharray="6 3"/>
+    <text x="350" y="650" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="9" letter-spacing="0.1em">CROSS-CUTTING PLATFORM SERVICES</text>
+
+    <!-- 4 platform service boxes inside the bar -->
+    <rect x="44" y="658" width="140" height="34" rx="5" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="114" y="672" text-anchor="middle" fill="var(--text)" font-family="var(--font-mono)" font-size="9" font-weight="600">MemorySaver</text>
+    <text x="114" y="684" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="8">checkpointing</text>
+
+    <rect x="198" y="658" width="140" height="34" rx="5" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="268" y="672" text-anchor="middle" fill="var(--text)" font-family="var(--font-mono)" font-size="9" font-weight="600">Graph Streaming</text>
+    <text x="268" y="684" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="8">partial updates</text>
+
+    <rect x="352" y="658" width="140" height="34" rx="5" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="422" y="672" text-anchor="middle" fill="var(--text)" font-family="var(--font-mono)" font-size="9" font-weight="600">LangSmith</text>
+    <text x="422" y="684" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="8">tracing + evals</text>
+
+    <rect x="506" y="658" width="150" height="34" rx="5" fill="var(--node-bg)" stroke="var(--node-border)" stroke-width="1"/>
+    <text x="581" y="672" text-anchor="middle" fill="var(--text)" font-family="var(--font-mono)" font-size="9" font-weight="600">Error Boundaries</text>
+    <text x="581" y="684" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="8">timeouts + fallbacks</text>
+  </svg>
+  <div class="diagram-caption">LangGraph StateGraph &mdash; Supervisor routes to specialists via conditional edges, with tool integrations, human-in-the-loop gate, and cross-cutting platform services</div>
+</div>
+
+<p>Each specialist is its own <strong>compiled sub-graph</strong>&mdash;a self-contained <strong>ReAct agent</strong> with its own execution cycle (reason &rarr; tool call &rarr; evaluate &rarr; reason again) and a dedicated <code>ToolNode</code>. The supervisor never broadcasts. It inspects the shared <code>TravelPlanState</code> through <strong>conditional edge evaluation</strong> and activates only the agents whose state slices are <code>None</code> or invalidated by user mutation. This is <strong>graph-native selective re-execution</strong>&mdash;the orchestration topology itself decides what runs.</p>
+
+<hr class="separator">
+
+<div class="section-label">// Why the Lang Family &mdash; A Vertically Integrated Agentic Stack</div>
+
+<p>There are many agentic frameworks. I deliberately chose <strong>LangChain + LangGraph + LangSmith</strong> because they form a <strong>vertically integrated agentic stack</strong>&mdash;primitives, orchestration, and observability in a single, coherent architecture:</p>
+
+<ul class="check-list">
+  <li><strong>Graph-native state management</strong> &mdash; LangGraph's <code>StateGraph</code> with typed <code>TypedDict</code> state, <code>add_messages</code> reducers, and conditional edges models agent orchestration as a <strong>directed execution graph</strong>, not a chain of function calls. State is explicit, inspectable, and checkpointed&mdash;the graph topology <em>is</em> the orchestration logic.</li>
+  <li><strong>Selective re-execution under mutation</strong> &mdash; When a user says "find cheaper hotels," the supervisor evaluates <code>TravelPlanState</code> and re-invokes <em>only</em> the Hotel agent&mdash;not the entire pipeline. This is <strong>native to the graph's conditional edge routing</strong>. In a linear chain framework, you'd rebuild this invalidation logic from scratch.</li>
+  <li><strong>Sub-graph composition &amp; agent isolation</strong> &mdash; Each specialist compiles into its own graph with its own ReAct execution cycle, then plugs into the parent graph as a composable node. Each sub-graph is testable in isolation, independently deployable, and orchestrated by the supervisor&mdash;<strong>true multi-agent modularity</strong>.</li>
+  <li><strong>Structural human-in-the-loop gates</strong> &mdash; LangGraph's <code>interrupt_before</code> pauses graph execution at the human review node, serializes the full plan state, waits for approval or revision input, and resumes the graph exactly where it stopped. Not a confirmation dialog&mdash;a <strong>stateful approval gate with revision routing</strong>.</li>
+  <li><strong>Real-time observability &amp; evaluation</strong> &mdash; Every agent handoff, tool invocation, and state transition is auto-traced in LangSmith with zero additional instrumentation. <code>@traceable</code> decorators and custom metadata tags enable per-agent latency profiling, tool-call chain inspection, and <strong>evaluation against curated datasets</strong>&mdash;production-grade observability from the first run.</li>
+</ul>
+
+<div class="callout">
+  <strong>The architectural stress test:</strong> a single session can trigger 9+ modification scenarios (change dates, swap destination, add a traveler, adjust budget, request dietary options...) and the supervisor must route each mutation to the correct subset of agents without re-executing stable subgraphs. LangGraph's <strong>state-driven conditional edges</strong> turn this into a routing table evaluated at every graph step&mdash;not spaghetti code patching around a linear pipeline.
+</div>
+
+<hr class="separator">
+
+<div class="section-label">// The Agentic Tech Stack</div>
+
+<p>Every layer was chosen to serve the architecture. No defaults, no "just use OpenAI."</p>
+
+<div style="overflow-x: auto;">
+<table class="stack-table">
+  <thead>
+    <tr><th>Layer</th><th>Tool</th><th>Why This One</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AI Harness</td>
+      <td>Claude (ChatAnthropic)</td>
+      <td>Powers all agent reasoning &amp; routing &mdash; large context window, strong instruction-following for multi-agent dispatch, native tool-use protocol</td>
+    </tr>
+    <tr>
+      <td>Orchestration</td>
+      <td>LangGraph StateGraph</td>
+      <td>The graph-native orchestration layer &mdash; conditional edge routing, sub-graph composition, interrupt gates, stateful checkpointing, selective re-execution</td>
+    </tr>
+    <tr>
+      <td>Agent Primitives</td>
+      <td>LangChain</td>
+      <td>ToolNode, ReAct agent pattern, output parsers, prompt templates &mdash; the building blocks each sub-graph agent is assembled from</td>
+    </tr>
+    <tr>
+      <td>Web Intelligence</td>
+      <td>Tavily + DuckDuckGo</td>
+      <td>Tavily: purpose-built search API for AI agents and RAG pipelines. DuckDuckGo: privacy-first fallback with zero API key overhead</td>
+    </tr>
+    <tr>
+      <td>Observability</td>
+      <td>LangSmith</td>
+      <td>Real-time trace observability &mdash; @traceable decorators, datasets, evaluations, per-agent latency profiling, and tool-call chain inspection</td>
+    </tr>
+    <tr>
+      <td>State Persistence</td>
+      <td>MemorySaver</td>
+      <td>LangGraph's graph checkpointer &mdash; thread-based state persistence with full conversation replay, zero external infra</td>
+    </tr>
+    <tr>
+      <td>Weather Intel</td>
+      <td>OpenWeatherMap API</td>
+      <td>Context-aware activity routing &mdash; the Activity agent uses forecast data to decide outdoor vs. indoor itinerary recommendations</td>
+    </tr>
+    <tr>
+      <td>Currency</td>
+      <td>ExchangeRate API</td>
+      <td>Real-time conversion for accurate multi-currency budget computation across the Budget agent's state slice</td>
+    </tr>
+    <tr>
+      <td>Agent UI</td>
+      <td>Gradio + Jupyter ipywidgets</td>
+      <td>Interactive agent interface with streaming output &mdash; users observe the multi-agent execution unfold in real time</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr class="separator">
+
+<div class="section-label">// Architectural Differentiators</div>
+
+<p><strong>1. The supervisor is a state-driven router, not a narrator.</strong><br>
+It generates zero user-facing text. It reads the typed <code>TravelPlanState</code>, evaluates which state slices are <code>None</code> or invalidated by user mutation, and dispatches to exactly the right specialist agent through <strong>conditional edge evaluation</strong>. The routing logic lives in the graph topology&mdash;not in prompt engineering.</p>
+
+<p><strong>2. ReAct execution cycles at every agent node.</strong><br>
+Each specialist doesn't call a tool once and return. It runs a full <strong>ReAct loop</strong> within its compiled sub-graph: reason &rarr; select tool &rarr; invoke &rarr; evaluate result &rarr; decide whether to invoke again or report. The Destination agent might search, find conflicting visa info, refine the query, cross-reference, and return a structured finding. This is a <strong>self-contained agentic sub-graph with its own execution cycle</strong>, not a single function call.</p>
+
+<p><strong>3. Human-in-the-loop is a structural graph gate, not a UI decoration.</strong><br>
+After the aggregator assembles a complete plan, the graph <em>pauses</em> at a <code>interrupt_before</code> node. The full plan state is serialized&mdash;flights, hotels, itinerary, budget&mdash;and presented for human review. Approval resumes the graph to <code>COMPLETE</code>. Revision feedback re-enters the supervisor, which evaluates the mutation and <strong>re-routes to only the affected agent subgraphs</strong>. This is a <strong>stateful approval gate with selective re-execution routing</strong>.</p>
+
+<p><strong>4. Graph checkpointing enables selective re-planning under mutation.</strong><br>
+<code>MemorySaver</code> checkpoints the full <code>StateGraph</code> per <code>thread_id</code>. When a user says "make it Thailand instead," the supervisor reads the checkpointed state, invalidates <code>destination_research</code> and every downstream dependency, and <strong>re-executes only the invalidated subgraphs</strong>. Stable agent outputs remain cached. This is <strong>state-driven selective re-execution</strong>&mdash;native to the graph, not bolted on.</p>
+
+<p><strong>5. Real-time observability and evaluation via LangSmith.</strong><br>
+Every agent handoff, every tool invocation, every state transition is auto-traced with zero additional instrumentation. Custom metadata tags (<code>agent_name</code>, <code>tool_name</code>, <code>phase</code>) enable per-agent latency profiling, tool-call chain inspection, and <strong>evaluation against curated travel planning datasets</strong>. The entire multi-agent execution trace is inspectable step by step&mdash;from graph entry through supervisor dispatch through tool resolution to human review gate.</p>
+
+<hr class="separator">
+
+<div class="section-label">// The Graph Under Mutation Pressure</div>
+
+<p>Here's a single multi-turn session&mdash;9 consecutive user mutations, each testing the supervisor's <strong>selective re-execution routing</strong>:</p>
+
+<ul class="check-list">
+  <li>"Plan a 7-day trip to the Maldives for 2, budget $5000" &rarr; <em>full pipeline runs</em></li>
+  <li>"Find cheaper hotels" &rarr; <em>only Hotel + Budget agents re-run</em></li>
+  <li>"Move it to April 10&ndash;17" &rarr; <em>Flight + Hotel + Activity + Budget re-run</em></li>
+  <li>"Make it 5 days instead of 7" &rarr; <em>Hotel + Activity + Budget re-run</em></li>
+  <li>"One more traveler joining" &rarr; <em>Flight + Hotel + Budget re-run</em></li>
+  <li>"Actually, change to Bali" &rarr; <em>all 5 agents re-run, full re-plan</em></li>
+  <li>"Add scuba diving" &rarr; <em>only Activity + Budget re-run</em></li>
+  <li>"Find a nonstop flight" &rarr; <em>only Flight + Budget re-run</em></li>
+  <li>"One of us is vegetarian" &rarr; <em>only Activity + Budget re-run</em></li>
+</ul>
+
+<p>Nine mutations. Each one triggers the <em>minimum subgraph re-execution</em>&mdash;the supervisor evaluates state, invalidates only the affected slices, and dispatches to the correct agent subset. The <strong>graph state persists across every turn</strong> via MemorySaver checkpointing, and the <strong>human approval gate fires after every re-plan</strong>. This is the supervisor pattern proving its architectural value under continuous mutation pressure.</p>
+
+<hr class="separator">
+
+<div class="section-label">// Real-Time Observability &amp; Evaluation &mdash; LangSmith Trace Data</div>
+
+<p>This isn't hypothetical. Here's what LangSmith's <strong>real-time trace observability</strong> captured from a live multi-agent planning session on <code>ArunManglickLanggraph/AITravelGenie</code>&mdash;every agent handoff, tool invocation, and state transition, fully inspectable:</p>
+
+<div class="obs-grid">
+  <div class="obs-stat">
+    <div class="num">50</div>
+    <div class="label">Total Runs Traced</div>
+  </div>
+  <div class="obs-stat">
+    <div class="num">96%</div>
+    <div class="label">Success Rate</div>
+  </div>
+  <div class="obs-stat">
+    <div class="num">14,098</div>
+    <div class="label">Total Tokens</div>
+  </div>
+  <div class="obs-stat">
+    <div class="num">32</div>
+    <div class="label">Chain Runs</div>
+  </div>
+  <div class="obs-stat">
+    <div class="num">12</div>
+    <div class="label">Tool Invocations</div>
+  </div>
+  <div class="obs-stat">
+    <div class="num">6</div>
+    <div class="label">LLM Calls</div>
+  </div>
+</div>
+
+<div class="obs-breakdown">
+  <div class="obs-col">
+    <h4>Agent &amp; Chain Traces</h4>
+    <ul>
+      <li><span>should_continue (routing)</span> <span>7</span></li>
+      <li><span>ChatAnthropic (LLM)</span> <span>6</span></li>
+      <li><span>agent (ReAct loop)</span> <span>6</span></li>
+      <li><span>tools (ToolNode)</span> <span>4</span></li>
+      <li><span>supervisor_router</span> <span>3</span></li>
+      <li><span>human_review (gate)</span> <span>2</span></li>
+      <li><span>LangGraph (graph entry)</span> <span>2</span></li>
+      <li><span>aggregate_results</span> <span>1</span></li>
+    </ul>
+  </div>
+  <div class="obs-col">
+    <h4>Tool Call Breakdown</h4>
+    <ul>
+      <li><span>get_hotel_reviews</span> <span>3</span></li>
+      <li><span>search_hotels</span> <span>2</span></li>
+      <li><span>search_activities</span> <span>2</span></li>
+      <li><span>get_weather_forecast</span> <span>2</span></li>
+      <li><span>calculate_budget</span> <span>2</span></li>
+      <li><span>convert_currency</span> <span>1</span></li>
+    </ul>
+    <h4 style="margin-top: 12px;">Token Usage</h4>
+    <ul>
+      <li><span>Prompt (input)</span> <span>5,812</span></li>
+      <li><span>Completion (output)</span> <span>8,286</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout">
+  <strong>The 2 "interrupted" runs?</strong> Those are the <code>human_review</code> graph nodes&mdash;<code>interrupt_before</code> firing exactly as designed. LangSmith traces the <code>GraphInterrupt</code> event with the full serialized travel plan payload, so you can inspect every approval gate in the trace timeline. Not errors&mdash;the <strong>stateful human-in-the-loop architecture</strong> working as intended.
+</div>
+
+<hr class="separator">
+
+<div class="section-label tax-section-label" id="tax-calculation-section">// Applying the Pattern to Tax Calculation</div>
+
+<p>The same architecture can orchestrate a real <mark class="yellow-highlight">"tax calculation workflow"</mark>. Instead of treating tax as one opaque API call, the graph can coordinate the full journey from an ERP transaction payload to a validated tax response that is ready to return to the ERP.</p>
+
+<div class="tax-flow">
+  <div class="tax-flow-title">Tax Calculation &mdash; Lang Family Orchestration Flow</div>
+  <div class="tax-agent-flow">
+    <div class="tax-flow-row">
+      <div class="tax-flow-node"><strong>ERP payload</strong><span>invoice / order</span></div>
+      <span class="tax-flow-arrow">&gt;</span>
+      <div class="tax-flow-node"><strong>LangChain intake</strong><span>parse + normalize</span></div>
+      <span class="tax-flow-arrow">&gt;</span>
+      <div class="tax-flow-node supervisor"><strong>LangGraph supervisor</strong><span>typed state + conditional edges</span></div>
+    </div>
+    <div class="tax-flow-down">v &nbsp; fan-out to specialist agents &nbsp; v</div>
+    <div class="tax-agent-grid">
+      <div class="tax-agent-node"><strong>Rules agent</strong><span>ERP Business Set Rules<br>policy + exemption checks</span></div>
+      <div class="tax-agent-node"><strong>Enrichment agent</strong><span>jurisdiction + product<br>classification validation</span></div>
+      <div class="tax-agent-node"><strong>Calculation agent</strong><span>Common Calculation Services<br>Tax Calculation Engine</span></div>
+    </div>
+    <div class="tax-flow-down">v &nbsp; parallel results &nbsp; v</div>
+    <div class="tax-flow-row">
+      <div class="tax-flow-node"><strong>State aggregator</strong><span>merge responses + audit context</span></div>
+      <span class="tax-flow-arrow">&gt;</span>
+      <div class="tax-flow-node decision"><strong>Confidence router</strong><span>approve, retry, or interrupt</span></div>
+    </div>
+    <div class="tax-flow-branches">
+      <div class="tax-flow-branch approve">approved &rarr; response mapper &rarr; ERP</div>
+      <div class="tax-flow-branch review">human review &rarr; feedback &rarr; affected agent only</div>
+    </div>
+    <div class="tax-flow-loop">&circlearrowleft; checkpointed state resumes the graph without replaying stable branches</div>
+    <div class="tax-flow-node" style="justify-self: center;">
+      <strong>LangSmith trace</strong><span>metrics, evaluation, latency, tool calls, decisions</span>
+    </div>
+  </div>
+  <div class="tax-flow-lane">
+    <span class="tax-lane-label">Governed AI harness and tax service tools</span>
+    <span class="tax-lane-chip">ERP Business Set Rules</span>
+    <span class="tax-lane-chip">Common Calculation Services</span>
+    <span class="tax-lane-chip">Tax Calculation Engine</span>
+    <span class="tax-lane-chip">Platform Services</span>
+    <span class="tax-lane-chip">Validation &amp; Retry Tools</span>
+    <span class="tax-lane-chip">Human Feedback</span>
+  </div>
+</div>
+
+<ul class="check-list">
+  <li><strong>ERP intake and payload parsing</strong> &mdash; A LangChain tool validates the inbound invoice or sales-order payload, normalizes customer, ship-from, ship-to, product, exemption, jurisdiction, currency, and line-item data, and records the original request for traceability.</li>
+  <li><strong>Tax connector orchestration</strong> &mdash; LangGraph routes the normalized transaction through the required connector layers, preserving correlation IDs, connector responses, retries, and error state as explicit graph state rather than hidden integration code.</li>
+  <li><strong>Business and tax calculation services</strong> &mdash; Specialized tools can invoke ERP Business Set Rules, the Tax Calculation Engine, Common Calculation Services, and supporting platform services in the correct dependency order.</li>
+  <li><strong>Exception and confidence routing</strong> &mdash; The supervisor can detect missing jurisdiction data, ambiguous product taxability, exemption conflicts, calculation failures, or policy exceptions and route only the affected branch for enrichment or retry.</li>
+  <li><strong>Human approval and feedback</strong> &mdash; For high-value transactions, low-confidence classifications, or policy exceptions, LangGraph pauses at a durable human approval gate. The reviewer can approve, correct, or provide feedback that re-routes the affected tax branch without replaying the entire workflow.</li>
+  <li><strong>ERP-ready output</strong> &mdash; A response-mapping tool assembles the tax result into the ERP contract, including tax jurisdiction, taxable basis, rates, calculated tax, exemptions, warnings, audit metadata, and correlation details.</li>
+</ul>
+
+<div class="callout">
+  <strong>The AI harness around the workflow:</strong> LangChain supplies the structured tools, parsers, validators, connector adapters, and policy prompts. LangGraph provides the typed state, conditional routing, parallel service calls, retries, checkpoints, human approval, and feedback loop. LangSmith provides real-time traces, latency and failure metrics, token and tool usage, evaluation datasets, and end-to-end visibility from ERP intake to ERP response. The AI remains inside governed tools and approval boundaries; it orchestrates the workflow without replacing authoritative tax calculation services.
+</div>
+
+<p>If you're building multi-agent systems and haven't explored LangGraph's <strong>state-driven orchestration model</strong>, I'd strongly recommend it. The <strong>conditional edge routing</strong>, sub-graph composition, graph-native checkpointing, and <strong>real-time LangSmith observability</strong> solve orchestration problems that most agentic frameworks leave entirely to the developer.</p>
+
+<p>The full architecture walkthrough&mdash;graph topology, agent design, tool integration patterns, and LangSmith evaluation setup&mdash;is on my GitHub. Happy to discuss the architectural trade-offs.</p>
+
+<p>What's the most complex <strong>multi-agent orchestration challenge</strong> you've tackled? I'd love to hear about your graph architectures, supervisor patterns, and observability setups in the comments.</p>
+
+<div class="hashtags">
+#AgenticAI #MultiAgentArchitecture #SupervisorPattern #StatefulGraphOrchestration #GraphNativeAI #StateGraph #LangChain #LangGraph #LangSmith #ReActPattern #HumanInTheLoop #SelectiveReExecution #ConditionalEdgeRouting #SubGraphComposition #AIOrchestration #RealTimeObservability #AgentEvaluation #Claude #Anthropic #Tavily #DuckDuckGo #MemorySaver #Gradio #AIEngineering #LLMApplications #BuildInPublic
+</div>
+
+</article>
+
+<div class="engagement">
+  <span>&#x1F44D; Like</span>
+  <span>&#x1F4AC; Comment</span>
+  <span>&#x1F501; Repost</span>
+  <span>&#x1F4E8; Send</span>
+</div>
+
+<div class="copy-wrap">
+  <button class="copy-btn" id="copyBtn">Copy plain text for LinkedIn</button>
+</div>
+
+<script>
+document.getElementById('copyBtn').addEventListener('click', function() {
+  var text = `AI Travel CoPilot — A Graph-Native, Multi-Agent Supervisor Architecture Under Real Mutation Pressure
+
+The intent is not to build another AI assistant that adapts to your preferences, responds to changing travel requirements, and then calls it a "trip plan."
+
+Though I call it AI Travel CoPilot, travel is merely the proving ground. The end goal is to use this as a proof of concept for a multi-agent supervisor architecture that can seamlessly orchestrate a real "tax calculation workflow," handling complex dependencies while ensuring accuracy, traceability, and controlled execution.
+
+The real objective was to architect a multi-agent supervisor system and push a stateful graph orchestration model through nine consecutive user modifications, where every agent knows exactly when to wake up, when to remain idle, and when to seek human approval before proceeding.
+
+This effort culminates in a state-driven orchestration model capable of coordinating specialist agents through conditional graph edges, selectively re-executing only invalidated subgraphs, checkpointing the entire conversation state, and enforcing structured human-in-the-loop approval gates, all within a single observable execution trace.
+
+After building agents with CrewAI, Oracle AI Studio, Copilot, n8n, and several other platforms, I wanted to evaluate the Lang ecosystem as a vertically integrated agentic architecture. LangChain provides the agent primitives (tool nodes, output parsers, and ReAct loops), LangGraph delivers the graph-native orchestration layer with typed state, conditional routing, subgraph composition, interrupt gates, and persistent checkpointing, while LangSmith provides real-time observability and evaluation across every agent handoff, tool invocation, and state transition.
+
+The result is a state-driven, fully traceable multi-agent system where the graph itself becomes the orchestrator.
+
+─────────────────────────────
+AGENTIC ORCHESTRATION PATTERNS
+─────────────────────────────
+
+Supervisor Architecture • Stateful Graph Orchestration • Sub-Graph Composition • ReAct Agent Loops • Conditional Edge Routing • Typed State Reducers • Human-in-the-Loop Gates • Graph Checkpointing • Selective Re-Execution • Parallel Agent Fan-Out • Error Boundaries • Real-Time Trace Observability • @traceable Evaluation
+
+─────────────────────────────
+THE MULTI-AGENT GRAPH ARCHITECTURE
+─────────────────────────────
+
+At the core sits a Supervisor Router — the central orchestration node in a LangGraph StateGraph. It doesn't generate text. It reads the typed TravelPlanState, evaluates which state slices are None or invalidated, and dispatches work to five specialist agents through conditional edges — a state-driven routing table, not prompt engineering:
+
+  ┌─ AI Harness: Claude (ChatAnthropic) ──────────────┐
+  │                                                     │
+  │           ┌─────────────┐                           │
+  │           │    START     │                           │
+  │           └──────┬──────┘                           │
+  │                  ▼                                  │
+  │        ┌────────────────┐                           │
+  │        │  Intent Parser │                           │
+  │        └───────┬────────┘                           │
+  │                ▼                                    │
+  │      ┌──────────────────┐                           │
+  │      │ Supervisor Router│                           │
+  │      └─┬──┬──┬──┬──┬───┘                           │
+  │        ▼  ▼  ▼  ▼  ▼                               │
+  │  ┌────┐┌───┐┌───┐┌───┐┌──────┐                     │
+  │  │Dest││Fly ││Hot ││Act ││Budget│                    │
+  │  └─┬──┘└─┬─┘└─┬─┘└─┬─┘└──┬───┘                     │
+  │    :      :     :     :      :    ◁─ Tool calls      │
+  │    ▼      ▼     ▼     ▼      ▼                       │
+  │  Tavily  Flts  Htls  Weath  Curr                     │
+  │  DDG     IATA  Revs  Actvs  Budg                     │
+  │    │      │     │     │      │                       │
+  │    └──┬───┴──┬──┴──┬──┘      │                       │
+  │       └──────┼─────┘         │                       │
+  │              ▼               │                       │
+  │     ┌────────────────┐       │                       │
+  │     │Result Aggregator│◄─────┘                       │
+  │     └───────┬────────┘                               │
+  │             ▼                                        │
+  │     ┌────────────────┐                               │
+  │     │  Human Review   │                              │
+  │     │(Approval Gate)  │                              │
+  │     └───┬────────┬───┘                               │
+  │         ▼        ▼                                   │
+  │     ┌──────┐ ┌────────┐                              │
+  │     │Revise│ │Complete│                              │
+  │     │(loop)│ │ (END)  │                              │
+  │     └──────┘ └────────┘                              │
+  └──────────────────────────────────────────────────────┘
+  Platform: MemorySaver │ Streaming │ LangSmith │ Error Boundaries
+
+Each specialist is its own compiled sub-graph — a self-contained ReAct agent with its own execution cycle (reason → tool call → evaluate → reason again) and a dedicated ToolNode. The supervisor never broadcasts. It inspects the shared TravelPlanState through conditional edge evaluation and activates only the agents whose state slices are None or invalidated by user mutation. This is graph-native selective re-execution — the orchestration topology itself decides what runs.
+
+Claude (via ChatAnthropic from langchain-anthropic) is the AI harness powering all agent reasoning, routing decisions, and tool orchestration.
+
+─────────────────────────────
+WHY THE LANG FAMILY — A VERTICALLY INTEGRATED AGENTIC STACK
+─────────────────────────────
+
+I deliberately chose LangChain + LangGraph + LangSmith because they form a vertically integrated agentic stack — primitives, orchestration, and observability in a single, coherent architecture:
+
+> Graph-native state management — LangGraph's StateGraph with typed TypedDict state, add_messages reducers, and conditional edges models agent orchestration as a directed execution graph, not a chain of function calls. The graph topology IS the orchestration logic.
+
+> Selective re-execution under mutation — When a user says "find cheaper hotels," the supervisor evaluates TravelPlanState and re-invokes only the Hotel agent — not the entire pipeline. This is native to the graph's conditional edge routing.
+
+> Sub-graph composition & agent isolation — Each specialist compiles into its own graph with its own ReAct execution cycle, then plugs into the parent graph as a composable node. Testable in isolation, independently deployable — true multi-agent modularity.
+
+> Structural human-in-the-loop gates — LangGraph's interrupt_before pauses graph execution at the human review node, serializes the full plan state, waits for approval or revision, and resumes exactly where it stopped. Not a confirmation dialog — a stateful approval gate with revision routing.
+
+> Real-time observability & evaluation — Every agent handoff, tool invocation, and state transition is auto-traced in LangSmith. @traceable decorators and custom metadata tags enable per-agent latency profiling, tool-call chain inspection, and evaluation against curated datasets — production-grade observability from the first run.
+
+The architectural stress test: a single session can trigger 9+ modification scenarios and the supervisor must route each mutation to the correct subset of agents without re-executing stable subgraphs. LangGraph's state-driven conditional edges turn this into a routing table evaluated at every graph step — not spaghetti code patching around a linear pipeline.
+
+─────────────────────────────
+THE AGENTIC TECH STACK
+─────────────────────────────
+
+Every layer was chosen to serve the architecture:
+
+• AI Harness → Claude (ChatAnthropic) — powers all agent reasoning & routing, large context window, native tool-use protocol
+• Orchestration → LangGraph StateGraph — graph-native orchestration: conditional edge routing, sub-graph composition, interrupt gates, stateful checkpointing, selective re-execution
+• Agent Primitives → LangChain — ToolNode, ReAct agent pattern, output parsers, prompt templates
+• Web Intelligence → Tavily + DuckDuckGo — Tavily: purpose-built search API for AI agents and RAG pipelines. DuckDuckGo: privacy-first fallback, zero API key overhead
+• Observability → LangSmith — real-time trace observability: @traceable decorators, datasets, evaluations, per-agent latency profiling
+• State Persistence → MemorySaver — graph checkpointer with thread-based state persistence and full conversation replay, zero external infra
+• Weather Intel → OpenWeatherMap API — context-aware activity routing based on forecast data
+• Currency → ExchangeRate API — real-time conversion for multi-currency budget computation
+• Agent UI → Gradio + Jupyter ipywidgets — interactive agent interface with streaming output
+
+─────────────────────────────
+ARCHITECTURAL DIFFERENTIATORS
+─────────────────────────────
+
+1. The supervisor is a state-driven router, not a narrator.
+It generates zero user-facing text. It reads the typed TravelPlanState, evaluates which state slices are None or invalidated by user mutation, and dispatches to exactly the right specialist agent through conditional edge evaluation. The routing logic lives in the graph topology — not in prompt engineering.
+
+2. ReAct execution cycles at every agent node.
+Each specialist runs a full ReAct loop within its compiled sub-graph: reason → select tool → invoke → evaluate result → decide whether to invoke again or report. The Destination agent might search, find conflicting visa info, refine the query, cross-reference, and return a structured finding. This is a self-contained agentic sub-graph with its own execution cycle, not a single function call.
+
+3. Human-in-the-loop is a structural graph gate, not a UI decoration.
+After the aggregator assembles a complete plan, the graph pauses at an interrupt_before node. The full plan state is serialized and presented for human review. Revision feedback re-enters the supervisor, which evaluates the mutation and re-routes to only the affected agent subgraphs. This is a stateful approval gate with selective re-execution routing.
+
+4. Graph checkpointing enables selective re-planning under mutation.
+MemorySaver checkpoints the full StateGraph per thread_id. When a user says "make it Thailand instead," the supervisor reads the checkpointed state, invalidates destination_research and every downstream dependency, and re-executes only the invalidated subgraphs. Stable agent outputs remain cached. State-driven selective re-execution — native to the graph, not bolted on.
+
+5. Real-time observability and evaluation via LangSmith.
+Every agent handoff, every tool invocation, every state transition is auto-traced with zero additional instrumentation. Custom metadata tags enable per-agent latency profiling, tool-call chain inspection, and evaluation against curated datasets. The entire multi-agent execution trace is inspectable step by step.
+
+─────────────────────────────
+THE GRAPH UNDER MUTATION PRESSURE
+─────────────────────────────
+
+A single multi-turn session — 9 consecutive user mutations, each testing the supervisor's selective re-execution routing:
+
+• "Plan a 7-day trip to the Maldives for 2, budget $5000" → full pipeline runs
+• "Find cheaper hotels" → only Hotel + Budget agents re-run
+• "Move it to April 10–17" → Flight + Hotel + Activity + Budget re-run
+• "Make it 5 days instead of 7" → Hotel + Activity + Budget re-run
+• "One more traveler joining" → Flight + Hotel + Budget re-run
+• "Actually, change to Bali" → all 5 agents re-run, full re-plan
+• "Add scuba diving" → only Activity + Budget re-run
+• "Find a nonstop flight" → only Flight + Budget re-run
+• "One of us is vegetarian" → only Activity + Budget re-run
+
+Nine mutations. Each one triggers the minimum subgraph re-execution — the supervisor evaluates state, invalidates only the affected slices, and dispatches to the correct agent subset. The graph state persists across every turn via MemorySaver checkpointing, and the human approval gate fires after every re-plan. This is the supervisor pattern proving its architectural value under continuous mutation pressure.
+
+─────────────────────────────
+
+// Real-Time Observability & Evaluation — LangSmith Trace Data
+
+This isn't hypothetical. Here's what LangSmith's real-time trace observability captured from a live multi-agent planning session on ArunManglickLanggraph/AITravelGenie — every agent handoff, tool invocation, and state transition, fully inspectable:
+
+┌──────────────────────────────────────────────┐
+│  50 Total Runs │ 96% Success │ 74,098 Tokens │
+│  32 Chains     │ 12 Tools   │ 6 LLM Calls   │
+└──────────────────────────────────────────────┘
+
+Agent & Chain Traces:
+  • should_continue (routing)    → 7
+  • ChatAnthropic (LLM)          → 6
+  • agent (ReAct loop)           → 6
+  • tools (ToolNode)             → 4
+  • supervisor_router            → 3
+  • human_review (gate)          → 2
+  • LangGraph (graph entry)      → 2
+  • aggregate_results            → 1
+
+Tool Call Breakdown:
+  • get_hotel_reviews            → 3
+  • search_hotels                → 2
+  • search_activities            → 2
+  • get_weather_forecast         → 2
+  • calculate_budget             → 2
+  • convert_currency             → 1
+
+Token Usage: Prompt 45,812 | Completion 28,286
+
+The 2 "interrupted" runs? Those are the human_review graph nodes — interrupt_before firing exactly as designed. LangSmith traces the GraphInterrupt event with the full serialized travel plan payload, so you can inspect every approval gate in the trace timeline. Not errors — the stateful human-in-the-loop architecture working as intended.
+
+─────────────────────────────
+
+APPLYING THE PATTERN TO TAX CALCULATION
+─────────────────────────────
+
+The same architecture can orchestrate a real "tax calculation workflow". Instead of treating tax as one opaque API call, the graph can coordinate the full journey from an ERP transaction payload to a validated tax response ready to return to the ERP:
+
+• ERP intake and payload parsing — LangChain tools validate and normalize customer, ship-from, ship-to, product, exemption, jurisdiction, currency, and line-item data while preserving the original request for traceability
+• Tax connector orchestration — LangGraph routes the normalized transaction through the required connector layers, preserving correlation IDs, responses, retries, and error state as explicit graph state
+• Business and tax calculation services — specialized tools invoke ERP Business Set Rules, the Tax Calculation Engine, Common Calculation Services, and supporting platform services in dependency order
+• Exception and confidence routing — the supervisor detects missing jurisdiction data, ambiguous product taxability, exemption conflicts, calculation failures, or policy exceptions and routes only the affected branch for enrichment or retry
+• Human approval and feedback — high-value transactions, low-confidence classifications, or policy exceptions pause at a durable LangGraph approval gate; reviewer feedback re-routes the affected tax branch without replaying the entire workflow
+• ERP-ready output — a response-mapping tool assembles tax jurisdiction, taxable basis, rates, calculated tax, exemptions, warnings, audit metadata, and correlation details into the ERP response contract
+
+The AI harness around the workflow is where the Lang family becomes especially powerful:
+
+• LangChain supplies structured tools, parsers, validators, connector adapters, and policy prompts
+• LangGraph provides typed state, conditional routing, parallel service calls, retries, checkpoints, human approval, and feedback loops
+• LangSmith provides real-time traces, latency and failure metrics, token and tool usage, evaluation datasets, and end-to-end visibility from ERP intake to ERP response
+
+The AI remains inside governed tools and approval boundaries. It orchestrates the workflow without replacing authoritative tax calculation services.
+
+─────────────────────────────
+
+If you're building multi-agent systems and haven't explored LangGraph's state-driven orchestration model, I'd strongly recommend it. The conditional edge routing, sub-graph composition, graph-native checkpointing, and real-time LangSmith observability solve orchestration problems that most agentic frameworks leave entirely to the developer.
+
+The full architecture walkthrough — graph topology, agent design, tool integration patterns, and LangSmith evaluation setup — is on my GitHub. Happy to discuss the architectural trade-offs.
+
+What's the most complex multi-agent orchestration challenge you've tackled? I'd love to hear about your graph architectures, supervisor patterns, and observability setups in the comments.
+
+#AgenticAI #MultiAgentArchitecture #SupervisorPattern #StatefulGraphOrchestration #GraphNativeAI #StateGraph #LangChain #LangGraph #LangSmith #ReActPattern #HumanInTheLoop #SelectiveReExecution #ConditionalEdgeRouting #SubGraphComposition #AIOrchestration #RealTimeObservability #AgentEvaluation #Claude #Anthropic #Tavily #DuckDuckGo #MemorySaver #Gradio #AIEngineering #LLMApplications #BuildInPublic`;
+
+  navigator.clipboard.writeText(text).then(function() {
+    var btn = document.getElementById('copyBtn');
+    btn.textContent = 'Copied!';
+    setTimeout(function() { btn.textContent = 'Copy plain text for LinkedIn'; }, 2000);
+  }).catch(function() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    var btn = document.getElementById('copyBtn');
+    btn.textContent = 'Copied!';
+    setTimeout(function() { btn.textContent = 'Copy plain text for LinkedIn'; }, 2000);
+  });
+});
+</script>

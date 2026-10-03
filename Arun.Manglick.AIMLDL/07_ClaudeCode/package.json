@@ -1,0 +1,13 @@
+{
+  "name": "claude-file-watcher",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "watch": "node file-watcher-review.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0",
+    "chokidar": "^4.0.0"
+  }
+}

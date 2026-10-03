@@ -38,3 +38,4 @@
 [2026-06-29 02:55:25] Edit — C:\\Arun.Manglick\\Arun.Manglick.PRJ\\codetogether\\Arun.Manglick.AIMLDL\\07_ClaudeCode\\01_Claude_Portfolio\\utils\\plan\\04_find-skills_plan.md
 [2026-06-29 02:55:39] Edit — C:\\Arun.Manglick\\Arun.Manglick.PRJ\\codetogether\\Arun.Manglick.AIMLDL\\07_ClaudeCode\\01_Claude_Portfolio\\utils\\plan\\04_find-skills_plan.md
 [2026-06-29 02:55:55] Edit — C:\\Arun.Manglick\\Arun.Manglick.PRJ\\codetogether\\Arun.Manglick.AIMLDL\\07_ClaudeCode\\01_Claude_Portfolio\\utils\\plan\\04_find-skills_plan.md
+[2026-08-08 15:09:04] Edit — C:\\Users\\Arun.Manglick\\.claude\\settings.json
